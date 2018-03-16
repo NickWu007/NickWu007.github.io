@@ -1,0 +1,24 @@
+---
+author: nickwu0715
+comments: true
+date: 2016-07-17 23:05:28+00:00
+layout: post
+link: https://nickwuedinburgh.wordpress.com/2016/07/17/restart/
+slug: restart
+title: Restart!
+wordpress_id: 17
+categories:
+- 未分类
+---
+
+This site is largely inspired by John Sonmez([https://simpleprogrammer.com](https://simpleprogrammer.com)). Originally this blog was mostly about my own life as a software engineer, but upon reading some of his posts, I feel like it should actually be a technical blog. Hence the restart.
+
+Allow me to elaborate further. From now on, all the posts on this site will be programmer-practice-orientated. The idea is “giving practical advice and help for other programmer”. For a long time I have this wrong mentality that, especially at work, I would view other colleagues as competitors, in other sense I must outperform them in order to keep my job. This year when I started my second internship at Google, I realized the work of software engineering benefits tremendously from community and collaboration. That’s part of the reason why I want to start this series of blogs.
+
+So what should you expect from this blog? In short, I am trying to give very practical help to you guys, if you are a programmer or trying to be. Please understand that I am an apprentice on this path as well, and some of my posts may not be able to help you as much. But I still want to give my very best try. In terms of actual content, they can be some easy-to-setup developer tools that I have used and find effective, or some tricks when applying some specific technology, or even just some thought rooting from my experience in the industry.
+
+Also I want to set an early schedule and stick to it. For now I am uploading a new post every week, usually at weekends. If the response turns out to be great, or I simply have so many stuff to share with you guys, I will add more posts each week. But let’s start with something more realistic and manageable.
+
+At last I want to have a few words about interactions with you. All comments, re-post, or sharing on other digital media are welcome, and I would be really grateful that this site turns out to be a place for discussion. If I am wrong in anywhere in a post, which I often am, please feel free to point it out, and I will correct them asap. Of course I will try my best very best to provide factually correct and valuable contents consistently, but sometimes I would trip up, and it would be awesome if you can help me with that.
+
+That will be it for this kickstart post. Next Saturday we will have our first post, so stay tuned, and I hope my posts can be helpful to you!
