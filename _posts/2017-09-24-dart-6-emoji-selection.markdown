@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2017/09/24/dart-6-emoji-selection/
 slug: dart-6-emoji-selection
 title: 'Dart #6: Emoji selection'
 wordpress_id: 482
-categories:
+tags:
 - dartlang
 - Technical
 ---

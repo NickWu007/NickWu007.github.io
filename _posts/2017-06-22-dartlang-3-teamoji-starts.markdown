@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2017/06/22/dartlang-3-teamoji-starts
 slug: dartlang-3-teamoji-starts
 title: 'Dartlang #3: Teamoji starts!'
 wordpress_id: 396
-categories:
+tags:
 - dartlang
 - Technical
 ---

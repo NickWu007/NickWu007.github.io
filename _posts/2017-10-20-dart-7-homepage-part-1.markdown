@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2017/10/20/dart-7-homepage-part-1/
 slug: dart-7-homepage-part-1
 title: 'Dart #7: Homepage part 1'
 wordpress_id: 494
-categories:
+tags:
 - dartlang
 - Technical
 ---

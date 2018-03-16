@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2016/11/05/web-dev-crash-course/
 slug: web-dev-crash-course
 title: 'Web dev: crash course'
 wordpress_id: 159
-categories:
+tags:
 - Technical
 ---
 

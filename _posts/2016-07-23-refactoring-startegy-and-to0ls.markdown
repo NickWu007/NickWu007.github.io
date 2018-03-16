@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2016/07/23/refactoring-startegy-and-
 slug: refactoring-startegy-and-to0ls
 title: 'Refactoring: strategy and tools'
 wordpress_id: 34
-categories:
+tags:
 - Technical
 ---
 

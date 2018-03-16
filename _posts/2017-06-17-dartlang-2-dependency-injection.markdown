@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2017/06/17/dartlang-2-dependency-inj
 slug: dartlang-2-dependency-injection
 title: 'Dartlang #2: Dependency Injection'
 wordpress_id: 366
-categories:
+tags:
 - dartlang
 - Technical
 ---

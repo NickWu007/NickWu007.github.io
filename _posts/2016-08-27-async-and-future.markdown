@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2016/08/27/async-and-future/
 slug: async-and-future
 title: Async and Future
 wordpress_id: 98
-categories:
+tags:
 - Technical
 ---
 

@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2017/05/09/mid-year-reflection-2017/
 slug: mid-year-reflection-2017
 title: 'Mid-year reflection: 2017'
 wordpress_id: 315
-categories:
+tags:
 - Non-technical
 - Technical
 ---

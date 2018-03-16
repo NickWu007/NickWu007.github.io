@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2017/03/26/road-to-shell-script-mast
 slug: road-to-shell-script-master
 title: Road to shell script master
 wordpress_id: 307
-categories:
+tags:
 - Technical
 ---
 

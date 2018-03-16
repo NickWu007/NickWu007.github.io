@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2016/09/03/back-to-school/
 slug: back-to-school
 title: Back to school
 wordpress_id: 104
-categories:
+tags:
 - Non-technical
 ---
 

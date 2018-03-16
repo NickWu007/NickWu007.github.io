@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2016/11/13/how-to-deal-with-failures
 slug: how-to-deal-with-failures
 title: How to deal with failures
 wordpress_id: 170
-categories:
+tags:
 - Non-technical
 ---
 

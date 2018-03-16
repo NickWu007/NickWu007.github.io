@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2016/08/06/how-to-get-un-stuck/
 slug: how-to-get-un-stuck
 title: How to get un-stuck?
 wordpress_id: 66
-categories:
+tags:
 - Non-technical
 ---
 

@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2016/08/13/rpc-bridge-betwwen-server
 slug: rpc-bridge-betwwen-server-and-client
 title: 'RPC: bridge between server and client'
 wordpress_id: 82
-categories:
+tags:
 - Technical
 ---
 

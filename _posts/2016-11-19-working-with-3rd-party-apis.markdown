@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2016/11/18/working-with-3rd-party-ap
 slug: working-with-3rd-party-apis
 title: Working with 3rd party APIs
 wordpress_id: 177
-categories:
+tags:
 - Technical
 ---
 

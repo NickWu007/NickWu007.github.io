@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2017/02/19/stepping-into-mapreduce/
 slug: stepping-into-mapreduce
 title: Stepping into MapReduce
 wordpress_id: 267
-categories:
+tags:
 - Technical
 ---
 

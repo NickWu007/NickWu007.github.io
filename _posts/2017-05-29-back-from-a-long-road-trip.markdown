@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2017/05/29/back-from-a-long-road-tri
 slug: back-from-a-long-road-trip
 title: Back from a long road trip
 wordpress_id: 326
-categories:
+tags:
 - Life
 ---
 

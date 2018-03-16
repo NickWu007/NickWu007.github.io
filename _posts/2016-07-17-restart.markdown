@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2016/07/17/restart/
 slug: restart
 title: Restart!
 wordpress_id: 17
-categories:
+tags:
 - 未分类
 ---
 

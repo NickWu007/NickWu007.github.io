@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2017/02/12/my-developer-life/
 slug: my-developer-life
 title: My developer life
 wordpress_id: 254
-categories:
+tags:
 - Non-technical
 ---
 

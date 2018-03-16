@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2017/02/05/java-nio-tutorial/
 slug: java-nio-tutorial
 title: Java NIO tutorial
 wordpress_id: 244
-categories:
+tags:
 - Technical
 ---
 

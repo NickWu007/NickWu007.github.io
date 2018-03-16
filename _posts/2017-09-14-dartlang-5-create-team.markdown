@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2017/09/14/dartlang-5-create-team/
 slug: dartlang-5-create-team
 title: 'Dartlang #5: Create Team'
 wordpress_id: 479
-categories:
+tags:
 - dartlang
 - Technical
 ---

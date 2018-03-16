@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2017/02/26/building-a-dev-team/
 slug: building-a-dev-team
 title: Building a dev team
 wordpress_id: 283
-categories:
+tags:
 - Non-technical
 ---
 

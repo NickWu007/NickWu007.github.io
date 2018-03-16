@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2017/06/26/dartlang-4-welcome-page/
 slug: dartlang-4-welcome-page
 title: 'Dartlang #4: Welcome page'
 wordpress_id: 404
-categories:
+tags:
 - dartlang
 - Technical
 ---

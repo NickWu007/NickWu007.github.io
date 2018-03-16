@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2018/01/07/new-year-resolutions-2018
 slug: new-year-resolutions-2018
 title: 'New Year Resolutions: 2018'
 wordpress_id: 525
-categories:
+tags:
 - Non-technical
 ---
 

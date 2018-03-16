@@ -7,7 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2018/01/07/dart-8-homepage-part-2/
 slug: dart-8-homepage-part-2
 title: 'Dart #8: homepage part 2'
 wordpress_id: 529
-categories:
+image: /assets/images/dart_angular.png
+tags:
 - dartlang
 - Technical
 ---

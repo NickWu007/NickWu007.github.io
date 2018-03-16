@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2017/03/19/handling-a-mess-a-little-
 slug: handling-a-mess-a-little-reflection
 title: 'Handling a mess: a little reflection'
 wordpress_id: 292
-categories:
+tags:
 - Non-technical
 ---
 

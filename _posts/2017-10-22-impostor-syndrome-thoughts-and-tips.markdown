@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2017/10/22/impostor-syndrome-thought
 slug: impostor-syndrome-thoughts-and-tips
 title: 'Impostor Syndrome: thoughts and tips'
 wordpress_id: 515
-categories:
+tags:
 - Life
 - Non-technical
 ---

@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2017/06/15/dartlang-1-primer/
 slug: dartlang-1-primer
 title: 'Dartlang #1: Primer'
 wordpress_id: 344
-categories:
+tags:
 - dartlang
 - Technical
 ---

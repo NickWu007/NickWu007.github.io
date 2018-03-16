@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2017/09/07/back-to-edinburgh-a-short
 slug: back-to-edinburgh-a-short-reflection
 title: 'Back to Edinburgh: a short reflection'
 wordpress_id: 441
-categories:
+tags:
 - Life
 - Non-technical
 ---

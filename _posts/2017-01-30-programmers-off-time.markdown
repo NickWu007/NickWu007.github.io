@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2017/01/29/programmers-off-time/
 slug: programmers-off-time
 title: Programmer's off time
 wordpress_id: 216
-categories:
+tags:
 - Non-technical
 ---
 

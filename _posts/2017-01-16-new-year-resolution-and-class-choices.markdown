@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2017/01/16/new-year-resolution-and-c
 slug: new-year-resolution-and-class-choices
 title: New year resolution and class choices
 wordpress_id: 188
-categories:
+tags:
 - Non-technical
 ---
 

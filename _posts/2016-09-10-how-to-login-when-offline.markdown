@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2016/09/10/how-to-login-when-offline
 slug: how-to-login-when-offline
 title: How to login when offline?
 wordpress_id: 120
-categories:
+tags:
 - Technical
 ---
 

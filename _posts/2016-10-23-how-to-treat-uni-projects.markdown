@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2016/10/23/how-to-treat-uni-projects
 slug: how-to-treat-uni-projects
 title: How to treat uni projects
 wordpress_id: 154
-categories:
+tags:
 - Non-technical
 ---
 

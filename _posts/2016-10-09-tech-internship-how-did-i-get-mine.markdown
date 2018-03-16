@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2016/10/09/tech-internship-how-did-i
 slug: tech-internship-how-did-i-get-mine
 title: 'Tech Internship: how did I get mine'
 wordpress_id: 133
-categories:
+tags:
 - Non-technical
 ---
 

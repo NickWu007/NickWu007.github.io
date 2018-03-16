@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2017/05/18/why-i-started-this-sectio
 slug: why-i-started-this-section
 title: Why I started this section?
 wordpress_id: 320
-categories:
+tags:
 - Life
 ---
 

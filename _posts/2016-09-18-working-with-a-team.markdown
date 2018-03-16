@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2016/09/18/working-with-a-team/
 slug: working-with-a-team
 title: Working with a team
 wordpress_id: 125
-categories:
+tags:
 - Non-technical
 ---
 

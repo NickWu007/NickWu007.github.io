@@ -7,7 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2016/10/16/cordova-loves-and-hates/
 slug: cordova-loves-and-hates
 title: 'Cordova: loves and hates'
 wordpress_id: 144
-categories:
+tags:
 - Technical
 ---
 
