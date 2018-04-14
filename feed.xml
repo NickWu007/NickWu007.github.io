@@ -1,0 +1,1311 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://nickwu007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nickwu007.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-04-15T00:03:05+01:00</updated><id>https://nickwu007.github.io/</id><title type="html">DevPractical</title><subtitle>Practical tips for Developers, from a developer.</subtitle><author><name>Nick Wu</name></author><entry><title type="html">Teamoji wrap-up: connecting Firebase database</title><link href="https://nickwu007.github.io/dart/technical/2018/03/29/teamoji-wrap-up-connecting-firebase-database/" rel="alternate" type="text/html" title="Teamoji wrap-up: connecting Firebase database" /><published>2018-03-29T11:37:00+01:00</published><updated>2018-03-29T11:37:00+01:00</updated><id>https://nickwu007.github.io/dart/technical/2018/03/29/teamoji-wrap-up-connecting-firebase-database</id><content type="html" xml:base="https://nickwu007.github.io/dart/technical/2018/03/29/teamoji-wrap-up-connecting-firebase-database/">&lt;p&gt;Today we finish up with Teamoji! In the last post we got the authentication and session checking done. In this post we will start from &lt;a href=&quot;https://github.com/NickWu007/Teamoji-practice/tree/firebase_auth_done&quot;&gt;this branch&lt;/a&gt; on the Github repo. So without further ado, let’s jump in!&lt;/p&gt;
+
+&lt;p&gt;Fair warning: this is a fairly long one. So get some coffee first!&lt;/p&gt;
+
+&lt;h3 id=&quot;firebase-real-time-database&quot;&gt;Firebase real-time database&lt;/h3&gt;
+&lt;p&gt;Firebase offers a &lt;a href=&quot;https://firebase.google.com/docs/database/&quot;&gt;real-time NoSQL database&lt;/a&gt;. If you have only worked with relational database, like me, NoSQL takes sometime to get used to. But here I will attempt to give you a high level overview of NoSQL, and Firebase database, since it is slightly different from traditional NoSQL database.&lt;/p&gt;
+
+&lt;p&gt;Contrary to relational database, where data is stored in tables with rows and columns, NoSQL database stores data as “a collection of documents”. In other words, you can think of your entire database as a huge JSON tree, or a dictionary. Each node is a &lt;code class=&quot;highlighter-rouge&quot;&gt;key, value&lt;/code&gt; pair, where the &lt;code class=&quot;highlighter-rouge&quot;&gt;value&lt;/code&gt; can be another dictionary.&lt;/p&gt;
+
+&lt;p&gt;In Firebase, you can retrieve a particular piece of data by “referencing” it. This sure sounds simple enough, but since Firebase is real-time, you cannot directly read data off from reference. Instead, you register callbacks to specific events, which gives you a &lt;code class=&quot;highlighter-rouge&quot;&gt;DatabaseSnapshot&lt;/code&gt; object, from which you can then read the data.&lt;/p&gt;
+
+&lt;p&gt;Let’s look at an example.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;starCountRef&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;firebase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;database&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'posts/'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;postId&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/starCount'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;starCountRef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;snapshot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;updateStarCount&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;postElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;snapshot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here a &lt;code class=&quot;highlighter-rouge&quot;&gt;starCountRef&lt;/code&gt; is created. However, the reference itself doesn’t do anything in particular. To read the data, you must register a callback on the &lt;code class=&quot;highlighter-rouge&quot;&gt;value&lt;/code&gt; event, which passes a &lt;code class=&quot;highlighter-rouge&quot;&gt;snapshot&lt;/code&gt; which the data contained.&lt;/p&gt;
+
+&lt;p&gt;There are also other events you can register callbacks to. In Teamoji you will see them getting used as well. Now let’s jump in with Teamoji!&lt;/p&gt;
+
+&lt;h3 id=&quot;structure-of-data&quot;&gt;Structure of data&lt;/h3&gt;
+&lt;p&gt;Before we write any code, the structure of the database needs to be nailed down first. First of all, there are three major data models in Teamoji:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;User&lt;/li&gt;
+  &lt;li&gt;Team&lt;/li&gt;
+  &lt;li&gt;Message&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Obviously we can each of them in a separate reference, and add more references to link them. That would be the relation way. We need another representation of the data.&lt;/p&gt;
+
+&lt;p&gt;First of all, Firebase authentication module takes care of the &lt;code class=&quot;highlighter-rouge&quot;&gt;User&lt;/code&gt; object, and exposes a unique &lt;code class=&quot;highlighter-rouge&quot;&gt;uid&lt;/code&gt; for each user. Since we don’t plan to support user-to-user functionalities in Teamoji, a &lt;code class=&quot;highlighter-rouge&quot;&gt;uid&lt;/code&gt; is essentially all we need. Overall, &lt;code class=&quot;highlighter-rouge&quot;&gt;User&lt;/code&gt; needn’t to be in the database.&lt;/p&gt;
+
+&lt;p&gt;Each user will have a few teams they are affiliated with. In Teamoji we use a &lt;code class=&quot;highlighter-rouge&quot;&gt;user_teams&lt;/code&gt; reference to represent this. The key would be the &lt;code class=&quot;highlighter-rouge&quot;&gt;uid&lt;/code&gt; mentioned before, and the value would the a list of team names that user is in.&lt;/p&gt;
+
+&lt;p&gt;Now the messages. Conceptually each message should be linked with a team. We use the same approach we did with user and teams, and use a &lt;code class=&quot;highlighter-rouge&quot;&gt;messages&lt;/code&gt; reference to represent all the messages. Within it, each key is the name of the team, and the value is a list of the messages in that team.&lt;/p&gt;
+
+&lt;p&gt;It is very important to settle down on a structure of the database, since our code is going to be based on it. What I used in Teamoji is quite crude and might not be optimal. If you have any suggestion, feel free to bring it up in the comment section.&lt;/p&gt;
+
+&lt;h3 id=&quot;linking-with-firebase-db&quot;&gt;Linking with Firebase DB&lt;/h3&gt;
+&lt;p&gt;First let’s tackle the teams. When the user logs in, they teams would be built into a list, and we also need something to represent the currently displaying team. Right now all of this is mocked in &lt;code class=&quot;highlighter-rouge&quot;&gt;homepage.dart&lt;/code&gt;, but ideally they should be in the service module, since the component itself should only display content and forward the user interactions. So first thing we should do is to take out all the teams-related variables, and delegate the functionality to the service.&lt;/p&gt;
+
+&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// firebase_service.dart&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FirebaseService&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;//...&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;fb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Database&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fbDatabase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;previousEmojiMap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{};&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;teams&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[];&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentTeam&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;previousEmojis&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[];&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;FirebaseService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;_fbGoogleAuthProvider&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;GoogleAuthProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fbAuth&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fbDatabase&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;database&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;buildTeams&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fbDatabase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'users_teams/'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fbAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currentUser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;uid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;onValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;teams&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[];&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;Map&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rawTeams&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;snapshot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rawTeams&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;rawTeams&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;teams&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;changeTeam&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;teams&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;changeTeam&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;team&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;currentTeam&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;team&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;currentTeam&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;team&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;switchTeam&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;switchTeam&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// return if there is already a lister.&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;previousEmojiMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;containsKey&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;currentTeam&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;previousEmojiMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;currentTeam&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[];&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Register listener&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fbDatabase&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'messages/'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentTeam&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;onChildAdded&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_buildPrevEmoji&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentTeam&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;_buildPrevEmoji&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;team&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Map&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rawMessages&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;snapshot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;previousEmojiMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;team&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fromJson&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rawMessages&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;Future&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;postNewMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Message&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fbDatabase&lt;/span&gt;
+          &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'messages/'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentTeam&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+          &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toMap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+          &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;future&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;Future&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;createTeam&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;teamName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fbDatabase&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'users_teams/'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fbAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currentUser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;uid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;teamName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;future&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;//...&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;First of all, a &lt;code class=&quot;highlighter-rouge&quot;&gt;Database&lt;/code&gt; object is created during initialization. Then the relevant variables are added. Note that &lt;code class=&quot;highlighter-rouge&quot;&gt;previousEmojiMap&lt;/code&gt; is especially important, and I will explain this later.&lt;/p&gt;
+
+&lt;p&gt;First let’s take a look at &lt;code class=&quot;highlighter-rouge&quot;&gt;buildTeams()&lt;/code&gt;. As mentioned before, we reference &lt;code class=&quot;highlighter-rouge&quot;&gt;users_teams/$uid&lt;/code&gt; in the database, and register a callback on value. In it the value of the snapshot is iterated, and each team name is added into the list. Finally, it calls &lt;code class=&quot;highlighter-rouge&quot;&gt;changeTeam(teams[0])&lt;/code&gt; to point the current team to the first one of the list.&lt;/p&gt;
+
+&lt;p&gt;Following up let’s look at &lt;code class=&quot;highlighter-rouge&quot;&gt;changeTeam()&lt;/code&gt;. This function is fairly simple, in that it just updates &lt;code class=&quot;highlighter-rouge&quot;&gt;currentTeam&lt;/code&gt; if necessary and calls the  &lt;code class=&quot;highlighter-rouge&quot;&gt;switchTeam&lt;/code&gt; function.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;switchTeam&lt;/code&gt; is where I got things wrong the first time. Here it checks if a callback that builds the messages has been registered for this team. If so, nothing should be done. Otherwise a new callback would be registered.&lt;/p&gt;
+
+&lt;p&gt;This is necessary, since Teamoji is a Single Page Application. If this check is not done, multiple callbacks would be called when a new child is added into the messages list, and therefore showing multiple times in the list.&lt;/p&gt;
+
+&lt;p&gt;Lastly, the &lt;code class=&quot;highlighter-rouge&quot;&gt;createTeam()&lt;/code&gt; function is fairly straightforward as well. It simply pushes a new entry in the &lt;code class=&quot;highlighter-rouge&quot;&gt;users_teams/$uid&lt;/code&gt; list.&lt;/p&gt;
+
+&lt;h3 id=&quot;default-group&quot;&gt;Default group&lt;/h3&gt;
+&lt;p&gt;There are one more thing to take care of. When the user first logs in, they would not have any teams yet. If we use the current structure, the first thing the user sees will be a blank screen, which is quite confusing and bad UX. I added an extra check upon login that if this is a new user, assign them to the “general” group. This way users would be able to see at least some content when they first log in.&lt;/p&gt;
+
+&lt;div class=&quot;language-diff highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//firebase_service.dar
+
+Future signIn() async {
+     try {
+       await fbAuth.signInWithPopup(_fbGoogleAuthProvider);
+&lt;span class=&quot;gi&quot;&gt;+      if (fbAuth.currentUser != null) {
++        fbDatabase
++            .ref('users_teams/' + fbAuth.currentUser.uid)
++            .once('value')
++            .then((event) async {
++          if (event.snapshot.val() == null) {
++            await fbDatabase
++                .ref('users_teams/' + fbAuth.currentUser.uid)
++                .push('general').future;
++          }
++          ;
++        });
++      }
+&lt;/span&gt;     } catch (error) {
+       print(&quot;$runtimeType::login() -- $error&quot;);
+     }
+   }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;wiring-up&quot;&gt;Wiring up&lt;/h3&gt;
+&lt;p&gt;Now that services functionalities are ready, we can simply wiring it up to our components.&lt;/p&gt;
+
+&lt;div class=&quot;language-diff highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// changes of homepage.dart
+
+
+&lt;span class=&quot;gu&quot;&gt;@@ -34,43 +34,28 @@ import 'package:angular_components/angular_components.dart';
+&lt;/span&gt;       'homepage.css',
+     ])
+ class HomepageComponent extends HomepageMessages implements OnInit {
+   bool visible = false;
+   String currentComponent = 'homepage';
+ 
+&lt;span class=&quot;gd&quot;&gt;-  List&amp;lt;Message&amp;gt; previousEmojis = [
+-    new Message('Nick', 'images/profile_placeholder.png', '\u{1F60B}',
+-        new DateTime.now()),
+-    new Message('Nick', 'images/profile_placeholder.png', '\u{1F60B}',
+-        new DateTime.now()),
+-    new Message('Nick', 'images/profile_placeholder.png', '\u{1F60B}',
+-        new DateTime.now()),
+-    new Message('Nick', 'images/profile_placeholder.png', '\u{1F60B}',
+-        new DateTime.now()),
+-    new Message('Nick', 'images/profile_placeholder.png', '\u{1F60B}',
+-        new DateTime.now()),
+-  ];
+-
+-  List&amp;lt;String&amp;gt; teams = ['google', 'angular', 'firebase'];
+-
+&lt;/span&gt;   final StreamController&amp;lt;String&amp;gt; stream = new StreamController.broadcast();
+
+   @Output()
+   Stream get onPageChange =&amp;gt; stream.stream;
+ 
+&lt;span class=&quot;gd&quot;&gt;-  bool shouldShowAsDeepBlue(String team) =&amp;gt; false;
+&lt;/span&gt;&lt;span class=&quot;gi&quot;&gt;+  bool shouldShowAsDeepBlue(String team) =&amp;gt; team == service.currentTeam;
+&lt;/span&gt; 
+   Future onSelectEmoji(Message message) async {
+     currentComponent = 'homepage';
+&lt;span class=&quot;gd&quot;&gt;-    // TODO: use firebase database to push new message.
+&lt;/span&gt;&lt;span class=&quot;gi&quot;&gt;+    await service.postNewMessage(message);
+&lt;/span&gt;   }
+ 
+   Future onCreateTeam(String teamName) async {
+     currentComponent = 'homepage';
+     if (teamName == null) return;
+&lt;span class=&quot;gd&quot;&gt;-    // TODO: use firebase database to create new page.
+&lt;/span&gt;&lt;span class=&quot;gi&quot;&gt;+    await service.createTeam(teamName);
+&lt;/span&gt;   }
+ 
+   Future onSignOut() async {
+&lt;span class=&quot;gu&quot;&gt;@@ -80,6 +65,6 @@ class HomepageComponent extends HomepageMessages implements OnInit {
+&lt;/span&gt; 
+   @override
+   ngOnInit() {
+&lt;span class=&quot;gd&quot;&gt;-    // TODO: use firebase database to build the teams.
+&lt;/span&gt;&lt;span class=&quot;gi&quot;&gt;+    service.buildTeams();
+&lt;/span&gt;   }
+ }
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Also remember to update the template of homepage.&lt;/p&gt;
+
+&lt;div class=&quot;language-diff highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// changes of homepage.html
+
+
+&lt;span class=&quot;gu&quot;&gt;@@ -5,10 +5,10 @@
+&lt;/span&gt;             
+         &amp;lt;/div&amp;gt;
+         &amp;lt;material-list class=&quot;tm-home-drawer-list&quot;&amp;gt;
+&lt;span class=&quot;gd&quot;&gt;-            &amp;lt;material-list-item *ngFor=&quot;let team of teams&quot;
+&lt;/span&gt;&lt;span class=&quot;gi&quot;&gt;+            &amp;lt;material-list-item *ngFor=&quot;let team of service.teams&quot;
+&lt;/span&gt;                                 class=&quot;tm-team-list-item&quot;
+                                 [class.deep-blue]=&quot;shouldShowAsDeepBlue(team)&quot;
+&lt;span class=&quot;gd&quot;&gt;-                                (trigger)=&quot;drawer.toggle();&quot;&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;gi&quot;&gt;+                                (trigger)=&quot;drawer.toggle(); service.changeTeam(team);&quot;&amp;gt;
+&lt;/span&gt;                 
+             &amp;lt;/material-list-item&amp;gt;
+         &amp;lt;/material-list&amp;gt;
+&lt;span class=&quot;gu&quot;&gt;@@ -28,11 +28,11 @@
+&lt;/span&gt;             &amp;lt;material-button class=&quot;material-drawer-button&quot; icon (trigger)=&quot;drawer.toggle()&quot;&amp;gt;
+                 &amp;lt;material-icon icon=&quot;menu&quot;&amp;gt;&amp;lt;/material-icon&amp;gt;
+             &amp;lt;/material-button&amp;gt;
+&lt;span class=&quot;gd&quot;&gt;-            &amp;lt;div class=&quot;tm-main-content-header-title&quot;&amp;gt;header&amp;lt;/div&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;gi&quot;&gt;+            &amp;lt;div class=&quot;tm-main-content-header-title&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/span&gt;         &amp;lt;/div&amp;gt;
+         &amp;lt;div class=&quot;tm-main-content-content&quot;&amp;gt;
+             &amp;lt;ul style=&quot;padding-left: 0; display: grid; grid-template-columns: 1fr 1fr;&quot;&amp;gt;
+&lt;span class=&quot;gd&quot;&gt;-                &amp;lt;li *ngFor=&quot;let message of previousEmojis&quot; class=&quot;tm-prev-emoji-item&quot;&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;gi&quot;&gt;+                &amp;lt;li *ngFor=&quot;let message of service.previousEmojis&quot; class=&quot;tm-prev-emoji-item&quot;&amp;gt;
+&lt;/span&gt;                     &amp;lt;user-post [message]=&quot;message&quot;&amp;gt;&amp;lt;/user-post&amp;gt;
+                 &amp;lt;/li&amp;gt;
+             &amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Lastly, we need to create a new &lt;code class=&quot;highlighter-rouge&quot;&gt;Message&lt;/code&gt; object when the user selects an emoji from the selector. This should be done in &lt;code class=&quot;highlighter-rouge&quot;&gt;EmojiSelector&lt;/code&gt; component.&lt;/p&gt;
+
+&lt;div class=&quot;language-diff highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class EmojiSelectorComponent extends EmojiSelectorMessages with EmojiList {
+   @Output()
+   Stream get onSelect =&amp;gt; _selectStream.stream;
+ 
+&lt;span class=&quot;gi&quot;&gt;+  FirebaseService service;
++
++  EmojiSelectorComponent(this.service);
++
+&lt;/span&gt;   void onCancel() =&amp;gt; _selectStream.add(null);
+ 
+&lt;span class=&quot;gd&quot;&gt;-  void onSelectEmoji(String emoji) {
+-    // TODO: add new message to the stream.
+-    _selectStream.add(null);
+-  }
+&lt;/span&gt;&lt;span class=&quot;gi&quot;&gt;+  void onSelectEmoji(String emoji) =&amp;gt; _selectStream.add(new Message(
++      service.fbAuth.currentUser.displayName,
++      service.fbAuth.currentUser.photoURL,
++      emoji,
++      new DateTime.now()));
+&lt;/span&gt;}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After that, our Teamoji app should be completed.&lt;/p&gt;
+
+&lt;h3 id=&quot;finishing-up&quot;&gt;Finishing up&lt;/h3&gt;
+&lt;p&gt;You can find the complete code of Teamoji in the master branch of the &lt;a href=&quot;https://github.com/NickWu007/Teamoji-practice&quot;&gt;Github repo&lt;/a&gt;. I have omitted some steps in the styling and the steps to push it with Firebase hosting. If that’s something you want to know, let me know in the comments and I can do a follow-up in the future.&lt;/p&gt;
+
+&lt;p&gt;Also, I will do a separate post as a reflection of Teamoji, from the conception of the idea, and design and engineering decisions, and the process of building it. Stay tuned for that.&lt;/p&gt;
+
+&lt;p&gt;I hope this series serves as a good intro if you are new to AngularDart and Firebase. In the next few months I will try to make this web app into a mobile app, with &lt;a href=&quot;flutter.io&quot;&gt;Flutter&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hope you had fun reading this series. I will see you soon.&lt;/p&gt;
+
+&lt;p&gt;Nick&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">Today we finish up with Teamoji! In the last post we got the authentication and session checking done. In this post we will start from this branch on the Github repo. So without further ado, let’s jump in!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/dart_angular.png" /></entry><entry><title type="html">Teamoji #9 Entering Firebase</title><link href="https://nickwu007.github.io/dart/technical/2018/03/19/teamoji-9-entering-firebase/" rel="alternate" type="text/html" title="Teamoji #9 Entering Firebase" /><published>2018-03-19T22:21:00+00:00</published><updated>2018-03-19T22:21:00+00:00</updated><id>https://nickwu007.github.io/dart/technical/2018/03/19/teamoji-9-entering-firebase</id><content type="html" xml:base="https://nickwu007.github.io/dart/technical/2018/03/19/teamoji-9-entering-firebase/">&lt;p&gt;Today we keep going with Teamoji. In this post we are starting to use &lt;a href=&quot;https://firebase.google.com/&quot;&gt;Firebase&lt;/a&gt; for the authentication and database.&lt;/p&gt;
+
+&lt;h3 id=&quot;hold-on-a-sec&quot;&gt;Hold on a sec!&lt;/h3&gt;
+&lt;p&gt;Before I go into detail about integrating Firebase into Teamoji, for those of you who have been following this series since the beginning, I have made some drastic changes to the front end. Now there’s no routing in the app, on other words Teamoji is not a SPA(Single Page Application). This choice is made because I felt that using a SPA structure is easier for understanding the codebase. We will start with this SPA with no Firebase. You can find the starting code &lt;a href=&quot;https://github.com/NickWu007/Teamoji-practice/tree/firebase_start&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;firebase-overview&quot;&gt;Firebase Overview&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_96dp.png&quot; alt=&quot;firebase_logo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Firebase is Google’s BaaS(Backend as a Service), now with many development and growth tools readily available for developers. The main features of Firebase include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Authentication&lt;/li&gt;
+  &lt;li&gt;Real-time database&lt;/li&gt;
+  &lt;li&gt;Cloud storage&lt;/li&gt;
+  &lt;li&gt;Cloud functions&lt;/li&gt;
+  &lt;li&gt;Analytics&lt;/li&gt;
+  &lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the current version of Teamoji, we will only use the authentication and database module. In the future all other main features mentioned can be integrated in as well.&lt;/p&gt;
+
+&lt;p&gt;In this post we will implement the authentication of Firebase, and in the next post the database will be added.&lt;/p&gt;
+
+&lt;h3 id=&quot;firebase-setup&quot;&gt;Firebase setup&lt;/h3&gt;
+&lt;p&gt;First of all, you must create a Firebase “project”, which holds all the configurations and the data of your application. Go to Firebase &lt;a href=&quot;https://console.firebase.google.com/&quot;&gt;console&lt;/a&gt; and create a project following the instructions.&lt;/p&gt;
+
+&lt;p&gt;Once you have done that, the firebase module and firebase library should be added into the Angular Dart project. This is already done for you in the starter code.&lt;/p&gt;
+
+&lt;p&gt;One last configuration needed is in the “Authentication” tab once you have created the project. Under “Sign-in Method”, you must enable Google sign in, for it to be used in Teamoji.&lt;/p&gt;
+
+&lt;h3 id=&quot;firebase-service&quot;&gt;Firebase Service&lt;/h3&gt;
+&lt;p&gt;Before we start building the frontend interactions, a &lt;code class=&quot;highlighter-rouge&quot;&gt;FirebaseService&lt;/code&gt; should be added. It would be possible, of course, to use Firebase libraries directly in each component, but it would obviously be better to extract them into a custom service. Also, remember that ultimately we want to use Firebase with Flutter as well, and a ready-to-use service would be very handy.&lt;/p&gt;
+
+&lt;p&gt;On the “project overview” page of the Firebase console, a code snippet of how to initialize the firebase app can be found. We will use this in our setup.&lt;/p&gt;
+
+&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;/// firebase_service.dart&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'dart:async'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:angular/core.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:firebase/firebase.dart'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'secret.dart'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Injectable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FirebaseService&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;FirebaseService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here the code snippet is in &lt;code class=&quot;highlighter-rouge&quot;&gt;secret.init()&lt;/code&gt;, which is not tracked on github to protect the API key. Simply add your own init code snippet in and it would be fine.&lt;/p&gt;
+
+&lt;p&gt;Now that we have this service, it should be added into the provider list for the application, so that DI knows to inject it into components.
+ d&lt;/p&gt;
+&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;/// main.dart&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;FirebaseService&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FirebaseService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;bootstrap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AppComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;sign-in-and-sign-out&quot;&gt;Sign in and sign out&lt;/h3&gt;
+&lt;p&gt;First let’s work out the easy bits. Firebase has excellent &lt;a href=&quot;https://firebase.google.com/docs/auth/web/google-signin&quot;&gt;docs&lt;/a&gt; on how to implement authentication and other modules. I will only go over the gist.&lt;/p&gt;
+
+&lt;p&gt;Essentially, because Firebase offers so many authentication methods, when one wants to use the sign in method, one must specify which “provider” it is. As mentioned before, we will use Google sign in. The provider can be generated when the service is constructed, since we will most definitely need it. We would also need the &lt;code class=&quot;highlighter-rouge&quot;&gt;auth&lt;/code&gt; object from Firebase, which has the sign in and sign out method.&lt;/p&gt;
+
+&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;/// firebase_service.dart&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@Injectable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FirebaseService&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;fb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Auth&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fbAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;fb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;GoogleAuthProvider&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_fbGoogleAuthProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;FirebaseService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;_fbGoogleAuthProvider&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;GoogleAuthProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fbAuth&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After setting this up, the &lt;code class=&quot;highlighter-rouge&quot;&gt;signIn()&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;signOut()&lt;/code&gt; methods can be implemented by following the docs:&lt;/p&gt;
+
+&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;/// firebase_service.dart&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;Future&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;signIn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fbAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;signInWithPopup&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_fbGoogleAuthProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$runtimeType&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;::login() -- &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$error&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;signOut&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fbAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;signOut&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now let’s wire it up to the application, and test if it works.&lt;/p&gt;
+
+&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;/// welcome_page.dart&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;WelcomePageComponent&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WelcomePageMessages&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StreamController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StreamController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;broadcast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FirebaseService&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;WelcomePageComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;nd&quot;&gt;@Output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Stream&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;onPageChange&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;Future&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;login&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;signIn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fbAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currentUser&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'homepage'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;First inject the service in the constructor. When the button is pressed, &lt;code class=&quot;highlighter-rouge&quot;&gt;await&lt;/code&gt; on the service to sign in. After that, simply double check if there’s a current user. If so, change the showing page to the homepage.&lt;/p&gt;
+
+&lt;p&gt;Conversely, in the homepage &lt;code class=&quot;highlighter-rouge&quot;&gt;signOut&lt;/code&gt; method, the implementation is similar.&lt;/p&gt;
+
+&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// homepage.dart&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HomepageComponent&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HomepageMessages&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OnInit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
+
+  &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FirebaseService&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;HomepageComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;Future&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;onSignOut&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;signOut&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'welcome'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After implementing this, the sign in/ sign out flow should be complete.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/signin-out-demo.gif&quot; alt=&quot;sign-in-out-demo&quot; /&gt;
+&lt;em&gt;Works! Woohoo!&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;persist-authentication-status&quot;&gt;Persist authentication status&lt;/h3&gt;
+&lt;p&gt;Now that we have the sign in and sign out flow, it is worth reminding ourselves that users wouldn’t want to sign in every time they refresh the page, or if they just signed in an hour ago. We would want some mechanisms that preserves the user sign in status.&lt;/p&gt;
+
+&lt;p&gt;Fortunately, firebase offers an event when a user’s authentication state changes. We can register a callback to this event stream, and check if there’s a new user after the state change.&lt;/p&gt;
+
+&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;/// app_component.dart&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AppComponent&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OnInit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentPage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'welcome'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;FirebaseService&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;AppComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;onPageChange&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nextPage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentPage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nextPage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;nd&quot;&gt;@override&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;ngOnInit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fbAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;onAuthStateChanged&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;currentPage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'homepage'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;With this extra logic added, the landing flow becomes something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/login-persist.gif&quot; alt=&quot;login-persist-demo&quot; /&gt;
+&lt;em&gt;No need to sign in upon refresh!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;You will see that upon refresh, the authentication has not quite been updated yet, so the welcome page is shown. However, it is soon updated to reflect the user is actually signed in. Therefore the app loads the homepage. In addition, after signing out, a refresh would no longer redirect the user to homepage, which is exactly what we wanted.&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;You can find the completed code up to this point &lt;a href=&quot;https://github.com/NickWu007/Teamoji-practice/tree/firebase_auth_done&quot;&gt;here&lt;/a&gt;. Firebase has proven to be extremely easy to get started and use. It should be able to do more than needed for Teamoji. In the next post we will explore the Firebase real-time database, and finish the Teamoji project. As usual, if you run into anything weird, let me know in the comments below, or hit me up on twitter.&lt;/p&gt;
+
+&lt;p&gt;Happy coding!
+Nick&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">Today we keep going with Teamoji. In this post we are starting to use Firebase for the authentication and database.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/dart_angular.png" /></entry><entry><title type="html">Dart #8: homepage part 2</title><link href="https://nickwu007.github.io/dart/technical/2018/01/08/dart-8-homepage-part-2/" rel="alternate" type="text/html" title="Dart #8: homepage part 2" /><published>2018-01-08T03:32:35+00:00</published><updated>2018-01-08T03:32:35+00:00</updated><id>https://nickwu007.github.io/dart/technical/2018/01/08/dart-8-homepage-part-2</id><content type="html" xml:base="https://nickwu007.github.io/dart/technical/2018/01/08/dart-8-homepage-part-2/">&lt;p&gt;Today we continue with the homepage for Teamoji. In the last tutorial we finished the main content of Homepage. But we are still missing the hidden menu part on the left. This introduces a new concept of Angular Dart: deferred content. So without further ado, let’s jump in!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2018/01/homepage_drawer.png&quot; alt=&quot;Homepage_drawer.png&quot; /&gt;
+&lt;em&gt;Mock&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;whats-deferred-content&quot;&gt;What’s Deferred Content?&lt;/h3&gt;
+
+&lt;p&gt;Before we dive in code it is important to understand the modal component and deferred content. Deferred content roots from the &lt;em&gt;Lazy Evaluation Principle&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;“Lazy Evaluation, or call-by-need is an evaluation strategy which delays the evaluation of an expression until its value is needed.”&lt;/p&gt;
+
+&lt;p&gt;You might think: how is lazy a good thing? Consider the following scenario: the user logs into the homepage, which displays the recent chat history of a particular team. The user is very active in this team, and rarely switches to other teams.&lt;/p&gt;
+
+&lt;p&gt;Without lazy evaluation, we will compile and load all components when user accesses the page. However the user never expands the left menu, making the load time for that component virtually useless. On the other hand, with lazy evaluation, we choose not to compile and load the hidden components, and only load them when user is asking for them. This way we speed up the initial page load, which is crucial to acquisition and retention.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2018/01/lazyness.png&quot; alt=&quot;lazyness&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-menu-component&quot;&gt;The menu component&lt;/h3&gt;
+
+&lt;p&gt;We can see the bits of the menu component quite clearly from the mock:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;A header that says “Your teams”.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A list of the teams the user belongs to, highlight the one currently on display. (&lt;em&gt;ngFor&lt;/em&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A button to create new Team. (&lt;em&gt;Material-button&lt;/em&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A sign out button. (&lt;em&gt;Material-button&lt;/em&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;At this point you should be fairly comfortable with all these techniques. The only thing to watch for in the &lt;a href=&quot;https://dart-lang.github.io/angular_components_example/#AppLayout&quot;&gt;Application Layout&lt;/a&gt; format.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;material-drawer&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;temporary&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;drawer=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;drawer&quot;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;overlay&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;]=&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-home-drawer&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-home-drawer-header-row&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;material-list&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-home-drawer-list&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;material-list-item&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ngFor=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;let team of teams&quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-team-list-item&quot;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;deep-blue&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;]=&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;shouldShowAsDeepBlue&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;team&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)&quot;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;trigger&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)=&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;onChangeTeam&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;team&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/material-list-item&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/material-list&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-home-drawer-btns&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+
+
+
+
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/material-drawer&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;There are a few points to note. First notice we name the &lt;code class=&quot;highlighter-rouge&quot;&gt;material-drawer&lt;/code&gt; as &lt;code class=&quot;highlighter-rouge&quot;&gt;drawer&lt;/code&gt;. This is so that we can toggle it by clicking on the menu button on the homepage:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;material-button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;material-drawer-button&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;icon&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;trigger&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)=&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;drawer&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toggle&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;()&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;material-icon&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;icon=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;menu&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/material-icon&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/material-button&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Also notice the &lt;code class=&quot;highlighter-rouge&quot;&gt;*deferredContent&lt;/code&gt; marker in the fist &lt;code class=&quot;highlighter-rouge&quot;&gt;div&lt;/code&gt;. The &lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; has the same meaning as in &lt;code class=&quot;highlighter-rouge&quot;&gt;*ngFor&lt;/code&gt;: this is a structural directive, which alters the DOM tree. Adding this marker tells the dart engine: don’t load me unless needed. The rest is fairly standard stuff.&lt;/p&gt;
+
+&lt;p&gt;After adding this into the homepage, we can see something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2018/01/screen-shot-2018-01-07-at-22-29-41.png&quot; alt=&quot;Screen Shot 2018-01-07 at 22.29.41&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;At this point we have technically finished all mocks given in the first place. But as you can probably see, this app is still broken. There are some functionalities missing, such as a button to join a team. Also there’s no navigation between the pages. In the next post we will address these problems, and get started with firebase!&lt;/p&gt;
+
+&lt;p&gt;As usual if you get stuck somewhere, always feel free to checkout the &lt;a href=&quot;https://github.com/NickWu007/Teamoji-practice&quot;&gt;repo&lt;/a&gt;, or PM me the specific issue. Happy coding!&lt;/p&gt;</content><author><name>nickwu0715</name></author><summary type="html">Today we continue with the homepage for Teamoji. In the last tutorial we finished the main content of Homepage. But we are still missing the hidden menu part on the left. This introduces a new concept of Angular Dart: deferred content. So without further ado, let’s jump in!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/dart_angular.png" /></entry><entry><title type="html">New Year Resolutions: 2018</title><link href="https://nickwu007.github.io/non_technical/2018/01/08/new-year-resolutions-2018/" rel="alternate" type="text/html" title="New Year Resolutions: 2018" /><published>2018-01-08T01:38:00+00:00</published><updated>2018-01-08T01:38:00+00:00</updated><id>https://nickwu007.github.io/non_technical/2018/01/08/new-year-resolutions-2018</id><content type="html" xml:base="https://nickwu007.github.io/non_technical/2018/01/08/new-year-resolutions-2018/">&lt;p&gt;New year resolution has sort of become a joke in recent years, referencing plans people set at the start of the year and unavoidably fall short at the end of year. Though probably true, I still maintain that setting goals is helpful, in that they orient one’s focus and efforts. Personally I have been doing this privately for the past few years, and I am quite happy that every year I have managed to achieve most of them. This year in the spirit of getting more visibility and accountability I plan to write out some of the goals I set for the year, which I shall review at the end of 2018.&lt;/p&gt;
+
+&lt;p&gt;Most of the goals in this post are somewhat related to software development, for privacy concerns. ;)&lt;/p&gt;
+
+&lt;h3 id=&quot;technical&quot;&gt;Technical&lt;/h3&gt;
+
+&lt;h4 id=&quot;real-life-project&quot;&gt;Real life project&lt;/h4&gt;
+
+&lt;p&gt;If you have been here for a while, you will know I have started an &lt;a href=&quot;https://nickwuedinburgh.wordpress.com/category/dartlang/&quot;&gt;AngularDart series&lt;/a&gt;, in which we build a web chat app called Teamoji. Currently the app is only about 50% done, and the first goal of the year is to finish the project and blog series, also launch it online.&lt;/p&gt;
+
+&lt;p&gt;Personally I have virtually no experience in devops. (The last time I deploy code is through a FTP server) So this would be an interesting experience to go through. I will certainly blog about this as we progress. I have set up a list of TODOs for this project and we will follow it.&lt;/p&gt;
+
+&lt;h4 id=&quot;taking-it-further&quot;&gt;Taking it further&lt;/h4&gt;
+
+&lt;p&gt;Once the web app is online, I would like to do a follow-on project to make a mobile app for it as well. For a very time I have been interested in &lt;a href=&quot;https://flutter.io/&quot;&gt;Flutter&lt;/a&gt; and this would a perfect sized app to adopt. I will devote a separate post to this once we finish the web app.&lt;/p&gt;
+
+&lt;h4 id=&quot;going-deeper-into-backend&quot;&gt;Going deeper into Backend&lt;/h4&gt;
+
+&lt;p&gt;After half of a dozen front end heavy projects, I suddenly realized how unfamiliar I am with backend. Over the past year when I was using Node for my uni honors project, I found myself very confused at times and had to rely quite heavily on online help. This year I plan to vastly expand my backend knowledge, through a series of side projects, focused on API building. Since this part is mostly personal learning, through a lot of existing materials, I would not be publishing relevant posts.&lt;/p&gt;
+
+&lt;h4 id=&quot;distributed-systems&quot;&gt;Distributed Systems&lt;/h4&gt;
+
+&lt;p&gt;Over the last year we saw a burst in cryptocurrency, most famously Bitcoin. Personally I have been very interested in Distributed Systems, ever since I took a relevant class at UNC.&lt;/p&gt;
+
+&lt;p&gt;This year I would like to allocate time for 2 full system building projects, one centralized and one decentralized. The specific projects are TBD, and as usual I will write up individual posts when I start the project.&lt;/p&gt;
+
+&lt;h3 id=&quot;non-technical&quot;&gt;Non-Technical&lt;/h3&gt;
+
+&lt;h4 id=&quot;reading&quot;&gt;Reading&lt;/h4&gt;
+
+&lt;p&gt;Over the past year I have only read 5 books from start to finish, partly because of laziness, and ignorance of the value of reading. In 2018, I plan to read 10 fictions. (Yes you heard that right) When I look at my bookshelf, it is very clear most of the books I have read are technical, or relevant to the tech business. In the interest of balance, I figure it is time to pay more attention into fictions. If you have a suggestion, please let me know. There are still quite a few empty slots.&lt;/p&gt;
+
+&lt;p&gt;This doesn’t mean I will stop reading technical books though. To finish the projects above, there’s a quite a list of books and online materials I should go through.&lt;/p&gt;
+
+&lt;h4 id=&quot;giving-back-to-the-community&quot;&gt;Giving back to the community&lt;/h4&gt;
+
+&lt;p&gt;I have never considered myself a genius developer. Along the way I have worked very hard, but equally important, I have received countless help from my peers, mentors, and just friends. The point of this blog is to give back some of my knowledge to people just starting out their developer journey, and help someone to get through what I have been through. In 2018, I want to help more people, beyond the medium of text.&lt;/p&gt;
+
+&lt;p&gt;I am planning to set up a podcast for myself, to talk about my experience as a developer, and have guests to discuss various topics of software development. As you can probably guess, I have no experience in running a podcast. But over the past year I have listened to many great podcasts and I believe it is a viable medium to share knowledge and experience. If you have topics that you have to hear me talk about, please let me know, either through comments below or private messaging. As guests go, I would have mostly my friends and other developers I know, and we will see how that goes!&lt;/p&gt;
+
+&lt;h3 id=&quot;wrapping-up&quot;&gt;Wrapping up&lt;/h3&gt;
+
+&lt;p&gt;These are my goals in 2018. They seem like a lot for sure, and frankly I am slight terrified at this point when I scroll back and read them again. However, I have confidence to knock them down, or try my best to.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2018/01/screen-shot-2018-01-07-at-20-35-00.png&quot; alt=&quot;Screen Shot 2018-01-07 at 20.35.00&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Have a moment to think about what you want to achieve in the new year, and set up a list to track them too. It doesn’t really matter if you complete them or not; what matters is have you really tried.&lt;/p&gt;
+
+&lt;p&gt;Happy New Year!&lt;/p&gt;</content><author><name>nickwu0715</name></author><summary type="html">New year resolution has sort of become a joke in recent years, referencing plans people set at the start of the year and unavoidably fall short at the end of year. Though probably true, I still maintain that setting goals is helpful, in that they orient one’s focus and efforts. Personally I have been doing this privately for the past few years, and I am quite happy that every year I have managed to achieve most of them. This year in the spirit of getting more visibility and accountability I plan to write out some of the goals I set for the year, which I shall review at the end of 2018.</summary></entry><entry><title type="html">Impostor Syndrome: thoughts and tips</title><link href="https://nickwu007.github.io/life/non_technical/2017/10/22/impostor-syndrome-thoughts-and-tips/" rel="alternate" type="text/html" title="Impostor Syndrome: thoughts and tips" /><published>2017-10-22T16:22:33+01:00</published><updated>2017-10-22T16:22:33+01:00</updated><id>https://nickwu007.github.io/life/non_technical/2017/10/22/impostor-syndrome-thoughts-and-tips</id><content type="html" xml:base="https://nickwu007.github.io/life/non_technical/2017/10/22/impostor-syndrome-thoughts-and-tips/">&lt;p&gt;Recently a dear friend of mine is struggling to enjoy work. As this is their first “job”, a lot of pressure, imagined or not, has become a source of great anxiety. After discussing the mental hardship during these tough moments, I can’t help by remembering how I felt in my first job. Today I want to identify this problem, explain why it exists, and what we can do to mitigate it.&lt;/p&gt;
+
+&lt;p&gt;Before I begin, it should be pointed that I have not taken a full-time job either, and all my experience came from previous internships. I do believe my thoughts and pointers are valid, but take it with a grain of salt just in case.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-impostor-syndrome&quot;&gt;What is Impostor Syndrome&lt;/h3&gt;
+
+&lt;p&gt;Rather than giving a formal definition about the term, which you can find &lt;a href=&quot;https://en.wikipedia.org/wiki/Impostor_syndrome&quot;&gt;here&lt;/a&gt;, I want to give an example to start with. Imagine you are at a party, standing in a circle of discussion. Weirdly you know all the people in the group, but just cannot understand what they are talking about. You feel a bit embarrassed to ask, so you just listen quietly, and throw in a few “that’s interesting”s. When you are on the way home, you question your intelligence and if you looked stupid at the party, and you end up hating yourself for being an idiot.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/10/screenshot2015-08-13at10_48_51.png&quot; alt=&quot;ScreenShot2015-08-13at10_48_51&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sounds familiar? Now switch the context into an office, and you are having Impostor Syndrome now. Often times, people feel bad for themselves for not performing well at work, or not following others’ train of thought, and they feel like they are frauds, pretending that they understand things they don’t; and they are Impostor(that’s where the term comes from).&lt;/p&gt;
+
+&lt;h3 id=&quot;why-we-have-it&quot;&gt;Why we have it?&lt;/h3&gt;
+
+&lt;p&gt;First of all, looking back at my earlier jobs, it is so viscerally understandable to have the feeling that you are not as good as you think, or people expect you to be, especially for me and my contemporaries, just entering, or about to, the industry. This is not a singular problem in tech, but across pretty much any industry. Let me walk you through how a new grad walks into the trap of Impostor Syndrome, and sometimes ironically rational.&lt;/p&gt;
+
+&lt;p&gt;You begin your first day, surrounded by people who all have more experience than you do. You want to “prove” that you are just as good, and you start your work with the determination of “I can figure things out by myself”. Not after long you get hopelessly stuck, and after a few hours of intellectual and mental battle, you got into a position where you have to ask someone for help, but simultaneously ashamed of showing weakness. When you finally solve the problem after possibly extensive help, you escape from work, wishing people had forgotten how stupid you were today. You get home and cry in the shower, thinking “maybe I am just a fake”, and you dread showing up at work the next day. Voilà?&lt;/p&gt;
+
+&lt;p&gt;In my opinion, Impostor Syndrome roots essentially from a lack of confidence, specifically in the workplace. Being fresh out of college, we may sudden realize just how much we don’t know that goes into our work, and that makes us nervous, worrying others may disapprove us. I totally had a mental phase like this, and I think many people have it too. And the worst of all is, you can’t really tell anyone about this, without admitting your unreadiness for work.&lt;/p&gt;
+
+&lt;h3 id=&quot;removing-the-mental-block&quot;&gt;Removing the mental block&lt;/h3&gt;
+
+&lt;p&gt;I want to introduce a different way of thinking about this, which helped me to deal with Impostor Syndrome. Instead of trying to resolve it, try to admit and embrace it.&lt;/p&gt;
+
+&lt;p&gt;People around us at work have worked for years, if not decades, to horn their skills in real life situations, which makes them competent when we look at them. They didn’t get to this point in a day. We must understand when starting a new job, most people would &lt;em&gt;objectively&lt;/em&gt; struggle, due to inexperience. Most importantly, there’s nothing to be shamed of for not knowing. What matters is how you deal with that.&lt;/p&gt;
+
+&lt;p&gt;Also you need to see your career as a process, not a static view(pardon the pun). Right now you are not good at what you do, that’s for sure; so just accept it. What keeps you moving forward is the belief that &lt;strong&gt;EVENTUALLY&lt;/strong&gt; you will be good at it, as long as you put in enough effort.&lt;/p&gt;
+
+&lt;p&gt;You may feel that “eventually” is too far and impractical, and that’s reasonable. I cannot predict when I will become a “strong” developer, but I can make sure that I work towards it everyday. In the end, the result doesn’t matter; what matters is the &lt;em&gt;journey&lt;/em&gt; you take, and if you &lt;em&gt;enjoyed&lt;/em&gt; it.&lt;/p&gt;
+
+&lt;h3 id=&quot;some-practical-tips&quot;&gt;Some practical tips&lt;/h3&gt;
+
+&lt;p&gt;If you have something like what I described before at work, try this tomorrow. Forget you are an employee, and think of yourself having a “behind the curtains” look into what smart people do at work. Simply observe and appreciate their work process, and absorb a bit to improve yourself. The trick here is you remove yourself from comparing against your colleagues, and move to appreciate them and in term you will appreciate too.&lt;/p&gt;
+
+&lt;p&gt;There’s a more readily applicable tip about Impostor Syndrome I feel like bringing up, and that’s talking about it. Yes it is embarrassing, but honestly talking about it with people you trust helps a lot, even if they just simply listen and nod. I am very lucky to have someone to share my fears and anxieties. And guess what? I can return the favors in the same fashion. Find a friend to talk about it, and offer to listen when they need too. When one mind can’t take, find another one.&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;I hope this helps you in accepting your weakness and finding ways to improve it. If you want to discuss the details, PM me on twitter and we can talk about it more in detail.&lt;/p&gt;
+
+&lt;p&gt;Tl;dr. Trust that you are awesome!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/10/1y1wg5.jpg&quot; alt=&quot;1y1wg5&quot; /&gt;&lt;/p&gt;</content><author><name>nickwu0715</name></author><summary type="html">Recently a dear friend of mine is struggling to enjoy work. As this is their first “job”, a lot of pressure, imagined or not, has become a source of great anxiety. After discussing the mental hardship during these tough moments, I can’t help by remembering how I felt in my first job. Today I want to identify this problem, explain why it exists, and what we can do to mitigate it.</summary></entry><entry><title type="html">Dart #7: Homepage part 1</title><link href="https://nickwu007.github.io/dart/technical/2017/10/20/dart-7-homepage-part-1/" rel="alternate" type="text/html" title="Dart #7: Homepage part 1" /><published>2017-10-20T23:44:50+01:00</published><updated>2017-10-20T23:44:50+01:00</updated><id>https://nickwu007.github.io/dart/technical/2017/10/20/dart-7-homepage-part-1</id><content type="html" xml:base="https://nickwu007.github.io/dart/technical/2017/10/20/dart-7-homepage-part-1/">&lt;p&gt;Hello there! Sorry I have been away for a few weeks due to uni work and other stuff, but today we will start working on the homepage of Teamoji, which will be the last page left, before we start hooking up everything and starting with Firebase!&lt;/p&gt;
+
+&lt;p&gt;As I mentioned before, due to the complexity of the app, we will split this page into a few posts. In this post we will work on the main content, which consists a header, a list of recent posts, and a button to post new emoji.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/10/homepage.png&quot; alt=&quot;Homepage&quot; /&gt;
+&lt;em&gt;Our goal today&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;userpostcomponent&quot;&gt;UserPostComponent&lt;/h3&gt;
+
+&lt;p&gt;At this point, you should have a bit of an “Angular” senses about how to implement things, given Angular’s features and principles. It is not hard to see we would want a component for one post by a user, and in the main component we would simply &lt;code class=&quot;highlighter-rouge&quot;&gt;*ngFor&lt;/code&gt; a bunch of this sub-component.&lt;/p&gt;
+
+&lt;p&gt;So let’s build that.&lt;/p&gt;
+
+&lt;p&gt;First you should consider what exactly this &lt;code class=&quot;highlighter-rouge&quot;&gt;UserPostComponent&lt;/code&gt; should do. It should display a posted emoji by a user. From that, we see there are actually two things needed for this component to display:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;a &lt;code class=&quot;highlighter-rouge&quot;&gt;User&lt;/code&gt; who posted this emoji.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What emoji it is.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As a result, we would want to have 2 &lt;code class=&quot;highlighter-rouge&quot;&gt;@Input()&lt;/code&gt; bindings from upstream, and that’s exactly what we will do.&lt;/p&gt;
+
+&lt;h4 id=&quot;user_postdart&quot;&gt;user_post.dart&lt;/h4&gt;
+
+&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:Teamoji_tutorial/src/emoji_render/emoji_render.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:angular/angular.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Component&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;selector:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'user-post'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;templateUrl:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'user_post.html'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;styleUrls:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'user_post.css'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;directives:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;EmojiRenderComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;UserPostComponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@Input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emoji&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;userName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shortUserName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;userName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;trim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toUpperCase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;user_posthtml&quot;&gt;user_post.html&lt;/h4&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-user-post-user-icon&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-user-profile-image&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;emoji-render&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;useBigIcon&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;]=&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;]=&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;emoji&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/emoji-render&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-user-post-timestamp&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;1h&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;user_postcss&quot;&gt;user_post.css&lt;/h4&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.tm-user-profile-image&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;dodgerblue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;table-cell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;vertical-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;middle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.tm-user-post-timestamp&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lightgray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;I won’t go into detail about how this component is built. Everything should be fairly easy to grasp. There’s one bit that requires some thinking though, which is rounding the &lt;code class=&quot;highlighter-rouge&quot;&gt;div&lt;/code&gt; for &lt;code class=&quot;highlighter-rouge&quot;&gt;shortUserName&lt;/code&gt; but still make the text centered. The last three lines in &lt;code class=&quot;highlighter-rouge&quot;&gt;.tm-user-profile-image&lt;/code&gt; realize that. Take a second look and really understand the reason for each line.&lt;/p&gt;
+
+&lt;p&gt;Another thing worth mentioning is that tapping on a recent post doesn’t do anything, hence no &lt;code class=&quot;highlighter-rouge&quot;&gt;@Output()&lt;/code&gt; event needed.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/10/screen-shot-2017-10-20-at-23-40-08.png&quot; alt=&quot;Screen Shot 2017-10-20 at 23.40.08&quot; /&gt;
+&lt;em&gt;I am cool kid!&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;main-homepage-content&quot;&gt;Main homepage content&lt;/h3&gt;
+
+&lt;p&gt;Now that we have &lt;code class=&quot;highlighter-rouge&quot;&gt;UserPostComponent&lt;/code&gt;, it is finally time to start building our homepage.&lt;/p&gt;
+
+&lt;p&gt;As we considered before, for now the homepage will have 3 main components:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;a header.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;a list of &lt;code class=&quot;highlighter-rouge&quot;&gt;UserPostComponent&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;a button to post new emoji.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Let’s double check if we have everything needed. The header will be an “icon button” plus some text, this is easy. The main section is a list of posts, which we have as well(for now we will mock a list of emojis, but eventually this should be pulled from Firebase). And last the button to add new emoji. There’s actually a designated name for this sort of button on the lower right side on page, according to Angular Material Design: &lt;a href=&quot;https://dart-lang.github.io/angular_components_example/#Buttons&quot;&gt;&lt;em&gt;Floating Action Button&lt;/em&gt;&lt;/a&gt;, which we can just use out of the box. So we have everything we need, let’s build it.&lt;/p&gt;
+
+&lt;h4 id=&quot;homepagehtml&quot;&gt;homepage.html&lt;/h4&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-main-content&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-main-content-header-row&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-main-content-header-title&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Header&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-main-content-content&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;padding-left:0;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-prev-emoji-item&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;material-fab&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-add-post-icon&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;aria-label=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;add&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;raised&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;trigger&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)=&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;onAddPost&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;()&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;material-icon&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;icon=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;add&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;size=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;x-large&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/material-icon&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/material-fab&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;homepagedart&quot;&gt;homepage.dart&lt;/h4&gt;
+
+&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'dart:async'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:Teamoji_tutorial/src/common/messages.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:Teamoji_tutorial/src/create_team/create_team.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:Teamoji_tutorial/src/services/firebase_service.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:Teamoji_tutorial/src/user_post/user_post.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:angular/angular.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:angular_components/angular_components.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ShowingComponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;homepage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;create_team&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emoji_selector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Component&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;selector:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'homepage'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;directives:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;MaterialButtonComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;MaterialFabComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;MaterialIconComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;MaterialListComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;MaterialListItemComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;NgFor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;UserPostComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;templateUrl:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'homepage.html'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;styleUrls:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'homepage.css'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HomepageComponent&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HomepageMessages&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_mockEmojiList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F60B}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F60E}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F60D}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F618}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F617}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F619}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F60B}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F60E}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F60D}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F618}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F617}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F619}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F60B}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F60E}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F60D}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F618}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F617}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F619}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;previousEmojis&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_mockEmojiList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onAddPost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'should show select emoji component'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;At first let’s do zero css and see what we got.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/10/screen-shot-2017-10-20-at-23-12-43.png&quot; alt=&quot;Screen Shot 2017-10-20 at 23.12.43&quot; /&gt;
+&lt;em&gt;Yeah… You gotta make a bit more sense than that.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;In the next section let’s work carefully with css and the page more like a page.&lt;/p&gt;
+
+&lt;h3 id=&quot;css-homepage&quot;&gt;CSS homepage&lt;/h3&gt;
+
+&lt;p&gt;In this section I won’t go too deep into stuff like font and color. We are going to focus mainly on layout.&lt;/p&gt;
+
+&lt;p&gt;First let’s make the root div stretch to full screen, adjust the background color too.&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.tm-main-content&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;lightyellow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This won’t change any layout. Our next goal is to make the header text and the button in one row, and use a different background color to mark the header part. There are many ways to do that, but ultimately we need to change the &lt;code class=&quot;highlighter-rouge&quot;&gt;display&lt;/code&gt; attribute for the header top-level &lt;code class=&quot;highlighter-rouge&quot;&gt;div&lt;/code&gt;. By default it is set to &lt;code class=&quot;highlighter-rouge&quot;&gt;block&lt;/code&gt;, which just stacks child elements vertically. Hence the above picture.&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.tm-main-content-header-row&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;orange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.tm-main-content-header-title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This fixes the header div for us. It is worth noting you want to have some padding for the text, otherwise it would touch the button at the upper bound since it is set to &lt;code class=&quot;highlighter-rouge&quot;&gt;flex&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/10/screen-shot-2017-10-20-at-23-26-21.png&quot; alt=&quot;Screen Shot 2017-10-20 at 23.26.21&quot; /&gt;
+&lt;em&gt;A bit better now.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Now let’s fix the user post list. The problem is the same as the header: &lt;code class=&quot;highlighter-rouge&quot;&gt;display&lt;/code&gt; attribute. Here we want to have the posts stacked up, but use horizontal spaces too, this is done by setting it to &lt;code class=&quot;highlighter-rouge&quot;&gt;inline-block&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.tm-main-content-content&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;8px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.tm-prev-emoji-item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inline-block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/10/screen-shot-2017-10-20-at-23-34-09.png&quot; alt=&quot;Screen Shot 2017-10-20 at 23.34.09&quot; /&gt;
+&lt;em&gt;So close… Just missing the button now.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;And lastly the FAB. Here we are just going to fix the &lt;code class=&quot;highlighter-rouge&quot;&gt;position&lt;/code&gt; at the lower right corner of the page, even when scrolling.&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.tm-add-post-icon&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;deepskyblue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;fixed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;After that, we should have the homepage nice and pretty.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/10/screen-shot-2017-10-20-at-23-34-32.png&quot; alt=&quot;Screen Shot 2017-10-20 at 23.34.32.png&quot; /&gt;
+&lt;em&gt;Nice and pretty indeed :D&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;Let’s recap what we did today. We created a sub component to display a post from earlier, and we have the main content of the homepage done. The most challenging part maybe playing with CSS, you might find &lt;a href=&quot;https://www.w3schools.com/css/css_display_visibility.asp&quot;&gt;this&lt;/a&gt; and &lt;a href=&quot;https://css-tricks.com/almanac/properties/d/display/&quot;&gt;this&lt;/a&gt; to be helpful in understanding &lt;code class=&quot;highlighter-rouge&quot;&gt;display&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;As usual, let me know if anything is unclear. Happy building!&lt;/p&gt;</content><author><name>nickwu0715</name></author><summary type="html">Hello there! Sorry I have been away for a few weeks due to uni work and other stuff, but today we will start working on the homepage of Teamoji, which will be the last page left, before we start hooking up everything and starting with Firebase!</summary></entry><entry><title type="html">Dart #6: Emoji selection</title><link href="https://nickwu007.github.io/dart/technical/2017/09/24/dart-6-emoji-selection/" rel="alternate" type="text/html" title="Dart #6: Emoji selection" /><published>2017-09-24T16:40:36+01:00</published><updated>2017-09-24T16:40:36+01:00</updated><id>https://nickwu007.github.io/dart/technical/2017/09/24/dart-6-emoji-selection</id><content type="html" xml:base="https://nickwu007.github.io/dart/technical/2017/09/24/dart-6-emoji-selection/">&lt;p&gt;After the create team page, this week we are going to be building the emoji selection page. As usual the code I present here is somewhat partial, so let me know if anything is unclear.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/09/emoji_selection.png&quot; alt=&quot;emoji_selection&quot; /&gt;
+&lt;em&gt;Our mock&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-build-it&quot;&gt;How to build it?&lt;/h3&gt;
+
+&lt;p&gt;As mentioned in last week’s post, we are going to leverage &lt;code class=&quot;highlighter-rouge&quot;&gt;EmojiRenderComponent&lt;/code&gt; to build this component, and it is not hard to see why. Every little emoji to select is an &lt;code class=&quot;highlighter-rouge&quot;&gt;EmojiRenderComponent&lt;/code&gt;. If we have a list of emoji unicodes, then a simple &lt;code class=&quot;highlighter-rouge&quot;&gt;material-list&lt;/code&gt; should do.&lt;/p&gt;
+
+&lt;p&gt;So the question becomes: where do we find all the emoji unicodes? Answer is, and usually will be, our good friend Google. A simple search would turn up some csv file, and with a little python formatting, we are good to go.&lt;/p&gt;
+
+&lt;p&gt;One thing worth pointing out though is current I am putting the entire list as a private variable in the component, and ideally it should be fetched from some service. We will address this when we get to &lt;em&gt;Firebase&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now let’s take a look at the code.&lt;/p&gt;
+
+&lt;h3 id=&quot;emoji_selectordart&quot;&gt;emoji_selector.dart&lt;/h3&gt;
+
+&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:Teamoji_tutorial/src/common/messages.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:Teamoji_tutorial/src/emoji_render/emoji_render.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:angular/angular.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:angular_components/angular_components.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Component&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;selector:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'emoji-selector'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;templateUrl:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'emoji_selector.html'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;directives:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;EmojiRenderComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;MaterialIconComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;MaterialButtonComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;NgFor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;styleUrls:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'emoji_selector.css'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EmojiSelectorComponent&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EmojiSelectorMessages&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EmojiList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onCancel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_dismiss&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onSelect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emoji&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'You want to post &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$emoji&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;_dismiss&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;_dismiss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'You want to cancel selecting an emoji'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This is pretty straightforward. I am printing out the actions instead of actually implementing them. This simplifies the component for now, and we can fill these up when we put everything together.&lt;/p&gt;
+
+&lt;h3 id=&quot;emoji_selectorhtml&quot;&gt;emoji_selector.html&lt;/h3&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-emoji-select-header&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-emoji-select-header-message&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;material-button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-emoji-select-header-button&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;icon&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;trigger&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)=&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;onCancel&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;()&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;material-icon&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;icon=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;clear&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/material-icon&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/material-button&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-emoji-select-content&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-emoji-select-list&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-emoji-select-item&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Note we use a combination of &lt;code class=&quot;highlighter-rouge&quot;&gt;material-button&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;material-icon&lt;/code&gt; to realize the cancel button. There might be cleaner ways to implement this, but as far as I know this is the conventional way.&lt;/p&gt;
+
+&lt;p&gt;Also interestingly there’s an &lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; before the &lt;code class=&quot;highlighter-rouge&quot;&gt;ngFor&lt;/code&gt;, that’s because &lt;code class=&quot;highlighter-rouge&quot;&gt;ngFor&lt;/code&gt; is a &lt;a href=&quot;https://webdev.dartlang.org/angular/guide/structural-directives&quot;&gt;&lt;em&gt;Structural Directive&lt;/em&gt;&lt;/a&gt;. This asterisk is saying “I will potentially alter the DOM tree, so parse me a bit differently”. In our case, because we are enumerating a list, whose length is unbeknownst to the template, it can potentially grow to many &lt;code class=&quot;highlighter-rouge&quot;&gt;li&lt;/code&gt;s, thus altering the DOM tree.&lt;/p&gt;
+
+&lt;p&gt;I won’t show the CSS here, it is in the repo if you to take a look. Also I am pretty sure I did a lot of hacky stuff there, so you might want to implement the layout and styling by you own.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/09/screen-shot-2017-09-24-at-16-36-07.png&quot; alt=&quot;Screen Shot 2017-09-24 at 16.36.07&quot; /&gt;
+&lt;em&gt;Final render. Also the selection “works” too!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Once we have this component done, the only component left is the homepage component. Unfortunately this is the most complicated component to implement, so we will split into 2 or 3 posts for that.&lt;/p&gt;
+
+&lt;p&gt;Let me know if anything can be improved. Thanks for reading, and I will see you all next week.&lt;/p&gt;</content><author><name>nickwu0715</name></author><summary type="html">After the create team page, this week we are going to be building the emoji selection page. As usual the code I present here is somewhat partial, so let me know if anything is unclear.</summary></entry><entry><title type="html">Dartlang #5: Create Team</title><link href="https://nickwu007.github.io/dart/technical/2017/09/14/dartlang-5-create-team/" rel="alternate" type="text/html" title="Dartlang #5: Create Team" /><published>2017-09-14T16:25:49+01:00</published><updated>2017-09-14T16:25:49+01:00</updated><id>https://nickwu007.github.io/dart/technical/2017/09/14/dartlang-5-create-team</id><content type="html" xml:base="https://nickwu007.github.io/dart/technical/2017/09/14/dartlang-5-create-team/">&lt;p&gt;Today we continue with our Teamoji web app. My apologies for putting this off for so long, everything has been a bit crazy because of the moving. Now that I am done with that, the series will pick up as usual. In this post we focus on 2 components: &lt;code class=&quot;highlighter-rouge&quot;&gt;EmojiRenderComponent&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;CreateTeamComponent&lt;/code&gt;. All the code can be found in our &lt;a href=&quot;https://github.com/NickWu007/Teamoji-practice&quot;&gt;Github repo&lt;/a&gt;; you will also notice there are some new component there which I haven’t talked about. We will cover them in the upcoming few posts, no worries. So without further ado, let’s get started.&lt;/p&gt;
+
+&lt;h3 id=&quot;emojirendercomponent&quot;&gt;EmojiRenderComponent&lt;/h3&gt;
+
+&lt;p&gt;You may realize that there is not any particular page that this matches to. That’s because this component will be a sub-component for many other components. Think about the big fox emoji we have in the &lt;code class=&quot;highlighter-rouge&quot;&gt;welcome&lt;/code&gt; page. If we take a look at the &lt;code class=&quot;highlighter-rouge&quot;&gt;create team&lt;/code&gt; page, it also has a big emoji on the page.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/09/screen-shot-2017-09-14-at-16-18-03.png&quot; alt=&quot;Screen Shot 2017-09-14 at 16.18.03&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/09/screen-shot-2017-09-14-at-15-23-18.png&quot; alt=&quot;Screen Shot 2017-09-14 at 15.23.18&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Can we somehow just have one component that simply shows a configureable emoji? Since Angular Dart is component based, we should be able to reuse this common component every time we need to show an emoji. It’s very clear that having an &lt;code class=&quot;highlighter-rouge&quot;&gt;EmojiRenderComponent&lt;/code&gt; avoids duplicate code and helps a lot with readability and maintainability.&lt;/p&gt;
+
+&lt;p&gt;So how do we go about building such a component? Turns out it is almost too simple, with the &lt;code class=&quot;highlighter-rouge&quot;&gt;@Input()&lt;/code&gt; from Angular. Let’s take a look at the code first, and I will explain it.&lt;/p&gt;
+
+&lt;h4 id=&quot;emoji_renderdart&quot;&gt;emoji_render.dart&lt;/h4&gt;
+&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:angular/angular.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Component&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;selector:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'emoji-render'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;templateUrl:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'emoji_render.html'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;directives:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;NgStyle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EmojiRenderComponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nd&quot;&gt;@Input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;useBigIcon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;nd&quot;&gt;@Input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;emoji_renderhtml&quot;&gt;emoji_render.html&lt;/h4&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;First let’s look at the &lt;code class=&quot;highlighter-rouge&quot;&gt;@Input()&lt;/code&gt; thing. There’s a &lt;a href=&quot;https://webdev.dartlang.org/angular/guide/template-syntax#!#inputs-outputs&quot;&gt;detailed doc&lt;/a&gt; on Angular Dart official site, but essentially think of components like a tree. For the parent to pass something to its child component, the child must declare an input to be assigned. Conversely, when the child wants to propagate something to the parent, usually an event, it must declare an output. We have used the input here, but we will see the output being used in other components soon.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/09/parent-child-binding.png&quot; alt=&quot;parent-child-binding&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Also an interesting feature of Angular is shown here too: &lt;code class=&quot;highlighter-rouge&quot;&gt;NgStyle&lt;/code&gt;. Normally if we want to set some style dynamically to a &lt;code class=&quot;highlighter-rouge&quot;&gt;div&lt;/code&gt;, we assign different classes to it on the fly. This in my opinion is unnecessary and ugly, since you end up with class names like &lt;code class=&quot;highlighter-rouge&quot;&gt;blue-btn&lt;/code&gt;, which is just to generic, and if you have to switch a button from blue to red on the fly, you have to remember to remove the &lt;code class=&quot;highlighter-rouge&quot;&gt;blue-btn&lt;/code&gt; class, otherwise sometimes the button will stay as blue.&lt;/p&gt;
+
+&lt;p&gt;In Angular, after including the &lt;code class=&quot;highlighter-rouge&quot;&gt;NgStyle&lt;/code&gt; directive, we can define a specific style to be evaluated from a dart expression. Here the &lt;code class=&quot;highlighter-rouge&quot;&gt;font-size&lt;/code&gt; is controlled by the Boolean variable &lt;code class=&quot;highlighter-rouge&quot;&gt;useBigIcon&lt;/code&gt;. Incidentally, this variable is also an input, which means the parent can decide either to show a big emoji, or a small one. Flexible.&lt;/p&gt;
+
+&lt;p&gt;After this is created, we can replace the emoji template in &lt;code class=&quot;highlighter-rouge&quot;&gt;WelcomeComponent&lt;/code&gt; with the following. You would also need to include &lt;code class=&quot;highlighter-rouge&quot;&gt;EmojiRenderComponent&lt;/code&gt; in the directive list for this to work.&lt;/p&gt;
+
+&lt;p&gt;[code lang=html]&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;div class=&quot;tm-app-icon&quot;&gt;&lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&amp;lt;emoji-render [useBigIcon]=”true” [icon]=”appIcon”&amp;gt;&amp;lt;/emoji-render&amp;gt;
+[/code]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This may seem like a small change, but I think it is very important to have modularity in your codebase.&lt;/p&gt;
+
+&lt;h3 id=&quot;createteamcomponent&quot;&gt;CreateTeamComponent&lt;/h3&gt;
+
+&lt;p&gt;Ok now that we have the building blocks, let’s actually build the component for creating teams. This is pretty trivial, since the overall structure will be the same with our existing &lt;code class=&quot;highlighter-rouge&quot;&gt;WelcomeComponent&lt;/code&gt;. Take a look(no css here but you can find it in the repo):&lt;/p&gt;
+
+&lt;h4 id=&quot;create_teamdart&quot;&gt;create_team.dart&lt;/h4&gt;
+
+&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'dart:async'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:Teamoji_tutorial/src/common/messages.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:Teamoji_tutorial/src/emoji_render/emoji_render.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:angular/angular.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:angular_components/angular_components.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Component&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;selector:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'create-team'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;templateUrl:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'create_team.html'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;styleUrls:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'create_team.css'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;directives:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;EmojiRenderComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;MaterialButtonComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;MaterialInputComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;CreateTeamComponent&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CreateTeamMessages&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;newTeamName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;Future&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'You want to create a new team called: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$newTeamName&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;newTeamName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;create_teamhtml&quot;&gt;create_team.html&lt;/h4&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-create-team&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-prompt-header&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-prompt-content&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;material-input&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;floatingLabel&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;label=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Name of your new team&quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)=&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;newTeamName =&lt;/span&gt;&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;$event&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/material-input&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;material-button&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;raised&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-btn&quot;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;trigger&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)=&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;()&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/material-button&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can see we are re-using &lt;code class=&quot;highlighter-rouge&quot;&gt;EmojiRenderComponent&lt;/code&gt; here too, which was the reason we built that in the first place.&lt;/p&gt;
+
+&lt;p&gt;Here the interesting thing to look at is ``. You will notice there’s an “attribute” we associate with this tag: &lt;code class=&quot;highlighter-rouge&quot;&gt;(change)=&quot;newTeamName = $event&quot;&lt;/code&gt;. This is the output event binding we glossed over earlier.&lt;/p&gt;
+
+&lt;p&gt;Consider you are the input box yourself. You have the user’s input, but you yourself can’t make much out of it since you are just a generic input, and you have no idea what the user’s input is about. It could be a name, an email address, etc. However, your parent would probably know what that’s for and can take care of the input. As a result, you pass your input value &lt;em&gt;upstream&lt;/em&gt; as an event. Here &lt;code class=&quot;highlighter-rouge&quot;&gt;change&lt;/code&gt; is the name of the event, meaning the input value has changed, and the parent’s action to that is to assign the newest input value to a variable.&lt;/p&gt;
+
+&lt;p&gt;You might be wondering: ok that’s very cool, but how would I know what event these material components are emitting, and what type of parameter are associated with it? You can find detailed documentation about these components in the &lt;a href=&quot;https://github.com/dart-lang/angular_components&quot;&gt;AngularDart Material component repo&lt;/a&gt;. In our case it’s the &lt;a href=&quot;https://github.com/dart-lang/angular_components/blob/master/lib/src/components/material_input/material_input.dart&quot;&gt;material input&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Once you have these all understood and in your project directory, change your &lt;code class=&quot;highlighter-rouge&quot;&gt;AppComponent&lt;/code&gt; to show &lt;code class=&quot;highlighter-rouge&quot;&gt;CreateTeamComponent&lt;/code&gt; and run &lt;code class=&quot;highlighter-rouge&quot;&gt;pub serve&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/09/screen-shot-2017-09-14-at-16-20-27.png&quot; alt=&quot;Screen Shot 2017-09-14 at 16.20.27&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;In this post we are getting into the Angular world, with input/output binding, and more practice with material components. Most importantly, it is of great importance that we stick to the basic software engineering principles, in this case &lt;em&gt;modularity&lt;/em&gt;. In the next post we will continue to build all the components we need and once we have all the components we need, we can start integrating Firebase in.&lt;/p&gt;
+
+&lt;p&gt;Hope you enjoyed this. Let me know if anything is unclear or can be improved.&lt;/p&gt;</content><author><name>nickwu0715</name></author><summary type="html">Today we continue with our Teamoji web app. My apologies for putting this off for so long, everything has been a bit crazy because of the moving. Now that I am done with that, the series will pick up as usual. In this post we focus on 2 components: EmojiRenderComponent and CreateTeamComponent. All the code can be found in our Github repo; you will also notice there are some new component there which I haven’t talked about. We will cover them in the upcoming few posts, no worries. So without further ado, let’s get started.</summary></entry><entry><title type="html">Back to Edinburgh: a short reflection</title><link href="https://nickwu007.github.io/life/non_technical/2017/09/07/back-to-edinburgh-a-short-reflection/" rel="alternate" type="text/html" title="Back to Edinburgh: a short reflection" /><published>2017-09-07T12:23:34+01:00</published><updated>2017-09-07T12:23:34+01:00</updated><id>https://nickwu007.github.io/life/non_technical/2017/09/07/back-to-edinburgh-a-short-reflection</id><content type="html" xml:base="https://nickwu007.github.io/life/non_technical/2017/09/07/back-to-edinburgh-a-short-reflection/">&lt;p&gt;It’s been such a LONG time! I must start with an apology: I stopped updating here for about a month and a half by now. Previously work was a bit too much that I couldn’t spare enough time for blogging and I didn’t want to write anything not worth reading. Since I have finished work by now, and I will be moving into my new place in a couple of days, it seems right to get back to the site, and we will have our weekly posts as usual from now on.&lt;/p&gt;
+
+&lt;p&gt;So today I would like to write about what I did in the summer. For those of you not that familiar with me, I was working at Google London for 3 months this summer, working in the Adsense team. My project is to help people sign up in Adsense easier, to put it briefly. It was hard work all around, since this was a new team for me, with different code conventions and new technologies to learn. But in the end I was able to complete the project and produce a working demo, and hopefully my feature would be rolled out into production soon.&lt;/p&gt;
+
+&lt;p&gt;Even though I was glad to finish everything in time, there are a few things I definitely wish I would have known in the beginning. Fortunately, these tips might be helpful to you.&lt;/p&gt;
+
+&lt;h3 id=&quot;socialize&quot;&gt;Socialize&lt;/h3&gt;
+
+&lt;p&gt;We developers are stereotyped to be unsociable, and I do have to admit that it comes with some grounds. Yes it can’t be easy to squeeze yourself into an already well-built circle, and it may feel left out. I certainly have this problem: during the internship I didn’t connect well with other interns, both for practical and mental reasons.&lt;/p&gt;
+
+&lt;p&gt;One day I was confiding this to a good friend, and she gave a quite profound yet meaningful response:&lt;/p&gt;
+
+&lt;blockquote&gt;&quot;You are not what you think you are; you are not what others think you are; you are that you think others think you are.&quot;&lt;/blockquote&gt;
+
+&lt;p&gt;A bit twisted I know, but let me explain. Naturally we care about what others think of us, and sometimes it is hard to do something because it may come off as stupid and we would feel embarrassed. However, a big part, if not the most important, part of “blending in” is put yourself forward. It may seem desperate and pathetic, but you must realize that these are not what you are, they are things you feel like people would think. As long as you keep a sincere interest in people and be brave to start talking, making friends is less daunting as you think.&lt;/p&gt;
+
+&lt;p&gt;And for what it is worth, this will be helpful to you, both professionally and in life in general. I was not aware of the importance of communication in software development until quite recently. Even though software is something to reason about, more then often you need to present your ideas well so others can understand and therefore agree with, or bring up concerns. Take this as an example: I had a problem with a front end component during the internship, and I was explaining this to a colleague. He didn’t quite get the problem at first and asked me to elaborate further, so I did. Literally in the middle of talking I suddenly realized something I hadn’t considered before, and problem solved itself. If I were to sit silently and think about it on my own, it could easily take hours.&lt;/p&gt;
+
+&lt;h3 id=&quot;self-righteousness&quot;&gt;Self-righteousness&lt;/h3&gt;
+
+&lt;p&gt;At first I thought this may just be something I have to watch out for, but it seems that it is more prevalent than I thought, so I want to explain this a bit. It originated from work again, when I was thinking about how to design UI for my project, I got into a debate with a colleague. We each had a different plan of implementation, and as the debate went to it was clear that his plan was better in the long term, with less maintenance and high extensibility. Yet, as stupid as it may be, I wasn’t quite ready to drop my plan, kept stating it would be easier to implement and the potential problems are only potential, and we have other mechanisms to guard against them.&lt;/p&gt;
+
+&lt;p&gt;In the end, I was persuaded to adopt the other plan, but there’s something quite interesting to discuss here. Even though my idea was logically suboptimal, it was still hard for me to completely discard it, simply because it was &lt;em&gt;my idea&lt;/em&gt;. We all have, more or less, some self-righteousness to insist on our ideas, whether or not they are actually good ideas. And this goes back to what I was talking about earlier, if we admit our ideas are bad, that kind of implies we are not clever as we claim, and that hurts our faces.&lt;/p&gt;
+
+&lt;p&gt;But there’s a caveat here, ignored by many people: you intellect, if can be reflected, should only be reflected by your best idea, not worst. Therefore, if you do come up with a bad idea, it doesn’t mean you are stupid as well.&lt;/p&gt;
+
+&lt;p&gt;Take Google as an example. Over the years they have made some bad decisions as well, investing on products that never actually got on. Yet, nobody can denied the brilliance of its search algorithm, and few competitors are even present in this field. Certainly it is a bit off to compare a company to a person, but you get the idea.&lt;/p&gt;
+
+&lt;h3 id=&quot;last-few-words&quot;&gt;Last few words&lt;/h3&gt;
+
+&lt;p&gt;Hopefully the things I discussed above helped you in some way. Let me know if you have something to add, or if you disagree with some of the things I mentioned. Next week we should be back with a technical post. Have a great week, and I will see you soon!&lt;/p&gt;</content><author><name>nickwu0715</name></author><summary type="html">It’s been such a LONG time! I must start with an apology: I stopped updating here for about a month and a half by now. Previously work was a bit too much that I couldn’t spare enough time for blogging and I didn’t want to write anything not worth reading. Since I have finished work by now, and I will be moving into my new place in a couple of days, it seems right to get back to the site, and we will have our weekly posts as usual from now on.</summary></entry><entry><title type="html">Dartlang #4: Welcome page</title><link href="https://nickwu007.github.io/dart/technical/2017/06/26/dartlang-4-welcome-page/" rel="alternate" type="text/html" title="Dartlang #4: Welcome page" /><published>2017-06-26T21:56:09+01:00</published><updated>2017-06-26T21:56:09+01:00</updated><id>https://nickwu007.github.io/dart/technical/2017/06/26/dartlang-4-welcome-page</id><content type="html" xml:base="https://nickwu007.github.io/dart/technical/2017/06/26/dartlang-4-welcome-page/">&lt;p&gt;Today we are actually going to code something finally. As a good starter, we will build the welcome page, which is what users see when they first got to the website.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/06/welcome.png&quot; alt=&quot;Welcome&quot; /&gt;
+&lt;em&gt;Our mock&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Note: if you like to follow along the tutorial, make sure you pull from &lt;a href=&quot;https://github.com/NickWu007/Teamoji-practice/commit/697e2a7760d6c66ef8495bfa246c329f04aca263&quot;&gt;this commit&lt;/a&gt; as this will be our starting point onward. Also, basic dart syntax and AngularDart architecture are assumed, if you are not sure about them, check out &lt;a href=&quot;https://webdev.dartlang.org/angular&quot;&gt;AngularDart’s official site&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;step-1-got-the-content-up&quot;&gt;Step 1: got the content up&lt;/h3&gt;
+
+&lt;p&gt;Before we get into placement and styling, the first thing is to have some content to show obviously. So in the current app, remove &lt;code class=&quot;highlighter-rouge&quot;&gt;todo/&lt;/code&gt; directory, since we are not building a TODO list. Instead, add a package named &lt;code class=&quot;highlighter-rouge&quot;&gt;welcome&lt;/code&gt;, create a component as &lt;code class=&quot;highlighter-rouge&quot;&gt;WelcomePageComponent&lt;/code&gt;(with blank html and css for now), and configure &lt;code class=&quot;highlighter-rouge&quot;&gt;AppComponent&lt;/code&gt; to point to that.&lt;/p&gt;
+
+&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// app_component.dart&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Component&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;selector:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'my-app'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;styleUrls:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'app_component.css'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;templateUrl:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'app_component.html'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;directives:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;materialDirectives&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WelcomePageComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;providers:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;materialProviders&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AppComponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//app_component.html&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;welcome&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;welcome&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;This is basically saying “now my app component is just the welcome page component”, which is fine for now. We will first build individual pages, and then worry about routing and redirections.&lt;/p&gt;
+
+&lt;p&gt;In &lt;code class=&quot;highlighter-rouge&quot;&gt;welcome_page.dart&lt;/code&gt;, add the content according to the mocks, and then just place them in &lt;code class=&quot;highlighter-rouge&quot;&gt;div&lt;/code&gt;s in &lt;code class=&quot;highlighter-rouge&quot;&gt;welcome_page.html&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// welcome_page.dart&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'dart:async'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:angular2/angular2.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:angular_components/angular_components.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Component&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;selector:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'welcome-page'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;templateUrl:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'welcome_page.html'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;styleUrls:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'welcome_page.css'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;directives:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;MaterialButtonComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;WelcomePageComponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;appTitle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Teamoji'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;appSubtitle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F551} Team Status &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F680}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;appIcon&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F63B}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;signInMessage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'sign in with google'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;appMainFooter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Powered by Firebase'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;appSubFooter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'source on github'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;Future&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;login&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Login not implemented yet'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For the emojis, I used standard Unicode to show them. You can find a complete list of emojis and their corresponding Unicode encoding &lt;a href=&quot;http://www.unicode.org/emoji/charts/full-emoji-list.html&quot;&gt;here&lt;/a&gt;. This will be important when we implement the emoji selection page.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-welcome&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-app-icon&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-main-header&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-sub-header&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;material-button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;raised&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-login-btn&quot;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;trigger&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)=&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;login&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;()&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/material-button&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-main-footer&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-sub-footer&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For now you can safely ignore the classes assigned, we will use them for styling later. One thing worth noting is that face that we are not using a regular &lt;code class=&quot;highlighter-rouge&quot;&gt;for the login button, but a&lt;/code&gt;. This is the main package for our project since material design looks better and has many built-in functionalities handy. Check out &lt;a href=&quot;https://dart-lang.github.io/angular_components_example/&quot;&gt;this site&lt;/a&gt; for more detail on AngularDart material components.&lt;/p&gt;
+
+&lt;p&gt;After all these work, run &lt;code class=&quot;highlighter-rouge&quot;&gt;pub get&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;pub serve&lt;/code&gt; on the command line, then load the page on localhost. You should see something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/06/screen-shot-2017-06-25-at-17-36-06.png&quot; alt=&quot;Screen Shot 2017-06-25 at 17.36.06&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;step-2-add-styling&quot;&gt;Step 2: Add styling&lt;/h3&gt;
+
+&lt;p&gt;So we have all the content on the page, that’s 50% done! Next is to make the content look like the mock. Starting from the easy bits, these are what we can do.&lt;/p&gt;
+
+&lt;h4 id=&quot;environmental-styling&quot;&gt;Environmental styling&lt;/h4&gt;
+
+&lt;p&gt;These are stylings that should affect most tags, so they should go into &lt;code class=&quot;highlighter-rouge&quot;&gt;styles.css&lt;/code&gt; under &lt;code class=&quot;highlighter-rouge&quot;&gt;web/&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;deepskyblue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here we make the component to fill the page, and have a light blue background color.&lt;/p&gt;
+
+&lt;h4 id=&quot;tag-specific-styling&quot;&gt;Tag specific styling&lt;/h4&gt;
+
+&lt;p&gt;Here we make specific changes to each tag, using the classes we set earlier. These include font size, color, `padding, etc. I won’t go into too much detail, but here is the code:&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;:host&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&quot;Lucida Sans Unicode&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&quot;Lucida Grande&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sans-serif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.tm-welcome&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.tm-app-icon&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;125px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.tm-main-header&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;40px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.tm-sub-header&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;16px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.tm-login-btn&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;dodgerblue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.tm-main-footer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.tm-sub-footer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;lightgrey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After these changes, the page should look like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/06/screen-shot-2017-06-25-at-17-51-56.png&quot; alt=&quot;Screen Shot 2017-06-25 at 17.51.56&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;placement&quot;&gt;Placement&lt;/h4&gt;
+
+&lt;p&gt;This in my opinion is the hardest part. What we want is to have the top level &lt;code class=&quot;highlighter-rouge&quot;&gt;div&lt;/code&gt; centered both horizontally and vertically. Let’s see the code first:&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.tm-welcome&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;justify-content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;align-items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;flex-direction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;column&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The first 4 lines make the div centered on page, but the children &lt;code class=&quot;highlighter-rouge&quot;&gt;div&lt;/code&gt;s are horizontally aligned. To change this, adding &lt;code class=&quot;highlighter-rouge&quot;&gt;flex-direction: column;&lt;/code&gt; would line those children vertically. To be honest, CSS is kind of hard to make work, and you need to use trial and error to get what you want.&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;If everything works good, you will see our page now looks almost close to the mocks.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/06/screen-shot-2017-06-25-at-18-18-33.png&quot; alt=&quot;Screen Shot 2017-06-25 at 18.18.33&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/06/screen-shot-2017-06-25-at-18-25-31.png&quot; alt=&quot;Screen Shot 2017-06-25 at 18.25.31&quot; /&gt;
+&lt;em&gt;Looks good in mobile as well :D&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Let me know if there’s something confusing in this tutorial, and I will fix it and keep that in mind as we go on. This week we will build the “Create team” page, which is also quite simple, but we will see another material component. Stay tuned!&lt;/p&gt;</content><author><name>nickwu0715</name></author><summary type="html">Today we are actually going to code something finally. As a good starter, we will build the welcome page, which is what users see when they first got to the website.</summary></entry></feed>
