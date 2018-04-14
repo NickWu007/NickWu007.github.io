@@ -7,9 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2017/06/17/dartlang-2-dependency-inj
 slug: dartlang-2-dependency-injection
 title: 'Dartlang #2: Dependency Injection'
 wordpress_id: 366
-tags:
-- dartlang
-- Technical
+categories: [dart, technical]
+
 ---
 
 Welcome back! The first post turned out to be the most viewed post on this site, I am so grateful and motivated to keep this going. So here we go, dependency injection!

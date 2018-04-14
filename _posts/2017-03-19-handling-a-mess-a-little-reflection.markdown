@@ -7,8 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2017/03/19/handling-a-mess-a-little-
 slug: handling-a-mess-a-little-reflection
 title: 'Handling a mess: a little reflection'
 wordpress_id: 292
-tags:
-- Non-technical
+categories: [non_technical]
+
 ---
 
 First of all, I am quite sorry about not posting anything for the past few weeks. I was occupied by school and left for San Fransisco for my spring break. Fortunately, because of that trip, I had a great topic to write about today. When I was on the plane back home, I kept thinking about all the stuff I have to in the coming few days: finishing 3 school deadlines, signing a new contract with my employer, following up on other side projects, and writing this very blog no less!

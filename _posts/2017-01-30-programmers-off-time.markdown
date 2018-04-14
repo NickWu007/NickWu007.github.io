@@ -7,8 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2017/01/29/programmers-off-time/
 slug: programmers-off-time
 title: Programmer's off time
 wordpress_id: 216
-tags:
-- Non-technical
+categories: [non_technical]
+
 ---
 
 Before anything, let me congratulate everyone a Happy Chinese New Year. Even if you are not Chinese or Asian even, it's always great to get some dumplings from time to time. ;)

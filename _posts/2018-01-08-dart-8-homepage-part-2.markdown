@@ -8,9 +8,8 @@ slug: dart-8-homepage-part-2
 title: 'Dart #8: homepage part 2'
 wordpress_id: 529
 image: /assets/images/dart_angular.png
-tags:
-- dartlang
-- Technical
+categories: [dart, technical]
+
 ---
 
 Today we continue with the homepage for Teamoji. In the last tutorial we finished the main content of Homepage. But we are still missing the hidden menu part on the left. This introduces a new concept of Angular Dart: deferred content. So without further ado, let's jump in!

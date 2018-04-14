@@ -7,8 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2016/11/18/working-with-3rd-party-ap
 slug: working-with-3rd-party-apis
 title: Working with 3rd party APIs
 wordpress_id: 177
-tags:
-- Technical
+categories: [technical]
+
 ---
 
 Recently a lot of my work, both for school and privately, have been working with external APIs, or 3rd party API which is the term more commonly used. Today I want to talk about these APIs: what they are, why we use them, and some gotchas and best practices.

@@ -7,9 +7,10 @@ link: https://nickwuedinburgh.wordpress.com/2016/09/30/write-your-own-shell/
 slug: write-your-own-shell
 title: Write your own shell
 wordpress_id: 130
-tags:
-- Technical
+categories: [technical]
 ---
+
+## Write your own shell
 
 ### My story
 

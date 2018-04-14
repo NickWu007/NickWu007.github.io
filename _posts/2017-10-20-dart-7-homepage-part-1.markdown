@@ -7,9 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2017/10/20/dart-7-homepage-part-1/
 slug: dart-7-homepage-part-1
 title: 'Dart #7: Homepage part 1'
 wordpress_id: 494
-tags:
-- dartlang
-- Technical
+categories: [dart, technical]
+
 ---
 
 Hello there! Sorry I have been away for a few weeks due to uni work and other stuff, but today we will start working on the homepage of Teamoji, which will be the last page left, before we start hooking up everything and starting with Firebase!

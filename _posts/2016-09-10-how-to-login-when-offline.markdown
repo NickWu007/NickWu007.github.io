@@ -7,14 +7,9 @@ link: https://nickwuedinburgh.wordpress.com/2016/09/10/how-to-login-when-offline
 slug: how-to-login-when-offline
 title: How to login when offline?
 wordpress_id: 120
-tags:
-- Technical
+categories: [technical]
+
 ---
-
-### A Pain Point
-
-
-
 With the uprise of mobile systems, nowadays apps are used by people more often than ever. A real shame is that lots of the apps need Internet connectivity to perform full functionalities. Without it they are more like yet another block on home screen just for definition. I'd venture and say the most miserable time when holding a smartphone is on plane. No Internet, no fun.
 
 Today we are going to look at a way to make this better: how to implement a login persistence logic when offline.

@@ -7,9 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2017/06/15/dartlang-1-primer/
 slug: dartlang-1-primer
 title: 'Dartlang #1: Primer'
 wordpress_id: 344
-tags:
-- dartlang
-- Technical
+categories: [dart, technical]
+
 ---
 
 So it's finally here, our [dartlang](https://www.dartlang.org/) series! I understand this is long overdue than I promised, but unfortunately I have start with even more bad news. For the current series we are only going to look at [AngularDart](https://webdev.dartlang.org/angular), a frontend framework for web applications, but dart is far more widely used, in [server](https://aqueduct.io/), in [mobile](https://flutter.io/), and so on. Ideally I would like to do separate series for each of this, but for starter let's just focus on webbed, which is what dart is originally made for.So it's finally here, our [dartlang](https://www.dartlang.org/) series! I understand this is long overdue than I promised, but unfortunately I have start with even more bad news. For the current series we are only going to look at [AngularDart](https://webdev.dartlang.org/angular), a frontend framework for web applications, but dart is far more widely used, in [server](https://aqueduct.io/), in [mobile](https://flutter.io/), and so on. Ideally I would like to do separate series for each of this, but for starter let's just focus on webbed, which is what dart is originally made for.

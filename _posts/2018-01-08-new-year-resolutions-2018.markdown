@@ -7,8 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2018/01/07/new-year-resolutions-2018
 slug: new-year-resolutions-2018
 title: 'New Year Resolutions: 2018'
 wordpress_id: 525
-tags:
-- Non-technical
+categories: [non_technical]
+
 ---
 
 New year resolution has sort of become a joke in recent years, referencing plans people set at the start of the year and unavoidably fall short at the end of year. Though probably true, I still maintain that setting goals is helpful, in that they orient one's focus and efforts. Personally I have been doing this privately for the past few years, and I am quite happy that every year I have managed to achieve most of them. This year in the spirit of getting more visibility and accountability I plan to write out some of the goals I set for the year, which I shall review at the end of 2018.

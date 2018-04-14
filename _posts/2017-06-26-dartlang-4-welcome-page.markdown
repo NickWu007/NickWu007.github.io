@@ -7,9 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2017/06/26/dartlang-4-welcome-page/
 slug: dartlang-4-welcome-page
 title: 'Dartlang #4: Welcome page'
 wordpress_id: 404
-tags:
-- dartlang
-- Technical
+categories: [dart, technical]
+
 ---
 
 Today we are actually going to code something finally. As a good starter, we will build the welcome page, which is what users see when they first got to the website.

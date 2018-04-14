@@ -7,8 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2016/07/17/restart/
 slug: restart
 title: Restart!
 wordpress_id: 17
-tags:
-- 未分类
+categories: [technical]
 ---
 
 This site is largely inspired by John Sonmez([https://simpleprogrammer.com](https://simpleprogrammer.com)). Originally this blog was mostly about my own life as a software engineer, but upon reading some of his posts, I feel like it should actually be a technical blog. Hence the restart.

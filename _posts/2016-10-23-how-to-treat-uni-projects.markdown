@@ -7,8 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2016/10/23/how-to-treat-uni-projects
 slug: how-to-treat-uni-projects
 title: How to treat uni projects
 wordpress_id: 154
-tags:
-- Non-technical
+categories: [non_technical]
+
 ---
 
 University software projects/assignments are the first few impressions for a new programmer to taste the world. To be honest, they are daunting in terms of scale for most of the times, you may have no clue about how to even start, and sometimes your teammates are just as lost as you are. Although they do have a solid reason to be part of the education: these are the stuff you will get, if not worse, when you start working. Today I want to talk about uni projects, what a healthy attitude we should take towards, and a few tips about them.

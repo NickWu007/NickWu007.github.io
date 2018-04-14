@@ -7,8 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2017/02/19/stepping-into-mapreduce/
 slug: stepping-into-mapreduce
 title: Stepping into MapReduce
 wordpress_id: 267
-tags:
-- Technical
+categories: [technical]
+
 ---
 
 Yesterday I have been immersed in a MapReduce assignment for my data centre class, so this week I want to give you guys a taste of MapReduce, one of the most used data processing frameworks, and also base of many other great frameworks.

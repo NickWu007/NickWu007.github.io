@@ -3,6 +3,7 @@ layout: post
 title: 'Teamoji wrap-up: connecting Firebase database'
 date: 2018-03-29 11:37 +0100
 image: /assets/images/dart_angular.png
+categories: [dart, technical]
 ---
 
 Today we finish up with Teamoji! In the last post we got the authentication and session checking done. In this post we will start from [this branch](https://github.com/NickWu007/Teamoji-practice/tree/firebase_auth_done) on the Github repo. So without further ado, let's jump in!

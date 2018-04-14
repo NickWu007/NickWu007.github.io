@@ -7,8 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2016/09/03/back-to-school/
 slug: back-to-school
 title: Back to school
 wordpress_id: 104
-tags:
-- Non-technical
+categories: [non_technical]
 ---
 
 This week is the first week of September, and lots of students, myself included, start or have started school. For the upcoming year, I feel like writing a post about my own resolutions, and hopefully I can help with anyone out there planning to get into the tech industry.

@@ -7,8 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2016/08/27/async-and-future/
 slug: async-and-future
 title: Async and Future
 wordpress_id: 98
-tags:
-- Technical
+categories: [technical]
 ---
 
 When developing large-scale software system, which handles thousands, if not millions of requests all the time, performance is one of the most important spec to think about, other than functionalities. That's why one would buy lots of servers with powerful CPUs to support for the software. The idea behind all this is when a request comes in, a special program assigns it to an idle, or least loaded server to process it. Many servers process lots of requests

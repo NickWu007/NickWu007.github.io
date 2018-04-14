@@ -7,8 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2017/05/29/back-from-a-long-road-tri
 slug: back-from-a-long-road-trip
 title: Back from a long road trip
 wordpress_id: 326
-tags:
-- Life
+categories: [life]
+
 ---
 
 Just got back last night from a LONG trip, arguably the longest trip I went on over years. There's a lot that I saw, both of the nature and people, so I decide to write a reflection post about it.

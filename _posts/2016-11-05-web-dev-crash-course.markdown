@@ -7,8 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2016/11/05/web-dev-crash-course/
 slug: web-dev-crash-course
 title: 'Web dev: crash course'
 wordpress_id: 159
-tags:
-- Technical
+categories: [technical]
+
 ---
 
 As you probably know, my "specific" job title would probably be a full stack web developer. Recently I have gotten some questions about web dev in general, from others who want to start their own website, and are a bit lost after diving into the ocean of web. In this post, I am going to try and give an overview about web development in general, and some thoughts and tips I find useful while learning web dev.

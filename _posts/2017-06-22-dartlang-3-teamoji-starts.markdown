@@ -7,9 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2017/06/22/dartlang-3-teamoji-starts
 slug: dartlang-3-teamoji-starts
 title: 'Dartlang #3: Teamoji starts!'
 wordpress_id: 396
-tags:
-- dartlang
-- Technical
+categories: [dart, technical]
+
 ---
 
 After the previous two posts, we are finally set to start actually building something in AngularDart! As I mentioned before, the app we are building for this series is called Teamoji, which was [shown in Google I/O 2016](https://www.youtube.com/watch?v=SobXoh4rb58&t=172s).

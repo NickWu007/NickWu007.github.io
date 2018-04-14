@@ -7,8 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2017/02/05/java-nio-tutorial/
 slug: java-nio-tutorial
 title: Java NIO tutorial
 wordpress_id: 244
-tags:
-- Technical
+categories: [technical]
+
 ---
 
 Before I start this blog, allow me to give a follow-up with the Caterpillars Count app: right now we are fully live on both iOS and Android!

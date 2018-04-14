@@ -7,8 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2017/03/26/road-to-shell-script-mast
 slug: road-to-shell-script-master
 title: Road to shell script master
 wordpress_id: 307
-tags:
-- Technical
+categories: [technical]
+
 ---
 
 Recently because of a lot of DevOps and data analysis work I have been working, and a good reminder from [_The Effective Engineer: How to Leverage Your Efforts In Software Engineering to Make a Disproportionate and Meaningful Impact_](https://www.amazon.com/gp/product/0996128107/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1), I decided to move some work into the good old command line, arguably the most powerful tool a developer has, but constantly overlooked. Amazingly, my life has been so much better after I started using more and more scripts instead of working my code around to fit the expected output format, and shortened my web dev cycle a lot. So today I want to dedicate a post to talk about shell scripts: why should you use it, what are the basic tools for you, and some nice one-liners that make your life so much easier.

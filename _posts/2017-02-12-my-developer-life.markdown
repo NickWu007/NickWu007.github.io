@@ -7,8 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2017/02/12/my-developer-life/
 slug: my-developer-life
 title: My developer life
 wordpress_id: 254
-tags:
-- Non-technical
+categories: [non_technical]
+
 ---
 
 For this week's non-tech blog, instead of trying to give you guys any advice, I think it might be better and more down to earth to let you know how my days look like as student and software developer. Hopefully you can utilise some of it.

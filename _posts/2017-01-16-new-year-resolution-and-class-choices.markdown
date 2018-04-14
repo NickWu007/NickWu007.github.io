@@ -7,8 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2017/01/16/new-year-resolution-and-c
 slug: new-year-resolution-and-class-choices
 title: New year resolution and class choices
 wordpress_id: 188
-tags:
-- Non-technical
+categories: [non_technical]
+
 ---
 
 I must start this post by apologising to every reader. If you can recall I stated in the first post I will stick to a schedule of one post per week. But since early December I have not been posting anything, partially because of the final exams, and the rest my own laziness. Now that the new term has started, I will get back to the rule and try my best to stick to it.

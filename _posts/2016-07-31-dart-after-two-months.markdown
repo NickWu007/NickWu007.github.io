@@ -7,8 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2016/07/31/dart-after-two-months/
 slug: dart-after-two-months
 title: 'Dart: after two months'
 wordpress_id: 55
-tags:
-- 未分类
+categories: [technical, dart]
 ---
 
 Today I want to talk about Dart, a programming language I have been using both in-and-outside of Google for web development lately. Again, I am only into this field for about two months, so my views might not be quite comprehensive. But today we are going to talk about my experience and feelings in these two months.

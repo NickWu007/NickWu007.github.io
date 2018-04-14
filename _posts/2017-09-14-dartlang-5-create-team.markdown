@@ -7,9 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2017/09/14/dartlang-5-create-team/
 slug: dartlang-5-create-team
 title: 'Dartlang #5: Create Team'
 wordpress_id: 479
-tags:
-- dartlang
-- Technical
+categories: [dart, technical]
+
 ---
 
 Today we continue with our Teamoji web app. My apologies for putting this off for so long, everything has been a bit crazy because of the moving. Now that I am done with that, the series will pick up as usual. In this post we focus on 2 components: `EmojiRenderComponent` and `CreateTeamComponent`. All the code can be found in our [Github repo](https://github.com/NickWu007/Teamoji-practice); you will also notice there are some new component there which I haven't talked about. We will cover them in the upcoming few posts, no worries. So without further ado, let's get started.

@@ -7,8 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2016/10/16/cordova-loves-and-hates/
 slug: cordova-loves-and-hates
 title: 'Cordova: loves and hates'
 wordpress_id: 144
-tags:
-- Technical
+categories: [technical]
+
 ---
 
 I am pretty sure that if you are a pure web dev or a pure mobile dev, the word Cordova doesn't really mean anything to you. To give a 50,000 feet overview, [Cordova](https://cordova.apache.org/) is a platform from Apache that migrates a web application to a "sort of" native app. So say you have a web app running, potentially you can just dump the source code into a new Cordova project, build it, and then you have a virtually identical app on mobile, iOS and Android, and other platforms.

@@ -7,9 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2017/05/09/mid-year-reflection-2017/
 slug: mid-year-reflection-2017
 title: 'Mid-year reflection: 2017'
 wordpress_id: 315
-tags:
-- Non-technical
-- Technical
+categories: [technical, non_technical]
+
 ---
 
 It's been a long time. I must start this post with an apology. Every semester then finals are close, it becomes hard for me to keep writing. Fortunately now that finals are behind, and a nice summer is coming, I will be back on my weekly posting schedule, sort of. I will explain this in the end.

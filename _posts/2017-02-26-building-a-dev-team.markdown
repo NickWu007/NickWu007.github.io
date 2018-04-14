@@ -7,8 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2017/02/26/building-a-dev-team/
 slug: building-a-dev-team
 title: Building a dev team
 wordpress_id: 283
-tags:
-- Non-technical
+categories: [non_technical]
+
 ---
 
 Recently I came cross [this interesting blog](https://dev.to/ben/bens-five-keys-to-creating-a-successful-side-project) from [Ben Halpern](https://twitter.com/bendhalpern), talking about things to watch out when working on a side project. Although all of his points are reasonable and should be followed, one of them jumped out to me: "Start it yourself, eventually find help". Over the side projects I have worked on with various teams, this bit is due for more elaboration, which is my goal for this blog post. Today I want to write about a few tips I learned over the years that make a successful development team.

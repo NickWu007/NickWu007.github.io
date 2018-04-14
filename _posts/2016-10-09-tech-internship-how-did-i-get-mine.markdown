@@ -7,8 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2016/10/09/tech-internship-how-did-i
 slug: tech-internship-how-did-i-get-mine
 title: 'Tech Internship: how did I get mine'
 wordpress_id: 133
-tags:
-- Non-technical
+categories: [non_technical]
+
 ---
 
 Recently a lot of my friends have started their internship/job hunting, and we got to talk a lot about the topic. This week I want to devote a short essay to talk about my internship experience, and some of the advice I can give to those of you who are searching for jobs for summer 2017 or later.

@@ -7,9 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2017/09/07/back-to-edinburgh-a-short
 slug: back-to-edinburgh-a-short-reflection
 title: 'Back to Edinburgh: a short reflection'
 wordpress_id: 441
-tags:
-- Life
-- Non-technical
+categories: [life, non_technical]
+
 ---
 
 It's been such a LONG time! I must start with an apology: I stopped updating here for about a month and a half by now. Previously work was a bit too much that I couldn't spare enough time for blogging and I didn't want to write anything not worth reading. Since I have finished work by now, and I will be moving into my new place in a couple of days, it seems right to get back to the site, and we will have our weekly posts as usual from now on.

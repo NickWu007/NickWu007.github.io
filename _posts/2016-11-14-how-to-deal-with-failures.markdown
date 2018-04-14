@@ -7,8 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2016/11/13/how-to-deal-with-failures
 slug: how-to-deal-with-failures
 title: How to deal with failures
 wordpress_id: 170
-tags:
-- Non-technical
+categories: [non_technical]
+
 ---
 
 Most of us don't go through our lives without stumbling every now and then. In fact, I have failed more than I care to admit, both career and otherwise. Recently it is the "midterm" season, and many of friends are either worried about their performance in the exams, or just plain frustrated by it. To that I want to write up this post to talk about my ways of dealing with failures, and hopefully some of you can feel less bad after reading it.

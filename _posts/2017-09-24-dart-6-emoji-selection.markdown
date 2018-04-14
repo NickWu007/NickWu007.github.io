@@ -7,9 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2017/09/24/dart-6-emoji-selection/
 slug: dart-6-emoji-selection
 title: 'Dart #6: Emoji selection'
 wordpress_id: 482
-tags:
-- dartlang
-- Technical
+categories: [dart, technical]
+
 ---
 
 After the create team page, this week we are going to be building the emoji selection page. As usual the code I present here is somewhat partial, so let me know if anything is unclear.

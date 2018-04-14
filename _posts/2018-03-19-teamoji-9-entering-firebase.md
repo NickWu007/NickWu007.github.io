@@ -3,6 +3,8 @@ layout: post
 title: 'Teamoji #9 Entering Firebase'
 date: 2018-03-19 22:21 +0000
 image: /assets/images/dart_angular.png
+categories: [dart, technical]
+
 ---
 
 Today we keep going with Teamoji. In this post we are starting to use [Firebase](https://firebase.google.com/) for the authentication and database.

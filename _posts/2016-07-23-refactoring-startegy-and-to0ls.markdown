@@ -4,11 +4,10 @@ comments: true
 date: 2016-07-23 23:50:39+00:00
 layout: post
 link: https://nickwuedinburgh.wordpress.com/2016/07/23/refactoring-startegy-and-to0ls/
-slug: refactoring-startegy-and-to0ls
+slug: refactoring-startegy-and-tools
 title: 'Refactoring: strategy and tools'
 wordpress_id: 34
-tags:
-- Technical
+categories: [technical]
 ---
 
 Refactoring. The one thing in work that probably has the same priority as business meetings with the marketing team. JK. As a matter of fact, in my own experience in the industry so dar, more time is spent worrying if the code I write now needs least refactoring in the future, compared to time spent writing development code it itself. So today we are gonna talk about refactoring, my approach about working with a large-scale refactor, and some of the tools I used.

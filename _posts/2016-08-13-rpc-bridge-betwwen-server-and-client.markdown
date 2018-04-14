@@ -5,13 +5,11 @@ date: 2016-08-13 21:24:16+00:00
 layout: post
 link: https://nickwuedinburgh.wordpress.com/2016/08/13/rpc-bridge-betwwen-server-and-client/
 slug: rpc-bridge-betwwen-server-and-client
-title: 'RPC: bridge between server and client'
+title: RPC, bridge between server and client
 wordpress_id: 82
-tags:
-- Technical
+categories: [technical]
 ---
 
-### Problem we face
 
 
 

@@ -7,9 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2017/10/22/impostor-syndrome-thought
 slug: impostor-syndrome-thoughts-and-tips
 title: 'Impostor Syndrome: thoughts and tips'
 wordpress_id: 515
-tags:
-- Life
-- Non-technical
+categories: [life, non_technical]
+
 ---
 
 Recently a dear friend of mine is struggling to enjoy work. As this is their first "job", a lot of pressure, imagined or not, has become a source of great anxiety. After discussing the mental hardship during these tough moments, I can't help by remembering how I felt in my first job. Today I want to identify this problem, explain why it exists, and what we can do to mitigate it.

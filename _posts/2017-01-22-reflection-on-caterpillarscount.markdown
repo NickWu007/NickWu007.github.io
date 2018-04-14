@@ -7,8 +7,8 @@ link: https://nickwuedinburgh.wordpress.com/2017/01/22/reflection-on-caterpillar
 slug: reflection-on-caterpillarscount
 title: Reflection on CaterpillarsCount
 wordpress_id: 197
-tags:
-- Technical
+categories: [technical]
+
 ---
 
 So you guys might remember that back in August I took on a software project called "[Caterpillars Count!](http://caterpillarscount.unc.edu/)" for my software engineering class. Just last night I finally finished the development for the app. It's been a pretty crazy and awesome ride, so today I want to devote a blog post to talk about the experience and lessons learned. Because this is a technical post I am not going to cover the "softer" side of the project. I might do that in a future post.

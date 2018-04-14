@@ -7,8 +7,7 @@ link: https://nickwuedinburgh.wordpress.com/2016/08/06/how-to-get-un-stuck/
 slug: how-to-get-un-stuck
 title: How to get un-stuck?
 wordpress_id: 66
-tags:
-- Non-technical
+categories: [non_technical]
 ---
 
 Being a programmer, the biggest obstacle you face sometimes may not be a complicated algorithm problem, or trying to learn a new framework you are familiar with. A lot of the times it is because of you are just 'stuck', unable to keep smashing on those keys. Today I am going to talk about some real-life experience on this topic, how I got into being stuck, and how I eventually got out.
