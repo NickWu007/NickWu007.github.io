@@ -11,4 +11,1042 @@
                 \/__/                  \/___/
 
 Powered by Hydejack v7.5.1 <https://qwtel.com/hydejack/>
---><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>DevPractical | Practical tips for Developers, from a developer.</title><meta property="og:title" content="DevPractical" /><meta name="author" content="Nick Wu" /><meta property="og:locale" content="en" /><meta name="description" content="Practical tips for Developers, from a developer." /><meta property="og:description" content="Practical tips for Developers, from a developer." /><link rel="canonical" href="https://nickwu007.github.io/" /><meta property="og:url" content="https://nickwu007.github.io/" /><meta property="og:site_name" content="DevPractical" /> <script type="application/ld+json"> {"name":"DevPractical","description":"Practical tips for Developers, from a developer.","author":{"@type":"Person","name":"Nick Wu"},"@type":"WebSite","url":"https://nickwu007.github.io/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://nickwu007.github.io/assets/icons/icon.png"},"name":"Nick Wu"},"image":null,"headline":"DevPractical","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="DevPractical"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="application-name" content="DevPractical"><meta name="msapplication-config" content="/assets/ieconfig.xml"><meta name="theme-color" content="#4fb1ba"><meta name="generator" content="Hydejack v7.5.1"><link type="application/atom+xml" rel="alternate" href="https://nickwu007.github.io/feed.xml" title="DevPractical" /><link rel="alternate" href="https://nickwu007.github.io/" hreflang="en"><link rel="shortcut icon" href="/assets/icons/favicon.ico"><link rel="apple-touch-icon" href="/assets/icons/icon.png"><link rel="manifest" href="/assets/manifest.json"><link rel="dns-prefetch" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link id="_katexJS" rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.js"><link id="_katexCSS" rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.css"> <script> function stdOnEnd(n,e){n.onload=function(){this.onerror=this.onload=null,e(null,n)},n.onerror=function(){this.onerror=this.onload=null,e(new Error("Failed to load "+this.src),n)}}function ieOnEnd(n,e){n.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||(this.onreadystatechange=null,e(null,n))}}window.setRelStylesheet=function(n){function e(){this.rel="stylesheet"}var o=document.getElementById(n);o.addEventListener?o.addEventListener("load",e,!1):o.onload=e},window._loaded=!1,window.loadJSDeferred=function(n,e){function o(){window._loaded=!0;var o=document.createElement("script");o.src=n,e&&(("onload"in o?stdOnEnd:ieOnEnd)(o,e),o.onload||stdOnEnd(o,e));var t=document.scripts[0];t.parentNode.insertBefore(o,t)}window._loaded?o():window.addEventListener?window.addEventListener("load",o,!1):window.onload=o}; !function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this); !function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this); window._noPushState = false; window._noDrawer = false; </script> <!--[if gt IE 8]><!----> <script> WebFontConfig = { google: { families: ['Roboto+Slab:700','Noto+Sans:400,400i,700,700i'] }, custom: { families: ['icomoon'], urls: ['/assets/icomoon/style.css'] } }; (function(d) { var wf = d.createElement('script'), s = d.scripts[0]; wf.src = "/assets/bower_components/webfontloader/webfontloader.js"; s.parentNode.insertBefore(wf, s); }(document)); </script> <!--<![endif]--> <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700%7CNoto+Sans:400,400i,700,700i"><style> html { font-family: 'Noto Sans', Helvetica, Arial, sans-serif } h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: 'Roboto Slab', Helvetica, Arial, sans-serif }</style><link rel="stylesheet" href="/assets/icomoon/style.css"> </noscript> <!--[if gt IE 8]><!----><style> *{box-sizing:border-box}html,body{margin:0;padding:0}html{font-size:16px;line-height:1.75}body{color:#444;background-color:#fff;overflow-y:scroll}a{text-decoration:none}.lead{margin-left:-1rem;margin-right:-1rem}.content img,.img{display:block;max-width:100%;margin-bottom:1rem;border:none}.content img.lead,.img.lead{max-width:calc(100% + 2rem);width:calc(100% + 2rem)}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-weight:700;margin:4rem 0 1rem}.heading{font-weight:700}h1,.h1{font-size:2rem;line-height:1.3}h2,.h2{font-size:1.5rem;line-height:1.4}h3,.h3{font-size:1.17em;line-height:1.5}p{margin-top:0;margin-bottom:1rem}p.lead{padding:0 1rem}ul,ol,dl{margin-top:0;margin-bottom:1rem}ul,ol{padding-left:1.25rem}hr{position:relative;margin:1.5rem 0;border:0;border-top:1px solid #eee}strong{font-weight:700}.hr{border-bottom:1px solid #eee;padding-bottom:1rem;margin-bottom:2rem}h4,h5,h6,.h4,.h5,.h6{margin-bottom:0.5rem;font-size:1rem}table:not(.highlight){border-collapse:collapse;margin-bottom:2rem;margin-left:-1rem}table:not(.highlight) td,table:not(.highlight) th{padding:.25rem .5rem;border:1px solid #eee}table:not(.highlight) td:first-child,table:not(.highlight) th:first-child{padding-left:1rem}table:not(.highlight) td:last-child,table:not(.highlight) th:last-child{padding-right:1rem}.page{margin-bottom:3em}.page li+li{margin-top:.25rem}.page>header{margin-bottom:2rem}.page-title,.post-title{margin-top:0}.post-date{display:block;margin-top:-0.5rem;margin-bottom:1rem;color:#888}.related-posts{padding-left:0;list-style:none;margin-bottom:2rem}.related-posts>li,.related-posts>li+li{margin-top:1rem}.message{margin-bottom:1rem;padding:1rem;color:#666;background-color:rgba(0,0,0,0.025);margin-left:-1rem;margin-right:-1rem}@media screen{body::before{content:'';width:.5rem;background:#eee;position:absolute;left:0;top:0;bottom:0}}@media screen and (min-width: 42em){html{font-size:17px}}@media screen and (min-width: 125em){html{font-size:18px}}hy-push-state a,.a{position:relative;padding-bottom:.15rem;border-bottom:1px solid}.content .img{overflow:hidden;background-color:rgba(0,0,0,0.025)}.content .img img{margin:0;width:100%;height:100%}.fade-in{animation-duration:500ms;animation-name:fade-in;animation-fill-mode:forwards}@keyframes fade-in{from{transform:translateY(-3rem);opacity:0}50%{transform:translateY(-3rem);opacity:0}to{transform:translateY(0);opacity:1}}.fl{float:left}.fr{float:right}.mb4{margin-bottom:4rem}.mb6{margin-bottom:6rem}.mt0{margin-top:0}.mt4{margin-top:4rem}.pb0{padding-bottom:0}.clearfix,.sidebar-social::after,.clearafter::after{content:"";display:table;clear:both}.sr-only{display:none}.sidebar{color:rgba(255,255,255,0.75);text-align:left}.sidebar a{color:#fff;border-bottom-color:rgba(255,255,255,0.2)}hy-drawer{position:relative;padding:1rem 0}@media screen{hy-drawer{padding:2rem 1rem}}@media screen and (min-width: 64em){hy-drawer{position:fixed;top:0;left:0;bottom:0;width:18rem;margin-left:0}}@media screen and (min-width: 98.5em){hy-drawer{width:calc(50% - 28rem)}}.sidebar-bg{position:absolute;top:0;right:0;bottom:0;left:0;background:#202020 center / cover}.sidebar-bg::after{content:"";position:absolute;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.05)}.sidebar-bg.sidebar-overlay::after{background:linear-gradient(to bottom, rgba(32,32,32,0) 0%, rgba(32,32,32,0.5) 100%)}.sidebar-sticky{position:relative;z-index:3}@media screen{.sidebar-sticky{position:absolute;right:1.5rem;left:1.5rem;bottom:1rem}}@media screen and (min-width: 98.5em){.sidebar-sticky{left:auto;width:15rem}}.sidebar-about>h1{color:#fff;font-size:2rem}.sidebar-nav>ul{list-style:none;padding-left:0;margin-bottom:.5rem}a.sidebar-nav-item{display:block;font-weight:700;line-height:1.75;padding:.25rem 0;border-bottom:1px solid rgba(255,255,255,0.2)}.sidebar-social{margin-bottom:.5rem}.sidebar-social>ul{list-style:none;padding-left:0}.sidebar-social>ul>li{float:left}.sidebar-social>ul>li>a{display:inline-block;text-align:center;font-size:1.5rem;width:3rem;height:3.5rem;padding:0}.sidebar-social>ul li+li{margin-top:0}.fixed-top{position:fixed;top:0;left:0;width:100%;z-index:2}.navbar>.content{padding-top:0;padding-bottom:0;min-height:0;height:0;color:#888}.nav-btn-bar{margin-left:-.875rem}.nav-btn{display:inline-block;padding:1.75rem .875rem;border-bottom:none;color:#888 !important}@media screen and (min-width: 64em){#_menu{position:absolute;left:-9999px}}.content{position:relative;margin-left:auto;margin-right:auto;padding:5rem 1rem 12rem}@media screen{.content{padding-left:1.5rem;max-width:38rem;min-height:100vh}}@media screen and (min-width: 54em){.content{max-width:42rem}}@media screen and (min-width: 64em){.content{margin-left:22rem;margin-right:4rem;padding-left:1rem}}@media screen and (min-width: 90em){.content{max-width:48rem}}@media screen and (min-width: 98.5em){.content{margin:auto}}.avatar{float:right;width:6.5rem;height:6.5rem;border-radius:100%;margin-left:.5rem}@media screen and (min-width: 42em){.avatar{width:7rem;height:7rem}}html{font-family:Helvetica, Arial, sans-serif}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.heading{font-family:Helvetica, Arial, sans-serif}</style><link id="_stylePreload" rel="preload" as="style" href="/assets/css/hydejack-7.5.1.css"> <script>window.setRelStylesheet('_stylePreload');</script> <noscript><link rel="stylesheet" href="/assets/css/hydejack-7.5.1.css"></noscript><style id="_pageStyle"> .content a:not(.btn){color:#4fb1ba;border-color:rgba(79,177,186,0.2)}.content a:not(.btn):hover{border-color:#4fb1ba}:focus{outline-color:#4fb1ba}.btn-primary{color:#fff;background-color:#4fb1ba;border-color:#4fb1ba}.btn-primary:focus,.btn-primary.focus{box-shadow:0 0 0 3px rgba(79,177,186,0.5)}.btn-primary:hover,.btn-primary.hover{color:#fff;background-color:#409ba3;border-color:#409ba3}.btn-primary:disabled,.btn-primary.disabled{color:#fff;background-color:#4fb1ba;border-color:#4fb1ba}.btn-primary:active,.btn-primary.active{color:#fff;background-color:#409ba3;border-color:#409ba3}::selection{color:#fff;background:#4fb1ba}::-moz-selection{color:#fff;background:#4fb1ba}</style><!--<![endif]--><body><div class="navbar fixed-top"><div class="content"><div class="nav-btn-bar"> <span class="sr-only">Jump to:</span> <a id="_menu" class="nav-btn no-hover" href="#_navigation"> <span class="sr-only">Navigation</span> <span class="icon-menu"></span> </a></div></div></div><hy-push-state><main id="_main" class="content fade-in layout-list" role="main" data-color="#4fb1ba" data-theme-color="" data-image="/assets/images/sidebar.jpg" data-overlay ><p>Hello world.<p>Nick Wu. Software developer.<p>Hope you like this site.<h2 id="y-2018" class="hr">2018</h2><ul class="related-posts"><li> <a href="/dart/technical/2018/03/29/teamoji-wrap-up-connecting-firebase-database/" class="h4 flip-title"> <span>Teamoji wrap-up: connecting Firebase database</span> </a> <time class="heading faded fine" datetime="2018-03-29T11:37:00+01:00">29 Mar</time><li> <a href="/dart/technical/2018/03/19/teamoji-9-entering-firebase/" class="h4 flip-title"> <span>Teamoji #9 Entering Firebase</span> </a> <time class="heading faded fine" datetime="2018-03-19T22:21:00+00:00">19 Mar</time><li> <a href="/dart/technical/2018/01/08/dart-8-homepage-part-2/" class="h4 flip-title"> <span>Dart #8: homepage part 2</span> </a> <time class="heading faded fine" datetime="2018-01-08T03:32:35+00:00">08 Jan</time><li> <a href="/non_technical/2018/01/08/new-year-resolutions-2018/" class="h4 flip-title"> <span>New Year Resolutions: 2018</span> </a> <time class="heading faded fine" datetime="2018-01-08T01:38:00+00:00">08 Jan</time></ul><h2 id="y-2017" class="hr">2017</h2><ul class="related-posts"><li> <a href="/life/non_technical/2017/10/22/impostor-syndrome-thoughts-and-tips/" class="h4 flip-title"> <span>Impostor Syndrome: thoughts and tips</span> </a> <time class="heading faded fine" datetime="2017-10-22T16:22:33+01:00">22 Oct</time><li> <a href="/dart/technical/2017/10/20/dart-7-homepage-part-1/" class="h4 flip-title"> <span>Dart #7: Homepage part 1</span> </a> <time class="heading faded fine" datetime="2017-10-20T23:44:50+01:00">20 Oct</time><li> <a href="/dart/technical/2017/09/24/dart-6-emoji-selection/" class="h4 flip-title"> <span>Dart #6: Emoji selection</span> </a> <time class="heading faded fine" datetime="2017-09-24T16:40:36+01:00">24 Sep</time><li> <a href="/dart/technical/2017/09/14/dartlang-5-create-team/" class="h4 flip-title"> <span>Dartlang #5: Create Team</span> </a> <time class="heading faded fine" datetime="2017-09-14T16:25:49+01:00">14 Sep</time><li> <a href="/life/non_technical/2017/09/07/back-to-edinburgh-a-short-reflection/" class="h4 flip-title"> <span>Back to Edinburgh: a short reflection</span> </a> <time class="heading faded fine" datetime="2017-09-07T12:23:34+01:00">07 Sep</time><li> <a href="/dart/technical/2017/06/26/dartlang-4-welcome-page/" class="h4 flip-title"> <span>Dartlang #4: Welcome page</span> </a> <time class="heading faded fine" datetime="2017-06-26T21:56:09+01:00">26 Jun</time><li> <a href="/dart/technical/2017/06/22/dartlang-3-teamoji-starts/" class="h4 flip-title"> <span>Dartlang #3: Teamoji starts!</span> </a> <time class="heading faded fine" datetime="2017-06-22T22:05:53+01:00">22 Jun</time><li> <a href="/dart/technical/2017/06/17/dartlang-2-dependency-injection/" class="h4 flip-title"> <span>Dartlang #2: Dependency Injection</span> </a> <time class="heading faded fine" datetime="2017-06-17T21:07:44+01:00">17 Jun</time><li> <a href="/dart/technical/2017/06/15/dartlang-1-primer/" class="h4 flip-title"> <span>Dartlang #1: Primer</span> </a> <time class="heading faded fine" datetime="2017-06-15T22:44:15+01:00">15 Jun</time><li> <a href="/life/2017/05/29/back-from-a-long-road-trip/" class="h4 flip-title"> <span>Back from a long road trip</span> </a> <time class="heading faded fine" datetime="2017-05-29T15:22:24+01:00">29 May</time><li> <a href="/life/2017/05/18/why-i-started-this-section/" class="h4 flip-title"> <span>Why I started this section?</span> </a> <time class="heading faded fine" datetime="2017-05-18T14:09:40+01:00">18 May</time><li> <a href="/technical/non_technical/2017/05/09/mid-year-reflection-2017/" class="h4 flip-title"> <span>Mid-year reflection: 2017</span> </a> <time class="heading faded fine" datetime="2017-05-09T19:22:14+01:00">09 May</time><li> <a href="/technical/2017/03/26/road-to-shell-script-master/" class="h4 flip-title"> <span>Road to shell script master</span> </a> <time class="heading faded fine" datetime="2017-03-26T23:12:04+01:00">26 Mar</time><li> <a href="/non_technical/2017/03/19/handling-a-mess-a-little-reflection/" class="h4 flip-title"> <span>Handling a mess: a little reflection</span> </a> <time class="heading faded fine" datetime="2017-03-19T16:17:52+00:00">19 Mar</time><li> <a href="/non_technical/2017/02/26/building-a-dev-team/" class="h4 flip-title"> <span>Building a dev team</span> </a> <time class="heading faded fine" datetime="2017-02-26T17:18:40+00:00">26 Feb</time><li> <a href="/technical/2017/02/19/stepping-into-mapreduce/" class="h4 flip-title"> <span>Stepping into MapReduce</span> </a> <time class="heading faded fine" datetime="2017-02-19T05:21:18+00:00">19 Feb</time><li> <a href="/non_technical/2017/02/12/my-developer-life/" class="h4 flip-title"> <span>My developer life</span> </a> <time class="heading faded fine" datetime="2017-02-12T22:02:32+00:00">12 Feb</time><li> <a href="/technical/2017/02/05/java-nio-tutorial/" class="h4 flip-title"> <span>Java NIO tutorial</span> </a> <time class="heading faded fine" datetime="2017-02-05T17:07:32+00:00">05 Feb</time><li> <a href="/non_technical/2017/01/30/programmers-off-time/" class="h4 flip-title"> <span>Programmer's off time</span> </a> <time class="heading faded fine" datetime="2017-01-30T03:22:11+00:00">30 Jan</time><li> <a href="/technical/2017/01/22/reflection-on-caterpillarscount/" class="h4 flip-title"> <span>Reflection on CaterpillarsCount</span> </a> <time class="heading faded fine" datetime="2017-01-22T20:21:06+00:00">22 Jan</time><li> <a href="/non_technical/2017/01/16/new-year-resolution-and-class-choices/" class="h4 flip-title"> <span>New year resolution and class choices</span> </a> <time class="heading faded fine" datetime="2017-01-16T22:57:57+00:00">16 Jan</time></ul><h2 id="y-2016" class="hr">2016</h2><ul class="related-posts"><li> <a href="/technical/2016/11/19/working-with-3rd-party-apis/" class="h4 flip-title"> <span>Working with 3rd party APIs</span> </a> <time class="heading faded fine" datetime="2016-11-19T02:20:31+00:00">19 Nov</time><li> <a href="/non_technical/2016/11/14/how-to-deal-with-failures/" class="h4 flip-title"> <span>How to deal with failures</span> </a> <time class="heading faded fine" datetime="2016-11-14T02:48:36+00:00">14 Nov</time><li> <a href="/technical/2016/11/05/web-dev-crash-course/" class="h4 flip-title"> <span>Web dev: crash course</span> </a> <time class="heading faded fine" datetime="2016-11-05T21:19:53+00:00">05 Nov</time><li> <a href="/non_technical/2016/10/23/how-to-treat-uni-projects/" class="h4 flip-title"> <span>How to treat uni projects</span> </a> <time class="heading faded fine" datetime="2016-10-23T22:11:18+01:00">23 Oct</time><li> <a href="/technical/2016/10/17/cordova-loves-and-hates/" class="h4 flip-title"> <span>Cordova: loves and hates</span> </a> <time class="heading faded fine" datetime="2016-10-17T02:28:30+01:00">17 Oct</time><li> <a href="/non_technical/2016/10/09/tech-internship-how-did-i-get-mine/" class="h4 flip-title"> <span>Tech Internship: how did I get mine</span> </a> <time class="heading faded fine" datetime="2016-10-09T20:22:58+01:00">09 Oct</time><li> <a href="/technical/2016/10/01/write-your-own-shell/" class="h4 flip-title"> <span>Write your own shell</span> </a> <time class="heading faded fine" datetime="2016-10-01T03:33:34+01:00">01 Oct</time><li> <a href="/non_technical/2016/09/18/working-with-a-team/" class="h4 flip-title"> <span>How to work with a team?</span> </a> <time class="heading faded fine" datetime="2016-09-18T20:39:10+01:00">18 Sep</time><li> <a href="/technical/2016/09/10/how-to-login-when-offline/" class="h4 flip-title"> <span>How to login when offline?</span> </a> <time class="heading faded fine" datetime="2016-09-10T21:47:00+01:00">10 Sep</time><li> <a href="/non_technical/2016/09/03/back-to-school/" class="h4 flip-title"> <span>Back to school</span> </a> <time class="heading faded fine" datetime="2016-09-03T20:09:48+01:00">03 Sep</time><li> <a href="/technical/2016/08/27/async-and-future/" class="h4 flip-title"> <span>Async and Future</span> </a> <time class="heading faded fine" datetime="2016-08-27T19:17:09+01:00">27 Aug</time><li> <a href="/technical/2016/08/13/rpc-bridge-betwwen-server-and-client/" class="h4 flip-title"> <span>RPC, bridge between server and client</span> </a> <time class="heading faded fine" datetime="2016-08-13T22:24:16+01:00">13 Aug</time><li> <a href="/non_technical/2016/08/06/how-to-get-un-stuck/" class="h4 flip-title"> <span>How to get un-stuck?</span> </a> <time class="heading faded fine" datetime="2016-08-06T23:23:33+01:00">06 Aug</time><li> <a href="/technical/dart/2016/07/31/dart-after-two-months/" class="h4 flip-title"> <span>Dart: after two months</span> </a> <time class="heading faded fine" datetime="2016-07-31T19:33:18+01:00">31 Jul</time><li> <a href="/technical/2016/07/24/refactoring-startegy-and-tools/" class="h4 flip-title"> <span>Refactoring: strategy and tools</span> </a> <time class="heading faded fine" datetime="2016-07-24T00:50:39+01:00">24 Jul</time><li> <a href="/technical/2016/07/18/restart/" class="h4 flip-title"> <span>Restart!</span> </a> <time class="heading faded fine" datetime="2016-07-18T00:05:28+01:00">18 Jul</time></ul><footer role="contentinfo"><hr/><p><small class="copyright">© 2018. All rights reserved. </small><p><small>Powered by <a class="external" href="https://qwtel.com/hydejack/">Hydejack</a> v<span id="_version">7.5.1</span></small><hr class="sr-only"/></footer></main><hy-drawer><header id="_sidebar" class="sidebar" role="banner"><div class="sidebar-bg sidebar-overlay" style="background-color:#4fb1ba;background-image:url(/assets/images/sidebar.jpg)"></div><div class="sidebar-sticky"><div class="sidebar-about"><h2 class="h1"><a href="/">DevPractical</a></h2><p class=""> Made by Nick Wu</div><nav class="sidebar-nav heading" role="navigation"> <span class="sr-only">Navigation:</span><ul><li> <a id="_navigation" href="/category/dart/" class="sidebar-nav-item" > Dart </a><li> <a href="/category/technical/" class="sidebar-nav-item" > Technical </a><li> <a href="/category/non-technical/" class="sidebar-nav-item" > Non-Technical </a><li> <a href="/category/life/" class="sidebar-nav-item" > Life </a><li> <a href="/about/" class="sidebar-nav-item" > About Me </a></ul></nav><div class="sidebar-social"> <span class="sr-only">Social</span><ul><li> <a href="https://twitter.com/WujunaoNick" title="Twitter" class="no-mark-external"> <span class="icon-twitter"></span> <span class="sr-only">Twitter</span> </a><li> <a href="https://github.com/NickWu007" title="GitHub" class="no-mark-external"> <span class="icon-github"></span> <span class="sr-only">GitHub</span> </a><li> <a href="mailto:wujunao19950715@gmail.com" title="email" class="no-mark-external"> <span class="icon-link"></span> <span class="sr-only">email</span> </a></ul></div></div></header></hy-drawer> </hy-push-state> <!--[if gt IE 9]><!----> <script>loadJSDeferred('/assets/js/hydejack-7.5.1.js');</script> <!--<![endif]--><hr class="sr-only"/><h2 class="sr-only">Templates:</h2><template id="_animation-template"><div class="animation-main fixed-top"><div class="content"><div class="page"></div></div></div></template> <template id="_loading-template"><div class="loading"> <span class="sr-only">Loading…</span> <span class="icon-cog"></span></div></template> <template id="_error-template"><div class="page"><h1 class="page-title">Error</h1><p class="lead"> Sorry, an error occurred while loading: <a class="this-link" href=""></a>.</div></template> <template id="_back-template"> <a id="_back" class="back nav-btn no-hover"> <span class="sr-only">Back</span> <span class="icon-arrow-left2"></span> </a> </template> <template id="_permalink-template"> <a href="#" class="permalink"> <span class="sr-only">Permalink</span> <span class="icon-link"></span> </a> </template></html>
+-->
+
+
+
+
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+  
+<!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>DevPractical | Practical tips for Developers, from a developer.</title>
+<meta property="og:title" content="DevPractical" />
+<meta name="author" content="Nick Wu" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Practical tips for Developers, from a developer." />
+<meta property="og:description" content="Practical tips for Developers, from a developer." />
+<link rel="canonical" href="https://nickwu007.github.io/" />
+<meta property="og:url" content="https://nickwu007.github.io/" />
+<meta property="og:site_name" content="DevPractical" />
+<script type="application/ld+json">
+{"name":"DevPractical","description":"Practical tips for Developers, from a developer.","author":{"@type":"Person","name":"Nick Wu"},"@type":"WebSite","url":"https://nickwu007.github.io/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://nickwu007.github.io/assets/icons/icon.png"},"name":"Nick Wu"},"image":null,"headline":"DevPractical","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="DevPractical">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<meta name="application-name" content="DevPractical">
+<meta name="msapplication-config" content="/assets/ieconfig.xml">
+
+
+<meta name="theme-color" content="#4fb1ba">
+
+
+<meta name="generator" content="Hydejack v7.5.1">
+
+<link type="application/atom+xml" rel="alternate" href="https://nickwu007.github.io/feed.xml" title="DevPractical" />
+
+
+
+<link rel="alternate" href="https://nickwu007.github.io/" hreflang="en">
+
+<link rel="shortcut icon" href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/icon.png">
+
+<link rel="manifest" href="/assets/manifest.json">
+
+
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+
+
+
+
+
+
+<link id="_katexJS"  rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.js">
+<link id="_katexCSS" rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.css">
+
+<script>
+  function stdOnEnd(n,e){n.onload=function(){this.onerror=this.onload=null,e(null,n)},n.onerror=function(){this.onerror=this.onload=null,e(new Error("Failed to load "+this.src),n)}}function ieOnEnd(n,e){n.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||(this.onreadystatechange=null,e(null,n))}}window.setRelStylesheet=function(n){function e(){this.rel="stylesheet"}var o=document.getElementById(n);o.addEventListener?o.addEventListener("load",e,!1):o.onload=e},window._loaded=!1,window.loadJSDeferred=function(n,e){function o(){window._loaded=!0;var o=document.createElement("script");o.src=n,e&&(("onload"in o?stdOnEnd:ieOnEnd)(o,e),o.onload||stdOnEnd(o,e));var t=document.scripts[0];t.parentNode.insertBefore(o,t)}window._loaded?o():window.addEventListener?window.addEventListener("load",o,!1):window.onload=o};
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+
+  window._noPushState = false;
+  window._noDrawer = false;
+</script>
+
+<!--[if gt IE 8]><!---->
+
+
+<script>
+  WebFontConfig = {
+    
+    google: {
+      families: ['Roboto+Slab:700','Noto+Sans:400,400i,700,700i']
+    },
+    
+
+    custom: {
+      families: ['icomoon'],
+      urls: ['/assets/icomoon/style.css']
+    }
+  };
+  (function(d) {
+    var wf = d.createElement('script'), s = d.scripts[0];
+    wf.src = "/assets/bower_components/webfontloader/webfontloader.js";
+    s.parentNode.insertBefore(wf, s);
+  }(document));
+</script>
+<!--<![endif]-->
+
+<noscript>
+  
+  
+
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700%7CNoto+Sans:400,400i,700,700i">
+    <style>
+      html { font-family: 'Noto Sans', Helvetica, Arial, sans-serif }
+      h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: 'Roboto Slab', Helvetica, Arial, sans-serif }
+    </style>
+  
+
+  <link rel="stylesheet" href="/assets/icomoon/style.css">
+</noscript>
+
+<!--[if gt IE 8]><!---->
+
+
+
+  <link rel="stylesheet" href="/assets/css/hydejack-7.5.1.css">
+
+
+
+<style id="_pageStyle">
+
+.content a:not(.btn){color:#4fb1ba;border-color:rgba(79,177,186,0.2)}.content a:not(.btn):hover{border-color:#4fb1ba}:focus{outline-color:#4fb1ba}.btn-primary{color:#fff;background-color:#4fb1ba;border-color:#4fb1ba}.btn-primary:focus,.btn-primary.focus{box-shadow:0 0 0 3px rgba(79,177,186,0.5)}.btn-primary:hover,.btn-primary.hover{color:#fff;background-color:#409ba3;border-color:#409ba3}.btn-primary:disabled,.btn-primary.disabled{color:#fff;background-color:#4fb1ba;border-color:#4fb1ba}.btn-primary:active,.btn-primary.active{color:#fff;background-color:#409ba3;border-color:#409ba3}::selection{color:#fff;background:#4fb1ba}::-moz-selection{color:#fff;background:#4fb1ba}
+
+</style>
+
+<!--<![endif]-->
+
+
+
+
+</head>
+
+<body>
+  <div class="navbar fixed-top">
+  <div class="content">
+    <div class="nav-btn-bar">
+      <span class="sr-only">Jump to:</span>
+      <a id="_menu" class="nav-btn no-hover" href="#_navigation">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<hy-push-state>
+  <main
+    id="_main"
+    class="content fade-in layout-list"
+    role="main"
+    data-color="#4fb1ba"
+    data-theme-color=""
+    
+      data-image="/assets/images/sidebar.jpg"
+      data-overlay
+    
+    >
+    
+
+
+
+
+<p>Hello world.</p>
+
+<p>Nick Wu. Software developer.</p>
+
+<p>Hope you like this site.</p>
+
+
+
+
+
+
+
+  
+  
+    
+    <h2 id="y-2018" class="hr">2018</h2>
+    <ul class="related-posts">
+    
+  
+  
+
+
+<li>
+  <a href="/non_technical/life/2018/06/07/what-s-next/" class="h4 flip-title">
+    <span>What's next?</span>
+  </a>
+  <time class="heading faded fine" datetime="2018-06-07T10:54:00+01:00">07 Jun</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/dart/technical/2018/03/29/teamoji-wrap-up-connecting-firebase-database/" class="h4 flip-title">
+    <span>Teamoji wrap-up: connecting Firebase database</span>
+  </a>
+  <time class="heading faded fine" datetime="2018-03-29T11:37:00+01:00">29 Mar</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/dart/technical/2018/03/19/teamoji-9-entering-firebase/" class="h4 flip-title">
+    <span>Teamoji #9 Entering Firebase</span>
+  </a>
+  <time class="heading faded fine" datetime="2018-03-19T22:21:00+00:00">19 Mar</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/dart/technical/2018/01/08/dart-8-homepage-part-2/" class="h4 flip-title">
+    <span>Dart #8: homepage part 2</span>
+  </a>
+  <time class="heading faded fine" datetime="2018-01-08T03:32:35+00:00">08 Jan</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/non_technical/2018/01/08/new-year-resolutions-2018/" class="h4 flip-title">
+    <span>New Year Resolutions: 2018</span>
+  </a>
+  <time class="heading faded fine" datetime="2018-01-08T01:38:00+00:00">08 Jan</time>
+</li>
+
+  
+
+  
+  
+    </ul>
+    <h2 id="y-2017" class="hr">2017</h2>
+    <ul class="related-posts">
+    
+  
+  
+
+
+<li>
+  <a href="/life/non_technical/2017/10/22/impostor-syndrome-thoughts-and-tips/" class="h4 flip-title">
+    <span>Impostor Syndrome: thoughts and tips</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-10-22T16:22:33+01:00">22 Oct</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/dart/technical/2017/10/20/dart-7-homepage-part-1/" class="h4 flip-title">
+    <span>Dart #7: Homepage part 1</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-10-20T23:44:50+01:00">20 Oct</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/dart/technical/2017/09/24/dart-6-emoji-selection/" class="h4 flip-title">
+    <span>Dart #6: Emoji selection</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-09-24T16:40:36+01:00">24 Sep</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/dart/technical/2017/09/14/dartlang-5-create-team/" class="h4 flip-title">
+    <span>Dartlang #5: Create Team</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-09-14T16:25:49+01:00">14 Sep</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/life/non_technical/2017/09/07/back-to-edinburgh-a-short-reflection/" class="h4 flip-title">
+    <span>Back to Edinburgh: a short reflection</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-09-07T12:23:34+01:00">07 Sep</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/dart/technical/2017/06/26/dartlang-4-welcome-page/" class="h4 flip-title">
+    <span>Dartlang #4: Welcome page</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-06-26T21:56:09+01:00">26 Jun</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/dart/technical/2017/06/22/dartlang-3-teamoji-starts/" class="h4 flip-title">
+    <span>Dartlang #3: Teamoji starts!</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-06-22T22:05:53+01:00">22 Jun</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/dart/technical/2017/06/17/dartlang-2-dependency-injection/" class="h4 flip-title">
+    <span>Dartlang #2: Dependency Injection</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-06-17T21:07:44+01:00">17 Jun</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/dart/technical/2017/06/15/dartlang-1-primer/" class="h4 flip-title">
+    <span>Dartlang #1: Primer</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-06-15T22:44:15+01:00">15 Jun</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/life/2017/05/29/back-from-a-long-road-trip/" class="h4 flip-title">
+    <span>Back from a long road trip</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-05-29T15:22:24+01:00">29 May</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/life/2017/05/18/why-i-started-this-section/" class="h4 flip-title">
+    <span>Why I started this section?</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-05-18T14:09:40+01:00">18 May</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/technical/non_technical/2017/05/09/mid-year-reflection-2017/" class="h4 flip-title">
+    <span>Mid-year reflection: 2017</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-05-09T19:22:14+01:00">09 May</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/technical/2017/03/26/road-to-shell-script-master/" class="h4 flip-title">
+    <span>Road to shell script master</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-03-26T23:12:04+01:00">26 Mar</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/non_technical/2017/03/19/handling-a-mess-a-little-reflection/" class="h4 flip-title">
+    <span>Handling a mess: a little reflection</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-03-19T16:17:52+00:00">19 Mar</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/non_technical/2017/02/26/building-a-dev-team/" class="h4 flip-title">
+    <span>Building a dev team</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-02-26T17:18:40+00:00">26 Feb</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/technical/2017/02/19/stepping-into-mapreduce/" class="h4 flip-title">
+    <span>Stepping into MapReduce</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-02-19T05:21:18+00:00">19 Feb</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/non_technical/2017/02/12/my-developer-life/" class="h4 flip-title">
+    <span>My developer life</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-02-12T22:02:32+00:00">12 Feb</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/technical/2017/02/05/java-nio-tutorial/" class="h4 flip-title">
+    <span>Java NIO tutorial</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-02-05T17:07:32+00:00">05 Feb</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/non_technical/2017/01/30/programmers-off-time/" class="h4 flip-title">
+    <span>Programmer's off time</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-01-30T03:22:11+00:00">30 Jan</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/technical/2017/01/22/reflection-on-caterpillarscount/" class="h4 flip-title">
+    <span>Reflection on CaterpillarsCount</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-01-22T20:21:06+00:00">22 Jan</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/non_technical/2017/01/16/new-year-resolution-and-class-choices/" class="h4 flip-title">
+    <span>New year resolution and class choices</span>
+  </a>
+  <time class="heading faded fine" datetime="2017-01-16T22:57:57+00:00">16 Jan</time>
+</li>
+
+  
+
+  
+  
+    </ul>
+    <h2 id="y-2016" class="hr">2016</h2>
+    <ul class="related-posts">
+    
+  
+  
+
+
+<li>
+  <a href="/technical/2016/11/19/working-with-3rd-party-apis/" class="h4 flip-title">
+    <span>Working with 3rd party APIs</span>
+  </a>
+  <time class="heading faded fine" datetime="2016-11-19T02:20:31+00:00">19 Nov</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/non_technical/2016/11/14/how-to-deal-with-failures/" class="h4 flip-title">
+    <span>How to deal with failures</span>
+  </a>
+  <time class="heading faded fine" datetime="2016-11-14T02:48:36+00:00">14 Nov</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/technical/2016/11/05/web-dev-crash-course/" class="h4 flip-title">
+    <span>Web dev: crash course</span>
+  </a>
+  <time class="heading faded fine" datetime="2016-11-05T21:19:53+00:00">05 Nov</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/non_technical/2016/10/23/how-to-treat-uni-projects/" class="h4 flip-title">
+    <span>How to treat uni projects</span>
+  </a>
+  <time class="heading faded fine" datetime="2016-10-23T22:11:18+01:00">23 Oct</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/technical/2016/10/17/cordova-loves-and-hates/" class="h4 flip-title">
+    <span>Cordova: loves and hates</span>
+  </a>
+  <time class="heading faded fine" datetime="2016-10-17T02:28:30+01:00">17 Oct</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/non_technical/2016/10/09/tech-internship-how-did-i-get-mine/" class="h4 flip-title">
+    <span>Tech Internship: how did I get mine</span>
+  </a>
+  <time class="heading faded fine" datetime="2016-10-09T20:22:58+01:00">09 Oct</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/technical/2016/10/01/write-your-own-shell/" class="h4 flip-title">
+    <span>Write your own shell</span>
+  </a>
+  <time class="heading faded fine" datetime="2016-10-01T03:33:34+01:00">01 Oct</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/non_technical/2016/09/18/working-with-a-team/" class="h4 flip-title">
+    <span>How to work with a team?</span>
+  </a>
+  <time class="heading faded fine" datetime="2016-09-18T20:39:10+01:00">18 Sep</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/technical/2016/09/10/how-to-login-when-offline/" class="h4 flip-title">
+    <span>How to login when offline?</span>
+  </a>
+  <time class="heading faded fine" datetime="2016-09-10T21:47:00+01:00">10 Sep</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/non_technical/2016/09/03/back-to-school/" class="h4 flip-title">
+    <span>Back to school</span>
+  </a>
+  <time class="heading faded fine" datetime="2016-09-03T20:09:48+01:00">03 Sep</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/technical/2016/08/27/async-and-future/" class="h4 flip-title">
+    <span>Async and Future</span>
+  </a>
+  <time class="heading faded fine" datetime="2016-08-27T19:17:09+01:00">27 Aug</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/technical/2016/08/13/rpc-bridge-betwwen-server-and-client/" class="h4 flip-title">
+    <span>RPC, bridge between server and client</span>
+  </a>
+  <time class="heading faded fine" datetime="2016-08-13T22:24:16+01:00">13 Aug</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/non_technical/2016/08/06/how-to-get-un-stuck/" class="h4 flip-title">
+    <span>How to get un-stuck?</span>
+  </a>
+  <time class="heading faded fine" datetime="2016-08-06T23:23:33+01:00">06 Aug</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/technical/dart/2016/07/31/dart-after-two-months/" class="h4 flip-title">
+    <span>Dart: after two months</span>
+  </a>
+  <time class="heading faded fine" datetime="2016-07-31T19:33:18+01:00">31 Jul</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/technical/2016/07/24/refactoring-startegy-and-tools/" class="h4 flip-title">
+    <span>Refactoring: strategy and tools</span>
+  </a>
+  <time class="heading faded fine" datetime="2016-07-24T00:50:39+01:00">24 Jul</time>
+</li>
+
+  
+
+  
+  
+  
+
+
+<li>
+  <a href="/technical/2016/07/18/restart/" class="h4 flip-title">
+    <span>Restart!</span>
+  </a>
+  <time class="heading faded fine" datetime="2016-07-18T00:05:28+01:00">18 Jul</time>
+</li>
+
+  </ul>
+
+
+    
+
+
+    <footer role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2018. All rights reserved.
+</small></p>
+  
+  
+  <p><small>Powered by <a class="external" href="https://qwtel.com/hydejack/">Hydejack</a> v<span id="_version">7.5.1</span></small></p>
+  <hr class="sr-only"/>
+</footer>
+
+  </main>
+  <hy-drawer>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+    <div class="sidebar-bg sidebar-overlay" style="background-color:#4fb1ba;background-image:url(/assets/images/sidebar.jpg)"></div>
+
+    <div class="sidebar-sticky">
+      <div class="sidebar-about">
+        <h2 class="h1"><a href="/">DevPractical</a></h2>
+        
+        
+          <p class="">
+            Made by Nick Wu
+
+          </p>
+        
+      </div>
+
+      <nav class="sidebar-nav heading" role="navigation">
+        <span class="sr-only">Navigation:</span>
+<ul>
+  
+  
+  
+  
+    
+      <li>
+        <a
+          id="_navigation"
+          href="/category/dart/"
+          class="sidebar-nav-item"
+          
+          >
+          Dart
+        </a>
+      </li>
+    
+  
+    
+      <li>
+        <a
+          
+          href="/category/technical/"
+          class="sidebar-nav-item"
+          
+          >
+          Technical
+        </a>
+      </li>
+    
+  
+    
+      <li>
+        <a
+          
+          href="/category/non-technical/"
+          class="sidebar-nav-item"
+          
+          >
+          Non-Technical
+        </a>
+      </li>
+    
+  
+    
+      <li>
+        <a
+          
+          href="/category/life/"
+          class="sidebar-nav-item"
+          
+          >
+          Life
+        </a>
+      </li>
+    
+  
+    
+      <li>
+        <a
+          
+          href="/about/"
+          class="sidebar-nav-item"
+          
+          >
+          About Me
+        </a>
+      </li>
+    
+  
+</ul>
+
+      </nav>
+
+      
+
+      <div class="sidebar-social">
+        <span class="sr-only">Social</span>
+<ul>
+  
+
+  
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://twitter.com/WujunaoNick" title="Twitter" class="no-mark-external">
+    <span class="icon-twitter"></span>
+    <span class="sr-only">Twitter</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="https://github.com/NickWu007" title="GitHub" class="no-mark-external">
+    <span class="icon-github"></span>
+    <span class="sr-only">GitHub</span>
+  </a>
+</li>
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a href="mailto:wujunao19950715@gmail.com" title="email" class="no-mark-external">
+    <span class="icon-link"></span>
+    <span class="sr-only">email</span>
+  </a>
+</li>
+
+  
+</ul>
+
+      </div>
+    </div>
+  </header>
+</hy-drawer>
+
+</hy-push-state>
+
+
+  
+
+  <!--[if gt IE 9]><!---->
+  
+  <script>loadJSDeferred('/assets/js/hydejack-7.5.1.js');</script>
+  
+  <!--<![endif]-->
+
+
+
+  
+<hr class="sr-only"/>
+<h2 class="sr-only">Templates:</h2>
+
+<template id="_animation-template">
+  <div class="animation-main fixed-top">
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+<template id="_loading-template">
+  <div class="loading">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+<template id="_error-template">
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading: <a class="this-link" href=""></a>.
+    </p>
+  </div>
+</template>
+
+<template id="_back-template">
+  <a id="_back" class="back nav-btn no-hover">
+    <span class="sr-only">Back</span>
+    <span class="icon-arrow-left2"></span>
+  </a>
+</template>
+
+<template id="_permalink-template">
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="icon-link"></span>
+  </a>
+</template>
+
+
+
+</body>
+</html>
