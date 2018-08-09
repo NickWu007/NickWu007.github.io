@@ -14,7 +14,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <atom:link href="https://NickWu007.github.io/feed/podcast" rel="self" type="application/rss+xml" />
 <link>https://NickWu007.github.io</link>
 <description>Two programmers talk abuot anything and everything.</description>
-<lastBuildDate>Thu, 09 Aug 2018 23:35:04 +0100</lastBuildDate>
+<lastBuildDate>Thu, 09 Aug 2018 23:42:53 +0100</lastBuildDate>
 <language>en-US</language>
 <sy:updatePeriod>hourly</sy:updatePeriod>
 <sy:updateFrequency>1</sy:updateFrequency>
@@ -51,11 +51,9 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
     <category><![CDATA[podcast]]></category>
 
 
-    <guid isPermaLink="true">https://NickWu007.github.io/podcast/2018/08/09/podcast-ep-1/</guid>
+    <guid isPermaLink="false">https://NickWu007.github.io/https://s3.eu-west-2.amazonaws.com/compilepodcast/compile_1.mp3</guid>
     <description>
-        <![CDATA[Hello everyone! This is a brand new podcast for you!
-
-]]>
+        <![CDATA[In our premier episode, we have a great guest Brennan joining us to talk about side projects.]]>
     </description>
     <content:encoded>
         <![CDATA[<p>Hello everyone! This is a brand new podcast for you!</p>
@@ -84,11 +82,8 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <p>My Twitter: https://twitter.com/WujunaoNick</p>
 ]]>
     </content:encoded>
-
     <enclosure url="https://s3.eu-west-2.amazonaws.com/compilepodcast/compile_1.mp3" length="136040524" type="audio/mpeg" />
-    <itunes:subtitle><![CDATA[Hello everyone! This is a brand new podcast for you!
-
-]]></itunes:subtitle>
+    <itunes:subtitle><![CDATA[In our premier episode, we have a great guest Brennan joining us to talk about side projects.]]></itunes:subtitle>
     <itunes:summary><![CDATA[<p>Hello everyone! This is a brand new podcast for you!</p>
 
 <p>In our premier episode, we have a great guest Brennan joining us to talk about side projects: why you might want to do a  side project, how to get started, and how to deal with getting stuck, and more!</p>
@@ -133,11 +128,9 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
     <category><![CDATA[podcast]]></category>
 
 
-    <guid isPermaLink="true">https://NickWu007.github.io/podcast/2018/08/09/podcast-ep-0/</guid>
+    <guid isPermaLink="false">https://NickWu007.github.io/https://s3.eu-west-2.amazonaws.com/compilepodcast/Compile_pilot.mp3</guid>
     <description>
-        <![CDATA[Hello everyone! This is a brand new podcast for you!
-
-]]>
+        <![CDATA[In our pilot episode, I talk about who I am, and why I am starting this podcast.]]>
     </description>
     <content:encoded>
         <![CDATA[<p>Hello everyone! This is a brand new podcast for you!</p>
@@ -160,11 +153,8 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <p>See you all next week!</p>
 ]]>
     </content:encoded>
-
     <enclosure url="https://s3.eu-west-2.amazonaws.com/compilepodcast/Compile_pilot.mp3" length="18922786" type="audio/mpeg" />
-    <itunes:subtitle><![CDATA[Hello everyone! This is a brand new podcast for you!
-
-]]></itunes:subtitle>
+    <itunes:subtitle><![CDATA[In our pilot episode, I talk about who I am, and why I am starting this podcast.]]></itunes:subtitle>
     <itunes:summary><![CDATA[<p>Hello everyone! This is a brand new podcast for you!</p>
 
 <p>In our pilot episode, I talk about the name of the podcast, a speed round of myself, and why I am starting this podcast! If there’s anything you want to say, be it suggestion on recording, any topic you want to hear us do, anything at all, feel free to leave a comment!</p>
