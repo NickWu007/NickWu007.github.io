@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:atom="http://www.w3.org/2005/Atom"
+xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
+>
+ 
+<channel>
+<title>The Compile Podcast</title>
+<atom:link href="https://NickWu007.github.io/feed/podcast" rel="self" type="application/rss+xml" />
+<link>https://NickWu007.github.io</link>
+<description>Two programmers talk abuot anything and everything.</description>
+<lastBuildDate>Thu, 09 Aug 2018 22:22:59 +0100</lastBuildDate>
+<language>en-US</language>
+<sy:updatePeriod>hourly</sy:updatePeriod>
+<sy:updateFrequency>1</sy:updateFrequency>
+<generator>http://jekyllrb.com</generator>
+<itunes:summary>Two programmers talk abuot anything and everything.</itunes:summary>
+<itunes:author>Nick</itunes:author>
+<itunes:explicit>no</itunes:explicit>
+<itunes:image href="https://NickWu007.github.io/assets/images/compile.png" />
+<itunes:owner>
+<itunes:name>Nick Wu</itunes:name>
+<itunes:email>wujunao19950715@gmail.com</itunes:email>
+</itunes:owner>
+<managingEditor>wujunao19950715@gmail.com (Nick Wu)</managingEditor>
+<itunes:subtitle>Two programmers talk abuot anything and everything.</itunes:subtitle>
+<image>
+<title>The Compile Podcast</title>
+<url>https://NickWu007.github.io/assets/images/compile.png</url>
+<link>https://NickWu007.github.io</link>
+</image>
+<itunes:category text="Technology">
+<itunes:category text="Software How-To" />
+<itunes:category text="" />
+</itunes:category>
+
+  <item>
+    <title>Episode 0: The Polit</title>
+    <link>https://NickWu007.github.io/podcast/2018/08/09/test-podcast/</link>
+    <comments>https://NickWu007.github.io/podcast/2018/08/09/test-podcast/#comments</comments>
+    <pubDate>Thu, 09 Aug 2018 00:00:00 +0100</pubDate>
+    <dc:creator><![CDATA[{"name"=>"Nick Wu", "picture"=>{"path"=>"/assets/image/me.jpg"}, "social"=>{"twitter"=>"WujunaoNick", "github"=>"NickWu007", "email"=>"mailto:wujunao19950715@gmail.com"}}]]></dc:creator>
+
+    <category><![CDATA[podcast]]></category>
+
+
+    <guid isPermaLink="true">https://NickWu007.github.io/podcast/2018/08/09/test-podcast/</guid>
+    <description>
+        <![CDATA[
+]]>
+    </description>
+    <content:encoded>
+        <![CDATA[
+]]>
+    </content:encoded>
+
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/compilepodcast/Compile_pilot.mp3" length="18922786" type="audio/mpeg" />
+    <itunes:subtitle><![CDATA[
+]]></itunes:subtitle>
+    <itunes:summary><![CDATA[
+]]></itunes:summary>
+    <itunes:author>Nick</itunes:author>
+    <itunes:image href="https://NickWu007.github.io/assets/images/compile.png" />
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:duration>10:56</itunes:duration>
+  </item>
+
+</channel>
+</rss>
