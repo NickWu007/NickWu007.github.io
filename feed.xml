@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://nickwu007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nickwu007.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-08-13T18:25:50+01:00</updated><id>https://nickwu007.github.io/</id><title type="html">DevPractical</title><subtitle>Practical tips for Developers, from a developer.</subtitle><author><name>Nick Wu</name></author><entry><title type="html">Compile Podcast Ep 1: Side projects</title><link href="https://nickwu007.github.io/podcast/2018/08/09/podcast-ep-1/" rel="alternate" type="text/html" title="Compile Podcast Ep 1: Side projects" /><published>2018-08-09T00:00:00+01:00</published><updated>2018-08-09T00:00:00+01:00</updated><id>https://nickwu007.github.io/podcast/2018/08/09/podcast-ep-1</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2018/08/09/podcast-ep-1/">&lt;p&gt;Hello everyone! This is a brand new podcast for you!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://nickwu007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nickwu007.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-08-15T00:08:58+01:00</updated><id>https://nickwu007.github.io/</id><title type="html">DevPractical</title><subtitle>Practical tips for Developers, from a developer.</subtitle><author><name>Nick Wu</name></author><entry><title type="html">Compile Podcast Ep 2: When to quit a project</title><link href="https://nickwu007.github.io/podcast/2018/08/09/podcast-ep-2/" rel="alternate" type="text/html" title="Compile Podcast Ep 2: When to quit a project" /><published>2018-08-09T00:00:00+01:00</published><updated>2018-08-09T00:00:00+01:00</updated><id>https://nickwu007.github.io/podcast/2018/08/09/podcast-ep-2</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2018/08/09/podcast-ep-2/">&lt;p&gt;Hello everyone! This is a brand new podcast for you!&lt;/p&gt;
+
+&lt;p&gt;In this episode, we have another great friend John joining us to talk about when you should quit a project: why you might want to consider quitting, how to deal with the guilt, what you can do to make the quitting easier, and more!&lt;/p&gt;
+
+&lt;p&gt;Breakpoints(lol):&lt;/p&gt;
+
+&lt;p&gt;00:00 Intro.
+00:36 Introduce guest: John.
+05:07 Speed Round with John.
+16:10 Main topic: When to quit a project.
+	17:21 John and Nick discuss a typical situation to quit a project.
+	19:30 John explains “Sunk Cost Fallacy”, and how to weigh different options when you are at a crossroad with your project.
+	24:50 Guilt of quitting a project.
+	31:27 How to deal with the guilt?
+	37:00 Quitting as part of time/energy management.
+	42:25 “Compile down to essentials”.
+45:28 Pick and Plug.&lt;/p&gt;
+
+&lt;p&gt;Bare with me with the rubbish audio, not really good with editing yet. Also if you find the audio funny from time to time, that’s probably because we had a few disconnects during recording, and some of the bits are re-rendered in post.&lt;/p&gt;
+
+&lt;p&gt;Next week we will have a new guest with a new topic! So subscribe and stay tuned!&lt;/p&gt;
+
+&lt;p&gt;My Twitter: https://twitter.com/WujunaoNick&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">In this episode, we have another great friend John joining us to talk about when you should quit a project: why you might want to consider quitting, how to deal with the guilt, what you can do to make the quitting easier, and more!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep2_wide.png" /></entry><entry><title type="html">Compile Podcast Ep 1: Side projects</title><link href="https://nickwu007.github.io/podcast/2018/08/09/podcast-ep-1/" rel="alternate" type="text/html" title="Compile Podcast Ep 1: Side projects" /><published>2018-08-09T00:00:00+01:00</published><updated>2018-08-09T00:00:00+01:00</updated><id>https://nickwu007.github.io/podcast/2018/08/09/podcast-ep-1</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2018/08/09/podcast-ep-1/">&lt;p&gt;Hello everyone! This is a brand new podcast for you!&lt;/p&gt;
 
 &lt;p&gt;In our premier episode, we have a great guest Brennan joining us to talk about side projects: why you might want to do a  side project, how to get started, and how to deal with getting stuck, and more!&lt;/p&gt;
 
@@ -971,80 +993,4 @@ Nick&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html
 
 &lt;p&gt;Let’s recap what we did today. We created a sub component to display a post from earlier, and we have the main content of the homepage done. The most challenging part maybe playing with CSS, you might find &lt;a href=&quot;https://www.w3schools.com/css/css_display_visibility.asp&quot;&gt;this&lt;/a&gt; and &lt;a href=&quot;https://css-tricks.com/almanac/properties/d/display/&quot;&gt;this&lt;/a&gt; to be helpful in understanding &lt;code class=&quot;highlighter-rouge&quot;&gt;display&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;As usual, let me know if anything is unclear. Happy building!&lt;/p&gt;</content><author><name>nickwu0715</name></author><summary type="html">Hello there! Sorry I have been away for a few weeks due to uni work and other stuff, but today we will start working on the homepage of Teamoji, which will be the last page left, before we start hooking up everything and starting with Firebase!</summary></entry><entry><title type="html">Dart #6: Emoji selection</title><link href="https://nickwu007.github.io/dart/technical/2017/09/24/dart-6-emoji-selection/" rel="alternate" type="text/html" title="Dart #6: Emoji selection" /><published>2017-09-24T16:40:36+01:00</published><updated>2017-09-24T16:40:36+01:00</updated><id>https://nickwu007.github.io/dart/technical/2017/09/24/dart-6-emoji-selection</id><content type="html" xml:base="https://nickwu007.github.io/dart/technical/2017/09/24/dart-6-emoji-selection/">&lt;p&gt;After the create team page, this week we are going to be building the emoji selection page. As usual the code I present here is somewhat partial, so let me know if anything is unclear.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/09/emoji_selection.png&quot; alt=&quot;emoji_selection&quot; /&gt;
-&lt;em&gt;Our mock&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;how-to-build-it&quot;&gt;How to build it?&lt;/h3&gt;
-
-&lt;p&gt;As mentioned in last week’s post, we are going to leverage &lt;code class=&quot;highlighter-rouge&quot;&gt;EmojiRenderComponent&lt;/code&gt; to build this component, and it is not hard to see why. Every little emoji to select is an &lt;code class=&quot;highlighter-rouge&quot;&gt;EmojiRenderComponent&lt;/code&gt;. If we have a list of emoji unicodes, then a simple &lt;code class=&quot;highlighter-rouge&quot;&gt;material-list&lt;/code&gt; should do.&lt;/p&gt;
-
-&lt;p&gt;So the question becomes: where do we find all the emoji unicodes? Answer is, and usually will be, our good friend Google. A simple search would turn up some csv file, and with a little python formatting, we are good to go.&lt;/p&gt;
-
-&lt;p&gt;One thing worth pointing out though is current I am putting the entire list as a private variable in the component, and ideally it should be fetched from some service. We will address this when we get to &lt;em&gt;Firebase&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Now let’s take a look at the code.&lt;/p&gt;
-
-&lt;h3 id=&quot;emoji_selectordart&quot;&gt;emoji_selector.dart&lt;/h3&gt;
-
-&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:Teamoji_tutorial/src/common/messages.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:Teamoji_tutorial/src/emoji_render/emoji_render.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:angular/angular.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:angular_components/angular_components.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nd&quot;&gt;@Component&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;selector:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'emoji-selector'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;templateUrl:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'emoji_selector.html'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;directives:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;EmojiRenderComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;MaterialIconComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;MaterialButtonComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;NgFor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;styleUrls:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'emoji_selector.css'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;EmojiSelectorComponent&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EmojiSelectorMessages&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EmojiList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onCancel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_dismiss&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onSelect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emoji&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'You want to post &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$emoji&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;_dismiss&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;_dismiss&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'You want to cancel selecting an emoji'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This is pretty straightforward. I am printing out the actions instead of actually implementing them. This simplifies the component for now, and we can fill these up when we put everything together.&lt;/p&gt;
-
-&lt;h3 id=&quot;emoji_selectorhtml&quot;&gt;emoji_selector.html&lt;/h3&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-emoji-select-header&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-emoji-select-header-message&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;material-button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-emoji-select-header-button&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;icon&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;trigger&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)=&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;onCancel&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;()&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;material-icon&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;icon=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;clear&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/material-icon&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/material-button&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-emoji-select-content&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-emoji-select-list&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-emoji-select-item&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Note we use a combination of &lt;code class=&quot;highlighter-rouge&quot;&gt;material-button&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;material-icon&lt;/code&gt; to realize the cancel button. There might be cleaner ways to implement this, but as far as I know this is the conventional way.&lt;/p&gt;
-
-&lt;p&gt;Also interestingly there’s an &lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; before the &lt;code class=&quot;highlighter-rouge&quot;&gt;ngFor&lt;/code&gt;, that’s because &lt;code class=&quot;highlighter-rouge&quot;&gt;ngFor&lt;/code&gt; is a &lt;a href=&quot;https://webdev.dartlang.org/angular/guide/structural-directives&quot;&gt;&lt;em&gt;Structural Directive&lt;/em&gt;&lt;/a&gt;. This asterisk is saying “I will potentially alter the DOM tree, so parse me a bit differently”. In our case, because we are enumerating a list, whose length is unbeknownst to the template, it can potentially grow to many &lt;code class=&quot;highlighter-rouge&quot;&gt;li&lt;/code&gt;s, thus altering the DOM tree.&lt;/p&gt;
-
-&lt;p&gt;I won’t show the CSS here, it is in the repo if you to take a look. Also I am pretty sure I did a lot of hacky stuff there, so you might want to implement the layout and styling by you own.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/09/screen-shot-2017-09-24-at-16-36-07.png&quot; alt=&quot;Screen Shot 2017-09-24 at 16.36.07&quot; /&gt;
-&lt;em&gt;Final render. Also the selection “works” too!&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Once we have this component done, the only component left is the homepage component. Unfortunately this is the most complicated component to implement, so we will split into 2 or 3 posts for that.&lt;/p&gt;
-
-&lt;p&gt;Let me know if anything can be improved. Thanks for reading, and I will see you all next week.&lt;/p&gt;</content><author><name>nickwu0715</name></author><summary type="html">After the create team page, this week we are going to be building the emoji selection page. As usual the code I present here is somewhat partial, so let me know if anything is unclear.</summary></entry></feed>
+&lt;p&gt;As usual, let me know if anything is unclear. Happy building!&lt;/p&gt;</content><author><name>nickwu0715</name></author><summary type="html">Hello there! Sorry I have been away for a few weeks due to uni work and other stuff, but today we will start working on the homepage of Teamoji, which will be the last page left, before we start hooking up everything and starting with Firebase!</summary></entry></feed>
