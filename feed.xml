@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://nickwu007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nickwu007.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-08-15T09:25:25+01:00</updated><id>https://nickwu007.github.io/</id><title type="html">DevPractical</title><subtitle>Practical tips for Developers, from a developer.</subtitle><author><name>Nick Wu</name></author><entry><title type="html">Compile Podcast Ep 2: When to quit a project</title><link href="https://nickwu007.github.io/podcast/2018/08/14/podcast-ep-2/" rel="alternate" type="text/html" title="Compile Podcast Ep 2: When to quit a project" /><published>2018-08-14T00:00:00+01:00</published><updated>2018-08-14T00:00:00+01:00</updated><id>https://nickwu007.github.io/podcast/2018/08/14/podcast-ep-2</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2018/08/14/podcast-ep-2/">&lt;p&gt;Hello everyone! This is a brand new podcast for you!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://nickwu007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nickwu007.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-08-25T20:20:10+01:00</updated><id>https://nickwu007.github.io/</id><title type="html">DevPractical</title><subtitle>Practical tips for Developers, from a developer.</subtitle><author><name>Nick Wu</name></author><entry><title type="html">Compile Podcast Ep 2: When to quit a project</title><link href="https://nickwu007.github.io/podcast/2018/08/25/podcast-ep-3/" rel="alternate" type="text/html" title="Compile Podcast Ep 2: When to quit a project" /><published>2018-08-25T00:00:00+01:00</published><updated>2018-08-25T00:00:00+01:00</updated><id>https://nickwu007.github.io/podcast/2018/08/25/podcast-ep-3</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2018/08/25/podcast-ep-3/">&lt;p&gt;Hello everyone! This is a brand new podcast for you!&lt;/p&gt;
+
+&lt;p&gt;In this episode, we have a great school mate Alex joining us to talk about First Dev Job: how we got our first job, tips on job hunting, interviews, and more!&lt;/p&gt;
+
+&lt;p&gt;Breakpoints(lol):&lt;/p&gt;
+
+&lt;p&gt;00:00 Intro.
+02:12 Speed Round with Alex.
+19:04 Main topic: First Dev Job.
+	19:26 Alex talks about his journey of getting his first job.
+	26:55 Nick talks about how he got his first job.
+	31:00 General tips on job hunting.
+	38:44 CV tips.
+	46:44Interview tips.
+	01:08:19 “Compile down to essentials”.
+1:11:58 Pick and Plug.&lt;/p&gt;
+
+&lt;p&gt;————————————————————
+Links in this episode:&lt;/p&gt;
+
+&lt;p&gt;MIT open course on Algorithm and data structure: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/&lt;/p&gt;
+
+&lt;p&gt;LeetCode: https://leetcode.com&lt;/p&gt;
+
+&lt;p&gt;Crack the Coding Interview book: http://amzn.eu/dlkHaB0&lt;/p&gt;
+
+&lt;p&gt;CareerCup: https://careercup.com/&lt;/p&gt;
+
+&lt;p&gt;Hiring without whiteboards: https://github.com/poteto/hiring-without-whiteboards&lt;/p&gt;
+
+&lt;p&gt;Pink of the week: Coding Tech YouTube Channel: https://www.youtube.com/channel/UCtxCXg-UvSnTKPOzLH4wJaQ
+————————————————————&lt;/p&gt;
+
+&lt;p&gt;Next week we will have a new guest with a new topic! So subscribe and stay tuned!&lt;/p&gt;
+
+&lt;p&gt;My Twitter: https://twitter.com/WujunaoNick&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">In this episode, we have a great school mate Alex joining us to talk about First Dev Job: how we got our first job, tips on job hunting, interviews, and more!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep3_wide.png" /></entry><entry><title type="html">Compile Podcast Ep 2: When to quit a project</title><link href="https://nickwu007.github.io/podcast/2018/08/14/podcast-ep-2/" rel="alternate" type="text/html" title="Compile Podcast Ep 2: When to quit a project" /><published>2018-08-14T00:00:00+01:00</published><updated>2018-08-14T00:00:00+01:00</updated><id>https://nickwu007.github.io/podcast/2018/08/14/podcast-ep-2</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2018/08/14/podcast-ep-2/">&lt;p&gt;Hello everyone! This is a brand new podcast for you!&lt;/p&gt;
 
 &lt;p&gt;In this episode, we have another great friend John joining us to talk about when you should quit a project: why you might want to consider quitting, how to deal with the guilt, what you can do to make the quitting easier, and more!&lt;/p&gt;
 
@@ -738,259 +773,4 @@ Nick&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html
 
 &lt;p&gt;Tl;dr. Trust that you are awesome!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/10/1y1wg5.jpg&quot; alt=&quot;1y1wg5&quot; /&gt;&lt;/p&gt;</content><author><name>nickwu0715</name></author><summary type="html">Recently a dear friend of mine is struggling to enjoy work. As this is their first “job”, a lot of pressure, imagined or not, has become a source of great anxiety. After discussing the mental hardship during these tough moments, I can’t help by remembering how I felt in my first job. Today I want to identify this problem, explain why it exists, and what we can do to mitigate it.</summary></entry><entry><title type="html">Dart #7: Homepage part 1</title><link href="https://nickwu007.github.io/dart/technical/2017/10/20/dart-7-homepage-part-1/" rel="alternate" type="text/html" title="Dart #7: Homepage part 1" /><published>2017-10-20T23:44:50+01:00</published><updated>2017-10-20T23:44:50+01:00</updated><id>https://nickwu007.github.io/dart/technical/2017/10/20/dart-7-homepage-part-1</id><content type="html" xml:base="https://nickwu007.github.io/dart/technical/2017/10/20/dart-7-homepage-part-1/">&lt;p&gt;Hello there! Sorry I have been away for a few weeks due to uni work and other stuff, but today we will start working on the homepage of Teamoji, which will be the last page left, before we start hooking up everything and starting with Firebase!&lt;/p&gt;
-
-&lt;p&gt;As I mentioned before, due to the complexity of the app, we will split this page into a few posts. In this post we will work on the main content, which consists a header, a list of recent posts, and a button to post new emoji.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/10/homepage.png&quot; alt=&quot;Homepage&quot; /&gt;
-&lt;em&gt;Our goal today&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;userpostcomponent&quot;&gt;UserPostComponent&lt;/h3&gt;
-
-&lt;p&gt;At this point, you should have a bit of an “Angular” senses about how to implement things, given Angular’s features and principles. It is not hard to see we would want a component for one post by a user, and in the main component we would simply &lt;code class=&quot;highlighter-rouge&quot;&gt;*ngFor&lt;/code&gt; a bunch of this sub-component.&lt;/p&gt;
-
-&lt;p&gt;So let’s build that.&lt;/p&gt;
-
-&lt;p&gt;First you should consider what exactly this &lt;code class=&quot;highlighter-rouge&quot;&gt;UserPostComponent&lt;/code&gt; should do. It should display a posted emoji by a user. From that, we see there are actually two things needed for this component to display:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;a &lt;code class=&quot;highlighter-rouge&quot;&gt;User&lt;/code&gt; who posted this emoji.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;What emoji it is.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As a result, we would want to have 2 &lt;code class=&quot;highlighter-rouge&quot;&gt;@Input()&lt;/code&gt; bindings from upstream, and that’s exactly what we will do.&lt;/p&gt;
-
-&lt;h4 id=&quot;user_postdart&quot;&gt;user_post.dart&lt;/h4&gt;
-
-&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:Teamoji_tutorial/src/emoji_render/emoji_render.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:angular/angular.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nd&quot;&gt;@Component&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;selector:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'user-post'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;templateUrl:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'user_post.html'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;styleUrls:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'user_post.css'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;directives:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;EmojiRenderComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;UserPostComponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@Input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emoji&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nd&quot;&gt;@Input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;userName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shortUserName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;userName&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;trim&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toUpperCase&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;user_posthtml&quot;&gt;user_post.html&lt;/h4&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-user-post-user-icon&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-user-profile-image&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;emoji-render&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;useBigIcon&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;]=&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;icon&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;]=&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;emoji&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/emoji-render&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-user-post-timestamp&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;1h&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;user_postcss&quot;&gt;user_post.css&lt;/h4&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.tm-user-profile-image&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;50%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;30px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;dodgerblue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;table-cell&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;center&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;vertical-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;middle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nc&quot;&gt;.tm-user-post-timestamp&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lightgray&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;I won’t go into detail about how this component is built. Everything should be fairly easy to grasp. There’s one bit that requires some thinking though, which is rounding the &lt;code class=&quot;highlighter-rouge&quot;&gt;div&lt;/code&gt; for &lt;code class=&quot;highlighter-rouge&quot;&gt;shortUserName&lt;/code&gt; but still make the text centered. The last three lines in &lt;code class=&quot;highlighter-rouge&quot;&gt;.tm-user-profile-image&lt;/code&gt; realize that. Take a second look and really understand the reason for each line.&lt;/p&gt;
-
-&lt;p&gt;Another thing worth mentioning is that tapping on a recent post doesn’t do anything, hence no &lt;code class=&quot;highlighter-rouge&quot;&gt;@Output()&lt;/code&gt; event needed.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/10/screen-shot-2017-10-20-at-23-40-08.png&quot; alt=&quot;Screen Shot 2017-10-20 at 23.40.08&quot; /&gt;
-&lt;em&gt;I am cool kid!&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;main-homepage-content&quot;&gt;Main homepage content&lt;/h3&gt;
-
-&lt;p&gt;Now that we have &lt;code class=&quot;highlighter-rouge&quot;&gt;UserPostComponent&lt;/code&gt;, it is finally time to start building our homepage.&lt;/p&gt;
-
-&lt;p&gt;As we considered before, for now the homepage will have 3 main components:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;a header.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;a list of &lt;code class=&quot;highlighter-rouge&quot;&gt;UserPostComponent&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;a button to post new emoji.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Let’s double check if we have everything needed. The header will be an “icon button” plus some text, this is easy. The main section is a list of posts, which we have as well(for now we will mock a list of emojis, but eventually this should be pulled from Firebase). And last the button to add new emoji. There’s actually a designated name for this sort of button on the lower right side on page, according to Angular Material Design: &lt;a href=&quot;https://dart-lang.github.io/angular_components_example/#Buttons&quot;&gt;&lt;em&gt;Floating Action Button&lt;/em&gt;&lt;/a&gt;, which we can just use out of the box. So we have everything we need, let’s build it.&lt;/p&gt;
-
-&lt;h4 id=&quot;homepagehtml&quot;&gt;homepage.html&lt;/h4&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-main-content&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-main-content-header-row&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-
-
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-main-content-header-title&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Header&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-main-content-content&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;padding-left:0;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;li&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-prev-emoji-item&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;material-fab&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-add-post-icon&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;aria-label=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;add&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;raised&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;trigger&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)=&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;onAddPost&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;()&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;material-icon&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;icon=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;add&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;size=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;x-large&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/material-icon&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/material-fab&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;homepagedart&quot;&gt;homepage.dart&lt;/h4&gt;
-
-&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'dart:async'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:Teamoji_tutorial/src/common/messages.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:Teamoji_tutorial/src/create_team/create_team.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:Teamoji_tutorial/src/services/firebase_service.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:Teamoji_tutorial/src/user_post/user_post.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:angular/angular.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:angular_components/angular_components.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ShowingComponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;homepage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;create_team&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;emoji_selector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nd&quot;&gt;@Component&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;selector:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'homepage'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;directives:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;MaterialButtonComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;MaterialFabComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;MaterialIconComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;MaterialListComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;MaterialListItemComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;NgFor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;UserPostComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;],&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;templateUrl:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'homepage.html'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;styleUrls:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'homepage.css'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;])&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HomepageComponent&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HomepageMessages&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_mockEmojiList&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F60B}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F60E}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F60D}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F618}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F617}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F619}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F60B}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F60E}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F60D}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F618}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F617}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F619}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F60B}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F60E}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F60D}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F618}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F617}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;u{1F619}'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;previousEmojis&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_mockEmojiList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onAddPost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'should show select emoji component'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;At first let’s do zero css and see what we got.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/10/screen-shot-2017-10-20-at-23-12-43.png&quot; alt=&quot;Screen Shot 2017-10-20 at 23.12.43&quot; /&gt;
-&lt;em&gt;Yeah… You gotta make a bit more sense than that.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;In the next section let’s work carefully with css and the page more like a page.&lt;/p&gt;
-
-&lt;h3 id=&quot;css-homepage&quot;&gt;CSS homepage&lt;/h3&gt;
-
-&lt;p&gt;In this section I won’t go too deep into stuff like font and color. We are going to focus mainly on layout.&lt;/p&gt;
-
-&lt;p&gt;First let’s make the root div stretch to full screen, adjust the background color too.&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.tm-main-content&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;lightyellow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;This won’t change any layout. Our next goal is to make the header text and the button in one row, and use a different background color to mark the header part. There are many ways to do that, but ultimately we need to change the &lt;code class=&quot;highlighter-rouge&quot;&gt;display&lt;/code&gt; attribute for the header top-level &lt;code class=&quot;highlighter-rouge&quot;&gt;div&lt;/code&gt;. By default it is set to &lt;code class=&quot;highlighter-rouge&quot;&gt;block&lt;/code&gt;, which just stacks child elements vertically. Hence the above picture.&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.tm-main-content-header-row&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;orange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nc&quot;&gt;.tm-main-content-header-title&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;This fixes the header div for us. It is worth noting you want to have some padding for the text, otherwise it would touch the button at the upper bound since it is set to &lt;code class=&quot;highlighter-rouge&quot;&gt;flex&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/10/screen-shot-2017-10-20-at-23-26-21.png&quot; alt=&quot;Screen Shot 2017-10-20 at 23.26.21&quot; /&gt;
-&lt;em&gt;A bit better now.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Now let’s fix the user post list. The problem is the same as the header: &lt;code class=&quot;highlighter-rouge&quot;&gt;display&lt;/code&gt; attribute. Here we want to have the posts stacked up, but use horizontal spaces too, this is done by setting it to &lt;code class=&quot;highlighter-rouge&quot;&gt;inline-block&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.tm-main-content-content&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;8px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nc&quot;&gt;.tm-prev-emoji-item&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inline-block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/10/screen-shot-2017-10-20-at-23-34-09.png&quot; alt=&quot;Screen Shot 2017-10-20 at 23.34.09&quot; /&gt;
-&lt;em&gt;So close… Just missing the button now.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;And lastly the FAB. Here we are just going to fix the &lt;code class=&quot;highlighter-rouge&quot;&gt;position&lt;/code&gt; at the lower right corner of the page, even when scrolling.&lt;/p&gt;
-
-&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.tm-add-post-icon&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;deepskyblue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;fixed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;nl&quot;&gt;bottom&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;After that, we should have the homepage nice and pretty.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/10/screen-shot-2017-10-20-at-23-34-32.png&quot; alt=&quot;Screen Shot 2017-10-20 at 23.34.32.png&quot; /&gt;
-&lt;em&gt;Nice and pretty indeed :D&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
-
-&lt;p&gt;Let’s recap what we did today. We created a sub component to display a post from earlier, and we have the main content of the homepage done. The most challenging part maybe playing with CSS, you might find &lt;a href=&quot;https://www.w3schools.com/css/css_display_visibility.asp&quot;&gt;this&lt;/a&gt; and &lt;a href=&quot;https://css-tricks.com/almanac/properties/d/display/&quot;&gt;this&lt;/a&gt; to be helpful in understanding &lt;code class=&quot;highlighter-rouge&quot;&gt;display&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;As usual, let me know if anything is unclear. Happy building!&lt;/p&gt;</content><author><name>nickwu0715</name></author><summary type="html">Hello there! Sorry I have been away for a few weeks due to uni work and other stuff, but today we will start working on the homepage of Teamoji, which will be the last page left, before we start hooking up everything and starting with Firebase!</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2017/10/1y1wg5.jpg&quot; alt=&quot;1y1wg5&quot; /&gt;&lt;/p&gt;</content><author><name>nickwu0715</name></author><summary type="html">Recently a dear friend of mine is struggling to enjoy work. As this is their first “job”, a lot of pressure, imagined or not, has become a source of great anxiety. After discussing the mental hardship during these tough moments, I can’t help by remembering how I felt in my first job. Today I want to identify this problem, explain why it exists, and what we can do to mitigate it.</summary></entry></feed>

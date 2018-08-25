@@ -14,7 +14,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <atom:link href="https://NickWu007.github.io/feed/podcast" rel="self" type="application/rss+xml" />
 <link>https://NickWu007.github.io</link>
 <description>Two programmers talk abuot anything and everything.</description>
-<lastBuildDate>Wed, 15 Aug 2018 09:25:25 +0100</lastBuildDate>
+<lastBuildDate>Sat, 25 Aug 2018 20:20:10 +0100</lastBuildDate>
 <language>en-US</language>
 <sy:updatePeriod>hourly</sy:updatePeriod>
 <sy:updateFrequency>1</sy:updateFrequency>
@@ -37,6 +37,109 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <itunes:category text="Technology">
 <itunes:category text="Software How-To" />
 </itunes:category>
+
+  <item>
+    <title>Compile Podcast Ep 2: When to quit a project</title>
+    <link>https://NickWu007.github.io/podcast/2018/08/25/podcast-ep-3/</link>
+    <image>
+    <title>/assets/images/compile_ep3_wide.png</title>
+    <url>https://NickWu007.github.io/assets/images/compile_ep3_wide.png</url>
+    </image>
+    <pubDate>Sat, 25 Aug 2018 00:00:00 +0100</pubDate>
+    <dc:creator><![CDATA[{"name"=>"Nick Wu", "picture"=>{"path"=>"/assets/image/me.jpg"}, "social"=>{"twitter"=>"WujunaoNick", "github"=>"NickWu007", "email"=>"mailto:wujunao19950715@gmail.com"}}]]></dc:creator>
+
+    <category><![CDATA[podcast]]></category>
+
+
+    <guid isPermaLink="false">https://NickWu007.github.io/https://s3.eu-west-2.amazonaws.com/compilepodcast/compile_3.mp3</guid>
+    <description>
+        <![CDATA[In this episode, we have a great school mate Alex joining us to talk about First Dev Job: how we got our first job, tips on job hunting, interviews, and more!]]>
+    </description>
+    <content:encoded>
+        <![CDATA[<p>Hello everyone! This is a brand new podcast for you!</p>
+
+<p>In this episode, we have a great school mate Alex joining us to talk about First Dev Job: how we got our first job, tips on job hunting, interviews, and more!</p>
+
+<p>Breakpoints(lol):</p>
+
+<p>00:00 Intro.
+02:12 Speed Round with Alex.
+19:04 Main topic: First Dev Job.
+	19:26 Alex talks about his journey of getting his first job.
+	26:55 Nick talks about how he got his first job.
+	31:00 General tips on job hunting.
+	38:44 CV tips.
+	46:44Interview tips.
+	01:08:19 “Compile down to essentials”.
+1:11:58 Pick and Plug.</p>
+
+<p>————————————————————
+Links in this episode:</p>
+
+<p>MIT open course on Algorithm and data structure: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/</p>
+
+<p>LeetCode: https://leetcode.com</p>
+
+<p>Crack the Coding Interview book: http://amzn.eu/dlkHaB0</p>
+
+<p>CareerCup: https://careercup.com/</p>
+
+<p>Hiring without whiteboards: https://github.com/poteto/hiring-without-whiteboards</p>
+
+<p>Pink of the week: Coding Tech YouTube Channel: https://www.youtube.com/channel/UCtxCXg-UvSnTKPOzLH4wJaQ
+————————————————————</p>
+
+<p>Next week we will have a new guest with a new topic! So subscribe and stay tuned!</p>
+
+<p>My Twitter: https://twitter.com/WujunaoNick</p>
+
+]]>
+    </content:encoded>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/compilepodcast/compile_3.mp3" length="180394353" type="audio/mpeg" />
+    <itunes:subtitle><![CDATA[In this episode, we have a great school mate Alex joining us to talk about First Dev Job: how we got our first job, tips on job hunting, interviews, and more!]]></itunes:subtitle>
+    <itunes:summary><![CDATA[<p>Hello everyone! This is a brand new podcast for you!</p>
+
+<p>In this episode, we have a great school mate Alex joining us to talk about First Dev Job: how we got our first job, tips on job hunting, interviews, and more!</p>
+
+<p>Breakpoints(lol):</p>
+
+<p>00:00 Intro.
+02:12 Speed Round with Alex.
+19:04 Main topic: First Dev Job.
+	19:26 Alex talks about his journey of getting his first job.
+	26:55 Nick talks about how he got his first job.
+	31:00 General tips on job hunting.
+	38:44 CV tips.
+	46:44Interview tips.
+	01:08:19 “Compile down to essentials”.
+1:11:58 Pick and Plug.</p>
+
+<p>————————————————————
+Links in this episode:</p>
+
+<p>MIT open course on Algorithm and data structure: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/</p>
+
+<p>LeetCode: https://leetcode.com</p>
+
+<p>Crack the Coding Interview book: http://amzn.eu/dlkHaB0</p>
+
+<p>CareerCup: https://careercup.com/</p>
+
+<p>Hiring without whiteboards: https://github.com/poteto/hiring-without-whiteboards</p>
+
+<p>Pink of the week: Coding Tech YouTube Channel: https://www.youtube.com/channel/UCtxCXg-UvSnTKPOzLH4wJaQ
+————————————————————</p>
+
+<p>Next week we will have a new guest with a new topic! So subscribe and stay tuned!</p>
+
+<p>My Twitter: https://twitter.com/WujunaoNick</p>
+
+]]></itunes:summary>
+    <itunes:author>Nick</itunes:author>
+    <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:duration>01:15:10</itunes:duration>
+  </item>
 
   <item>
     <title>Compile Podcast Ep 2: When to quit a project</title>
