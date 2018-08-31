@@ -14,7 +14,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <atom:link href="https://NickWu007.github.io/feed/podcast" rel="self" type="application/rss+xml" />
 <link>https://NickWu007.github.io</link>
 <description>Two programmers talk abuot anything and everything.</description>
-<lastBuildDate>Sat, 25 Aug 2018 20:20:10 +0100</lastBuildDate>
+<lastBuildDate>Fri, 31 Aug 2018 23:54:11 +0100</lastBuildDate>
 <language>en-US</language>
 <sy:updatePeriod>hourly</sy:updatePeriod>
 <sy:updateFrequency>1</sy:updateFrequency>
@@ -39,7 +39,82 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 </itunes:category>
 
   <item>
-    <title>Compile Podcast Ep 2: When to quit a project</title>
+    <title>Compile Podcast Ep 3.5: Morning and night routines</title>
+    <link>https://NickWu007.github.io/podcast/2018/08/31/podcast-ep-4/</link>
+    <image>
+    <title>/assets/images/compile_ep4_wide.png</title>
+    <url>https://NickWu007.github.io/assets/images/compile_ep4_wide.png</url>
+    </image>
+    <pubDate>Fri, 31 Aug 2018 00:00:00 +0100</pubDate>
+    <dc:creator><![CDATA[{"name"=>"Nick Wu", "picture"=>{"path"=>"/assets/image/me.jpg"}, "social"=>{"twitter"=>"WujunaoNick", "github"=>"NickWu007", "email"=>"mailto:wujunao19950715@gmail.com"}}]]></dc:creator>
+
+    <category><![CDATA[podcast]]></category>
+
+
+    <guid isPermaLink="false">https://NickWu007.github.io/https://s3.eu-west-2.amazonaws.com/compilepodcast/compile_5.mp3</guid>
+    <description>
+        <![CDATA[In this shorter episode, I talk about my morning and night routines! Hopefully some of the tips will help you develop your own routines!]]>
+    </description>
+    <content:encoded>
+        <![CDATA[<p>Hello everyone! This is a brand new podcast for you!</p>
+
+<p>My Twitter: https://twitter.com/WujunaoNick</p>
+
+<p>In this shorter episode, I talk about my morning and night routines! Hopefully some of the tips will help you develop your own routines!</p>
+
+<p>Breakpoints(lol):</p>
+
+<p>00:00 Intro.
+01:30 Why have morning and night routines?
+03:23 My morning routines.
+12:12 My night routines.
+18:00 “Compile down to essentials”.</p>
+
+<p>————————————————————
+Links in this episode:</p>
+
+<p>Why you should drink water first thing every day: https://eu.usatoday.com/story/news/nation-now/2017/03/14/why-you-should-drink-water-first-thing-every-day/99123938/</p>
+
+<p>Cardio with empty stomach: https://youtu.be/4Qz-1xD7BmM
+————————————————————</p>
+
+<p>Next week we will have a new guest with a new topic! So subscribe and stay tuned!</p>
+]]>
+    </content:encoded>
+    <enclosure url="https://s3.eu-west-2.amazonaws.com/compilepodcast/compile_5.mp3" length="48003692" type="audio/mpeg" />
+    <itunes:subtitle><![CDATA[In this shorter episode, I talk about my morning and night routines! Hopefully some of the tips will help you develop your own routines!]]></itunes:subtitle>
+    <itunes:summary><![CDATA[<p>Hello everyone! This is a brand new podcast for you!</p>
+
+<p>My Twitter: https://twitter.com/WujunaoNick</p>
+
+<p>In this shorter episode, I talk about my morning and night routines! Hopefully some of the tips will help you develop your own routines!</p>
+
+<p>Breakpoints(lol):</p>
+
+<p>00:00 Intro.
+01:30 Why have morning and night routines?
+03:23 My morning routines.
+12:12 My night routines.
+18:00 “Compile down to essentials”.</p>
+
+<p>————————————————————
+Links in this episode:</p>
+
+<p>Why you should drink water first thing every day: https://eu.usatoday.com/story/news/nation-now/2017/03/14/why-you-should-drink-water-first-thing-every-day/99123938/</p>
+
+<p>Cardio with empty stomach: https://youtu.be/4Qz-1xD7BmM
+————————————————————</p>
+
+<p>Next week we will have a new guest with a new topic! So subscribe and stay tuned!</p>
+]]></itunes:summary>
+    <itunes:author>Nick</itunes:author>
+    <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:duration>20:00</itunes:duration>
+  </item>
+
+  <item>
+    <title>Compile Podcast Ep 3: First Dev Job: Tips and stories</title>
     <link>https://NickWu007.github.io/podcast/2018/08/25/podcast-ep-3/</link>
     <image>
     <title>/assets/images/compile_ep3_wide.png</title>
