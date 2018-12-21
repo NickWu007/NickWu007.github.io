@@ -11,10 +11,10 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
  
 <channel>
 <title>The Compile Podcast</title>
-<atom:link href="http://localhost:4000/feed/podcast" rel="self" type="application/rss+xml" />
-<link>http://localhost:4000</link>
+<atom:link href="https://NickWu007.github.io/feed/podcast" rel="self" type="application/rss+xml" />
+<link>https://NickWu007.github.io</link>
 <description>Two programmers talk abuot anything and everything.</description>
-<lastBuildDate>Sat, 15 Dec 2018 16:33:12 +0000</lastBuildDate>
+<lastBuildDate>Fri, 21 Dec 2018 21:45:38 +0000</lastBuildDate>
 <language>en-US</language>
 <sy:updatePeriod>hourly</sy:updatePeriod>
 <sy:updateFrequency>1</sy:updateFrequency>
@@ -22,7 +22,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <itunes:summary>Two programmers talk abuot anything and everything.</itunes:summary>
 <itunes:author>Nick</itunes:author>
 <itunes:explicit>no</itunes:explicit>
-<itunes:image href="http://localhost:4000/assets/images/compile_3000.png" />
+<itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
 <itunes:owner>
 <itunes:name>Nick Wu</itunes:name>
 <itunes:email>wujunao19950715@gmail.com</itunes:email>
@@ -31,8 +31,8 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <itunes:subtitle>Two programmers talk abuot anything and everything.</itunes:subtitle>
 <image>
 <title>The Compile Podcast</title>
-<url>http://localhost:4000/assets/images/compile_3000.png</url>
-<link>http://localhost:4000</link>
+<url>https://NickWu007.github.io/assets/images/compile_3000.png</url>
+<link>https://NickWu007.github.io</link>
 </image>
 <itunes:category text="Technology">
 <itunes:category text="Software How-To" />
@@ -40,10 +40,10 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 
   <item>
     <title>Compile Podcast Ep 4: Impostor Syndrome</title>
-    <link>http://localhost:4000/podcast/2018/12/15/podcast-ep-5/</link>
+    <link>https://NickWu007.github.io/podcast/2018/12/15/podcast-ep-5/</link>
     <image>
     <title>/assets/images/compile_ep5_wide.png</title>
-    <url>http://localhost:4000/assets/images/compile_ep5_wide.png</url>
+    <url>https://NickWu007.github.io/assets/images/compile_ep5_wide.png</url>
     </image>
     <pubDate>Sat, 15 Dec 2018 00:00:00 +0000</pubDate>
     <dc:creator><![CDATA[{"name"=>"Nick Wu", "picture"=>{"path"=>"/assets/image/me.jpg"}, "social"=>{"twitter"=>"WujunaoNick", "github"=>"NickWu007", "email"=>"mailto:wujunao19950715@gmail.com"}}]]></dc:creator>
@@ -51,7 +51,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
     <category><![CDATA[podcast]]></category>
 
 
-    <guid isPermaLink="false">http://localhost:4000/https://s3.eu-west-2.amazonaws.com/compilepodcast/compile_4.mp3</guid>
+    <guid isPermaLink="false">https://NickWu007.github.io/https://s3.eu-west-2.amazonaws.com/compilepodcast/compile_4.mp3</guid>
     <description>
         <![CDATA[In this shorter episode, we talk about Impostor Syndrome with a great guest. We discuss each other’s story and give some tips on dealing with Impostor Syndrome.]]>
     </description>
@@ -130,17 +130,17 @@ Links in this episode:</p>
 <p>My Twitter: https://twitter.com/WujunaoNick</p>
 ]]></itunes:summary>
     <itunes:author>Nick</itunes:author>
-    <itunes:image href="http://localhost:4000/assets/images/compile_3000.png" />
+    <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
     <itunes:explicit>no</itunes:explicit>
     <itunes:duration>59:22</itunes:duration>
   </item>
 
   <item>
     <title>Compile Podcast Ep 3.5: Morning and night routines</title>
-    <link>http://localhost:4000/podcast/2018/08/31/podcast-ep-4/</link>
+    <link>https://NickWu007.github.io/podcast/2018/08/31/podcast-ep-4/</link>
     <image>
     <title>/assets/images/compile_ep4_wide.png</title>
-    <url>http://localhost:4000/assets/images/compile_ep4_wide.png</url>
+    <url>https://NickWu007.github.io/assets/images/compile_ep4_wide.png</url>
     </image>
     <pubDate>Fri, 31 Aug 2018 00:00:00 +0100</pubDate>
     <dc:creator><![CDATA[{"name"=>"Nick Wu", "picture"=>{"path"=>"/assets/image/me.jpg"}, "social"=>{"twitter"=>"WujunaoNick", "github"=>"NickWu007", "email"=>"mailto:wujunao19950715@gmail.com"}}]]></dc:creator>
@@ -148,7 +148,7 @@ Links in this episode:</p>
     <category><![CDATA[podcast]]></category>
 
 
-    <guid isPermaLink="false">http://localhost:4000/https://s3.eu-west-2.amazonaws.com/compilepodcast/compile_5.mp3</guid>
+    <guid isPermaLink="false">https://NickWu007.github.io/https://s3.eu-west-2.amazonaws.com/compilepodcast/compile_5.mp3</guid>
     <description>
         <![CDATA[In this shorter episode, I talk about my morning and night routines! Hopefully some of the tips will help you develop your own routines!]]>
     </description>
@@ -205,17 +205,17 @@ Links in this episode:</p>
 <p>Next week we will have a new guest with a new topic! So subscribe and stay tuned!</p>
 ]]></itunes:summary>
     <itunes:author>Nick</itunes:author>
-    <itunes:image href="http://localhost:4000/assets/images/compile_3000.png" />
+    <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
     <itunes:explicit>no</itunes:explicit>
     <itunes:duration>20:00</itunes:duration>
   </item>
 
   <item>
     <title>Compile Podcast Ep 3: First Dev Job: Tips and stories</title>
-    <link>http://localhost:4000/podcast/2018/08/25/podcast-ep-3/</link>
+    <link>https://NickWu007.github.io/podcast/2018/08/25/podcast-ep-3/</link>
     <image>
     <title>/assets/images/compile_ep3_wide.png</title>
-    <url>http://localhost:4000/assets/images/compile_ep3_wide.png</url>
+    <url>https://NickWu007.github.io/assets/images/compile_ep3_wide.png</url>
     </image>
     <pubDate>Sat, 25 Aug 2018 00:00:00 +0100</pubDate>
     <dc:creator><![CDATA[{"name"=>"Nick Wu", "picture"=>{"path"=>"/assets/image/me.jpg"}, "social"=>{"twitter"=>"WujunaoNick", "github"=>"NickWu007", "email"=>"mailto:wujunao19950715@gmail.com"}}]]></dc:creator>
@@ -223,7 +223,7 @@ Links in this episode:</p>
     <category><![CDATA[podcast]]></category>
 
 
-    <guid isPermaLink="false">http://localhost:4000/https://s3.eu-west-2.amazonaws.com/compilepodcast/compile_3.mp3</guid>
+    <guid isPermaLink="false">https://NickWu007.github.io/https://s3.eu-west-2.amazonaws.com/compilepodcast/compile_3.mp3</guid>
     <description>
         <![CDATA[In this episode, we have a great school mate Alex joining us to talk about First Dev Job: how we got our first job, tips on job hunting, interviews, and more!]]>
     </description>
@@ -308,17 +308,17 @@ Links in this episode:</p>
 
 ]]></itunes:summary>
     <itunes:author>Nick</itunes:author>
-    <itunes:image href="http://localhost:4000/assets/images/compile_3000.png" />
+    <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
     <itunes:explicit>no</itunes:explicit>
     <itunes:duration>01:15:10</itunes:duration>
   </item>
 
   <item>
     <title>Compile Podcast Ep 2: When to quit a project</title>
-    <link>http://localhost:4000/podcast/2018/08/14/podcast-ep-2/</link>
+    <link>https://NickWu007.github.io/podcast/2018/08/14/podcast-ep-2/</link>
     <image>
     <title>/assets/images/compile_ep2_wide.png</title>
-    <url>http://localhost:4000/assets/images/compile_ep2_wide.png</url>
+    <url>https://NickWu007.github.io/assets/images/compile_ep2_wide.png</url>
     </image>
     <pubDate>Tue, 14 Aug 2018 00:00:00 +0100</pubDate>
     <dc:creator><![CDATA[{"name"=>"Nick Wu", "picture"=>{"path"=>"/assets/image/me.jpg"}, "social"=>{"twitter"=>"WujunaoNick", "github"=>"NickWu007", "email"=>"mailto:wujunao19950715@gmail.com"}}]]></dc:creator>
@@ -326,7 +326,7 @@ Links in this episode:</p>
     <category><![CDATA[podcast]]></category>
 
 
-    <guid isPermaLink="false">http://localhost:4000/https://s3.eu-west-2.amazonaws.com/compilepodcast/compile_ep2.mp3</guid>
+    <guid isPermaLink="false">https://NickWu007.github.io/https://s3.eu-west-2.amazonaws.com/compilepodcast/compile_ep2.mp3</guid>
     <description>
         <![CDATA[In this episode, we have another great friend John joining us to talk about when you should quit a project: why you might want to consider quitting, how to deal with the guilt, what you can do to make the quitting easier, and more!]]>
     </description>
@@ -383,17 +383,17 @@ Links in this episode:</p>
 <p>My Twitter: https://twitter.com/WujunaoNick</p>
 ]]></itunes:summary>
     <itunes:author>Nick</itunes:author>
-    <itunes:image href="http://localhost:4000/assets/images/compile_3000.png" />
+    <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
     <itunes:explicit>no</itunes:explicit>
     <itunes:duration>51:08</itunes:duration>
   </item>
 
   <item>
     <title>Compile Podcast Ep 1: Side projects</title>
-    <link>http://localhost:4000/podcast/2018/08/09/podcast-ep-1/</link>
+    <link>https://NickWu007.github.io/podcast/2018/08/09/podcast-ep-1/</link>
     <image>
     <title>/assets/images/compile_ep_1.png</title>
-    <url>http://localhost:4000/assets/images/compile_ep_1.png</url>
+    <url>https://NickWu007.github.io/assets/images/compile_ep_1.png</url>
     </image>
     <pubDate>Thu, 09 Aug 2018 00:00:00 +0100</pubDate>
     <dc:creator><![CDATA[{"name"=>"Nick Wu", "picture"=>{"path"=>"/assets/image/me.jpg"}, "social"=>{"twitter"=>"WujunaoNick", "github"=>"NickWu007", "email"=>"mailto:wujunao19950715@gmail.com"}}]]></dc:creator>
@@ -401,7 +401,7 @@ Links in this episode:</p>
     <category><![CDATA[podcast]]></category>
 
 
-    <guid isPermaLink="false">http://localhost:4000/https://s3.eu-west-2.amazonaws.com/compilepodcast/compile_1.mp3</guid>
+    <guid isPermaLink="false">https://NickWu007.github.io/https://s3.eu-west-2.amazonaws.com/compilepodcast/compile_1.mp3</guid>
     <description>
         <![CDATA[In our premier episode, we have a great guest Brennan joining us to talk about side projects.]]>
     </description>
@@ -460,17 +460,17 @@ Links in this episode:</p>
 <p>My Twitter: https://twitter.com/WujunaoNick</p>
 ]]></itunes:summary>
     <itunes:author>Nick</itunes:author>
-    <itunes:image href="http://localhost:4000/assets/images/compile_3000.png" />
+    <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
     <itunes:explicit>no</itunes:explicit>
     <itunes:duration>56:40</itunes:duration>
   </item>
 
   <item>
     <title>Compile Podcast Ep 0: The Pilot</title>
-    <link>http://localhost:4000/podcast/2018/08/09/podcast-ep-0/</link>
+    <link>https://NickWu007.github.io/podcast/2018/08/09/podcast-ep-0/</link>
     <image>
     <title>/assets/images/compile_ep_0.png</title>
-    <url>http://localhost:4000/assets/images/compile_ep_0.png</url>
+    <url>https://NickWu007.github.io/assets/images/compile_ep_0.png</url>
     </image>
     <pubDate>Thu, 09 Aug 2018 00:00:00 +0100</pubDate>
     <dc:creator><![CDATA[{"name"=>"Nick Wu", "picture"=>{"path"=>"/assets/image/me.jpg"}, "social"=>{"twitter"=>"WujunaoNick", "github"=>"NickWu007", "email"=>"mailto:wujunao19950715@gmail.com"}}]]></dc:creator>
@@ -478,7 +478,7 @@ Links in this episode:</p>
     <category><![CDATA[podcast]]></category>
 
 
-    <guid isPermaLink="false">http://localhost:4000/https://s3.eu-west-2.amazonaws.com/compilepodcast/Compile_pilot.mp3</guid>
+    <guid isPermaLink="false">https://NickWu007.github.io/https://s3.eu-west-2.amazonaws.com/compilepodcast/Compile_pilot.mp3</guid>
     <description>
         <![CDATA[In our pilot episode, I talk about who I am, and why I am starting this podcast.]]>
     </description>
@@ -525,7 +525,7 @@ Links in this episode:</p>
 <p>See you all next week!</p>
 ]]></itunes:summary>
     <itunes:author>Nick</itunes:author>
-    <itunes:image href="http://localhost:4000/assets/images/compile_3000.png" />
+    <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
     <itunes:explicit>no</itunes:explicit>
     <itunes:duration>10:57</itunes:duration>
   </item>
