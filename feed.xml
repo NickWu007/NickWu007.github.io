@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://nickwu007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nickwu007.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2018-12-21T21:45:38+00:00</updated><id>https://nickwu007.github.io/</id><title type="html">DevPractical</title><subtitle>Practical tips for Developers, from a developer.</subtitle><author><name>Nick Wu</name></author><entry><title type="html">Compile Podcast Ep 4: Impostor Syndrome</title><link href="https://nickwu007.github.io/podcast/2018/12/15/podcast-ep-5/" rel="alternate" type="text/html" title="Compile Podcast Ep 4: Impostor Syndrome" /><published>2018-12-15T00:00:00+00:00</published><updated>2018-12-15T00:00:00+00:00</updated><id>https://nickwu007.github.io/podcast/2018/12/15/podcast-ep-5</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2018/12/15/podcast-ep-5/">&lt;p&gt;Hello everyone! This is a brand new podcast for you!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://nickwu007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nickwu007.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-04-11T16:21:18+01:00</updated><id>https://nickwu007.github.io/</id><title type="html">DevPractical</title><subtitle>Practical tips for Developers, from a developer.</subtitle><author><name>Nick Wu</name></author><entry><title type="html">I am back</title><link href="https://nickwu007.github.io/non_technical/life/2019/04/09/i-am-back/" rel="alternate" type="text/html" title="I am back" /><published>2019-04-09T21:29:00+01:00</published><updated>2019-04-09T21:29:00+01:00</updated><id>https://nickwu007.github.io/non_technical/life/2019/04/09/i-am-back</id><content type="html" xml:base="https://nickwu007.github.io/non_technical/life/2019/04/09/i-am-back/">&lt;p&gt;Has been a while hasn’t it? You must been thinking I was quitting the podcast and the blog completely, especially now that I have “real job”(to be honest I did hear it from some friends). But I have been thinking about this and I feel like it is the time to come back.&lt;/p&gt;
+
+&lt;h3 id=&quot;where-have-i-been&quot;&gt;Where have I been?&lt;/h3&gt;
+
+&lt;p&gt;If you have been following me on Twitter, you would probably are already fairly up to date with my life. If not, here’s a quick recap. I started my new job as a full-time software engineer at Google London last September, and it has been the major focus of my life for the last few months.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/google_london.JPG&quot; alt=&quot;Shot over King Cross Station from Google UK&quot; /&gt;
+&lt;em&gt;Shot over King Cross Station from Google UK&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;It was quite challenging during the first 3 months, even with all the experience I had as an intern. We had a tight deadline for the first project, and I eventually made it by 2 days. After that I had a couple more projects to work on and now work has steadied up a bit. If you want me to discuss more about my work, either as a blog post or episode, please let me know!&lt;/p&gt;
+
+&lt;p&gt;Apart from that, I have been continuously working on TryLinks, albeit in a smaller capacity. We were extremely to be accepted by the &lt;a href=&quot;https://2019.programming-conference.org/event/proweb-2019-papers-trylinks-an-interactive-tutorial-system-for-a-cross-tier-web-programming-language&quot;&gt;ProWeb&lt;/a&gt; conference, and I recently went to Italy to give a talk.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/trylinks_talk.jpg&quot; alt=&quot;Me giving the TryLinks talk in Italy&quot; /&gt;
+&lt;em&gt;Me giving the TryLinks talk in Italy&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;TryLinks was originally just my final project, but it has lived on much longer than I expected. Even better, it is still being worked on to add more and more features. Therefore, I am taking on a side project for TryLinks in the coming weeks!&lt;/p&gt;
+
+&lt;h3 id=&quot;upcoming-plans&quot;&gt;Upcoming plans&lt;/h3&gt;
+
+&lt;h4 id=&quot;blog&quot;&gt;Blog&lt;/h4&gt;
+&lt;p&gt;Since I am taking on the TryLinks side project, it would be a perfect opportunity to do another series for the blog. I am still ironing out the detail, but the project should be kicking off around late April. In terms of the blog, I want to commit to a 2-posts-per-week schedule, so that I won’t slack off.&lt;/p&gt;
+
+&lt;p&gt;As for non-technical topics, my old backlog has been a bit dated, and I don’t think I can produce quality content on them. Also, I am thinking about moving the non-technical topics to the podcast, since it would be better to have discussions on them. Bottom line is, I am holding off non-technical blog posts for now. If you think there’s a topic you want see, feel free to let me know.&lt;/p&gt;
+
+&lt;h4 id=&quot;podcast&quot;&gt;Podcast&lt;/h4&gt;
+&lt;p&gt;I started the &lt;a href=&quot;https://www.youtube.com/playlist?list=PLfkNBxEf3tVFjCJQ67ofI2Wh5yQwPGxOn&quot;&gt;Compile Podcast&lt;/a&gt; last summer, partially because I listen to a lot of podcasts myself and really wanted to try it, and secondly it would be great as another platform for content. So far we only have a couple of episodes and I have not scheduled any new recordings. But this year I do want to keep doing it, and meet more and more people!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/podcast_setup.jpg&quot; alt=&quot;My recording setup&quot; /&gt;
+&lt;em&gt;My recording setup&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;In terms of plans, I do have still a few recordings in mind. Also, the topic backlog is still long enough for cover most of the year. One thing that I am looking for is a regular co-host. If you are interested, please let me know!!&lt;/p&gt;
+
+&lt;h3 id=&quot;where-to-look-for-from-now-on&quot;&gt;Where to look for from now on?&lt;/h3&gt;
+
+&lt;p&gt;So where can you follow up with my content? The easiest way is to follow me on &lt;a href=&quot;https://twitter.com/WujunaoNick&quot;&gt;Twitter&lt;/a&gt;!&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">Has been a while hasn’t it? You must been thinking I was quitting the podcast and the blog completely, especially now that I have “real job”(to be honest I did hear it from some friends). But I have been thinking about this and I feel like it is the time to come back.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/london_for_title.jpg" /></entry><entry><title type="html">Compile Podcast Ep 4: Impostor Syndrome</title><link href="https://nickwu007.github.io/podcast/2018/12/15/podcast-ep-5/" rel="alternate" type="text/html" title="Compile Podcast Ep 4: Impostor Syndrome" /><published>2018-12-15T00:00:00+00:00</published><updated>2018-12-15T00:00:00+00:00</updated><id>https://nickwu007.github.io/podcast/2018/12/15/podcast-ep-5</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2018/12/15/podcast-ep-5/">&lt;p&gt;Hello everyone! This is a brand new podcast for you!&lt;/p&gt;
 
 &lt;p&gt;In this shorter episode, we talk about Impostor Syndrome with a great guest. We discuss each other’s story and give some tips on dealing with Impostor Syndrome.&lt;/p&gt;
 
@@ -659,83 +694,4 @@ Future signIn() async {
 &lt;p&gt;You can find the completed code up to this point &lt;a href=&quot;https://github.com/NickWu007/Teamoji-practice/tree/firebase_auth_done&quot;&gt;here&lt;/a&gt;. Firebase has proven to be extremely easy to get started and use. It should be able to do more than needed for Teamoji. In the next post we will explore the Firebase real-time database, and finish the Teamoji project. As usual, if you run into anything weird, let me know in the comments below, or hit me up on twitter.&lt;/p&gt;
 
 &lt;p&gt;Happy coding!
-Nick&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">Today we keep going with Teamoji. In this post we are starting to use Firebase for the authentication and database.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/dart_angular.png" /></entry><entry><title type="html">Dart #8: homepage part 2</title><link href="https://nickwu007.github.io/dart/technical/2018/01/08/dart-8-homepage-part-2/" rel="alternate" type="text/html" title="Dart #8: homepage part 2" /><published>2018-01-08T03:32:35+00:00</published><updated>2018-01-08T03:32:35+00:00</updated><id>https://nickwu007.github.io/dart/technical/2018/01/08/dart-8-homepage-part-2</id><content type="html" xml:base="https://nickwu007.github.io/dart/technical/2018/01/08/dart-8-homepage-part-2/">&lt;p&gt;Today we continue with the homepage for Teamoji. In the last tutorial we finished the main content of Homepage. But we are still missing the hidden menu part on the left. This introduces a new concept of Angular Dart: deferred content. So without further ado, let’s jump in!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2018/01/homepage_drawer.png&quot; alt=&quot;Homepage_drawer.png&quot; /&gt;
-&lt;em&gt;Mock&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;whats-deferred-content&quot;&gt;What’s Deferred Content?&lt;/h3&gt;
-
-&lt;p&gt;Before we dive in code it is important to understand the modal component and deferred content. Deferred content roots from the &lt;em&gt;Lazy Evaluation Principle&lt;/em&gt;:&lt;/p&gt;
-
-&lt;p&gt;“Lazy Evaluation, or call-by-need is an evaluation strategy which delays the evaluation of an expression until its value is needed.”&lt;/p&gt;
-
-&lt;p&gt;You might think: how is lazy a good thing? Consider the following scenario: the user logs into the homepage, which displays the recent chat history of a particular team. The user is very active in this team, and rarely switches to other teams.&lt;/p&gt;
-
-&lt;p&gt;Without lazy evaluation, we will compile and load all components when user accesses the page. However the user never expands the left menu, making the load time for that component virtually useless. On the other hand, with lazy evaluation, we choose not to compile and load the hidden components, and only load them when user is asking for them. This way we speed up the initial page load, which is crucial to acquisition and retention.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2018/01/lazyness.png&quot; alt=&quot;lazyness&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;the-menu-component&quot;&gt;The menu component&lt;/h3&gt;
-
-&lt;p&gt;We can see the bits of the menu component quite clearly from the mock:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;A header that says “Your teams”.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;A list of the teams the user belongs to, highlight the one currently on display. (&lt;em&gt;ngFor&lt;/em&gt;)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;A button to create new Team. (&lt;em&gt;Material-button&lt;/em&gt;)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;A sign out button. (&lt;em&gt;Material-button&lt;/em&gt;)&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;At this point you should be fairly comfortable with all these techniques. The only thing to watch for in the &lt;a href=&quot;https://dart-lang.github.io/angular_components_example/#AppLayout&quot;&gt;Application Layout&lt;/a&gt; format.&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;material-drawer&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;temporary&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;drawer=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;drawer&quot;&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;overlay&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;]=&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-home-drawer&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-home-drawer-header-row&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;material-list&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-home-drawer-list&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;material-list-item&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ngFor=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;let team of teams&quot;&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-team-list-item&quot;&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;deep-blue&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;]=&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;shouldShowAsDeepBlue&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;team&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)&quot;&lt;/span&gt;
-&lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;trigger&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)=&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;onChangeTeam&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;team&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/material-list-item&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/material-list&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;tm-home-drawer-btns&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-
-
-
-
-
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/material-drawer&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;There are a few points to note. First notice we name the &lt;code class=&quot;highlighter-rouge&quot;&gt;material-drawer&lt;/code&gt; as &lt;code class=&quot;highlighter-rouge&quot;&gt;drawer&lt;/code&gt;. This is so that we can toggle it by clicking on the menu button on the homepage:&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;material-button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;material-drawer-button&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;icon&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;trigger&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;)=&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;drawer&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toggle&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;()&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;material-icon&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;icon=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;menu&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/material-icon&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/material-button&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Also notice the &lt;code class=&quot;highlighter-rouge&quot;&gt;*deferredContent&lt;/code&gt; marker in the fist &lt;code class=&quot;highlighter-rouge&quot;&gt;div&lt;/code&gt;. The &lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; has the same meaning as in &lt;code class=&quot;highlighter-rouge&quot;&gt;*ngFor&lt;/code&gt;: this is a structural directive, which alters the DOM tree. Adding this marker tells the dart engine: don’t load me unless needed. The rest is fairly standard stuff.&lt;/p&gt;
-
-&lt;p&gt;After adding this into the homepage, we can see something like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://nickwuedinburgh.files.wordpress.com/2018/01/screen-shot-2018-01-07-at-22-29-41.png&quot; alt=&quot;Screen Shot 2018-01-07 at 22.29.41&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
-
-&lt;p&gt;At this point we have technically finished all mocks given in the first place. But as you can probably see, this app is still broken. There are some functionalities missing, such as a button to join a team. Also there’s no navigation between the pages. In the next post we will address these problems, and get started with firebase!&lt;/p&gt;
-
-&lt;p&gt;As usual if you get stuck somewhere, always feel free to checkout the &lt;a href=&quot;https://github.com/NickWu007/Teamoji-practice&quot;&gt;repo&lt;/a&gt;, or PM me the specific issue. Happy coding!&lt;/p&gt;</content><author><name>nickwu0715</name></author><summary type="html">Today we continue with the homepage for Teamoji. In the last tutorial we finished the main content of Homepage. But we are still missing the hidden menu part on the left. This introduces a new concept of Angular Dart: deferred content. So without further ado, let’s jump in!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/dart_angular.png" /></entry></feed>
+Nick&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">Today we keep going with Teamoji. In this post we are starting to use Firebase for the authentication and database.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/dart_angular.png" /></entry></feed>

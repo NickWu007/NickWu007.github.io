@@ -2,19 +2,19 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://nickwu007.github.io/category/dart/</loc>
-<lastmod>2018-12-21T21:45:38+00:00</lastmod>
+<lastmod>2019-04-11T16:21:18+01:00</lastmod>
 </url>
 <url>
 <loc>https://nickwu007.github.io/category/life/</loc>
-<lastmod>2018-12-21T21:45:38+00:00</lastmod>
+<lastmod>2019-04-11T16:21:18+01:00</lastmod>
 </url>
 <url>
 <loc>https://nickwu007.github.io/category/non-technical/</loc>
-<lastmod>2018-12-21T21:45:38+00:00</lastmod>
+<lastmod>2019-04-11T16:21:18+01:00</lastmod>
 </url>
 <url>
 <loc>https://nickwu007.github.io/category/technical/</loc>
-<lastmod>2018-12-21T21:45:38+00:00</lastmod>
+<lastmod>2019-04-11T16:21:18+01:00</lastmod>
 </url>
 <url>
 <loc>https://nickwu007.github.io/technical/2016/07/18/restart/</loc>
@@ -207,6 +207,10 @@
 <url>
 <loc>https://nickwu007.github.io/podcast/2018/12/15/podcast-ep-5/</loc>
 <lastmod>2018-12-15T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>https://nickwu007.github.io/non_technical/life/2019/04/09/i-am-back/</loc>
+<lastmod>2019-04-09T21:29:00+01:00</lastmod>
 </url>
 <url>
 <loc>https://nickwu007.github.io/404/</loc>
