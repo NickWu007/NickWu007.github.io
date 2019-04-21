@@ -1,4 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://nickwu007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nickwu007.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-04-11T18:22:56+01:00</updated><id>https://nickwu007.github.io/</id><title type="html">DevPractical</title><subtitle>Practical tips for Developers, from a developer.</subtitle><author><name>Nick Wu</name></author><entry><title type="html">I am back</title><link href="https://nickwu007.github.io/non_technical/life/2019/04/09/i-am-back/" rel="alternate" type="text/html" title="I am back" /><published>2019-04-09T21:29:00+01:00</published><updated>2019-04-09T21:29:00+01:00</updated><id>https://nickwu007.github.io/non_technical/life/2019/04/09/i-am-back</id><content type="html" xml:base="https://nickwu007.github.io/non_technical/life/2019/04/09/i-am-back/">&lt;p&gt;Has been a while hasn’t it? You must been thinking I was quitting the podcast and the blog completely, especially now that I have “real job”(to be honest I did hear it from some friends). But I have been thinking about this and I feel like it is the time to come back.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://nickwu007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nickwu007.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-04-21T14:11:16+01:00</updated><id>https://nickwu007.github.io/</id><title type="html">DevPractical</title><subtitle>Practical tips for Developers, from a developer.</subtitle><author><name>Nick Wu</name></author><entry><title type="html">Own your problems</title><link href="https://nickwu007.github.io/non_technical/life/2019/04/21/own-your-problems/" rel="alternate" type="text/html" title="Own your problems" /><published>2019-04-21T11:03:00+01:00</published><updated>2019-04-21T11:03:00+01:00</updated><id>https://nickwu007.github.io/non_technical/life/2019/04/21/own-your-problems</id><content type="html" xml:base="https://nickwu007.github.io/non_technical/life/2019/04/21/own-your-problems/">&lt;p&gt;Previously we have discussed &lt;a href=&quot;https://nickwu007.github.io/life/non_technical/2017/10/22/impostor-syndrome-thoughts-and-tips/&quot;&gt;Imposter Syndrome&lt;/a&gt; in this blog, and today I want to talk about one specific way to overcome it: owning your problems.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-this-came-to-be&quot;&gt;How this came to be?&lt;/h3&gt;
+&lt;p&gt;I must admit that this idea wasn’t original. I was having a conversation with my manager a few weeks ago, about how exactly I can be a more effective engineer in the team. This was one of the suggestions that he offered:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You should look into your own the problem that you are solving. Collaborate with the others, but be the driving force in solving the problem.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This got me thinking about my work style in the last few projects. Being a junior engineer and the newest member in the team, I was deferring to other engineers quite often, both in terms of design and implementation. Although this helped us delivering the projects in time, I don’t feel like I am actually contributing to “solving” the problem per se, but rather just solidifying ideas from other engineers. Worse still, I notice that I have grown into an awful habit: when I hit a problem that is not obvious in the first sight, my instinct is to ask someone else. In other words, I was not &lt;strong&gt;owning&lt;/strong&gt; the problem that I am supposed to solve, but rather &lt;strong&gt;dragging&lt;/strong&gt; other people into my problem.&lt;/p&gt;
+
+&lt;p&gt;But why was I doing this? I reflected on my thinking when this would happen, and I realized that I was &lt;em&gt;afraid&lt;/em&gt; of owning the problem. I might not be able to come up with a solution at all, or worse, I might come up with something completely wrong and mess things up. Therefore, it is safer to seek help from someone who knows better. Although this logic isn’t technically wrong, it only solves the problem at hand in the short term, and I wouldn’t grow to be independent to take on other problems in the future.&lt;/p&gt;
+
+&lt;p&gt;Once I realized that my way of work needed change, I consciously made sure that I ask less, and try to do more research on whatever problem that I was solving. The effect showed surprisingly quickly, only after about a week. Although it was taking slightly longer to solve individual problems, I was actually able to solve almost every problem that came to me, without asking other engineers all the time. And from the team’s perspective, the productivity has gone up, since everyone else in the team is not spending their time to answer me.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/adult-cheerful-coffee.jpg&quot; alt=&quot;Happy team!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Another bonus that I have found that this actually extends beyond just work. When I was looking for flats to move into a couple of weeks ago, I realized that I didn’t need to consult my friends and family about every single flat, which I had been doing up to then. I listed down the criteria that I was looking for, and just made my own decision. The takeaway is this applies to literally any problem that you are facing, be it at work, in life, etc.&lt;/p&gt;
+&lt;h3 id=&quot;so-what-can-you-do&quot;&gt;So, What can you do?&lt;/h3&gt;
+&lt;p&gt;Hopefully my story has encouraged you to take an initiative in owning your problems. Below I list a few tips that I think will help you in getting started.&lt;/p&gt;
+
+&lt;h4 id=&quot;start-with-a-mental-shift&quot;&gt;Start with a mental shift&lt;/h4&gt;
+&lt;p&gt;To make any tangible change, you must change the way you think first. I complete get all the concerns that you may have towards taking on a problem solo. In fact, these are the mental hurdles that I went through myself:&lt;/p&gt;
+
+&lt;h5 id=&quot;what-if-i-dont-know-how-to-solve-it&quot;&gt;What if I don’t know how to solve it?&lt;/h5&gt;
+&lt;p&gt;Now, I do believe that I &lt;em&gt;have&lt;/em&gt; the ability to solve most problems that come my way, at least at work. You are smarter than you realize, if you really stretch your mind. Have faith in yourself.&lt;/p&gt;
+
+&lt;h5 id=&quot;what-if-i-screw-up&quot;&gt;What if I screw up?&lt;/h5&gt;
+&lt;p&gt;Even if you get a wrong answer, you are not going to “screw up”. Things are not as bad as you think. Conversely, if you get it right by yourself, it would be a great confidence boost for you to take on more problems.&lt;/p&gt;
+
+&lt;p&gt;Ask yourself what exactly is stopping you from owning the problem. Once you enunciate it out loud, it will be easier to analyze its validity. And most likely you are over-worrying, which is quite normal if you are new to the field or problem space.&lt;/p&gt;
+
+&lt;h4 id=&quot;develop-a-process-to-deal-with-the-unfamiliar&quot;&gt;Develop a process to deal with the unfamiliar&lt;/h4&gt;
+&lt;p&gt;When you are facing a problem that involves a lot of unfamiliar places, it can be disorientating and confusing. The trick to deal with this, in my own experience, is to develop a “process” to go through.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/architect-architecture-build.jpg&quot; alt=&quot;Plot a process to tackle your problems&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Take a technical problem for example. Understanding the problem at first is crucial for me. I would do some research at first to get the context, and clarify what exactly the problem is, and which parts of the system are relevant to it. Once I nail down the general area I will dig deeper into each part, usually by reading doc and code. At this point I would know how the parts work currently, and what exactly it needs to work to solve the problem. Having this mental “diff” makes things a lot easier.&lt;/p&gt;
+
+&lt;p&gt;When I understand the problem I can think about changes to the system in order to solve it. Usually, there are many ways to solve one problem, each with pros and cons. Listing these out and comparing them will be a good way to see if there’s an optimal solution. Often times tradeoffs have to be made, and now you may need to consult someone else. Having the context, the problem definition, all the approaches with pros and cons is a good way for other engineers to quickly follow up with everything and offer suggestions.&lt;/p&gt;
+
+&lt;h4 id=&quot;dont-be-a-lone-wolf&quot;&gt;Don’t be a lone wolf&lt;/h4&gt;
+&lt;p&gt;Having encouraged you to own the problem, I do want to point out to not be too extreme with this. There are problems that you need help with, and that’s part of the process too. At some point you might realize that you lack some crucial information, and you cannot find it easily. Then it is better to ask someone, rather than reading thousands of lines of code to draw your own insight. A balance must be held, but my point is to at least consider solving it by yourself.&lt;/p&gt;
+
+&lt;h3 id=&quot;last-few-words&quot;&gt;Last few words&lt;/h3&gt;
+&lt;p&gt;I hope you start to take ownership of your problems after reading this post. I am still finding a good balance myself too, and would love to know how you feel about this. Let me know on &lt;a href=&quot;https://twitter.com/WujunaoNick&quot;&gt;Twitter&lt;/a&gt;, or email me directly!&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">Previously we have discussed Imposter Syndrome in this blog, and today I want to talk about one specific way to overcome it: owning your problems.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/own_your_problems_title.jpg" /></entry><entry><title type="html">I am back</title><link href="https://nickwu007.github.io/non_technical/life/2019/04/09/i-am-back/" rel="alternate" type="text/html" title="I am back" /><published>2019-04-09T21:29:00+01:00</published><updated>2019-04-09T21:29:00+01:00</updated><id>https://nickwu007.github.io/non_technical/life/2019/04/09/i-am-back</id><content type="html" xml:base="https://nickwu007.github.io/non_technical/life/2019/04/09/i-am-back/">&lt;p&gt;Has been a while hasn’t it? You must been thinking I was quitting the podcast and the blog completely, especially now that I have “real job”(to be honest I did hear it from some friends). But I have been thinking about this and I feel like it is the time to come back.&lt;/p&gt;
 
 &lt;h3 id=&quot;where-have-i-been&quot;&gt;Where have I been?&lt;/h3&gt;
 
@@ -508,190 +553,4 @@ Future signIn() async {
 
 &lt;p&gt;Hope you had fun reading this series. I will see you soon.&lt;/p&gt;
 
-&lt;p&gt;Nick&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">Today we finish up with Teamoji! In the last post we got the authentication and session checking done. In this post we will start from this branch on the Github repo. So without further ado, let’s jump in!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/dart_angular.png" /></entry><entry><title type="html">Teamoji #9 Entering Firebase</title><link href="https://nickwu007.github.io/dart/technical/2018/03/19/teamoji-9-entering-firebase/" rel="alternate" type="text/html" title="Teamoji #9 Entering Firebase" /><published>2018-03-19T22:21:00+00:00</published><updated>2018-03-19T22:21:00+00:00</updated><id>https://nickwu007.github.io/dart/technical/2018/03/19/teamoji-9-entering-firebase</id><content type="html" xml:base="https://nickwu007.github.io/dart/technical/2018/03/19/teamoji-9-entering-firebase/">&lt;p&gt;Today we keep going with Teamoji. In this post we are starting to use &lt;a href=&quot;https://firebase.google.com/&quot;&gt;Firebase&lt;/a&gt; for the authentication and database.&lt;/p&gt;
-
-&lt;h3 id=&quot;hold-on-a-sec&quot;&gt;Hold on a sec!&lt;/h3&gt;
-&lt;p&gt;Before I go into detail about integrating Firebase into Teamoji, for those of you who have been following this series since the beginning, I have made some drastic changes to the front end. Now there’s no routing in the app, on other words Teamoji is not a SPA(Single Page Application). This choice is made because I felt that using a SPA structure is easier for understanding the codebase. We will start with this SPA with no Firebase. You can find the starting code &lt;a href=&quot;https://github.com/NickWu007/Teamoji-practice/tree/firebase_start&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;firebase-overview&quot;&gt;Firebase Overview&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://www.gstatic.com/mobilesdk/160503_mobilesdk/logo/2x/firebase_96dp.png&quot; alt=&quot;firebase_logo&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Firebase is Google’s BaaS(Backend as a Service), now with many development and growth tools readily available for developers. The main features of Firebase include:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Authentication&lt;/li&gt;
-  &lt;li&gt;Real-time database&lt;/li&gt;
-  &lt;li&gt;Cloud storage&lt;/li&gt;
-  &lt;li&gt;Cloud functions&lt;/li&gt;
-  &lt;li&gt;Analytics&lt;/li&gt;
-  &lt;li&gt;etc.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;In the current version of Teamoji, we will only use the authentication and database module. In the future all other main features mentioned can be integrated in as well.&lt;/p&gt;
-
-&lt;p&gt;In this post we will implement the authentication of Firebase, and in the next post the database will be added.&lt;/p&gt;
-
-&lt;h3 id=&quot;firebase-setup&quot;&gt;Firebase setup&lt;/h3&gt;
-&lt;p&gt;First of all, you must create a Firebase “project”, which holds all the configurations and the data of your application. Go to Firebase &lt;a href=&quot;https://console.firebase.google.com/&quot;&gt;console&lt;/a&gt; and create a project following the instructions.&lt;/p&gt;
-
-&lt;p&gt;Once you have done that, the firebase module and firebase library should be added into the Angular Dart project. This is already done for you in the starter code.&lt;/p&gt;
-
-&lt;p&gt;One last configuration needed is in the “Authentication” tab once you have created the project. Under “Sign-in Method”, you must enable Google sign in, for it to be used in Teamoji.&lt;/p&gt;
-
-&lt;h3 id=&quot;firebase-service&quot;&gt;Firebase Service&lt;/h3&gt;
-&lt;p&gt;Before we start building the frontend interactions, a &lt;code class=&quot;highlighter-rouge&quot;&gt;FirebaseService&lt;/code&gt; should be added. It would be possible, of course, to use Firebase libraries directly in each component, but it would obviously be better to extract them into a custom service. Also, remember that ultimately we want to use Firebase with Flutter as well, and a ready-to-use service would be very handy.&lt;/p&gt;
-
-&lt;p&gt;On the “project overview” page of the Firebase console, a code snippet of how to initialize the firebase app can be found. We will use this in our setup.&lt;/p&gt;
-
-&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;/// firebase_service.dart&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'dart:async'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:angular/core.dart'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'package:firebase/firebase.dart'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'secret.dart'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;nd&quot;&gt;@Injectable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FirebaseService&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;FirebaseService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Here the code snippet is in &lt;code class=&quot;highlighter-rouge&quot;&gt;secret.init()&lt;/code&gt;, which is not tracked on github to protect the API key. Simply add your own init code snippet in and it would be fine.&lt;/p&gt;
-
-&lt;p&gt;Now that we have this service, it should be added into the provider list for the application, so that DI knows to inject it into components.
- d&lt;/p&gt;
-&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;/// main.dart&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;FirebaseService&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FirebaseService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;bootstrap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AppComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;]);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;sign-in-and-sign-out&quot;&gt;Sign in and sign out&lt;/h3&gt;
-&lt;p&gt;First let’s work out the easy bits. Firebase has excellent &lt;a href=&quot;https://firebase.google.com/docs/auth/web/google-signin&quot;&gt;docs&lt;/a&gt; on how to implement authentication and other modules. I will only go over the gist.&lt;/p&gt;
-
-&lt;p&gt;Essentially, because Firebase offers so many authentication methods, when one wants to use the sign in method, one must specify which “provider” it is. As mentioned before, we will use Google sign in. The provider can be generated when the service is constructed, since we will most definitely need it. We would also need the &lt;code class=&quot;highlighter-rouge&quot;&gt;auth&lt;/code&gt; object from Firebase, which has the sign in and sign out method.&lt;/p&gt;
-
-&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;/// firebase_service.dart&lt;/span&gt;
-&lt;span class=&quot;nd&quot;&gt;@Injectable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FirebaseService&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;fb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Auth&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fbAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;fb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;GoogleAuthProvider&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_fbGoogleAuthProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;FirebaseService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;secret&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;_fbGoogleAuthProvider&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;GoogleAuthProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;fbAuth&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fb&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;auth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;After setting this up, the &lt;code class=&quot;highlighter-rouge&quot;&gt;signIn()&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;signOut()&lt;/code&gt; methods can be implemented by following the docs:&lt;/p&gt;
-
-&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;/// firebase_service.dart&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;Future&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;signIn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fbAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;signInWithPopup&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_fbGoogleAuthProvider&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$runtimeType&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;::login() -- &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$error&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;signOut&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fbAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;signOut&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Now let’s wire it up to the application, and test if it works.&lt;/p&gt;
-
-&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;/// welcome_page.dart&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;WelcomePageComponent&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WelcomePageMessages&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StreamController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StreamController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;broadcast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FirebaseService&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;WelcomePageComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-  &lt;span class=&quot;nd&quot;&gt;@Output&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Stream&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;onPageChange&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;Future&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;login&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;signIn&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fbAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;currentUser&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'homepage'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;First inject the service in the constructor. When the button is pressed, &lt;code class=&quot;highlighter-rouge&quot;&gt;await&lt;/code&gt; on the service to sign in. After that, simply double check if there’s a current user. If so, change the showing page to the homepage.&lt;/p&gt;
-
-&lt;p&gt;Conversely, in the homepage &lt;code class=&quot;highlighter-rouge&quot;&gt;signOut&lt;/code&gt; method, the implementation is similar.&lt;/p&gt;
-
-&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// homepage.dart&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;HomepageComponent&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HomepageMessages&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OnInit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-  &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
-
-  &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FirebaseService&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;HomepageComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;Future&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;onSignOut&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;async&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;await&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;signOut&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'welcome'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-  &lt;span class=&quot;c1&quot;&gt;// ...&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;After implementing this, the sign in/ sign out flow should be complete.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/signin-out-demo.gif&quot; alt=&quot;sign-in-out-demo&quot; /&gt;
-&lt;em&gt;Works! Woohoo!&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;persist-authentication-status&quot;&gt;Persist authentication status&lt;/h3&gt;
-&lt;p&gt;Now that we have the sign in and sign out flow, it is worth reminding ourselves that users wouldn’t want to sign in every time they refresh the page, or if they just signed in an hour ago. We would want some mechanisms that preserves the user sign in status.&lt;/p&gt;
-
-&lt;p&gt;Fortunately, firebase offers an event when a user’s authentication state changes. We can register a callback to this event stream, and check if there’s a new user after the state change.&lt;/p&gt;
-
-&lt;div class=&quot;language-dart highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;/// app_component.dart&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AppComponent&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;OnInit&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentPage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'welcome'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;FirebaseService&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;AppComponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-  &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;onPageChange&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nextPage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentPage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nextPage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;nd&quot;&gt;@override&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;ngOnInit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;service&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;fbAuth&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;onAuthStateChanged&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;currentPage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'homepage'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;
-   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;With this extra logic added, the landing flow becomes something like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/login-persist.gif&quot; alt=&quot;login-persist-demo&quot; /&gt;
-&lt;em&gt;No need to sign in upon refresh!&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;You will see that upon refresh, the authentication has not quite been updated yet, so the welcome page is shown. However, it is soon updated to reflect the user is actually signed in. Therefore the app loads the homepage. In addition, after signing out, a refresh would no longer redirect the user to homepage, which is exactly what we wanted.&lt;/p&gt;
-
-&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
-&lt;p&gt;You can find the completed code up to this point &lt;a href=&quot;https://github.com/NickWu007/Teamoji-practice/tree/firebase_auth_done&quot;&gt;here&lt;/a&gt;. Firebase has proven to be extremely easy to get started and use. It should be able to do more than needed for Teamoji. In the next post we will explore the Firebase real-time database, and finish the Teamoji project. As usual, if you run into anything weird, let me know in the comments below, or hit me up on twitter.&lt;/p&gt;
-
-&lt;p&gt;Happy coding!
-Nick&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">Today we keep going with Teamoji. In this post we are starting to use Firebase for the authentication and database.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/dart_angular.png" /></entry></feed>
+&lt;p&gt;Nick&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">Today we finish up with Teamoji! In the last post we got the authentication and session checking done. In this post we will start from this branch on the Github repo. So without further ado, let’s jump in!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/dart_angular.png" /></entry></feed>
