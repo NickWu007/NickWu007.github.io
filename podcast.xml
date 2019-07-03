@@ -14,7 +14,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <atom:link href="https://NickWu007.github.io/feed/podcast" rel="self" type="application/rss+xml" />
 <link>https://NickWu007.github.io</link>
 <description>Two programmers talk abuot anything and everything.</description>
-<lastBuildDate>Mon, 22 Apr 2019 13:27:26 +0100</lastBuildDate>
+<lastBuildDate>Wed, 03 Jul 2019 11:46:40 +0100</lastBuildDate>
 <language>en-US</language>
 <sy:updatePeriod>hourly</sy:updatePeriod>
 <sy:updateFrequency>1</sy:updateFrequency>
@@ -39,6 +39,113 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 </itunes:category>
 
   <item>
+    <title>Compile Podcast Ep 5: Developer Workflow</title>
+    <link>https://NickWu007.github.io/podcast/2019/07/03/compile-ep-6/</link>
+    <image>
+    <title>/assets/images/compile_ep_5.png</title>
+    <url>https://NickWu007.github.io/assets/images/compile_ep_5.png</url>
+    </image>
+    <pubDate>Wed, 03 Jul 2019 00:00:00 +0100</pubDate>
+    <dc:creator><![CDATA[{"name"=>"Nick Wu", "picture"=>{"path"=>"/assets/image/me.jpg"}, "social"=>{"twitter"=>"WujunaoNick", "github"=>"NickWu007", "email"=>"mailto:wujunao19950715@gmail.com"}}]]></dc:creator>
+
+    <category><![CDATA[podcast]]></category>
+
+
+    <guid isPermaLink="false">https://NickWu007.github.io/https://compilepodcast.s3.eu-west-2.amazonaws.com/compile-ep-5.mp3</guid>
+    <description>
+        <![CDATA[In this episode, we talk about Developer Workflow with a great guest. We discuss the differences between uni and industry software projects, with some funny stories and some helpful tips, whether you are working or studying.]]>
+    </description>
+    <content:encoded>
+        <![CDATA[<p>Hello everyone! Welcome to the Compile Podcast, a show where 2 programmers talk about anything and everything!</p>
+
+<p>In this episode, we talk about Developer Workflow with a great guest. We discuss the differences between uni and industry software projects, with some funny stories and some helpful tips, whether you are working or studying.</p>
+
+<p>Next week we will have a new guest with a new topic! So subscribe and stay tuned!</p>
+
+<p>My Twitter: https://twitter.com/WujunaoNick</p>
+
+<p>This Podcast is also on:</p>
+<ul>
+  <li>Google Play Music: https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y</li>
+  <li>iTunes: https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367</li>
+</ul>
+
+<h3 id="breakpoints">Breakpoints</h3>
+
+<ul>
+  <li>00:00 Intro.</li>
+  <li>00:40 Catch up with John.</li>
+  <li>06:07 Developer Workflow: how we do software projects.
+    <ul>
+      <li>06:42 Uni vs industry project workflow</li>
+      <li>18:48 Main framework: waterfall + agile</li>
+      <li>25:04 The main stages of a typical software project</li>
+      <li>52:04 “Compile down to essentials”.</li>
+    </ul>
+  </li>
+  <li>53:10 Pick and Plug.</li>
+</ul>
+
+<h3 id="links-in-this-episode">Links in this episode:</h3>
+
+<p>The Mythical Man-Month: https://en.wikipedia.org/wiki/The_Mythical_Man-Month\</p>
+
+<p>Waterfall development process: https://en.wikipedia.org/wiki/Waterfall_model</p>
+
+<p>Agile development process: https://en.wikipedia.org/wiki/Agile_software_development</p>
+
+<p>John and Steve’s podcast “The Discomfortable Zone”: https://podcasts.apple.com/us/podcast/the-discomfortable-zone-podcast/id1294539931?mt=2.</p>
+]]>
+    </content:encoded>
+    <enclosure url="https://compilepodcast.s3.eu-west-2.amazonaws.com/compile-ep-5.mp3" length="138560782" type="audio/mpeg" />
+    <itunes:subtitle><![CDATA[In this episode, we talk about Developer Workflow with a great guest. We discuss the differences between uni and industry software projects, with some funny stories and some helpful tips, whether you are working or studying.]]></itunes:subtitle>
+    <itunes:summary><![CDATA[<p>Hello everyone! Welcome to the Compile Podcast, a show where 2 programmers talk about anything and everything!</p>
+
+<p>In this episode, we talk about Developer Workflow with a great guest. We discuss the differences between uni and industry software projects, with some funny stories and some helpful tips, whether you are working or studying.</p>
+
+<p>Next week we will have a new guest with a new topic! So subscribe and stay tuned!</p>
+
+<p>My Twitter: https://twitter.com/WujunaoNick</p>
+
+<p>This Podcast is also on:</p>
+<ul>
+  <li>Google Play Music: https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y</li>
+  <li>iTunes: https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367</li>
+</ul>
+
+<h3 id="breakpoints">Breakpoints</h3>
+
+<ul>
+  <li>00:00 Intro.</li>
+  <li>00:40 Catch up with John.</li>
+  <li>06:07 Developer Workflow: how we do software projects.
+    <ul>
+      <li>06:42 Uni vs industry project workflow</li>
+      <li>18:48 Main framework: waterfall + agile</li>
+      <li>25:04 The main stages of a typical software project</li>
+      <li>52:04 “Compile down to essentials”.</li>
+    </ul>
+  </li>
+  <li>53:10 Pick and Plug.</li>
+</ul>
+
+<h3 id="links-in-this-episode">Links in this episode:</h3>
+
+<p>The Mythical Man-Month: https://en.wikipedia.org/wiki/The_Mythical_Man-Month\</p>
+
+<p>Waterfall development process: https://en.wikipedia.org/wiki/Waterfall_model</p>
+
+<p>Agile development process: https://en.wikipedia.org/wiki/Agile_software_development</p>
+
+<p>John and Steve’s podcast “The Discomfortable Zone”: https://podcasts.apple.com/us/podcast/the-discomfortable-zone-podcast/id1294539931?mt=2.</p>
+]]></itunes:summary>
+    <itunes:author>Nick</itunes:author>
+    <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:duration>57:44</itunes:duration>
+  </item>
+
+  <item>
     <title>Compile Podcast Ep 4: Impostor Syndrome</title>
     <link>https://NickWu007.github.io/podcast/2018/12/15/podcast-ep-5/</link>
     <image>
@@ -53,7 +160,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 
     <guid isPermaLink="false">https://NickWu007.github.io/https://s3.eu-west-2.amazonaws.com/compilepodcast/compile_4.mp3</guid>
     <description>
-        <![CDATA[In this shorter episode, we talk about Impostor Syndrome with a great guest. We discuss each other’s story and give some tips on dealing with Impostor Syndrome.]]>
+        <![CDATA[In this episode, we talk about Impostor Syndrome with a great guest. We discuss each other’s story and give some tips on dealing with Impostor Syndrome.]]>
     </description>
     <content:encoded>
         <![CDATA[<p>Hello everyone! This is a brand new podcast for you!</p>
@@ -93,7 +200,7 @@ Links in this episode:</p>
 ]]>
     </content:encoded>
     <enclosure url="https://s3.eu-west-2.amazonaws.com/compilepodcast/compile_4.mp3" length="142455153" type="audio/mpeg" />
-    <itunes:subtitle><![CDATA[In this shorter episode, we talk about Impostor Syndrome with a great guest. We discuss each other’s story and give some tips on dealing with Impostor Syndrome.]]></itunes:subtitle>
+    <itunes:subtitle><![CDATA[In this episode, we talk about Impostor Syndrome with a great guest. We discuss each other’s story and give some tips on dealing with Impostor Syndrome.]]></itunes:subtitle>
     <itunes:summary><![CDATA[<p>Hello everyone! This is a brand new podcast for you!</p>
 
 <p>In this shorter episode, we talk about Impostor Syndrome with a great guest. We discuss each other’s story and give some tips on dealing with Impostor Syndrome.</p>
