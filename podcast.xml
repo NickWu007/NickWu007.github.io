@@ -13,14 +13,14 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <title>The Compile Podcast</title>
 <atom:link href="https://NickWu007.github.io/feed/podcast" rel="self" type="application/rss+xml" />
 <link>https://NickWu007.github.io</link>
-<description>Two programmers talk abuot anything and everything.</description>
-<lastBuildDate>Wed, 03 Jul 2019 11:46:40 +0100</lastBuildDate>
+<description>Two programmers talk about anything and everything.</description>
+<lastBuildDate>Wed, 03 Jul 2019 12:06:41 +0100</lastBuildDate>
 <language>en-US</language>
 <sy:updatePeriod>hourly</sy:updatePeriod>
 <sy:updateFrequency>1</sy:updateFrequency>
 <generator>http://jekyllrb.com</generator>
-<itunes:summary>Two programmers talk abuot anything and everything.</itunes:summary>
-<itunes:author>Nick</itunes:author>
+<itunes:summary>Two programmers talk about anything and everything.</itunes:summary>
+<itunes:author>Nick Wu</itunes:author>
 <itunes:explicit>no</itunes:explicit>
 <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
 <itunes:owner>
@@ -28,7 +28,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <itunes:email>wujunao19950715@gmail.com</itunes:email>
 </itunes:owner>
 <managingEditor>wujunao19950715@gmail.com (Nick Wu)</managingEditor>
-<itunes:subtitle>Two programmers talk abuot anything and everything.</itunes:subtitle>
+<itunes:subtitle>Two programmers talk about anything and everything.</itunes:subtitle>
 <image>
 <title>The Compile Podcast</title>
 <url>https://NickWu007.github.io/assets/images/compile_3000.png</url>
@@ -139,7 +139,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 
 <p>John and Steve’s podcast “The Discomfortable Zone”: https://podcasts.apple.com/us/podcast/the-discomfortable-zone-podcast/id1294539931?mt=2.</p>
 ]]></itunes:summary>
-    <itunes:author>Nick</itunes:author>
+    <itunes:author>Nick Wu</itunes:author>
     <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
     <itunes:explicit>no</itunes:explicit>
     <itunes:duration>57:44</itunes:duration>
@@ -236,7 +236,7 @@ Links in this episode:</p>
 
 <p>My Twitter: https://twitter.com/WujunaoNick</p>
 ]]></itunes:summary>
-    <itunes:author>Nick</itunes:author>
+    <itunes:author>Nick Wu</itunes:author>
     <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
     <itunes:explicit>no</itunes:explicit>
     <itunes:duration>59:22</itunes:duration>
@@ -311,7 +311,7 @@ Links in this episode:</p>
 
 <p>Next week we will have a new guest with a new topic! So subscribe and stay tuned!</p>
 ]]></itunes:summary>
-    <itunes:author>Nick</itunes:author>
+    <itunes:author>Nick Wu</itunes:author>
     <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
     <itunes:explicit>no</itunes:explicit>
     <itunes:duration>20:00</itunes:duration>
@@ -414,7 +414,7 @@ Links in this episode:</p>
 <p>My Twitter: https://twitter.com/WujunaoNick</p>
 
 ]]></itunes:summary>
-    <itunes:author>Nick</itunes:author>
+    <itunes:author>Nick Wu</itunes:author>
     <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
     <itunes:explicit>no</itunes:explicit>
     <itunes:duration>01:15:10</itunes:duration>
@@ -489,7 +489,7 @@ Links in this episode:</p>
 
 <p>My Twitter: https://twitter.com/WujunaoNick</p>
 ]]></itunes:summary>
-    <itunes:author>Nick</itunes:author>
+    <itunes:author>Nick Wu</itunes:author>
     <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
     <itunes:explicit>no</itunes:explicit>
     <itunes:duration>51:08</itunes:duration>
@@ -566,7 +566,7 @@ Links in this episode:</p>
 
 <p>My Twitter: https://twitter.com/WujunaoNick</p>
 ]]></itunes:summary>
-    <itunes:author>Nick</itunes:author>
+    <itunes:author>Nick Wu</itunes:author>
     <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
     <itunes:explicit>no</itunes:explicit>
     <itunes:duration>56:40</itunes:duration>
@@ -631,7 +631,7 @@ Links in this episode:</p>
 
 <p>See you all next week!</p>
 ]]></itunes:summary>
-    <itunes:author>Nick</itunes:author>
+    <itunes:author>Nick Wu</itunes:author>
     <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
     <itunes:explicit>no</itunes:explicit>
     <itunes:duration>10:57</itunes:duration>
