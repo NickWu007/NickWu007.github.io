@@ -2,19 +2,19 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://nickwu007.github.io/category/dart/</loc>
-<lastmod>2019-07-03T12:06:41+01:00</lastmod>
+<lastmod>2019-07-14T21:28:46+01:00</lastmod>
 </url>
 <url>
 <loc>https://nickwu007.github.io/category/life/</loc>
-<lastmod>2019-07-03T12:06:41+01:00</lastmod>
+<lastmod>2019-07-14T21:28:46+01:00</lastmod>
 </url>
 <url>
 <loc>https://nickwu007.github.io/category/non-technical/</loc>
-<lastmod>2019-07-03T12:06:41+01:00</lastmod>
+<lastmod>2019-07-14T21:28:46+01:00</lastmod>
 </url>
 <url>
 <loc>https://nickwu007.github.io/category/technical/</loc>
-<lastmod>2019-07-03T12:06:41+01:00</lastmod>
+<lastmod>2019-07-14T21:28:46+01:00</lastmod>
 </url>
 <url>
 <loc>https://nickwu007.github.io/technical/2016/07/18/restart/</loc>
@@ -219,6 +219,10 @@
 <url>
 <loc>https://nickwu007.github.io/podcast/2019/07/03/compile-ep-6/</loc>
 <lastmod>2019-07-03T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>https://nickwu007.github.io/non_technical/life/2019/07/14/mid-year-reflection-2019/</loc>
+<lastmod>2019-07-14T19:03:00+01:00</lastmod>
 </url>
 <url>
 <loc>https://nickwu007.github.io/404/</loc>
