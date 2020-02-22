@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v7.5.1 <https://qwtel.com/hydejack/>
+--><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>Teamoji wrap-up: connecting Firebase database | DevPractical</title><meta property="og:title" content="Teamoji wrap-up: connecting Firebase database" /><meta name="author" content="Nick Wu" /><meta property="og:locale" content="en" /><meta name="description" content="Today we finish up with Teamoji! In the last post we got the authentication and session checking done. In this post we will start from this branch on the Github repo. So without further ado, let’s jump in!" /><meta property="og:description" content="Today we finish up with Teamoji! In the last post we got the authentication and session checking done. In this post we will start from this branch on the Github repo. So without further ado, let’s jump in!" /><link rel="canonical" href="https://nickwu007.github.io/dart/technical/2018/03/29/teamoji-wrap-up-connecting-firebase-database/" /><meta property="og:url" content="https://nickwu007.github.io/dart/technical/2018/03/29/teamoji-wrap-up-connecting-firebase-database/" /><meta property="og:site_name" content="DevPractical" /><meta property="og:image" content="https://nickwu007.github.io/assets/images/dart_angular.png" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2018-03-29T11:37:00+01:00" /> <script type="application/ld+json"> {"author":{"@type":"Person","name":"Nick Wu"},"url":"https://nickwu007.github.io/dart/technical/2018/03/29/teamoji-wrap-up-connecting-firebase-database/","image":"https://nickwu007.github.io/assets/images/dart_angular.png","headline":"Teamoji wrap-up: connecting Firebase database","dateModified":"2018-03-29T11:37:00+01:00","datePublished":"2018-03-29T11:37:00+01:00","name":null,"sameAs":null,"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://nickwu007.github.io/assets/icons/icon.png"},"name":"Nick Wu"},"description":"Today we finish up with Teamoji! In the last post we got the authentication and session checking done. In this post we will start from this branch on the Github repo. So without further ado, let’s jump in!","mainEntityOfPage":{"@type":"WebPage","@id":"https://nickwu007.github.io/dart/technical/2018/03/29/teamoji-wrap-up-connecting-firebase-database/"},"@type":"BlogPosting","@context":"http://schema.org"}</script><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="DevPractical"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="application-name" content="DevPractical"><meta name="msapplication-config" content="/assets/ieconfig.xml"><meta name="theme-color" content="#268bd2"><meta name="generator" content="Hydejack v7.5.1"><link type="application/atom+xml" rel="alternate" href="https://nickwu007.github.io/feed.xml" title="DevPractical" /><link rel="alternate" href="https://nickwu007.github.io/dart/technical/2018/03/29/teamoji-wrap-up-connecting-firebase-database/" hreflang="en"><link rel="shortcut icon" href="/assets/icons/favicon.ico"><link rel="apple-touch-icon" href="/assets/icons/icon.png"><link rel="manifest" href="/assets/manifest.json"><link rel="dns-prefetch" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link id="_disqusJS" rel="dns-prefetch" href="https://{"shortname"=>"devpractical"}.disqus.com/embed.js"><link id="_katexJS" rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.js"><link id="_katexCSS" rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.css"> <script> function stdOnEnd(n,e){n.onload=function(){this.onerror=this.onload=null,e(null,n)},n.onerror=function(){this.onerror=this.onload=null,e(new Error("Failed to load "+this.src),n)}}function ieOnEnd(n,e){n.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||(this.onreadystatechange=null,e(null,n))}}window.setRelStylesheet=function(n){function e(){this.rel="stylesheet"}var o=document.getElementById(n);o.addEventListener?o.addEventListener("load",e,!1):o.onload=e},window._loaded=!1,window.loadJSDeferred=function(n,e){function o(){window._loaded=!0;var o=document.createElement("script");o.src=n,e&&(("onload"in o?stdOnEnd:ieOnEnd)(o,e),o.onload||stdOnEnd(o,e));var t=document.scripts[0];t.parentNode.insertBefore(o,t)}window._loaded?o():window.addEventListener?window.addEventListener("load",o,!1):window.onload=o}; !function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this); !function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this); window._noPushState = false; window._noDrawer = false; </script> <!--[if gt IE 8]><!----> <script> WebFontConfig = { google: { families: ['Roboto+Slab:700','Noto+Sans:400,400i,700,700i'] }, custom: { families: ['icomoon'], urls: ['/assets/icomoon/style.css'] } }; (function(d) { var wf = d.createElement('script'), s = d.scripts[0]; wf.src = "/assets/bower_components/webfontloader/webfontloader.js"; s.parentNode.insertBefore(wf, s); }(document)); </script> <!--<![endif]--> <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700%7CNoto+Sans:400,400i,700,700i"><style> html { font-family: 'Noto Sans', Helvetica, Arial, sans-serif } h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: 'Roboto Slab', Helvetica, Arial, sans-serif }</style><link rel="stylesheet" href="/assets/icomoon/style.css"> </noscript> <!--[if gt IE 8]><!----><style> *{box-sizing:border-box}html,body{margin:0;padding:0}html{font-size:16px;line-height:1.75}body{color:#444;background-color:#fff;overflow-y:scroll}a{text-decoration:none}.lead{margin-left:-1rem;margin-right:-1rem}.content img,.img{display:block;max-width:100%;margin-bottom:1rem;border:none}.content img.lead,.img.lead{max-width:calc(100% + 2rem);width:calc(100% + 2rem)}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-weight:700;margin:4rem 0 1rem}.heading{font-weight:700}h1,.h1{font-size:2rem;line-height:1.3}h2,.h2{font-size:1.5rem;line-height:1.4}h3,.h3{font-size:1.17em;line-height:1.5}p{margin-top:0;margin-bottom:1rem}p.lead{padding:0 1rem}ul,ol,dl{margin-top:0;margin-bottom:1rem}ul,ol{padding-left:1.25rem}hr{position:relative;margin:1.5rem 0;border:0;border-top:1px solid #eee}strong{font-weight:700}.hr{border-bottom:1px solid #eee;padding-bottom:1rem;margin-bottom:2rem}h4,h5,h6,.h4,.h5,.h6{margin-bottom:0.5rem;font-size:1rem}table:not(.highlight){border-collapse:collapse;margin-bottom:2rem;margin-left:-1rem}table:not(.highlight) td,table:not(.highlight) th{padding:.25rem .5rem;border:1px solid #eee}table:not(.highlight) td:first-child,table:not(.highlight) th:first-child{padding-left:1rem}table:not(.highlight) td:last-child,table:not(.highlight) th:last-child{padding-right:1rem}.page{margin-bottom:3em}.page li+li{margin-top:.25rem}.page>header{margin-bottom:2rem}.page-title,.post-title{margin-top:0}.post-date{display:block;margin-top:-0.5rem;margin-bottom:1rem;color:#888}.related-posts{padding-left:0;list-style:none;margin-bottom:2rem}.related-posts>li,.related-posts>li+li{margin-top:1rem}.message{margin-bottom:1rem;padding:1rem;color:#666;background-color:rgba(0,0,0,0.025);margin-left:-1rem;margin-right:-1rem}@media screen{body::before{content:'';width:.5rem;background:#eee;position:absolute;left:0;top:0;bottom:0}}@media screen and (min-width: 42em){html{font-size:17px}}@media screen and (min-width: 125em){html{font-size:18px}}hy-push-state a,.a{position:relative;padding-bottom:.15rem;border-bottom:1px solid}.content .img{overflow:hidden;background-color:rgba(0,0,0,0.025)}.content .img img{margin:0;width:100%;height:100%}.fade-in{animation-duration:500ms;animation-name:fade-in;animation-fill-mode:forwards}@keyframes fade-in{from{transform:translateY(-3rem);opacity:0}50%{transform:translateY(-3rem);opacity:0}to{transform:translateY(0);opacity:1}}.fl{float:left}.fr{float:right}.mb4{margin-bottom:4rem}.mb6{margin-bottom:6rem}.mt0{margin-top:0}.mt4{margin-top:4rem}.pb0{padding-bottom:0}.clearfix,.sidebar-social::after,.clearafter::after{content:"";display:table;clear:both}.sr-only{display:none}.sidebar{color:rgba(255,255,255,0.75);text-align:left}.sidebar a{color:#fff;border-bottom-color:rgba(255,255,255,0.2)}hy-drawer{position:relative;padding:1rem 0}@media screen{hy-drawer{padding:2rem 1rem}}@media screen and (min-width: 64em){hy-drawer{position:fixed;top:0;left:0;bottom:0;width:18rem;margin-left:0}}@media screen and (min-width: 98.5em){hy-drawer{width:calc(50% - 28rem)}}.sidebar-bg{position:absolute;top:0;right:0;bottom:0;left:0;background:#202020 center / cover}.sidebar-bg::after{content:"";position:absolute;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.05)}.sidebar-bg.sidebar-overlay::after{background:linear-gradient(to bottom, rgba(32,32,32,0) 0%, rgba(32,32,32,0.5) 100%)}.sidebar-sticky{position:relative;z-index:3}@media screen{.sidebar-sticky{position:absolute;right:1.5rem;left:1.5rem;bottom:1rem}}@media screen and (min-width: 98.5em){.sidebar-sticky{left:auto;width:15rem}}.sidebar-about>h1{color:#fff;font-size:2rem}.sidebar-nav>ul{list-style:none;padding-left:0;margin-bottom:.5rem}a.sidebar-nav-item{display:block;font-weight:700;line-height:1.75;padding:.25rem 0;border-bottom:1px solid rgba(255,255,255,0.2)}.sidebar-social{margin-bottom:.5rem}.sidebar-social>ul{list-style:none;padding-left:0}.sidebar-social>ul>li{float:left}.sidebar-social>ul>li>a{display:inline-block;text-align:center;font-size:1.5rem;width:3rem;height:3.5rem;padding:0}.sidebar-social>ul li+li{margin-top:0}.fixed-top{position:fixed;top:0;left:0;width:100%;z-index:2}.navbar>.content{padding-top:0;padding-bottom:0;min-height:0;height:0;color:#888}.nav-btn-bar{margin-left:-.875rem}.nav-btn{display:inline-block;padding:1.75rem .875rem;border-bottom:none;color:#888 !important}@media screen and (min-width: 64em){#_menu{position:absolute;left:-9999px}}.content{position:relative;margin-left:auto;margin-right:auto;padding:5rem 1rem 12rem}@media screen{.content{padding-left:1.5rem;max-width:38rem;min-height:100vh}}@media screen and (min-width: 54em){.content{max-width:42rem}}@media screen and (min-width: 64em){.content{margin-left:22rem;margin-right:4rem;padding-left:1rem}}@media screen and (min-width: 90em){.content{max-width:48rem}}@media screen and (min-width: 98.5em){.content{margin:auto}}.avatar{float:right;width:6.5rem;height:6.5rem;border-radius:100%;margin-left:.5rem}@media screen and (min-width: 42em){.avatar{width:7rem;height:7rem}}html{font-family:Helvetica, Arial, sans-serif}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.heading{font-family:Helvetica, Arial, sans-serif}</style><link id="_stylePreload" rel="preload" as="style" href="/assets/css/hydejack-7.5.1.css"> <script>window.setRelStylesheet('_stylePreload');</script> <noscript><link rel="stylesheet" href="/assets/css/hydejack-7.5.1.css"></noscript><style id="_pageStyle"> .content a:not(.btn){color:#268bd2;border-color:rgba(38,139,210,0.2)}.content a:not(.btn):hover{border-color:#268bd2}:focus{outline-color:#268bd2}.btn-primary{color:#fff;background-color:#268bd2;border-color:#268bd2}.btn-primary:focus,.btn-primary.focus{box-shadow:0 0 0 3px rgba(38,139,210,0.5)}.btn-primary:hover,.btn-primary.hover{color:#fff;background-color:#2076b2;border-color:#2076b2}.btn-primary:disabled,.btn-primary.disabled{color:#fff;background-color:#268bd2;border-color:#268bd2}.btn-primary:active,.btn-primary.active{color:#fff;background-color:#2076b2;border-color:#2076b2}::selection{color:#fff;background:#268bd2}::-moz-selection{color:#fff;background:#268bd2}</style><!--<![endif]--><body><div class="navbar fixed-top"><div class="content"><div class="nav-btn-bar"> <span class="sr-only">Jump to:</span> <a id="_menu" class="nav-btn no-hover" href="#_navigation"> <span class="sr-only">Navigation</span> <span class="icon-menu"></span> </a></div></div></div><hy-push-state><main id="_main" class="content fade-in layout-post" role="main" data-color="#268bd2" data-theme-color="" data-image="/assets/images/sidebar.jpg" data-overlay ><article id="post-dart-technical-2018-03-29-teamoji-wrap-up-connecting-firebase-database" class="page post" role="article"><header><h1 class="post-title"> Teamoji wrap-up: connecting Firebase database</h1><p class="post-date heading"> <time datetime="2018-03-29T11:37:00+01:00">29 Mar 2018</time> in <a href="/category/dart/" class="flip-title">Dart</a> / <a href="/category/technical/" class="flip-title">Technical</a><div class="hr pb0"></div></header><p>Today we finish up with Teamoji! In the last post we got the authentication and session checking done. In this post we will start from <a href="https://github.com/NickWu007/Teamoji-practice/tree/firebase_auth_done">this branch</a> on the Github repo. So without further ado, let’s jump in!<p>Fair warning: this is a fairly long one. So get some coffee first!<h3 id="firebase-real-time-database">Firebase real-time database</h3><p>Firebase offers a <a href="https://firebase.google.com/docs/database/">real-time NoSQL database</a>. If you have only worked with relational database, like me, NoSQL takes sometime to get used to. But here I will attempt to give you a high level overview of NoSQL, and Firebase database, since it is slightly different from traditional NoSQL database.<p>Contrary to relational database, where data is stored in tables with rows and columns, NoSQL database stores data as “a collection of documents”. In other words, you can think of your entire database as a huge JSON tree, or a dictionary. Each node is a <code class="highlighter-rouge">key, value</code> pair, where the <code class="highlighter-rouge">value</code> can be another dictionary.<p>In Firebase, you can retrieve a particular piece of data by “referencing” it. This sure sounds simple enough, but since Firebase is real-time, you cannot directly read data off from reference. Instead, you register callbacks to specific events, which gives you a <code class="highlighter-rouge">DatabaseSnapshot</code> object, from which you can then read the data.<p>Let’s look at an example.<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">starCountRef</span> <span class="o">=</span> <span class="nx">firebase</span><span class="p">.</span><span class="nx">database</span><span class="p">().</span><span class="nx">ref</span><span class="p">(</span><span class="s1">'posts/'</span> <span class="o">+</span> <span class="nx">postId</span> <span class="o">+</span> <span class="s1">'/starCount'</span><span class="p">);</span>
+<span class="nx">starCountRef</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'value'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">snapshot</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">updateStarCount</span><span class="p">(</span><span class="nx">postElement</span><span class="p">,</span> <span class="nx">snapshot</span><span class="p">.</span><span class="nx">val</span><span class="p">());</span>
+<span class="p">});</span>
+</code></pre></div></div><p>Here a <code class="highlighter-rouge">starCountRef</code> is created. However, the reference itself doesn’t do anything in particular. To read the data, you must register a callback on the <code class="highlighter-rouge">value</code> event, which passes a <code class="highlighter-rouge">snapshot</code> which the data contained.<p>There are also other events you can register callbacks to. In Teamoji you will see them getting used as well. Now let’s jump in with Teamoji!<h3 id="structure-of-data">Structure of data</h3><p>Before we write any code, the structure of the database needs to be nailed down first. First of all, there are three major data models in Teamoji:<ul><li>User<li>Team<li>Message</ul><p>Obviously we can each of them in a separate reference, and add more references to link them. That would be the relation way. We need another representation of the data.<p>First of all, Firebase authentication module takes care of the <code class="highlighter-rouge">User</code> object, and exposes a unique <code class="highlighter-rouge">uid</code> for each user. Since we don’t plan to support user-to-user functionalities in Teamoji, a <code class="highlighter-rouge">uid</code> is essentially all we need. Overall, <code class="highlighter-rouge">User</code> needn’t to be in the database.<p>Each user will have a few teams they are affiliated with. In Teamoji we use a <code class="highlighter-rouge">user_teams</code> reference to represent this. The key would be the <code class="highlighter-rouge">uid</code> mentioned before, and the value would the a list of team names that user is in.<p>Now the messages. Conceptually each message should be linked with a team. We use the same approach we did with user and teams, and use a <code class="highlighter-rouge">messages</code> reference to represent all the messages. Within it, each key is the name of the team, and the value is a list of the messages in that team.<p>It is very important to settle down on a structure of the database, since our code is going to be based on it. What I used in Teamoji is quite crude and might not be optimal. If you have any suggestion, feel free to bring it up in the comment section.<h3 id="linking-with-firebase-db">Linking with Firebase DB</h3><p>First let’s tackle the teams. When the user logs in, they teams would be built into a list, and we also need something to represent the currently displaying team. Right now all of this is mocked in <code class="highlighter-rouge">homepage.dart</code>, but ideally they should be in the service module, since the component itself should only display content and forward the user interactions. So first thing we should do is to take out all the teams-related variables, and delegate the functionality to the service.<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// firebase_service.dart</span>
+<span class="kd">class</span> <span class="nc">FirebaseService</span> <span class="o">{</span>
+
+  <span class="c1">//...</span>
+
+  <span class="n">fb</span><span class="o">.</span><span class="na">Database</span> <span class="n">fbDatabase</span><span class="o">;</span>
+  <span class="n">Map</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">,</span><span class="n">List</span><span class="o">&lt;</span><span class="n">Message</span><span class="o">&gt;&gt;</span> <span class="n">previousEmojiMap</span> <span class="o">=</span> <span class="o">{};</span>
+  <span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">teams</span> <span class="o">=</span> <span class="o">[];</span>
+  <span class="kt">String</span> <span class="n">currentTeam</span> <span class="o">=</span> <span class="s">''</span><span class="o">;</span>
+
+  <span class="n">List</span><span class="o">&lt;</span><span class="n">Message</span><span class="o">&gt;</span> <span class="kd">get</span> <span class="n">previousEmojis</span> <span class="o">=&gt;</span> <span class="o">[];</span>
+
+  <span class="n">FirebaseService</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">secret</span><span class="o">.</span><span class="na">init</span><span class="o">();</span>
+
+    <span class="n">_fbGoogleAuthProvider</span> <span class="o">=</span> <span class="k">new</span> <span class="n">fb</span><span class="o">.</span><span class="na">GoogleAuthProvider</span><span class="o">();</span>
+    <span class="n">fbAuth</span> <span class="o">=</span> <span class="n">fb</span><span class="o">.</span><span class="na">auth</span><span class="o">();</span>
+    <span class="n">fbDatabase</span> <span class="o">=</span> <span class="n">fb</span><span class="o">.</span><span class="na">database</span><span class="o">();</span>
+  <span class="o">}</span>
+
+  <span class="kt">void</span> <span class="n">buildTeams</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">fbDatabase</span><span class="o">.</span><span class="na">ref</span><span class="o">(</span><span class="s">'users_teams/'</span> <span class="o">+</span> <span class="n">fbAuth</span><span class="o">.</span><span class="na">currentUser</span><span class="o">.</span><span class="na">uid</span><span class="o">).</span><span class="na">onValue</span><span class="o">.</span><span class="na">listen</span><span class="o">((</span><span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">teams</span> <span class="o">=</span> <span class="o">[];</span>
+      <span class="n">Map</span> <span class="n">rawTeams</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="na">snapshot</span><span class="o">.</span><span class="na">val</span><span class="o">();</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">rawTeams</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="k">return</span><span class="o">;</span>
+      <span class="n">rawTeams</span><span class="o">.</span><span class="na">forEach</span><span class="o">((</span><span class="n">k</span><span class="o">,</span> <span class="n">v</span><span class="o">)</span> <span class="o">=&gt;</span> <span class="n">teams</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">v</span><span class="o">));</span>
+      <span class="n">changeTeam</span><span class="o">(</span><span class="n">teams</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span>
+    <span class="o">});</span>
+  <span class="o">}</span>
+
+  <span class="kt">void</span> <span class="n">changeTeam</span><span class="o">(</span><span class="kt">String</span> <span class="n">team</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">currentTeam</span> <span class="o">==</span> <span class="n">team</span><span class="o">)</span> <span class="k">return</span><span class="o">;</span>
+    <span class="n">currentTeam</span> <span class="o">=</span> <span class="n">team</span><span class="o">;</span>
+    <span class="n">switchTeam</span><span class="o">();</span>
+  <span class="o">}</span>
+
+  <span class="kt">void</span> <span class="n">switchTeam</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// return if there is already a lister.</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">previousEmojiMap</span><span class="o">.</span><span class="na">containsKey</span><span class="o">(</span><span class="n">currentTeam</span><span class="o">))</span> <span class="k">return</span><span class="o">;</span>
+
+    <span class="n">previousEmojiMap</span><span class="o">[</span><span class="n">currentTeam</span><span class="o">]</span> <span class="o">=</span> <span class="o">[];</span>
+    <span class="c1">// Register listener</span>
+    <span class="n">fbDatabase</span>
+        <span class="o">.</span><span class="na">ref</span><span class="o">(</span><span class="s">'messages/'</span> <span class="o">+</span> <span class="n">currentTeam</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">onChildAdded</span>
+        <span class="o">.</span><span class="na">listen</span><span class="o">((</span><span class="n">e</span><span class="o">)</span> <span class="o">=&gt;</span> <span class="n">_buildPrevEmoji</span><span class="o">(</span><span class="n">e</span><span class="o">,</span> <span class="n">currentTeam</span><span class="o">));</span>
+  <span class="o">}</span>
+
+  <span class="n">_buildPrevEmoji</span><span class="o">(</span><span class="n">e</span><span class="o">,</span> <span class="n">team</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">Map</span> <span class="n">rawMessages</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="na">snapshot</span><span class="o">.</span><span class="na">val</span><span class="o">();</span>
+    <span class="n">previousEmojiMap</span><span class="o">[</span><span class="n">team</span><span class="o">].</span><span class="na">insert</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="k">new</span> <span class="n">Message</span><span class="o">.</span><span class="na">fromJson</span><span class="o">(</span><span class="n">rawMessages</span><span class="o">));</span>
+  <span class="o">}</span>
+
+  <span class="n">Future</span> <span class="n">postNewMessage</span><span class="o">(</span><span class="n">Message</span> <span class="n">message</span><span class="o">)</span> <span class="n">async</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">message</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">await</span> <span class="n">fbDatabase</span>
+          <span class="o">.</span><span class="na">ref</span><span class="o">(</span><span class="s">'messages/'</span> <span class="o">+</span> <span class="n">currentTeam</span><span class="o">)</span>
+          <span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">Message</span><span class="o">.</span><span class="na">toMap</span><span class="o">(</span><span class="n">message</span><span class="o">))</span>
+          <span class="o">.</span><span class="na">future</span><span class="o">;</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+  <span class="n">Future</span> <span class="n">createTeam</span><span class="o">(</span><span class="kt">String</span> <span class="n">teamName</span><span class="o">)</span> <span class="n">async</span> <span class="o">{</span>
+    <span class="n">await</span> <span class="n">fbDatabase</span>
+        <span class="o">.</span><span class="na">ref</span><span class="o">(</span><span class="s">'users_teams/'</span> <span class="o">+</span> <span class="n">fbAuth</span><span class="o">.</span><span class="na">currentUser</span><span class="o">.</span><span class="na">uid</span><span class="o">)</span>
+        <span class="o">.</span><span class="na">push</span><span class="o">(</span><span class="n">teamName</span><span class="o">).</span><span class="na">future</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="c1">//...</span>
+
+<span class="o">}</span>
+</code></pre></div></div><p>First of all, a <code class="highlighter-rouge">Database</code> object is created during initialization. Then the relevant variables are added. Note that <code class="highlighter-rouge">previousEmojiMap</code> is especially important, and I will explain this later.<p>First let’s take a look at <code class="highlighter-rouge">buildTeams()</code>. As mentioned before, we reference <code class="highlighter-rouge">users_teams/$uid</code> in the database, and register a callback on value. In it the value of the snapshot is iterated, and each team name is added into the list. Finally, it calls <code class="highlighter-rouge">changeTeam(teams[0])</code> to point the current team to the first one of the list.<p>Following up let’s look at <code class="highlighter-rouge">changeTeam()</code>. This function is fairly simple, in that it just updates <code class="highlighter-rouge">currentTeam</code> if necessary and calls the <code class="highlighter-rouge">switchTeam</code> function.<p>The <code class="highlighter-rouge">switchTeam</code> is where I got things wrong the first time. Here it checks if a callback that builds the messages has been registered for this team. If so, nothing should be done. Otherwise a new callback would be registered.<p>This is necessary, since Teamoji is a Single Page Application. If this check is not done, multiple callbacks would be called when a new child is added into the messages list, and therefore showing multiple times in the list.<p>Lastly, the <code class="highlighter-rouge">createTeam()</code> function is fairly straightforward as well. It simply pushes a new entry in the <code class="highlighter-rouge">users_teams/$uid</code> list.<h3 id="default-group">Default group</h3><p>There are one more thing to take care of. When the user first logs in, they would not have any teams yet. If we use the current structure, the first thing the user sees will be a blank screen, which is quite confusing and bad UX. I added an extra check upon login that if this is a new user, assign them to the “general” group. This way users would be able to see at least some content when they first log in.<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//firebase_service.dar
+
+Future signIn() async {
+     try {
+       await fbAuth.signInWithPopup(_fbGoogleAuthProvider);
+<span class="gi">+      if (fbAuth.currentUser != null) {
++        fbDatabase
++            .ref('users_teams/' + fbAuth.currentUser.uid)
++            .once('value')
++            .then((event) async {
++          if (event.snapshot.val() == null) {
++            await fbDatabase
++                .ref('users_teams/' + fbAuth.currentUser.uid)
++                .push('general').future;
++          }
++          ;
++        });
++      }
+</span>     } catch (error) {
+       print("$runtimeType::login() -- $error");
+     }
+   }
+</code></pre></div></div><h3 id="wiring-up">Wiring up</h3><p>Now that services functionalities are ready, we can simply wiring it up to our components.<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// changes of homepage.dart
+
+
+<span class="gu">@@ -34,43 +34,28 @@ import 'package:angular_components/angular_components.dart';
+</span>       'homepage.css',
+     ])
+ class HomepageComponent extends HomepageMessages implements OnInit {
+   bool visible = false;
+   String currentComponent = 'homepage';
+ 
+<span class="gd">-  List&lt;Message&gt; previousEmojis = [
+-    new Message('Nick', 'images/profile_placeholder.png', '\u{1F60B}',
+-        new DateTime.now()),
+-    new Message('Nick', 'images/profile_placeholder.png', '\u{1F60B}',
+-        new DateTime.now()),
+-    new Message('Nick', 'images/profile_placeholder.png', '\u{1F60B}',
+-        new DateTime.now()),
+-    new Message('Nick', 'images/profile_placeholder.png', '\u{1F60B}',
+-        new DateTime.now()),
+-    new Message('Nick', 'images/profile_placeholder.png', '\u{1F60B}',
+-        new DateTime.now()),
+-  ];
+-
+-  List&lt;String&gt; teams = ['google', 'angular', 'firebase'];
+-
+</span>   final StreamController&lt;String&gt; stream = new StreamController.broadcast();
+
+   @Output()
+   Stream get onPageChange =&gt; stream.stream;
+ 
+<span class="gd">-  bool shouldShowAsDeepBlue(String team) =&gt; false;
+</span><span class="gi">+  bool shouldShowAsDeepBlue(String team) =&gt; team == service.currentTeam;
+</span> 
+   Future onSelectEmoji(Message message) async {
+     currentComponent = 'homepage';
+<span class="gd">-    // TODO: use firebase database to push new message.
+</span><span class="gi">+    await service.postNewMessage(message);
+</span>   }
+ 
+   Future onCreateTeam(String teamName) async {
+     currentComponent = 'homepage';
+     if (teamName == null) return;
+<span class="gd">-    // TODO: use firebase database to create new page.
+</span><span class="gi">+    await service.createTeam(teamName);
+</span>   }
+ 
+   Future onSignOut() async {
+<span class="gu">@@ -80,6 +65,6 @@ class HomepageComponent extends HomepageMessages implements OnInit {
+</span> 
+   @override
+   ngOnInit() {
+<span class="gd">-    // TODO: use firebase database to build the teams.
+</span><span class="gi">+    service.buildTeams();
+</span>   }
+ }
+
+</code></pre></div></div><p>Also remember to update the template of homepage.<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// changes of homepage.html
+
+
+<span class="gu">@@ -5,10 +5,10 @@
+</span>             
+         &lt;/div&gt;
+         &lt;material-list class="tm-home-drawer-list"&gt;
+<span class="gd">-            &lt;material-list-item *ngFor="let team of teams"
+</span><span class="gi">+            &lt;material-list-item *ngFor="let team of service.teams"
+</span>                                 class="tm-team-list-item"
+                                 [class.deep-blue]="shouldShowAsDeepBlue(team)"
+<span class="gd">-                                (trigger)="drawer.toggle();"&gt;
+</span><span class="gi">+                                (trigger)="drawer.toggle(); service.changeTeam(team);"&gt;
+</span>                 
+             &lt;/material-list-item&gt;
+         &lt;/material-list&gt;
+<span class="gu">@@ -28,11 +28,11 @@
+</span>             &lt;material-button class="material-drawer-button" icon (trigger)="drawer.toggle()"&gt;
+                 &lt;material-icon icon="menu"&gt;&lt;/material-icon&gt;
+             &lt;/material-button&gt;
+<span class="gd">-            &lt;div class="tm-main-content-header-title"&gt;header&lt;/div&gt;
+</span><span class="gi">+            &lt;div class="tm-main-content-header-title"&gt;&lt;/div&gt;
+</span>         &lt;/div&gt;
+         &lt;div class="tm-main-content-content"&gt;
+             &lt;ul style="padding-left: 0; display: grid; grid-template-columns: 1fr 1fr;"&gt;
+<span class="gd">-                &lt;li *ngFor="let message of previousEmojis" class="tm-prev-emoji-item"&gt;
+</span><span class="gi">+                &lt;li *ngFor="let message of service.previousEmojis" class="tm-prev-emoji-item"&gt;
+</span>                     &lt;user-post [message]="message"&gt;&lt;/user-post&gt;
+                 &lt;/li&gt;
+             &lt;/ul&gt;
+</code></pre></div></div><p>Lastly, we need to create a new <code class="highlighter-rouge">Message</code> object when the user selects an emoji from the selector. This should be done in <code class="highlighter-rouge">EmojiSelector</code> component.<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class EmojiSelectorComponent extends EmojiSelectorMessages with EmojiList {
+   @Output()
+   Stream get onSelect =&gt; _selectStream.stream;
+ 
+<span class="gi">+  FirebaseService service;
++
++  EmojiSelectorComponent(this.service);
++
+</span>   void onCancel() =&gt; _selectStream.add(null);
+ 
+<span class="gd">-  void onSelectEmoji(String emoji) {
+-    // TODO: add new message to the stream.
+-    _selectStream.add(null);
+-  }
+</span><span class="gi">+  void onSelectEmoji(String emoji) =&gt; _selectStream.add(new Message(
++      service.fbAuth.currentUser.displayName,
++      service.fbAuth.currentUser.photoURL,
++      emoji,
++      new DateTime.now()));
+</span>}
+</code></pre></div></div><p>After that, our Teamoji app should be completed.<h3 id="finishing-up">Finishing up</h3><p>You can find the complete code of Teamoji in the master branch of the <a href="https://github.com/NickWu007/Teamoji-practice">Github repo</a>. I have omitted some steps in the styling and the steps to push it with Firebase hosting. If that’s something you want to know, let me know in the comments and I can do a follow-up in the future.<p>Also, I will do a separate post as a reflection of Teamoji, from the conception of the idea, and design and engineering decisions, and the process of building it. Stay tuned for that.<p>I hope this series serves as a good intro if you are new to AngularDart and Firebase. In the next few months I will try to make this web app into a mobile app, with <a href="flutter.io">Flutter</a>.<p>Hope you had fun reading this series. I will see you soon.<p>Nick</article><div id="disqus_thread"></div><script> var disqus_config = function () { this.page.url = 'https://nickwu007.github.io/dart/technical/2018/03/29/teamoji-wrap-up-connecting-firebase-database/'; this.page.identifier = 'https://nickwu007.github.io/dart/technical/2018/03/29/teamoji-wrap-up-connecting-firebase-database/'; }; (function() { var d = document, s = d.createElement('script'); s.src = 'https://devpractical.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })(); </script> <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript><hr class="dingbat related" /><aside class="related mb4" role="complementary"><h2 class="hr">Related Posts</h2><ul class="related-posts"><li> <a href="/dart/technical/2018/03/19/teamoji-9-entering-firebase/" class="h4 flip-title"> <span>Teamoji #9 Entering Firebase</span> </a> <time class="heading faded fine" datetime="2018-03-19T22:21:00+00:00">19 Mar 2018</time><li> <a href="/dart/technical/2018/01/08/dart-8-homepage-part-2/" class="h4 flip-title"> <span>Dart #8: homepage part 2</span> </a> <time class="heading faded fine" datetime="2018-01-08T03:32:35+00:00">08 Jan 2018</time><li> <a href="/dart/technical/2017/10/20/dart-7-homepage-part-1/" class="h4 flip-title"> <span>Dart #7: Homepage part 1</span> </a> <time class="heading faded fine" datetime="2017-10-20T23:44:50+01:00">20 Oct 2017</time></ul></aside><aside class="comments related" role="complementary"><h2 class="hr">Comments</h2><div id="disqus_thread"></div><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript></aside><footer role="contentinfo"><hr/><p><small class="copyright">© 2018. All rights reserved. </small><p><small>Powered by <a class="external" href="https://qwtel.com/hydejack/">Hydejack</a> v<span id="_version">7.5.1</span></small><hr class="sr-only"/></footer></main><hy-drawer><header id="_sidebar" class="sidebar" role="banner"><div class="sidebar-bg sidebar-overlay" style="background-color:#268bd2;background-image:url(/assets/images/sidebar.jpg)"></div><div class="sidebar-sticky"><div class="sidebar-about"><h2 class="h1"><a href="/">DevPractical</a></h2><p class=""> Made by Nick Wu</div><nav class="sidebar-nav heading" role="navigation"> <span class="sr-only">Navigation:</span><ul><li> <a id="_navigation" href="/category/dart/" class="sidebar-nav-item" > Dart </a><li> <a href="/category/technical/" class="sidebar-nav-item" > Technical </a><li> <a href="/category/non-technical/" class="sidebar-nav-item" > Non-Technical </a><li> <a href="/category/life/" class="sidebar-nav-item" > Life </a><li> <a href="/about/" class="sidebar-nav-item" > About Me </a></ul></nav><div class="sidebar-social"> <span class="sr-only">Social</span><ul><li> <a href="https://twitter.com/WujunaoNick" title="Twitter" class="no-mark-external"> <span class="icon-twitter"></span> <span class="sr-only">Twitter</span> </a><li> <a href="https://github.com/NickWu007" title="GitHub" class="no-mark-external"> <span class="icon-github"></span> <span class="sr-only">GitHub</span> </a><li> <a href="mailto:wujunao19950715@gmail.com" title="email" class="no-mark-external"> <span class="icon-link"></span> <span class="sr-only">email</span> </a></ul></div></div></header></hy-drawer> </hy-push-state> <!--[if gt IE 9]><!----> <script>loadJSDeferred('/assets/js/hydejack-7.5.1.js');</script> <!--<![endif]--><hr class="sr-only"/><h2 class="sr-only">Templates:</h2><template id="_animation-template"><div class="animation-main fixed-top"><div class="content"><div class="page"></div></div></div></template> <template id="_loading-template"><div class="loading"> <span class="sr-only">Loading…</span> <span class="icon-cog"></span></div></template> <template id="_error-template"><div class="page"><h1 class="page-title">Error</h1><p class="lead"> Sorry, an error occurred while loading: <a class="this-link" href=""></a>.</div></template> <template id="_back-template"> <a id="_back" class="back nav-btn no-hover"> <span class="sr-only">Back</span> <span class="icon-arrow-left2"></span> </a> </template> <template id="_permalink-template"> <a href="#" class="permalink"> <span class="sr-only">Permalink</span> <span class="icon-link"></span> </a> </template> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106129727-2"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-106129727-2'); </script></html>

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://nickwu007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nickwu007.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-22T23:23:36+00:00</updated><id>https://nickwu007.github.io/</id><title type="html">DevPractical</title><subtitle>Practical tips for Developers, from a developer.</subtitle><author><name>Nick Wu</name></author><entry><title type="html">Compile Podcast Ep 6: Developer Health</title><link href="https://nickwu007.github.io/podcast/2020/02/22/compile-6/" rel="alternate" type="text/html" title="Compile Podcast Ep 6: Developer Health" /><published>2020-02-22T23:07:00+00:00</published><updated>2020-02-22T23:07:00+00:00</updated><id>https://nickwu007.github.io/podcast/2020/02/22/compile-6</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2020/02/22/compile-6/">&lt;p&gt;Hello everyone! Welcome to the Compile Podcast, a show where 2 programmers talk about anything and everything!&lt;/p&gt;
+
+&lt;p&gt;In this episode, we talk about Developer Health. We discuss the mindset towards health as developers and give coding and non-coding related tips.&lt;/p&gt;
+
+&lt;p&gt;Next week we will have a new topic to discuss! So subscribe and stay tuned!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/WujunaoNick&quot;&gt;My Twitter&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This Podcast is also on:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y&quot;&gt;Google Play Music&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367&quot;&gt;iTunes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;links-in-this-episode&quot;&gt;Links in this episode:&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/dp/0141983760/ref=cm_sw_r_tw_dp_U_x_DBBuEbY4M3E7A&quot;&gt;“Why we sleep” book&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.com/Sherlock-Holmes-Treason-Audible-Original/dp/B084BT2LK4&quot;&gt;My recommended audio book&lt;/a&gt;&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">In this episode, we talk about Developer Health. We discuss the mindset towards health as developers and give coding and non-coding related tips.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep_6.png" /></entry><entry><title type="html">mid-year-reflection-2019</title><link href="https://nickwu007.github.io/non_technical/life/2019/07/14/mid-year-reflection-2019/" rel="alternate" type="text/html" title="mid-year-reflection-2019" /><published>2019-07-14T19:03:00+01:00</published><updated>2019-07-14T19:03:00+01:00</updated><id>https://nickwu007.github.io/non_technical/life/2019/07/14/mid-year-reflection-2019</id><content type="html" xml:base="https://nickwu007.github.io/non_technical/life/2019/07/14/mid-year-reflection-2019/">&lt;p&gt;I realized that I did not write a post this year for new year resolutions, which I usually do. Although it has slipped in my mind, I did have a personal list of things that I wanted to do this year. And since we are just about over half on this year, I thought I could update myself on my progress, and possible shift on focus. I do recommend setting some goals for yourself, even just for a quarter, or the rest of year. Maybe my resolutions would interest you in setting one for yourself too!&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;img src=&quot;/assets/images/2019-desk-diary.jpg&quot; alt=&quot;Picture of a calendar&quot; /&gt;
+*Set a goal for yourself, from &lt;a href=&quot;https://www.pexels.com/photo/black-hello-2019-notebook-on-brown-wooden-surface-1937337/&quot;&gt;Pexels&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&quot;what-went-well&quot;&gt;What went well?&lt;/h3&gt;
+&lt;h4 id=&quot;work&quot;&gt;Work&lt;/h4&gt;
+&lt;p&gt;At the start of year, I had only just completed my first big project, and wanted to learn more about our technical stack. Up to today I have completed another few projects, which covers a range of areas as I had planned. My design and coding skills have grown since then, by quite a significant portion in my opinion, but still far from mastery naturally. All in all, I am in a relatively happy place with work, in other words I am able to enjoy working most of the time and produce at a steady pace.&lt;/p&gt;
+
+&lt;p&gt;Another point that I wanted to adjust at the start of year is putting in less time at work, ironically. I was putting a lot of time art work, and basically threw away my personal life and my friends. In the past 6 months, I have consciously limited my time at the office, and try to not work after hours. At first this put a lot of anxiety on me, worrying if I can still deliver projects on time. But as time goes on I have felt more comfortable in budgeting time appropriately for work, and my production has not gone down as badly as I thought.&lt;/p&gt;
+&lt;h4 id=&quot;side-projects&quot;&gt;Side projects&lt;/h4&gt;
+&lt;p&gt;If you have been on this blog for a while, you will probably know about &lt;a href=&quot;http://examples.links-lang.org&quot;&gt;TryLinks&lt;/a&gt;, my dissertation project at uni at first but has since turned into a mini-side project. This year I launched the a completely new UI for TryLinks, which carries the same functionality but with a much more maintainable codebase. I have to say working on this project in addition to my day job was challenging, but still I am glad to have completed the project on time and it is being actively worked on as well!&lt;/p&gt;
+&lt;h4 id=&quot;traveling&quot;&gt;Traveling&lt;/h4&gt;
+&lt;p&gt;For quite a long time, I have an ineffable dislike of traveling, and therefore kept my traveling to only strictly necessary. This year I wanted to try and see if this is true for me, and the easiest way to verify that is to travel and experience.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;img src=&quot;/assets/images/travels_2019.png&quot; alt=&quot;Where I have been this year&quot; /&gt;
+*Where I have been this year&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Up to today I have made 6 international travels, and I must say this idea is both right and wrong. It is true that I don’t particularly enjoy planning the logistics, and going on long flights. However, I think I have realized a few benefits of traveling. When I am going somewhere with others, I always come back from the trip with a stronger bond with them. Getting away from where I live makes it easier to put things into perspective, and fortunately I have had great company on all of these trips. Also, I noticed that when I am traveling, I can really think about myself as a person: what I like and dislike, my strengths and weakness, and where my mind is at the time. All of this has helped me re-center myself in life. Luckily I still have a few travels for the rest of this year, and I am more excited to go than I was 6 months ago.&lt;/p&gt;
+&lt;h3 id=&quot;what-should-i-focus-more-on&quot;&gt;What should I focus more on?&lt;/h3&gt;
+&lt;h4 id=&quot;physical-health&quot;&gt;Physical health&lt;/h4&gt;
+&lt;p&gt;Since I started working full time, with a lot of sitting around and not moving, plus a reduction in physical exercise, I have gained quite a substantial amount of weight. With this my energy level has dipped noticeably too, and I find myself less fit in general, compared to when I was in uni. The reason for this is that I have struggled with the 2 most important things in physical health: sticking to a regular schedule, and maintaining a healthy diet. This will be my main focus for the next 6 months, and hopefully by the end of year I can get back to where I was when I graduated uni.&lt;/p&gt;
+&lt;h4 id=&quot;podcast&quot;&gt;Podcast&lt;/h4&gt;
+&lt;p&gt;As many of you know, I host a &lt;a href=&quot;https://www.youtube.com/playlist?list=PLfkNBxEf3tVFjCJQ67ofI2Wh5yQwPGxOn&quot;&gt;podcast&lt;/a&gt;, where I talk about various topics with friends. It is a great shame that I have not been able to produce a single new episode in the past 6 months, and was only able to get started quite recently. Fortunately, I will be able to prioritize the podcast more from now on, and also with the help from a few enthusiastic friends.&lt;/p&gt;
+&lt;h4 id=&quot;getting-out-of-comfort-zone&quot;&gt;Getting out of comfort zone&lt;/h4&gt;
+&lt;p&gt;One thing that recently came to my mind is comfort zone. Since I am not the adventurous spirit, getting out of comfort zone is rare for me. But recently I was repeated suggested to venture out more often, in other words do things that would normally scare me. So far I have not planned out how exactly I should do that, but this will be a new focus for myself for rest of year. Maybe I will discuss this more in detail, either in another post or in the podcast.&lt;/p&gt;
+&lt;h3 id=&quot;tldr&quot;&gt;Tl;dr&lt;/h3&gt;
+&lt;p&gt;2019 has been going relatively well for me. As I was about to turn 24, I have gained a clearer image of my ideal life, and how to get there. I am glad about what I have been able to accomplish so far this year, and at the same time realize that I still have much to do. If you want to share your resolutions and your experience, I would be very glad to open a conversation!&lt;/p&gt;
+
+&lt;p&gt;Hope I can finish everything that I set out to do, and so do you!&lt;/p&gt;
+
+&lt;p&gt;See you very soon.&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">I realized that I did not write a post this year for new year resolutions, which I usually do. Although it has slipped in my mind, I did have a personal list of things that I wanted to do this year. And since we are just about over half on this year, I thought I could update myself on my progress, and possible shift on focus. I do recommend setting some goals for yourself, even just for a quarter, or the rest of year. Maybe my resolutions would interest you in setting one for yourself too!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/2019-desk-diary.jpg" /></entry><entry><title type="html">Compile Podcast Ep 5: Developer Workflow</title><link href="https://nickwu007.github.io/podcast/2019/07/03/compile-ep-6/" rel="alternate" type="text/html" title="Compile Podcast Ep 5: Developer Workflow" /><published>2019-07-03T00:00:00+01:00</published><updated>2019-07-03T00:00:00+01:00</updated><id>https://nickwu007.github.io/podcast/2019/07/03/compile-ep-6</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2019/07/03/compile-ep-6/">&lt;p&gt;Hello everyone! Welcome to the Compile Podcast, a show where 2 programmers talk about anything and everything!&lt;/p&gt;
+
+&lt;p&gt;In this episode, we talk about Developer Workflow with a great guest. We discuss the differences between uni and industry software projects, with some funny stories and some helpful tips, whether you are working or studying.&lt;/p&gt;
+
+&lt;p&gt;Next week we will have a new guest with a new topic! So subscribe and stay tuned!&lt;/p&gt;
+
+&lt;p&gt;My Twitter: https://twitter.com/WujunaoNick&lt;/p&gt;
+
+&lt;p&gt;This Podcast is also on:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Google Play Music: https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y&lt;/li&gt;
+  &lt;li&gt;iTunes: https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;breakpoints&quot;&gt;Breakpoints&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;00:00 Intro.&lt;/li&gt;
+  &lt;li&gt;00:40 Catch up with John.&lt;/li&gt;
+  &lt;li&gt;06:07 Developer Workflow: how we do software projects.
+    &lt;ul&gt;
+      &lt;li&gt;06:42 Uni vs industry project workflow&lt;/li&gt;
+      &lt;li&gt;18:48 Main framework: waterfall + agile&lt;/li&gt;
+      &lt;li&gt;25:04 The main stages of a typical software project&lt;/li&gt;
+      &lt;li&gt;52:04 “Compile down to essentials”.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;53:10 Pick and Plug.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;links-in-this-episode&quot;&gt;Links in this episode:&lt;/h3&gt;
+
+&lt;p&gt;The Mythical Man-Month: https://en.wikipedia.org/wiki/The_Mythical_Man-Month\&lt;/p&gt;
+
+&lt;p&gt;Waterfall development process: https://en.wikipedia.org/wiki/Waterfall_model&lt;/p&gt;
+
+&lt;p&gt;Agile development process: https://en.wikipedia.org/wiki/Agile_software_development&lt;/p&gt;
+
+&lt;p&gt;John and Steve’s podcast “The Discomfortable Zone”: https://podcasts.apple.com/us/podcast/the-discomfortable-zone-podcast/id1294539931?mt=2.&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">In this episode, we talk about Developer Workflow with a great guest. We discuss the differences between uni and industry software projects, with some funny stories and some helpful tips, whether you are working or studying.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep_5.png" /></entry><entry><title type="html">Own your problems</title><link href="https://nickwu007.github.io/non_technical/life/2019/04/21/own-your-problems/" rel="alternate" type="text/html" title="Own your problems" /><published>2019-04-21T11:03:00+01:00</published><updated>2019-04-21T11:03:00+01:00</updated><id>https://nickwu007.github.io/non_technical/life/2019/04/21/own-your-problems</id><content type="html" xml:base="https://nickwu007.github.io/non_technical/life/2019/04/21/own-your-problems/">&lt;p&gt;Previously we have discussed &lt;a href=&quot;https://nickwu007.github.io/life/non_technical/2017/10/22/impostor-syndrome-thoughts-and-tips/&quot;&gt;Impostor Syndrome&lt;/a&gt; in this blog, and today I want to talk about one specific way to overcome it: owning your problems.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-this-came-to-be&quot;&gt;How this came to be?&lt;/h3&gt;
+&lt;p&gt;I must admit that this idea wasn’t original. I was having a conversation with my manager a few weeks ago, about how exactly I can be a more effective engineer in the team. This was one of the suggestions that he offered:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You should look into your own the problem that you are solving. Collaborate with the others, but be the driving force in solving the problem.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This got me thinking about my work style in the last few projects. Being a junior engineer and the newest member in the team, I was deferring to other engineers quite often, both in terms of design and implementation. Although this helped us delivering the projects in time, I don’t feel like I am actually contributing to “solving” the problem per se, but rather just solidifying ideas from other engineers. Worse still, I notice that I have grown into an awful habit: when I hit a problem that is not obvious in the first sight, my instinct is to ask someone else. In other words, I was not &lt;strong&gt;owning&lt;/strong&gt; the problem that I am supposed to solve, but rather &lt;strong&gt;dragging&lt;/strong&gt; other people into my problem.&lt;/p&gt;
+
+&lt;p&gt;But why was I doing this? I reflected on my thinking when this would happen, and I realized that I was &lt;em&gt;afraid&lt;/em&gt; of owning the problem. I might not be able to come up with a solution at all, or worse, I might come up with something completely wrong and mess things up. Therefore, it is safer to seek help from someone who knows better. Although this logic isn’t technically wrong, it only solves the problem at hand in the short term, and I wouldn’t grow to be independent to take on other problems in the future.&lt;/p&gt;
+
+&lt;p&gt;Once I realized that my way of work needed change, I consciously made sure that I ask less, and try to do more research on whatever problem that I was solving. The effect showed surprisingly quickly, only after about a week. Although it was taking slightly longer to solve individual problems, I was actually able to solve almost every problem that came to me, without asking other engineers all the time. And from the team’s perspective, the productivity has gone up, since everyone else in the team is not spending their time to answer me.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/adult-cheerful-coffee.jpg&quot; alt=&quot;Happy team!&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Another bonus that I have found that this actually extends beyond just work. When I was looking for flats to move into a couple of weeks ago, I realized that I didn’t need to consult my friends and family about every single flat, which I had been doing up to then. I listed down the criteria that I was looking for, and just made my own decision. The takeaway is this applies to literally any problem that you are facing, be it at work, in life, etc.&lt;/p&gt;
+&lt;h3 id=&quot;so-what-can-you-do&quot;&gt;So, What can you do?&lt;/h3&gt;
+&lt;p&gt;Hopefully my story has encouraged you to take an initiative in owning your problems. Below I list a few tips that I think will help you in getting started.&lt;/p&gt;
+
+&lt;h4 id=&quot;start-with-a-mental-shift&quot;&gt;Start with a mental shift&lt;/h4&gt;
+&lt;p&gt;To make any tangible change, you must change the way you think first. I complete get all the concerns that you may have towards taking on a problem solo. In fact, these are the mental hurdles that I went through myself:&lt;/p&gt;
+
+&lt;h5 id=&quot;what-if-i-dont-know-how-to-solve-it&quot;&gt;What if I don’t know how to solve it?&lt;/h5&gt;
+&lt;p&gt;Now, I do believe that I &lt;em&gt;have&lt;/em&gt; the ability to solve most problems that come my way, at least at work. You are smarter than you realize, if you really stretch your mind. Have faith in yourself.&lt;/p&gt;
+
+&lt;h5 id=&quot;what-if-i-screw-up&quot;&gt;What if I screw up?&lt;/h5&gt;
+&lt;p&gt;Even if you get a wrong answer, you are not going to “screw up”. Things are not as bad as you think. Conversely, if you get it right by yourself, it would be a great confidence boost for you to take on more problems.&lt;/p&gt;
+
+&lt;p&gt;Ask yourself what exactly is stopping you from owning the problem. Once you enunciate it out loud, it will be easier to analyze its validity. And most likely you are over-worrying, which is quite normal if you are new to the field or problem space.&lt;/p&gt;
+
+&lt;h4 id=&quot;develop-a-process-to-deal-with-the-unfamiliar&quot;&gt;Develop a process to deal with the unfamiliar&lt;/h4&gt;
+&lt;p&gt;When you are facing a problem that involves a lot of unfamiliar places, it can be disorientating and confusing. The trick to deal with this, in my own experience, is to develop a “process” to go through.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/architect-architecture-build.jpg&quot; alt=&quot;Plot a process to tackle your problems&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Take a technical problem for example. Understanding the problem at first is crucial for me. I would do some research at first to get the context, and clarify what exactly the problem is, and which parts of the system are relevant to it. Once I nail down the general area I will dig deeper into each part, usually by reading doc and code. At this point I would know how the parts work currently, and what exactly it needs to work to solve the problem. Having this mental “diff” makes things a lot easier.&lt;/p&gt;
+
+&lt;p&gt;When I understand the problem I can think about changes to the system in order to solve it. Usually, there are many ways to solve one problem, each with pros and cons. Listing these out and comparing them will be a good way to see if there’s an optimal solution. Often times tradeoffs have to be made, and now you may need to consult someone else. Having the context, the problem definition, all the approaches with pros and cons is a good way for other engineers to quickly follow up with everything and offer suggestions.&lt;/p&gt;
+
+&lt;h4 id=&quot;dont-be-a-lone-wolf&quot;&gt;Don’t be a lone wolf&lt;/h4&gt;
+&lt;p&gt;Having encouraged you to own the problem, I do want to point out to not be too extreme with this. There are problems that you need help with, and that’s part of the process too. At some point you might realize that you lack some crucial information, and you cannot find it easily. Then it is better to ask someone, rather than reading thousands of lines of code to draw your own insight. A balance must be held, but my point is to at least consider solving it by yourself.&lt;/p&gt;
+
+&lt;h3 id=&quot;last-few-words&quot;&gt;Last few words&lt;/h3&gt;
+&lt;p&gt;I hope you start to take ownership of your problems after reading this post. I am still finding a good balance myself too, and would love to know how you feel about this. Let me know on &lt;a href=&quot;https://twitter.com/WujunaoNick&quot;&gt;Twitter&lt;/a&gt;, or email me directly!&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">Previously we have discussed Impostor Syndrome in this blog, and today I want to talk about one specific way to overcome it: owning your problems.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/own_your_problems_title.jpg" /></entry><entry><title type="html">I am back</title><link href="https://nickwu007.github.io/non_technical/life/2019/04/09/i-am-back/" rel="alternate" type="text/html" title="I am back" /><published>2019-04-09T21:29:00+01:00</published><updated>2019-04-09T21:29:00+01:00</updated><id>https://nickwu007.github.io/non_technical/life/2019/04/09/i-am-back</id><content type="html" xml:base="https://nickwu007.github.io/non_technical/life/2019/04/09/i-am-back/">&lt;p&gt;Has been a while hasn’t it? You must been thinking I was quitting the podcast and the blog completely, especially now that I have “real job”(to be honest I did hear it from some friends). But I have been thinking about this and I feel like it is the time to come back.&lt;/p&gt;
+
+&lt;h3 id=&quot;where-have-i-been&quot;&gt;Where have I been?&lt;/h3&gt;
+
+&lt;p&gt;If you have been following me on Twitter, you would probably are already fairly up to date with my life. If not, here’s a quick recap. I started my new job as a full-time software engineer at Google London last September, and it has been the major focus of my life for the last few months.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/google_london.JPG&quot; alt=&quot;Shot over King Cross Station from Google UK&quot; /&gt;
+&lt;em&gt;Shot over King Cross Station from Google UK&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;It was quite challenging during the first 3 months, even with all the experience I had as an intern. We had a tight deadline for the first project, and I eventually made it by 2 days. After that I had a couple more projects to work on and now work has steadied up a bit. If you want me to discuss more about my work, either as a blog post or episode, please let me know!&lt;/p&gt;
+
+&lt;p&gt;Apart from that, I have been continuously working on TryLinks, albeit in a smaller capacity. We were extremely to be accepted by the &lt;a href=&quot;https://2019.programming-conference.org/event/proweb-2019-papers-trylinks-an-interactive-tutorial-system-for-a-cross-tier-web-programming-language&quot;&gt;ProWeb&lt;/a&gt; conference, and I recently went to Italy to give a talk.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/trylinks_talk.jpg&quot; alt=&quot;Me giving the TryLinks talk in Italy&quot; /&gt;
+&lt;em&gt;Me giving the TryLinks talk in Italy&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;TryLinks was originally just my final project, but it has lived on much longer than I expected. Even better, it is still being worked on to add more and more features. Therefore, I am taking on a side project for TryLinks in the coming weeks!&lt;/p&gt;
+
+&lt;h3 id=&quot;upcoming-plans&quot;&gt;Upcoming plans&lt;/h3&gt;
+
+&lt;h4 id=&quot;blog&quot;&gt;Blog&lt;/h4&gt;
+&lt;p&gt;Since I am taking on the TryLinks side project, it would be a perfect opportunity to do another series for the blog. I am still ironing out the detail, but the project should be kicking off around late April. In terms of the blog, I want to commit to a 2-posts-per-week schedule, so that I won’t slack off.&lt;/p&gt;
+
+&lt;p&gt;As for non-technical topics, my old backlog has been a bit dated, and I don’t think I can produce quality content on them. Also, I am thinking about moving the non-technical topics to the podcast, since it would be better to have discussions on them. Bottom line is, I am holding off non-technical blog posts for now. If you think there’s a topic you want see, feel free to let me know.&lt;/p&gt;
+
+&lt;h4 id=&quot;podcast&quot;&gt;Podcast&lt;/h4&gt;
+&lt;p&gt;I started the &lt;a href=&quot;https://www.youtube.com/playlist?list=PLfkNBxEf3tVFjCJQ67ofI2Wh5yQwPGxOn&quot;&gt;Compile Podcast&lt;/a&gt; last summer, partially because I listen to a lot of podcasts myself and really wanted to try it, and secondly it would be great as another platform for content. So far we only have a couple of episodes and I have not scheduled any new recordings. But this year I do want to keep doing it, and meet more and more people!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/podcast_setup.jpg&quot; alt=&quot;My recording setup&quot; /&gt;
+&lt;em&gt;My recording setup&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;In terms of plans, I do have still a few recordings in mind. Also, the topic backlog is still long enough for cover most of the year. One thing that I am looking for is a regular co-host. If you are interested, please let me know!!&lt;/p&gt;
+
+&lt;h3 id=&quot;where-to-look-for-from-now-on&quot;&gt;Where to look for from now on?&lt;/h3&gt;
+
+&lt;p&gt;So where can you follow up with my content? The easiest way is to follow me on &lt;a href=&quot;https://twitter.com/WujunaoNick&quot;&gt;Twitter&lt;/a&gt;!&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">Has been a while hasn’t it? You must been thinking I was quitting the podcast and the blog completely, especially now that I have “real job”(to be honest I did hear it from some friends). But I have been thinking about this and I feel like it is the time to come back.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/london_for_title.jpg" /></entry><entry><title type="html">Compile Podcast Ep 4: Impostor Syndrome</title><link href="https://nickwu007.github.io/podcast/2018/12/15/podcast-ep-5/" rel="alternate" type="text/html" title="Compile Podcast Ep 4: Impostor Syndrome" /><published>2018-12-15T00:00:00+00:00</published><updated>2018-12-15T00:00:00+00:00</updated><id>https://nickwu007.github.io/podcast/2018/12/15/podcast-ep-5</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2018/12/15/podcast-ep-5/">&lt;p&gt;Hello everyone! This is a brand new podcast for you!&lt;/p&gt;
+
+&lt;p&gt;In this shorter episode, we talk about Impostor Syndrome with a great guest. We discuss each other’s story and give some tips on dealing with Impostor Syndrome.&lt;/p&gt;
+
+&lt;p&gt;Breakpoints(lol):&lt;/p&gt;
+
+&lt;p&gt;00:00 Intro.
+03:12 Speed Round with Alex.
+16:51 Main topic: Impostor Syndrome.
+ 18:33 Zack talks about his battle with Impostor Syndrome during uni and work.
+ 27:51 Zack talks about how to view Impostor Syndrome as a positive.
+ 31:55 Nick talks about psychological safety, and using it to deal with Impostor Syndrome.
+ 40:00 Getting support from others.
+ 45:41 “Compile down to essentials”.
+51:12 Pick and Plug.&lt;/p&gt;
+
+&lt;p&gt;————————————————————
+Links in this episode:&lt;/p&gt;
+
+&lt;p&gt;My blog post about Impostor Syndrome: https://nickwu007.github.io/life/non_technical/2017/10/22/impostor-syndrome-thoughts-and-tips/.&lt;/p&gt;
+
+&lt;p&gt;Harvard CS50 online course: https://cs50.harvard.edu/2018/fall/&lt;/p&gt;
+
+&lt;p&gt;Contexts Mac App: https://contexts.co.&lt;/p&gt;
+
+&lt;p&gt;A Philosophy of Software Design: http://amzn.eu/d/iaIrjLu.&lt;/p&gt;
+
+&lt;p&gt;The Man in the High Castle: http://amzn.eu/d/0pq0PiH.&lt;/p&gt;
+
+&lt;p&gt;————————————————————&lt;/p&gt;
+
+&lt;p&gt;Next week we will have a new guest with a new topic! So subscribe and stay tuned!&lt;/p&gt;
+
+&lt;p&gt;My Twitter: https://twitter.com/WujunaoNick&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">In this episode, we talk about Impostor Syndrome with a great guest. We discuss each other’s story and give some tips on dealing with Impostor Syndrome.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep5_wide.png" /></entry><entry><title type="html">Compile Podcast Ep 3.5: Morning and night routines</title><link href="https://nickwu007.github.io/podcast/2018/08/31/podcast-ep-4/" rel="alternate" type="text/html" title="Compile Podcast Ep 3.5: Morning and night routines" /><published>2018-08-31T00:00:00+01:00</published><updated>2018-08-31T00:00:00+01:00</updated><id>https://nickwu007.github.io/podcast/2018/08/31/podcast-ep-4</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2018/08/31/podcast-ep-4/">&lt;p&gt;Hello everyone! This is a brand new podcast for you!&lt;/p&gt;
+
+&lt;p&gt;My Twitter: https://twitter.com/WujunaoNick&lt;/p&gt;
+
+&lt;p&gt;In this shorter episode, I talk about my morning and night routines! Hopefully some of the tips will help you develop your own routines!&lt;/p&gt;
+
+&lt;p&gt;Breakpoints(lol):&lt;/p&gt;
+
+&lt;p&gt;00:00 Intro.
+01:30 Why have morning and night routines?
+03:23 My morning routines.
+12:12 My night routines.
+18:00 “Compile down to essentials”.&lt;/p&gt;
+
+&lt;p&gt;————————————————————
+Links in this episode:&lt;/p&gt;
+
+&lt;p&gt;Why you should drink water first thing every day: https://eu.usatoday.com/story/news/nation-now/2017/03/14/why-you-should-drink-water-first-thing-every-day/99123938/&lt;/p&gt;
+
+&lt;p&gt;Cardio with empty stomach: https://youtu.be/4Qz-1xD7BmM
+————————————————————&lt;/p&gt;
+
+&lt;p&gt;Next week we will have a new guest with a new topic! So subscribe and stay tuned!&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">In this shorter episode, I talk about my morning and night routines! Hopefully some of the tips will help you develop your own routines!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep4_wide.png" /></entry><entry><title type="html">Compile Podcast Ep 3: First Dev Job: Tips and stories</title><link href="https://nickwu007.github.io/podcast/2018/08/25/podcast-ep-3/" rel="alternate" type="text/html" title="Compile Podcast Ep 3: First Dev Job: Tips and stories" /><published>2018-08-25T00:00:00+01:00</published><updated>2018-08-25T00:00:00+01:00</updated><id>https://nickwu007.github.io/podcast/2018/08/25/podcast-ep-3</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2018/08/25/podcast-ep-3/">&lt;p&gt;Hello everyone! This is a brand new podcast for you!&lt;/p&gt;
+
+&lt;p&gt;In this episode, we have a great school mate Alex joining us to talk about First Dev Job: how we got our first job, tips on job hunting, interviews, and more!&lt;/p&gt;
+
+&lt;p&gt;Breakpoints(lol):&lt;/p&gt;
+
+&lt;p&gt;00:00 Intro.
+02:12 Speed Round with Alex.
+19:04 Main topic: First Dev Job.
+	19:26 Alex talks about his journey of getting his first job.
+	26:55 Nick talks about how he got his first job.
+	31:00 General tips on job hunting.
+	38:44 CV tips.
+	46:44Interview tips.
+	01:08:19 “Compile down to essentials”.
+1:11:58 Pick and Plug.&lt;/p&gt;
+
+&lt;p&gt;————————————————————
+Links in this episode:&lt;/p&gt;
+
+&lt;p&gt;MIT open course on Algorithm and data structure: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/&lt;/p&gt;
+
+&lt;p&gt;LeetCode: https://leetcode.com&lt;/p&gt;
+
+&lt;p&gt;Crack the Coding Interview book: http://amzn.eu/dlkHaB0&lt;/p&gt;
+
+&lt;p&gt;CareerCup: https://careercup.com/&lt;/p&gt;
+
+&lt;p&gt;Hiring without whiteboards: https://github.com/poteto/hiring-without-whiteboards&lt;/p&gt;
+
+&lt;p&gt;Pink of the week: Coding Tech YouTube Channel: https://www.youtube.com/channel/UCtxCXg-UvSnTKPOzLH4wJaQ
+————————————————————&lt;/p&gt;
+
+&lt;p&gt;Next week we will have a new guest with a new topic! So subscribe and stay tuned!&lt;/p&gt;
+
+&lt;p&gt;My Twitter: https://twitter.com/WujunaoNick&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">In this episode, we have a great school mate Alex joining us to talk about First Dev Job: how we got our first job, tips on job hunting, interviews, and more!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep3_wide.png" /></entry><entry><title type="html">Compile Podcast Ep 2: When to quit a project</title><link href="https://nickwu007.github.io/podcast/2018/08/14/podcast-ep-2/" rel="alternate" type="text/html" title="Compile Podcast Ep 2: When to quit a project" /><published>2018-08-14T00:00:00+01:00</published><updated>2018-08-14T00:00:00+01:00</updated><id>https://nickwu007.github.io/podcast/2018/08/14/podcast-ep-2</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2018/08/14/podcast-ep-2/">&lt;p&gt;Hello everyone! This is a brand new podcast for you!&lt;/p&gt;
+
+&lt;p&gt;In this episode, we have another great friend John joining us to talk about when you should quit a project: why you might want to consider quitting, how to deal with the guilt, what you can do to make the quitting easier, and more!&lt;/p&gt;
+
+&lt;p&gt;Breakpoints(lol):&lt;/p&gt;
+
+&lt;p&gt;00:00 Intro.
+00:36 Introduce guest: John.
+05:07 Speed Round with John.
+16:10 Main topic: When to quit a project.
+	17:21 John and Nick discuss a typical situation to quit a project.
+	19:30 John explains “Sunk Cost Fallacy”, and how to weigh different options when you are at a crossroad with your project.
+	24:50 Guilt of quitting a project.
+	31:27 How to deal with the guilt?
+	37:00 Quitting as part of time/energy management.
+	42:25 “Compile down to essentials”.
+45:28 Pick and Plug.&lt;/p&gt;
+
+&lt;p&gt;Bare with me with the rubbish audio, not really good with editing yet. Also if you find the audio funny from time to time, that’s probably because we had a few disconnects during recording, and some of the bits are re-rendered in post.&lt;/p&gt;
+
+&lt;p&gt;Next week we will have a new guest with a new topic! So subscribe and stay tuned!&lt;/p&gt;
+
+&lt;p&gt;My Twitter: https://twitter.com/WujunaoNick&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">In this episode, we have another great friend John joining us to talk about when you should quit a project: why you might want to consider quitting, how to deal with the guilt, what you can do to make the quitting easier, and more!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep2_wide.png" /></entry><entry><title type="html">Compile Podcast Ep 1: Side projects</title><link href="https://nickwu007.github.io/podcast/2018/08/09/podcast-ep-1/" rel="alternate" type="text/html" title="Compile Podcast Ep 1: Side projects" /><published>2018-08-09T00:00:00+01:00</published><updated>2018-08-09T00:00:00+01:00</updated><id>https://nickwu007.github.io/podcast/2018/08/09/podcast-ep-1</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2018/08/09/podcast-ep-1/">&lt;p&gt;Hello everyone! This is a brand new podcast for you!&lt;/p&gt;
+
+&lt;p&gt;In our premier episode, we have a great guest Brennan joining us to talk about side projects: why you might want to do a  side project, how to get started, and how to deal with getting stuck, and more!&lt;/p&gt;
+
+&lt;p&gt;Brennan’s LinkedIn: https://www.linkedin.com/in/brennanproudfoot/.&lt;/p&gt;
+
+&lt;p&gt;Breakpoints(lol):&lt;/p&gt;
+
+&lt;p&gt;00:00 Intro.
+00:43 Introduce guest: Brennan.
+02:47 Speed Round with Brennan.
+12:24 Main topic: side projects.
+    12:48 Brennan and Nick talk about one of their own side projects.
+    19:30 Why side projects are good for you?
+    30:25 How to deal with loss of motivation, and getting un-stuck?
+    39:25 How/where to get started?
+    46:10 “Compile down to essentials”.
+52:09 Pick and Plug.&lt;/p&gt;
+
+&lt;p&gt;Bare with me with the rubbish audio, not really good with editing yet. Also terrible sense of humor of my side, sorry Brennan!&lt;/p&gt;
+
+&lt;p&gt;Next week we will have a new guest with a new topic! So subscribe and stay tuned!&lt;/p&gt;
+
+&lt;p&gt;My Twitter: https://twitter.com/WujunaoNick&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">In our premier episode, we have a great guest Brennan joining us to talk about side projects.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep_1.png" /></entry></feed>
