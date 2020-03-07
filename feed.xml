@@ -1,4 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://nickwu007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nickwu007.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-22T23:43:40+00:00</updated><id>https://nickwu007.github.io/</id><title type="html">DevPractical</title><subtitle>Practical tips for Developers, from a developer.</subtitle><author><name>Nick Wu</name></author><entry><title type="html">Compile Podcast Ep 6: Developer Health</title><link href="https://nickwu007.github.io/podcast/2020/02/22/compile-6/" rel="alternate" type="text/html" title="Compile Podcast Ep 6: Developer Health" /><published>2020-02-22T23:07:00+00:00</published><updated>2020-02-22T23:07:00+00:00</updated><id>https://nickwu007.github.io/podcast/2020/02/22/compile-6</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2020/02/22/compile-6/">&lt;p&gt;Hello everyone! Welcome to the Compile Podcast, a show where 2 programmers talk about anything and everything!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://nickwu007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nickwu007.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-03-07T21:25:05+00:00</updated><id>https://nickwu007.github.io/</id><title type="html">DevPractical</title><subtitle>Practical tips for Developers, from a developer.</subtitle><author><name>Nick Wu</name></author><entry><title type="html">Compile Podcast Ep 7: Hobbies – What we do when we are not working</title><link href="https://nickwu007.github.io/2020/03/07/compile-7/" rel="alternate" type="text/html" title="Compile Podcast Ep 7: Hobbies -- What we do when we are not working" /><published>2020-03-07T20:55:00+00:00</published><updated>2020-03-07T20:55:00+00:00</updated><id>https://nickwu007.github.io/2020/03/07/compile-7</id><content type="html" xml:base="https://nickwu007.github.io/2020/03/07/compile-7/">&lt;p&gt;In this week’s episode Jasper and I talk about our hobbies when we are not coding, and what you can do to find a hobby for yourself!&lt;/p&gt;
+
+&lt;h3 id=&quot;breakpoints&quot;&gt;Breakpoints&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;00:58 Why is a hobby important, espeically for a developer&lt;/li&gt;
+  &lt;li&gt;11:27 How do I go about finding a hobby?&lt;/li&gt;
+  &lt;li&gt;21:17 Jasper and I talk about our hobbies
+    &lt;ul&gt;
+      &lt;li&gt;21:25 Technical hobbies&lt;/li&gt;
+      &lt;li&gt;28:15 Non-technical hobbies&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;42:40 Wrap up&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;links-in-this-episode&quot;&gt;Links in this episode:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Developer forum that I follow: &lt;a href=&quot;https://dev.to&quot;&gt;dev.to&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;“The Phoenix Project”: &lt;a href=&quot;https://www.amazon.co.uk/dp/1942788290/ref=cm_sw_r_tw_dp_U_x_I7azEb7XA50C0&quot;&gt;amazon&lt;/a&gt;, &lt;a href=&quot;https://www.audible.co.uk/pd/The-Phoenix-Project-Audiobook/B00VB034GK&quot;&gt;audible book&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Recipe for the &lt;a href=&quot;https://sortedfood.com/recipe/13950&quot;&gt;Chocolate Lava cake&lt;/a&gt; we made for Chirstmas&lt;/li&gt;
+  &lt;li&gt;A good &lt;a href=&quot;https://www.amazon.co.uk/dp/1473675405/ref=cm_sw_r_tw_dp_U_x_F.azEbFG36H85&quot;&gt;fiction&lt;/a&gt; that I read last year&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reach-out-to-us&quot;&gt;Reach out to us!&lt;/h3&gt;
+
+&lt;p&gt;Next week we will have a new guest with a new topic! So subscribe and stay tuned! Also send in any comment or request for new topics and we will try our best to make them happen!&lt;/p&gt;
+
+&lt;p&gt;My Twitter: https://twitter.com/WujunaoNick&lt;/p&gt;
+
+&lt;p&gt;This Podcast is also on:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y&quot;&gt;Google Play Music&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367&quot;&gt;iTunes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://open.spotify.com/show/2UH9hK7VlS7ytjYdM8Vd78&quot;&gt;Spotify&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Nick Wu</name></author><summary type="html">Jasper and I talk about our hobbies when we are not coding, and what you can do to find a hobby for yourself!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep_7.png" /></entry><entry><title type="html">Compile Podcast Ep 6: Developer Health</title><link href="https://nickwu007.github.io/podcast/2020/02/22/compile-6/" rel="alternate" type="text/html" title="Compile Podcast Ep 6: Developer Health" /><published>2020-02-22T23:07:00+00:00</published><updated>2020-02-22T23:07:00+00:00</updated><id>https://nickwu007.github.io/podcast/2020/02/22/compile-6</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2020/02/22/compile-6/">&lt;p&gt;Hello everyone! Welcome to the Compile Podcast, a show where 2 programmers talk about anything and everything!&lt;/p&gt;
 
 &lt;p&gt;In this episode, we talk about Developer Health. We discuss the mindset towards health as developers and give coding and non-coding related tips.&lt;/p&gt;
 
@@ -276,27 +312,4 @@ Links in this episode:&lt;/p&gt;
 
 &lt;p&gt;Next week we will have a new guest with a new topic! So subscribe and stay tuned!&lt;/p&gt;
 
-&lt;p&gt;My Twitter: https://twitter.com/WujunaoNick&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">In this episode, we have another great friend John joining us to talk about when you should quit a project: why you might want to consider quitting, how to deal with the guilt, what you can do to make the quitting easier, and more!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep2_wide.png" /></entry><entry><title type="html">Compile Podcast Ep 1: Side projects</title><link href="https://nickwu007.github.io/podcast/2018/08/09/podcast-ep-1/" rel="alternate" type="text/html" title="Compile Podcast Ep 1: Side projects" /><published>2018-08-09T00:00:00+01:00</published><updated>2018-08-09T00:00:00+01:00</updated><id>https://nickwu007.github.io/podcast/2018/08/09/podcast-ep-1</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2018/08/09/podcast-ep-1/">&lt;p&gt;Hello everyone! This is a brand new podcast for you!&lt;/p&gt;
-
-&lt;p&gt;In our premier episode, we have a great guest Brennan joining us to talk about side projects: why you might want to do a  side project, how to get started, and how to deal with getting stuck, and more!&lt;/p&gt;
-
-&lt;p&gt;Brennan’s LinkedIn: https://www.linkedin.com/in/brennanproudfoot/.&lt;/p&gt;
-
-&lt;p&gt;Breakpoints(lol):&lt;/p&gt;
-
-&lt;p&gt;00:00 Intro.
-00:43 Introduce guest: Brennan.
-02:47 Speed Round with Brennan.
-12:24 Main topic: side projects.
-    12:48 Brennan and Nick talk about one of their own side projects.
-    19:30 Why side projects are good for you?
-    30:25 How to deal with loss of motivation, and getting un-stuck?
-    39:25 How/where to get started?
-    46:10 “Compile down to essentials”.
-52:09 Pick and Plug.&lt;/p&gt;
-
-&lt;p&gt;Bare with me with the rubbish audio, not really good with editing yet. Also terrible sense of humor of my side, sorry Brennan!&lt;/p&gt;
-
-&lt;p&gt;Next week we will have a new guest with a new topic! So subscribe and stay tuned!&lt;/p&gt;
-
-&lt;p&gt;My Twitter: https://twitter.com/WujunaoNick&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">In our premier episode, we have a great guest Brennan joining us to talk about side projects.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep_1.png" /></entry></feed>
+&lt;p&gt;My Twitter: https://twitter.com/WujunaoNick&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">In this episode, we have another great friend John joining us to talk about when you should quit a project: why you might want to consider quitting, how to deal with the guilt, what you can do to make the quitting easier, and more!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep2_wide.png" /></entry></feed>
