@@ -14,7 +14,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <atom:link href="https://NickWu007.github.io/feed/podcast" rel="self" type="application/rss+xml" />
 <link>https://NickWu007.github.io</link>
 <description>Two programmers talk about anything and everything.</description>
-<lastBuildDate>Sun, 08 Mar 2020 11:14:58 +0000</lastBuildDate>
+<lastBuildDate>Sun, 08 Mar 2020 16:47:47 +0000</lastBuildDate>
 <language>en-US</language>
 <sy:updatePeriod>hourly</sy:updatePeriod>
 <sy:updateFrequency>1</sy:updateFrequency>
@@ -51,7 +51,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
     <category><![CDATA[podcast]]></category>
 
 
-    <guid isPermaLink="false">https://NickWu007.github.io/https://compilepodcast.s3.eu-west-2.amazonaws.com/compile-ep-7.mp3</guid>
+    <guid isPermaLink="false">https://NickWu007.github.io/https://compilepodcast.s3.eu-west-2.amazonaws.com/compile-7.mp3</guid>
     <description>
         <![CDATA[Jasper and I talk about our hobbies when we are not coding, and what you can do to find a hobby for yourself!]]>
     </description>
@@ -94,7 +94,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 </ul>
 ]]>
     </content:encoded>
-    <enclosure url="https://compilepodcast.s3.eu-west-2.amazonaws.com/compile-ep-7.mp3" length="105153305" type="audio/mpeg" />
+    <enclosure url="https://compilepodcast.s3.eu-west-2.amazonaws.com/compile-7.mp3" length="105153305" type="audio/mpeg" />
     <itunes:subtitle><![CDATA[Jasper and I talk about our hobbies when we are not coding, and what you can do to find a hobby for yourself!]]></itunes:subtitle>
     <itunes:summary><![CDATA[<p>In this week’s episode Jasper and I talk about our hobbies when we are not coding, and what you can do to find a hobby for yourself!</p>
 
