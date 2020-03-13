@@ -14,7 +14,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <atom:link href="https://NickWu007.github.io/feed/podcast" rel="self" type="application/rss+xml" />
 <link>https://NickWu007.github.io</link>
 <description>Two programmers talk about anything and everything.</description>
-<lastBuildDate>Sun, 08 Mar 2020 16:47:47 +0000</lastBuildDate>
+<lastBuildDate>Fri, 13 Mar 2020 21:36:01 +0000</lastBuildDate>
 <language>en-US</language>
 <sy:updatePeriod>hourly</sy:updatePeriod>
 <sy:updateFrequency>1</sy:updateFrequency>
@@ -37,6 +37,133 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <itunes:category text="Technology">
 <itunes:category text="Software How-To" />
 </itunes:category>
+
+  <item>
+    <title>Compile Podcast Ep 8: Anxiety -- How to deal with it?</title>
+    <link>https://NickWu007.github.io/podcast/2020/03/13/compile-8/</link>
+    <image>
+    <title>/assets/images/compile_ep_8.png</title>
+    <url>https://NickWu007.github.io/assets/images/compile_ep_8.png</url>
+    </image>
+    <pubDate>Fri, 13 Mar 2020 21:04:00 +0000</pubDate>
+    <dc:creator><![CDATA[{"name"=>"Nick Wu", "picture"=>{"path"=>"/assets/image/me.jpg"}, "social"=>{"twitter"=>"WujunaoNick", "github"=>"NickWu007", "email"=>"mailto:wujunao19950715@gmail.com"}}]]></dc:creator>
+
+    <category><![CDATA[podcast]]></category>
+
+
+    <guid isPermaLink="false">https://NickWu007.github.io/https://compilepodcast.s3.eu-west-2.amazonaws.com/compile-7.mp3</guid>
+    <description>
+        <![CDATA[Jasper and I talk about our experiences with anxiety, and tips about dealing with it mentally and practically!]]>
+    </description>
+    <content:encoded>
+        <![CDATA[<p>In this week’s episode Jasper and I talk about our experiences with anxiety, and tips about dealing with it mentally and practically!</p>
+
+<h3 id="breakpoints">Breakpoints</h3>
+
+<ul>
+  <li>00:25 Chill zone</li>
+  <li>07:20 Mindset towards stress and anxiety
+    <ul>
+      <li>08:55 “Everyone has it”</li>
+      <li>11:35 Acknowledge your anxiety</li>
+      <li>14:44 Find out the root of stress</li>
+      <li>21:30 “It’s not the end of the world”</li>
+      <li>23:00 “Don’t suffer twice”</li>
+      <li>24:25 “You will not remember what you were worried about last week”</li>
+    </ul>
+  </li>
+  <li>28:40 Practical tips to deal with anxiety
+    <ul>
+      <li>28:58 Breathing exercise</li>
+      <li>33:40 Find distraction and keep busy</li>
+      <li>38:05 Talk about your anxiety</li>
+      <li>41:15 Don’t be afraid to seek help</li>
+      <li>42:25 “Running away is shameful, but useful” (use with caution)</li>
+    </ul>
+  </li>
+  <li>45:45 “Compile” time</li>
+  <li>46:34 Personal favourite</li>
+</ul>
+
+<h3 id="links-in-this-episode">Links in this episode:</h3>
+
+<ul>
+  <li>“The art of breathing” by Dr Danny Penman: <a href="https://www.amazon.co.uk/Art-Breathing-Dr-Danny-Penman/dp/0008206619">amazon</a></li>
+  <li><a href="https://www.imdb.com/title/tt2234155/">“The Internship” movie</a></li>
+  <li>Hungarian proverb: <a href="https://en.wikipedia.org/wiki/Nigeru_wa_Haji_da_ga_Yaku_ni_Tatsu">“Running away is shameful, but useful”</a></li>
+</ul>
+
+<h3 id="reach-out-to-us">Reach out to us!</h3>
+
+<p>Subscribe and stay tuned! Also send in any comment or request for new topics and we will try our best to make them happen!</p>
+
+<p>My Twitter: https://twitter.com/WujunaoNick</p>
+
+<p>This Podcast is also on:</p>
+<ul>
+  <li><a href="https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y">Google Play Music</a></li>
+  <li><a href="https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367">iTunes</a></li>
+  <li><a href="https://open.spotify.com/show/2UH9hK7VlS7ytjYdM8Vd78">Spotify</a></li>
+</ul>
+]]>
+    </content:encoded>
+    <enclosure url="https://compilepodcast.s3.eu-west-2.amazonaws.com/compile-7.mp3" length="126024127" type="audio/mpeg" />
+    <itunes:subtitle><![CDATA[Jasper and I talk about our experiences with anxiety, and tips about dealing with it mentally and practically!]]></itunes:subtitle>
+    <itunes:summary><![CDATA[<p>In this week’s episode Jasper and I talk about our experiences with anxiety, and tips about dealing with it mentally and practically!</p>
+
+<h3 id="breakpoints">Breakpoints</h3>
+
+<ul>
+  <li>00:25 Chill zone</li>
+  <li>07:20 Mindset towards stress and anxiety
+    <ul>
+      <li>08:55 “Everyone has it”</li>
+      <li>11:35 Acknowledge your anxiety</li>
+      <li>14:44 Find out the root of stress</li>
+      <li>21:30 “It’s not the end of the world”</li>
+      <li>23:00 “Don’t suffer twice”</li>
+      <li>24:25 “You will not remember what you were worried about last week”</li>
+    </ul>
+  </li>
+  <li>28:40 Practical tips to deal with anxiety
+    <ul>
+      <li>28:58 Breathing exercise</li>
+      <li>33:40 Find distraction and keep busy</li>
+      <li>38:05 Talk about your anxiety</li>
+      <li>41:15 Don’t be afraid to seek help</li>
+      <li>42:25 “Running away is shameful, but useful” (use with caution)</li>
+    </ul>
+  </li>
+  <li>45:45 “Compile” time</li>
+  <li>46:34 Personal favourite</li>
+</ul>
+
+<h3 id="links-in-this-episode">Links in this episode:</h3>
+
+<ul>
+  <li>“The art of breathing” by Dr Danny Penman: <a href="https://www.amazon.co.uk/Art-Breathing-Dr-Danny-Penman/dp/0008206619">amazon</a></li>
+  <li><a href="https://www.imdb.com/title/tt2234155/">“The Internship” movie</a></li>
+  <li>Hungarian proverb: <a href="https://en.wikipedia.org/wiki/Nigeru_wa_Haji_da_ga_Yaku_ni_Tatsu">“Running away is shameful, but useful”</a></li>
+</ul>
+
+<h3 id="reach-out-to-us">Reach out to us!</h3>
+
+<p>Subscribe and stay tuned! Also send in any comment or request for new topics and we will try our best to make them happen!</p>
+
+<p>My Twitter: https://twitter.com/WujunaoNick</p>
+
+<p>This Podcast is also on:</p>
+<ul>
+  <li><a href="https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y">Google Play Music</a></li>
+  <li><a href="https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367">iTunes</a></li>
+  <li><a href="https://open.spotify.com/show/2UH9hK7VlS7ytjYdM8Vd78">Spotify</a></li>
+</ul>
+]]></itunes:summary>
+    <itunes:author>Nick Wu</itunes:author>
+    <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:duration>52:31</itunes:duration>
+  </item>
 
   <item>
     <title>Compile Podcast Ep 7: Hobbies -- What we do when we are not working</title>
