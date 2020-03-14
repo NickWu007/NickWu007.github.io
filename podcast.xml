@@ -14,7 +14,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <atom:link href="https://NickWu007.github.io/feed/podcast" rel="self" type="application/rss+xml" />
 <link>https://NickWu007.github.io</link>
 <description>Two programmers talk about anything and everything.</description>
-<lastBuildDate>Fri, 13 Mar 2020 21:36:01 +0000</lastBuildDate>
+<lastBuildDate>Sat, 14 Mar 2020 11:08:39 +0000</lastBuildDate>
 <language>en-US</language>
 <sy:updatePeriod>hourly</sy:updatePeriod>
 <sy:updateFrequency>1</sy:updateFrequency>
@@ -51,7 +51,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
     <category><![CDATA[podcast]]></category>
 
 
-    <guid isPermaLink="false">https://NickWu007.github.io/https://compilepodcast.s3.eu-west-2.amazonaws.com/compile-7.mp3</guid>
+    <guid isPermaLink="false">https://NickWu007.github.io/https://compilepodcast.s3.eu-west-2.amazonaws.com/compile-8.mp3</guid>
     <description>
         <![CDATA[Jasper and I talk about our experiences with anxiety, and tips about dealing with it mentally and practically!]]>
     </description>
@@ -107,7 +107,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 </ul>
 ]]>
     </content:encoded>
-    <enclosure url="https://compilepodcast.s3.eu-west-2.amazonaws.com/compile-7.mp3" length="126024127" type="audio/mpeg" />
+    <enclosure url="https://compilepodcast.s3.eu-west-2.amazonaws.com/compile-8.mp3" length="126024127" type="audio/mpeg" />
     <itunes:subtitle><![CDATA[Jasper and I talk about our experiences with anxiety, and tips about dealing with it mentally and practically!]]></itunes:subtitle>
     <itunes:summary><![CDATA[<p>In this week’s episode Jasper and I talk about our experiences with anxiety, and tips about dealing with it mentally and practically!</p>
 
