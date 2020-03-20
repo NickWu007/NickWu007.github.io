@@ -14,7 +14,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <atom:link href="https://NickWu007.github.io/feed/podcast" rel="self" type="application/rss+xml" />
 <link>https://NickWu007.github.io</link>
 <description>Two programmers talk about anything and everything.</description>
-<lastBuildDate>Sat, 14 Mar 2020 11:08:39 +0000</lastBuildDate>
+<lastBuildDate>Fri, 20 Mar 2020 22:32:38 +0000</lastBuildDate>
 <language>en-US</language>
 <sy:updatePeriod>hourly</sy:updatePeriod>
 <sy:updateFrequency>1</sy:updateFrequency>
@@ -37,6 +37,117 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <itunes:category text="Technology">
 <itunes:category text="Software How-To" />
 </itunes:category>
+
+  <item>
+    <title>Compile Podcast Ep 9: Workout and Productivity</title>
+    <link>https://NickWu007.github.io/podcast/2020/03/20/compile-9/</link>
+    <image>
+    <title>/assets/images/compile_ep_9.png</title>
+    <url>https://NickWu007.github.io/assets/images/compile_ep_9.png</url>
+    </image>
+    <pubDate>Fri, 20 Mar 2020 22:16:00 +0000</pubDate>
+    <dc:creator><![CDATA[{"name"=>"Nick Wu", "picture"=>{"path"=>"/assets/image/me.jpg"}, "social"=>{"twitter"=>"WujunaoNick", "github"=>"NickWu007", "email"=>"mailto:wujunao19950715@gmail.com"}}]]></dc:creator>
+
+    <category><![CDATA[podcast]]></category>
+
+
+    <guid isPermaLink="false">https://NickWu007.github.io/https://compilepodcast.s3.eu-west-2.amazonaws.com/compile-9.mp3</guid>
+    <description>
+        <![CDATA[This week my friend Yuekun and I talk about working out and how it impacts your productivity!]]>
+    </description>
+    <content:encoded>
+        <![CDATA[<p>This week my friend Yuekun and I talk about working out and how it impacts your productivity!</p>
+
+<h3 id="breakpoints">Breakpoints</h3>
+
+<ul>
+  <li>00:00 A little foreword</li>
+  <li>01:00 Podcast Intro</li>
+  <li>02:25 What happens when you don’t work out
+    <ul>
+      <li>02:54 Prone to chronical injuries</li>
+      <li>04:03 Mental stress from getting stuck at work</li>
+      <li>05:16 Lack of discipline and confidence</li>
+    </ul>
+  </li>
+  <li>07:25 “Does working out make you more tired actually?”</li>
+  <li>09:19 Benefits to productivity from working out
+    <ul>
+      <li>09:53 It is important to spend some time away from work</li>
+      <li>10:08 Science of health benefits</li>
+      <li>11:37 Nick’s personal journey of working out</li>
+      <li>13:29 Benefits to developers</li>
+      <li>18:32 Discovering hidden points</li>
+      <li>21:35 Cultivate a healthy respect to time management and building habits</li>
+    </ul>
+  </li>
+  <li>27:54 What time of day would be the best for workout if you have live a 9-5 life?</li>
+  <li>37:56 Wrapping up</li>
+</ul>
+
+<h3 id="reach-out-to-us">Reach out to us!</h3>
+
+<p>Subscribe and stay tuned! Also send in any comment or request for new topics and we will try our best to make them happen!</p>
+
+<p>My Twitter: https://twitter.com/WujunaoNick</p>
+
+<p>This Podcast is also on:</p>
+<ul>
+  <li><a href="https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y">Google Play Music</a></li>
+  <li><a href="https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367">iTunes</a></li>
+  <li><a href="https://open.spotify.com/show/2UH9hK7VlS7ytjYdM8Vd78">Spotify</a></li>
+</ul>
+]]>
+    </content:encoded>
+    <enclosure url="https://compilepodcast.s3.eu-west-2.amazonaws.com/compile-9.mp3" length="94031441" type="audio/mpeg" />
+    <itunes:subtitle><![CDATA[This week my friend Yuekun and I talk about working out and how it impacts your productivity!]]></itunes:subtitle>
+    <itunes:summary><![CDATA[<p>This week my friend Yuekun and I talk about working out and how it impacts your productivity!</p>
+
+<h3 id="breakpoints">Breakpoints</h3>
+
+<ul>
+  <li>00:00 A little foreword</li>
+  <li>01:00 Podcast Intro</li>
+  <li>02:25 What happens when you don’t work out
+    <ul>
+      <li>02:54 Prone to chronical injuries</li>
+      <li>04:03 Mental stress from getting stuck at work</li>
+      <li>05:16 Lack of discipline and confidence</li>
+    </ul>
+  </li>
+  <li>07:25 “Does working out make you more tired actually?”</li>
+  <li>09:19 Benefits to productivity from working out
+    <ul>
+      <li>09:53 It is important to spend some time away from work</li>
+      <li>10:08 Science of health benefits</li>
+      <li>11:37 Nick’s personal journey of working out</li>
+      <li>13:29 Benefits to developers</li>
+      <li>18:32 Discovering hidden points</li>
+      <li>21:35 Cultivate a healthy respect to time management and building habits</li>
+    </ul>
+  </li>
+  <li>27:54 What time of day would be the best for workout if you have live a 9-5 life?</li>
+  <li>37:56 Wrapping up</li>
+</ul>
+
+<h3 id="reach-out-to-us">Reach out to us!</h3>
+
+<p>Subscribe and stay tuned! Also send in any comment or request for new topics and we will try our best to make them happen!</p>
+
+<p>My Twitter: https://twitter.com/WujunaoNick</p>
+
+<p>This Podcast is also on:</p>
+<ul>
+  <li><a href="https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y">Google Play Music</a></li>
+  <li><a href="https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367">iTunes</a></li>
+  <li><a href="https://open.spotify.com/show/2UH9hK7VlS7ytjYdM8Vd78">Spotify</a></li>
+</ul>
+]]></itunes:summary>
+    <itunes:author>Nick Wu</itunes:author>
+    <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:duration>39:11</itunes:duration>
+  </item>
 
   <item>
     <title>Compile Podcast Ep 8: Anxiety -- How to deal with it?</title>
