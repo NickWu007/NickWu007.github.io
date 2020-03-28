@@ -14,7 +14,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <atom:link href="https://NickWu007.github.io/feed/podcast" rel="self" type="application/rss+xml" />
 <link>https://NickWu007.github.io</link>
 <description>Two programmers talk about anything and everything.</description>
-<lastBuildDate>Fri, 20 Mar 2020 22:32:38 +0000</lastBuildDate>
+<lastBuildDate>Sat, 28 Mar 2020 10:27:43 +0000</lastBuildDate>
 <language>en-US</language>
 <sy:updatePeriod>hourly</sy:updatePeriod>
 <sy:updateFrequency>1</sy:updateFrequency>
@@ -37,6 +37,129 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <itunes:category text="Technology">
 <itunes:category text="Software How-To" />
 </itunes:category>
+
+  <item>
+    <title>Compile Podcast Ep 10: Staying fit at home</title>
+    <link>https://NickWu007.github.io/podcast/2020/03/28/compile-10/</link>
+    <image>
+    <title>/assets/images/compile_ep_10.png</title>
+    <url>https://NickWu007.github.io/assets/images/compile_ep_10.png</url>
+    </image>
+    <pubDate>Sat, 28 Mar 2020 09:31:00 +0000</pubDate>
+    <dc:creator><![CDATA[{"name"=>"Nick Wu", "picture"=>{"path"=>"/assets/image/me.jpg"}, "social"=>{"twitter"=>"WujunaoNick", "github"=>"NickWu007", "email"=>"mailto:wujunao19950715@gmail.com"}}]]></dc:creator>
+
+    <category><![CDATA[podcast]]></category>
+
+
+    <guid isPermaLink="false">https://NickWu007.github.io/https://compilepodcast.s3.eu-west-2.amazonaws.com/Compile-10.mp3</guid>
+    <description>
+        <![CDATA[This week my friend Yuekun and I talk more about fitness at home and how you can avoid "isolation gut"!]]>
+    </description>
+    <content:encoded>
+        <![CDATA[<p>This week my friend Yuekun and I talk more about fitness at home and how you can avoid “isolation gut”!</p>
+
+<h3 id="breakpoints">Breakpoints</h3>
+
+<ul>
+  <li>01:00 Chill zone and catching up</li>
+  <li>05:00 Topic intro: staying fit at home</li>
+  <li>07:20 Why staying fit is so important, especially now
+    <ul>
+      <li>08:25 A Strong immune system</li>
+      <li>11:40 Nick’s experience with momentum and inertia</li>
+      <li>16:17 Lack of activity leads to general health problems</li>
+    </ul>
+  </li>
+  <li>26:42 Yuekun’s very own exercise routines
+    <ul>
+      <li>29:41 Stretches</li>
+      <li>37:20 How to get a good stretch?</li>
+      <li>39:00 Slow steady cardio</li>
+      <li>42:21 Basic and intermediate workouts</li>
+      <li>45:00 Results with the routines for Yuekun’s parents</li>
+    </ul>
+  </li>
+  <li>49:19 Nick and Yuekun share their current routines</li>
+  <li>56:43 Wrapping up</li>
+</ul>
+
+<h3 id="links-in-this-episode">Links in this episode:</h3>
+
+<ul>
+  <li>Great <a href="https://www.youtube.com/watch?v=BtN-goy9VOY">video</a> that explains Coronavirus</li>
+  <li><a href="https://compilepodcast.s3.eu-west-2.amazonaws.com/Easy+At-Home+Exercises.pdf">Home exercise routines</a> designed by Yuekun himself</li>
+  <li>Yuekun’s <a href="https://www.instagram.com/that_chinese_guy_">Instagram</a></li>
+</ul>
+
+<h3 id="reach-out-to-us">Reach out to us!</h3>
+
+<p>Subscribe and stay tuned! Also send in any comment or request for new topics and we will try our best to make them happen!</p>
+
+<p>My Twitter: https://twitter.com/WujunaoNick</p>
+
+<p>This Podcast is also on:</p>
+<ul>
+  <li><a href="https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y">Google Play Music</a></li>
+  <li><a href="https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367">iTunes</a></li>
+  <li><a href="https://open.spotify.com/show/2UH9hK7VlS7ytjYdM8Vd78">Spotify</a></li>
+</ul>
+]]>
+    </content:encoded>
+    <enclosure url="https://compilepodcast.s3.eu-west-2.amazonaws.com/Compile-10.mp3" length="141643261" type="audio/mpeg" />
+    <itunes:subtitle><![CDATA[This week my friend Yuekun and I talk more about fitness at home and how you can avoid "isolation gut"!]]></itunes:subtitle>
+    <itunes:summary><![CDATA[<p>This week my friend Yuekun and I talk more about fitness at home and how you can avoid “isolation gut”!</p>
+
+<h3 id="breakpoints">Breakpoints</h3>
+
+<ul>
+  <li>01:00 Chill zone and catching up</li>
+  <li>05:00 Topic intro: staying fit at home</li>
+  <li>07:20 Why staying fit is so important, especially now
+    <ul>
+      <li>08:25 A Strong immune system</li>
+      <li>11:40 Nick’s experience with momentum and inertia</li>
+      <li>16:17 Lack of activity leads to general health problems</li>
+    </ul>
+  </li>
+  <li>26:42 Yuekun’s very own exercise routines
+    <ul>
+      <li>29:41 Stretches</li>
+      <li>37:20 How to get a good stretch?</li>
+      <li>39:00 Slow steady cardio</li>
+      <li>42:21 Basic and intermediate workouts</li>
+      <li>45:00 Results with the routines for Yuekun’s parents</li>
+    </ul>
+  </li>
+  <li>49:19 Nick and Yuekun share their current routines</li>
+  <li>56:43 Wrapping up</li>
+</ul>
+
+<h3 id="links-in-this-episode">Links in this episode:</h3>
+
+<ul>
+  <li>Great <a href="https://www.youtube.com/watch?v=BtN-goy9VOY">video</a> that explains Coronavirus</li>
+  <li><a href="https://compilepodcast.s3.eu-west-2.amazonaws.com/Easy+At-Home+Exercises.pdf">Home exercise routines</a> designed by Yuekun himself</li>
+  <li>Yuekun’s <a href="https://www.instagram.com/that_chinese_guy_">Instagram</a></li>
+</ul>
+
+<h3 id="reach-out-to-us">Reach out to us!</h3>
+
+<p>Subscribe and stay tuned! Also send in any comment or request for new topics and we will try our best to make them happen!</p>
+
+<p>My Twitter: https://twitter.com/WujunaoNick</p>
+
+<p>This Podcast is also on:</p>
+<ul>
+  <li><a href="https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y">Google Play Music</a></li>
+  <li><a href="https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367">iTunes</a></li>
+  <li><a href="https://open.spotify.com/show/2UH9hK7VlS7ytjYdM8Vd78">Spotify</a></li>
+</ul>
+]]></itunes:summary>
+    <itunes:author>Nick Wu</itunes:author>
+    <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:duration>59:01</itunes:duration>
+  </item>
 
   <item>
     <title>Compile Podcast Ep 9: Workout and Productivity</title>
