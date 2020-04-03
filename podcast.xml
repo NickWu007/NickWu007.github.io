@@ -14,7 +14,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <atom:link href="https://NickWu007.github.io/feed/podcast" rel="self" type="application/rss+xml" />
 <link>https://NickWu007.github.io</link>
 <description>Two programmers talk about anything and everything.</description>
-<lastBuildDate>Sat, 28 Mar 2020 10:27:43 +0000</lastBuildDate>
+<lastBuildDate>Fri, 03 Apr 2020 22:04:07 +0100</lastBuildDate>
 <language>en-US</language>
 <sy:updatePeriod>hourly</sy:updatePeriod>
 <sy:updateFrequency>1</sy:updateFrequency>
@@ -37,6 +37,105 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <itunes:category text="Technology">
 <itunes:category text="Software How-To" />
 </itunes:category>
+
+  <item>
+    <title>Compile Podcast Ep 11: Can WFH be productive?</title>
+    <link>https://NickWu007.github.io/podcast/2020/04/03/compile-11/</link>
+    <image>
+    <title>/assets/images/compile_ep_11.png</title>
+    <url>https://NickWu007.github.io/assets/images/compile_ep_11.png</url>
+    </image>
+    <pubDate>Fri, 03 Apr 2020 21:29:00 +0100</pubDate>
+    <dc:creator><![CDATA[{"name"=>"Nick Wu", "picture"=>{"path"=>"/assets/image/me.jpg"}, "social"=>{"twitter"=>"WujunaoNick", "github"=>"NickWu007", "email"=>"mailto:wujunao19950715@gmail.com"}}]]></dc:creator>
+
+    <category><![CDATA[podcast]]></category>
+
+
+    <guid isPermaLink="false">https://NickWu007.github.io/https://compilepodcast.s3.eu-west-2.amazonaws.com/Compile-11.mp3</guid>
+    <description>
+        <![CDATA[This week my good friend John joins me again to talk about how to be productive while Working from home during the times of quarantine!]]>
+    </description>
+    <content:encoded>
+        <![CDATA[<p>This week my good friend John joins me again to talk about how to be productive while Working from home during the times of quarantine!</p>
+
+<h3 id="breakpoints">Breakpoints</h3>
+
+<ul>
+  <li>00:42 Chill zone and catching up</li>
+  <li>02:45 Topic intro: productivity while working from home</li>
+  <li>03:20 Our WFH experiences</li>
+  <li>10:35 Establish a clean cut between work and life
+    <ul>
+      <li>16:08 Having a dedicated work area</li>
+      <li>19:40 Get some fresh air/change of scenery</li>
+    </ul>
+  </li>
+  <li>23:05 Keep your work routine</li>
+  <li>25:35 Take a breather before starting work</li>
+  <li>28:58 Our typical work day during the quarantine</li>
+  <li>35:00 Get your remote toolkit ready</li>
+  <li>44:15 Be social and avoid loniness</li>
+  <li>46:34 Distractions and how to moderate them</li>
+  <li>54:09 “Compile” time</li>
+</ul>
+
+<h3 id="reach-out-to-us">Reach out to us!</h3>
+
+<p>Subscribe and stay tuned! Also send in any comment or request for new topics and we will try our best to make them happen!</p>
+
+<p>My Twitter: https://twitter.com/WujunaoNick</p>
+
+<p>This Podcast is also on:</p>
+<ul>
+  <li><a href="https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y">Google Play Music</a></li>
+  <li><a href="https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367">iTunes</a></li>
+  <li><a href="https://open.spotify.com/show/2UH9hK7VlS7ytjYdM8Vd78">Spotify</a></li>
+</ul>
+]]>
+    </content:encoded>
+    <enclosure url="https://compilepodcast.s3.eu-west-2.amazonaws.com/compile-11.mp3" length="140044537" type="audio/mpeg" />
+    <itunes:subtitle><![CDATA[This week my good friend John joins me again to talk about how to be productive while Working from home during the times of quarantine!]]></itunes:subtitle>
+    <itunes:summary><![CDATA[<p>This week my good friend John joins me again to talk about how to be productive while Working from home during the times of quarantine!</p>
+
+<h3 id="breakpoints">Breakpoints</h3>
+
+<ul>
+  <li>00:42 Chill zone and catching up</li>
+  <li>02:45 Topic intro: productivity while working from home</li>
+  <li>03:20 Our WFH experiences</li>
+  <li>10:35 Establish a clean cut between work and life
+    <ul>
+      <li>16:08 Having a dedicated work area</li>
+      <li>19:40 Get some fresh air/change of scenery</li>
+    </ul>
+  </li>
+  <li>23:05 Keep your work routine</li>
+  <li>25:35 Take a breather before starting work</li>
+  <li>28:58 Our typical work day during the quarantine</li>
+  <li>35:00 Get your remote toolkit ready</li>
+  <li>44:15 Be social and avoid loniness</li>
+  <li>46:34 Distractions and how to moderate them</li>
+  <li>54:09 “Compile” time</li>
+</ul>
+
+<h3 id="reach-out-to-us">Reach out to us!</h3>
+
+<p>Subscribe and stay tuned! Also send in any comment or request for new topics and we will try our best to make them happen!</p>
+
+<p>My Twitter: https://twitter.com/WujunaoNick</p>
+
+<p>This Podcast is also on:</p>
+<ul>
+  <li><a href="https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y">Google Play Music</a></li>
+  <li><a href="https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367">iTunes</a></li>
+  <li><a href="https://open.spotify.com/show/2UH9hK7VlS7ytjYdM8Vd78">Spotify</a></li>
+</ul>
+]]></itunes:summary>
+    <itunes:author>Nick Wu</itunes:author>
+    <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:duration>58:21</itunes:duration>
+  </item>
 
   <item>
     <title>Compile Podcast Ep 10: Staying fit at home</title>
