@@ -14,7 +14,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <atom:link href="https://NickWu007.github.io/feed/podcast" rel="self" type="application/rss+xml" />
 <link>https://NickWu007.github.io</link>
 <description>Two programmers talk about anything and everything.</description>
-<lastBuildDate>Fri, 03 Apr 2020 22:04:07 +0100</lastBuildDate>
+<lastBuildDate>Fri, 10 Apr 2020 21:05:34 +0100</lastBuildDate>
 <language>en-US</language>
 <sy:updatePeriod>hourly</sy:updatePeriod>
 <sy:updateFrequency>1</sy:updateFrequency>
@@ -37,6 +37,107 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <itunes:category text="Technology">
 <itunes:category text="Software How-To" />
 </itunes:category>
+
+  <item>
+    <title>Compile Podcast Ep 12: How to avoid quarantine gut?</title>
+    <link>https://NickWu007.github.io/podcast/2020/04/10/compile-12/</link>
+    <image>
+    <title>/assets/images/compile_ep_12.png</title>
+    <url>https://NickWu007.github.io/assets/images/compile_ep_12.png</url>
+    </image>
+    <pubDate>Fri, 10 Apr 2020 20:50:00 +0100</pubDate>
+    <dc:creator><![CDATA[{"name"=>"Nick Wu", "picture"=>{"path"=>"/assets/image/me.jpg"}, "social"=>{"twitter"=>"WujunaoNick", "github"=>"NickWu007", "email"=>"mailto:wujunao19950715@gmail.com"}}]]></dc:creator>
+
+    <category><![CDATA[podcast]]></category>
+
+
+    <guid isPermaLink="false">https://NickWu007.github.io/https://compilepodcast.s3.eu-west-2.amazonaws.com/Compile-12.mp3</guid>
+    <description>
+        <![CDATA[This week my friend Yuekun and I talk more about maintaining a healthy diet during the quarantine, and how to avoiud getting a quarantine gut!]]>
+    </description>
+    <content:encoded>
+        <![CDATA[<p>This week my friend Yuekun and I talk more about maintaining a healthy diet during the quarantine, and how to avoiud getting a quarantine gut!</p>
+
+<h3 id="breakpoints">Breakpoints</h3>
+
+<ul>
+  <li>00:32 Chill zone and catching up</li>
+  <li>07:26 Topic intro: how to avoid quarantine gut</li>
+  <li>12:50 A balanced diet</li>
+  <li>16:50 “Eat your vegatables”</li>
+  <li>19:30 Yuekun recommends a few staple vegatables</li>
+  <li>38:38 How to correctly limit total caloric intake</li>
+  <li>44:45 Enjoy your food</li>
+  <li>47:41 Counting calories work, but don’t count on it</li>
+  <li>53:46 Consider using supplements</li>
+  <li>57:58 Wrapping up</li>
+</ul>
+
+<h3 id="links-in-this-episode">Links in this episode:</h3>
+
+<ul>
+  <li>Great <a href="https://www.youtube.com/watch?v=BtN-goy9VOY">video</a> from Vietnam about Covid-19</li>
+  <li>Yuekun’s <a href="https://www.instagram.com/that_chinese_guy_">Instagram</a></li>
+</ul>
+
+<h3 id="reach-out-to-us">Reach out to us!</h3>
+
+<p>Subscribe and stay tuned! Also send in any comment or request for new topics and we will try our best to make them happen!</p>
+
+<p>My Twitter: https://twitter.com/WujunaoNick</p>
+
+<p>This Podcast is also on:</p>
+<ul>
+  <li><a href="https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y">Google Play Music</a></li>
+  <li><a href="https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367">iTunes</a></li>
+  <li><a href="https://open.spotify.com/show/2UH9hK7VlS7ytjYdM8Vd78">Spotify</a></li>
+</ul>
+]]>
+    </content:encoded>
+    <enclosure url="https://compilepodcast.s3.eu-west-2.amazonaws.com/compile-12.mp3" length="147241795" type="audio/mpeg" />
+    <itunes:subtitle><![CDATA[This week my friend Yuekun and I talk more about maintaining a healthy diet during the quarantine, and how to avoiud getting a quarantine gut!]]></itunes:subtitle>
+    <itunes:summary><![CDATA[<p>This week my friend Yuekun and I talk more about maintaining a healthy diet during the quarantine, and how to avoiud getting a quarantine gut!</p>
+
+<h3 id="breakpoints">Breakpoints</h3>
+
+<ul>
+  <li>00:32 Chill zone and catching up</li>
+  <li>07:26 Topic intro: how to avoid quarantine gut</li>
+  <li>12:50 A balanced diet</li>
+  <li>16:50 “Eat your vegatables”</li>
+  <li>19:30 Yuekun recommends a few staple vegatables</li>
+  <li>38:38 How to correctly limit total caloric intake</li>
+  <li>44:45 Enjoy your food</li>
+  <li>47:41 Counting calories work, but don’t count on it</li>
+  <li>53:46 Consider using supplements</li>
+  <li>57:58 Wrapping up</li>
+</ul>
+
+<h3 id="links-in-this-episode">Links in this episode:</h3>
+
+<ul>
+  <li>Great <a href="https://www.youtube.com/watch?v=BtN-goy9VOY">video</a> from Vietnam about Covid-19</li>
+  <li>Yuekun’s <a href="https://www.instagram.com/that_chinese_guy_">Instagram</a></li>
+</ul>
+
+<h3 id="reach-out-to-us">Reach out to us!</h3>
+
+<p>Subscribe and stay tuned! Also send in any comment or request for new topics and we will try our best to make them happen!</p>
+
+<p>My Twitter: https://twitter.com/WujunaoNick</p>
+
+<p>This Podcast is also on:</p>
+<ul>
+  <li><a href="https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y">Google Play Music</a></li>
+  <li><a href="https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367">iTunes</a></li>
+  <li><a href="https://open.spotify.com/show/2UH9hK7VlS7ytjYdM8Vd78">Spotify</a></li>
+</ul>
+]]></itunes:summary>
+    <itunes:author>Nick Wu</itunes:author>
+    <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:duration>61:20</itunes:duration>
+  </item>
 
   <item>
     <title>Compile Podcast Ep 11: Can WFH be productive?</title>
