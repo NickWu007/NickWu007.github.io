@@ -14,7 +14,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <atom:link href="https://NickWu007.github.io/feed/podcast" rel="self" type="application/rss+xml" />
 <link>https://NickWu007.github.io</link>
 <description>Two programmers talk about anything and everything.</description>
-<lastBuildDate>Fri, 10 Apr 2020 21:09:12 +0100</lastBuildDate>
+<lastBuildDate>Fri, 10 Apr 2020 21:10:54 +0100</lastBuildDate>
 <language>en-US</language>
 <sy:updatePeriod>hourly</sy:updatePeriod>
 <sy:updateFrequency>1</sy:updateFrequency>
@@ -53,10 +53,10 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 
     <guid isPermaLink="false">https://NickWu007.github.io/https://compilepodcast.s3.eu-west-2.amazonaws.com/Compile-12.mp3</guid>
     <description>
-        <![CDATA[This week my friend Yuekun and I talk more about maintaining a healthy diet during the quarantine, and how to avoiud getting a quarantine gut!]]>
+        <![CDATA[This week my friend Yuekun and I talk more about maintaining a healthy diet during the quarantine, and how to avoid getting a quarantine gut!]]>
     </description>
     <content:encoded>
-        <![CDATA[<p>This week my friend Yuekun and I talk more about maintaining a healthy diet during the quarantine, and how to avoiud getting a quarantine gut!</p>
+        <![CDATA[<p>This week my friend Yuekun and I talk more about maintaining a healthy diet during the quarantine, and how to avoid getting a quarantine gut!</p>
 
 <h3 id="breakpoints">Breakpoints</h3>
 
@@ -64,8 +64,8 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
   <li>00:32 Chill zone and catching up</li>
   <li>07:26 Topic intro: how to avoid quarantine gut</li>
   <li>12:50 A balanced diet</li>
-  <li>16:50 “Eat your vegatables”</li>
-  <li>19:30 Yuekun recommends a few staple vegatables</li>
+  <li>16:50 “Eat your vegetables”</li>
+  <li>19:30 Yuekun recommends a few staple vegetables</li>
   <li>38:38 How to correctly limit total caloric intake</li>
   <li>44:45 Enjoy your food</li>
   <li>47:41 Counting calories work, but don’t count on it</li>
@@ -95,8 +95,8 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 ]]>
     </content:encoded>
     <enclosure url="https://compilepodcast.s3.eu-west-2.amazonaws.com/compile-12.mp3" length="147241795" type="audio/mpeg" />
-    <itunes:subtitle><![CDATA[This week my friend Yuekun and I talk more about maintaining a healthy diet during the quarantine, and how to avoiud getting a quarantine gut!]]></itunes:subtitle>
-    <itunes:summary><![CDATA[<p>This week my friend Yuekun and I talk more about maintaining a healthy diet during the quarantine, and how to avoiud getting a quarantine gut!</p>
+    <itunes:subtitle><![CDATA[This week my friend Yuekun and I talk more about maintaining a healthy diet during the quarantine, and how to avoid getting a quarantine gut!]]></itunes:subtitle>
+    <itunes:summary><![CDATA[<p>This week my friend Yuekun and I talk more about maintaining a healthy diet during the quarantine, and how to avoid getting a quarantine gut!</p>
 
 <h3 id="breakpoints">Breakpoints</h3>
 
@@ -104,8 +104,8 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
   <li>00:32 Chill zone and catching up</li>
   <li>07:26 Topic intro: how to avoid quarantine gut</li>
   <li>12:50 A balanced diet</li>
-  <li>16:50 “Eat your vegatables”</li>
-  <li>19:30 Yuekun recommends a few staple vegatables</li>
+  <li>16:50 “Eat your vegetables”</li>
+  <li>19:30 Yuekun recommends a few staple vegetables</li>
   <li>38:38 How to correctly limit total caloric intake</li>
   <li>44:45 Enjoy your food</li>
   <li>47:41 Counting calories work, but don’t count on it</li>
