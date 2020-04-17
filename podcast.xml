@@ -14,7 +14,7 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <atom:link href="https://NickWu007.github.io/feed/podcast" rel="self" type="application/rss+xml" />
 <link>https://NickWu007.github.io</link>
 <description>Two programmers talk about anything and everything.</description>
-<lastBuildDate>Fri, 10 Apr 2020 21:10:54 +0100</lastBuildDate>
+<lastBuildDate>Fri, 17 Apr 2020 22:52:50 +0100</lastBuildDate>
 <language>en-US</language>
 <sy:updatePeriod>hourly</sy:updatePeriod>
 <sy:updateFrequency>1</sy:updateFrequency>
@@ -37,6 +37,81 @@ xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
 <itunes:category text="Technology">
 <itunes:category text="Software How-To" />
 </itunes:category>
+
+  <item>
+    <title>Compile Podcast Ep 13: Learning a programming language</title>
+    <link>https://NickWu007.github.io/podcast/2020/04/13/compile-13/</link>
+    <image>
+    <title>/assets/images/compile_ep_13.png</title>
+    <url>https://NickWu007.github.io/assets/images/compile_ep_13.png</url>
+    </image>
+    <pubDate>Mon, 13 Apr 2020 11:08:00 +0100</pubDate>
+    <dc:creator><![CDATA[{"name"=>"Nick Wu", "picture"=>{"path"=>"/assets/image/me.jpg"}, "social"=>{"twitter"=>"WujunaoNick", "github"=>"NickWu007", "email"=>"mailto:wujunao19950715@gmail.com"}}]]></dc:creator>
+
+    <category><![CDATA[podcast]]></category>
+
+
+    <guid isPermaLink="false">https://NickWu007.github.io/https://compilepodcast.s3.eu-west-2.amazonaws.com/Compile-13.mp3</guid>
+    <description>
+        <![CDATA[This week Jasper and I talk about our experiences in learning programming languages, and how you can pick up a new programming language during the quarantine!]]>
+    </description>
+    <content:encoded>
+        <![CDATA[<p>This week Jasper and I talk about our experiences in learning programming languages, and how you can pick up a new programming language during the quarantine!</p>
+
+<h3 id="breakpoints">Breakpoints</h3>
+
+<ul>
+  <li>00:00 Chill zone and catching up</li>
+  <li>02:14 why learn a programming language</li>
+  <li>16:33 How do we learn new languages</li>
+  <li>36:19 Wrapping up</li>
+</ul>
+
+<h3 id="reach-out-to-us">Reach out to us!</h3>
+
+<p>Subscribe and stay tuned! Also send in any comment or request for new topics and we will try our best to make them happen!</p>
+
+<p>My Twitter: https://twitter.com/WujunaoNick</p>
+
+<p>This Podcast is also on:</p>
+<ul>
+  <li><a href="https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y">Google Play Music</a></li>
+  <li><a href="https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367">iTunes</a></li>
+  <li><a href="https://open.spotify.com/show/2UH9hK7VlS7ytjYdM8Vd78">Spotify</a></li>
+</ul>
+]]>
+    </content:encoded>
+    <enclosure url="https://compilepodcast.s3.eu-west-2.amazonaws.com/compile-13.mp3" length="90351280" type="audio/mpeg" />
+    <itunes:subtitle><![CDATA[This week Jasper and I talk about our experiences in learning programming languages, and how you can pick up a new programming language during the quarantine!]]></itunes:subtitle>
+    <itunes:summary><![CDATA[<p>This week Jasper and I talk about our experiences in learning programming languages, and how you can pick up a new programming language during the quarantine!</p>
+
+<h3 id="breakpoints">Breakpoints</h3>
+
+<ul>
+  <li>00:00 Chill zone and catching up</li>
+  <li>02:14 why learn a programming language</li>
+  <li>16:33 How do we learn new languages</li>
+  <li>36:19 Wrapping up</li>
+</ul>
+
+<h3 id="reach-out-to-us">Reach out to us!</h3>
+
+<p>Subscribe and stay tuned! Also send in any comment or request for new topics and we will try our best to make them happen!</p>
+
+<p>My Twitter: https://twitter.com/WujunaoNick</p>
+
+<p>This Podcast is also on:</p>
+<ul>
+  <li><a href="https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y">Google Play Music</a></li>
+  <li><a href="https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367">iTunes</a></li>
+  <li><a href="https://open.spotify.com/show/2UH9hK7VlS7ytjYdM8Vd78">Spotify</a></li>
+</ul>
+]]></itunes:summary>
+    <itunes:author>Nick Wu</itunes:author>
+    <itunes:image href="https://NickWu007.github.io/assets/images/compile_3000.png" />
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:duration>37:39</itunes:duration>
+  </item>
 
   <item>
     <title>Compile Podcast Ep 12: How to avoid quarantine gut?</title>
