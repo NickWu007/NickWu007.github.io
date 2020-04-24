@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://nickwu007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nickwu007.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-04-17T22:52:50+01:00</updated><id>https://nickwu007.github.io/</id><title type="html">DevPractical</title><subtitle>Practical tips for Developers, from a developer.</subtitle><author><name>Nick Wu</name></author><entry><title type="html">Compile Podcast Ep 13: Learning a programming language</title><link href="https://nickwu007.github.io/podcast/2020/04/13/compile-13/" rel="alternate" type="text/html" title="Compile Podcast Ep 13: Learning a programming language" /><published>2020-04-13T11:08:00+01:00</published><updated>2020-04-13T11:08:00+01:00</updated><id>https://nickwu007.github.io/podcast/2020/04/13/compile-13</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2020/04/13/compile-13/">&lt;p&gt;This week Jasper and I talk about our experiences in learning programming languages, and how you can pick up a new programming language during the quarantine!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://nickwu007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nickwu007.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-04-24T21:32:27+01:00</updated><id>https://nickwu007.github.io/</id><title type="html">DevPractical</title><subtitle>Practical tips for Developers, from a developer.</subtitle><author><name>Nick Wu</name></author><entry><title type="html">Compile Podcast Ep 14: First year of code</title><link href="https://nickwu007.github.io/podcast/2020/04/24/compile-14/" rel="alternate" type="text/html" title="Compile Podcast Ep 14: First year of code" /><published>2020-04-24T21:28:00+01:00</published><updated>2020-04-24T21:28:00+01:00</updated><id>https://nickwu007.github.io/podcast/2020/04/24/compile-14</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2020/04/24/compile-14/">&lt;p&gt;This week Brennan joins me again to talk about our first year of coding professionally, our experiences and thoughts!&lt;/p&gt;
+
+&lt;h3 id=&quot;reach-out-to-us&quot;&gt;Reach out to us!&lt;/h3&gt;
+
+&lt;p&gt;Subscribe and stay tuned! Also send in any comment or request for new topics and we will try our best to make them happen!&lt;/p&gt;
+
+&lt;p&gt;My Twitter: https://twitter.com/WujunaoNick&lt;/p&gt;
+
+&lt;p&gt;This Podcast is also on:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y&quot;&gt;Google Play Music&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367&quot;&gt;iTunes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://open.spotify.com/show/2UH9hK7VlS7ytjYdM8Vd78&quot;&gt;Spotify&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Nick Wu</name></author><summary type="html">This week Brennan joins me again to talk about our first year of coding professionally, our experiences and thoughts!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep_14.png" /></entry><entry><title type="html">Compile Podcast Ep 13: Learning a programming language</title><link href="https://nickwu007.github.io/podcast/2020/04/13/compile-13/" rel="alternate" type="text/html" title="Compile Podcast Ep 13: Learning a programming language" /><published>2020-04-13T11:08:00+01:00</published><updated>2020-04-13T11:08:00+01:00</updated><id>https://nickwu007.github.io/podcast/2020/04/13/compile-13</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2020/04/13/compile-13/">&lt;p&gt;This week Jasper and I talk about our experiences in learning programming languages, and how you can pick up a new programming language during the quarantine!&lt;/p&gt;
 
 &lt;h3 id=&quot;breakpoints&quot;&gt;Breakpoints&lt;/h3&gt;
 
@@ -306,42 +319,4 @@
 
 &lt;p&gt;Hope I can finish everything that I set out to do, and so do you!&lt;/p&gt;
 
-&lt;p&gt;See you very soon.&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">I realized that I did not write a post this year for new year resolutions, which I usually do. Although it has slipped in my mind, I did have a personal list of things that I wanted to do this year. And since we are just about over half on this year, I thought I could update myself on my progress, and possible shift on focus. I do recommend setting some goals for yourself, even just for a quarter, or the rest of year. Maybe my resolutions would interest you in setting one for yourself too!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/2019-desk-diary.jpg" /></entry><entry><title type="html">Compile Podcast Ep 5: Developer Workflow</title><link href="https://nickwu007.github.io/podcast/2019/07/03/compile-ep-6/" rel="alternate" type="text/html" title="Compile Podcast Ep 5: Developer Workflow" /><published>2019-07-03T00:00:00+01:00</published><updated>2019-07-03T00:00:00+01:00</updated><id>https://nickwu007.github.io/podcast/2019/07/03/compile-ep-6</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2019/07/03/compile-ep-6/">&lt;p&gt;Hello everyone! Welcome to the Compile Podcast, a show where 2 programmers talk about anything and everything!&lt;/p&gt;
-
-&lt;p&gt;In this episode, we talk about Developer Workflow with a great guest. We discuss the differences between uni and industry software projects, with some funny stories and some helpful tips, whether you are working or studying.&lt;/p&gt;
-
-&lt;p&gt;Next week we will have a new guest with a new topic! So subscribe and stay tuned!&lt;/p&gt;
-
-&lt;p&gt;My Twitter: https://twitter.com/WujunaoNick&lt;/p&gt;
-
-&lt;p&gt;This Podcast is also on:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Google Play Music: https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y&lt;/li&gt;
-  &lt;li&gt;iTunes: https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;breakpoints&quot;&gt;Breakpoints&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;00:00 Intro.&lt;/li&gt;
-  &lt;li&gt;00:40 Catch up with John.&lt;/li&gt;
-  &lt;li&gt;06:07 Developer Workflow: how we do software projects.
-    &lt;ul&gt;
-      &lt;li&gt;06:42 Uni vs industry project workflow&lt;/li&gt;
-      &lt;li&gt;18:48 Main framework: waterfall + agile&lt;/li&gt;
-      &lt;li&gt;25:04 The main stages of a typical software project&lt;/li&gt;
-      &lt;li&gt;52:04 “Compile down to essentials”.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;53:10 Pick and Plug.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;links-in-this-episode&quot;&gt;Links in this episode:&lt;/h3&gt;
-
-&lt;p&gt;The Mythical Man-Month: https://en.wikipedia.org/wiki/The_Mythical_Man-Month\&lt;/p&gt;
-
-&lt;p&gt;Waterfall development process: https://en.wikipedia.org/wiki/Waterfall_model&lt;/p&gt;
-
-&lt;p&gt;Agile development process: https://en.wikipedia.org/wiki/Agile_software_development&lt;/p&gt;
-
-&lt;p&gt;John and Steve’s podcast “The Discomfortable Zone”: https://podcasts.apple.com/us/podcast/the-discomfortable-zone-podcast/id1294539931?mt=2.&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">In this episode, we talk about Developer Workflow with a great guest. We discuss the differences between uni and industry software projects, with some funny stories and some helpful tips, whether you are working or studying.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep_5.png" /></entry></feed>
+&lt;p&gt;See you very soon.&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">I realized that I did not write a post this year for new year resolutions, which I usually do. Although it has slipped in my mind, I did have a personal list of things that I wanted to do this year. And since we are just about over half on this year, I thought I could update myself on my progress, and possible shift on focus. I do recommend setting some goals for yourself, even just for a quarter, or the rest of year. Maybe my resolutions would interest you in setting one for yourself too!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/2019-desk-diary.jpg" /></entry></feed>
