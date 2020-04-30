@@ -1,4 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://nickwu007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nickwu007.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-04-24T21:32:27+01:00</updated><id>https://nickwu007.github.io/</id><title type="html">DevPractical</title><subtitle>Practical tips for Developers, from a developer.</subtitle><author><name>Nick Wu</name></author><entry><title type="html">Compile Podcast Ep 14: First year of code</title><link href="https://nickwu007.github.io/podcast/2020/04/24/compile-14/" rel="alternate" type="text/html" title="Compile Podcast Ep 14: First year of code" /><published>2020-04-24T21:28:00+01:00</published><updated>2020-04-24T21:28:00+01:00</updated><id>https://nickwu007.github.io/podcast/2020/04/24/compile-14</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2020/04/24/compile-14/">&lt;p&gt;This week Brennan joins me again to talk about our first year of coding professionally, our experiences and thoughts!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://nickwu007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nickwu007.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-04-30T23:10:24+01:00</updated><id>https://nickwu007.github.io/</id><title type="html">DevPractical</title><subtitle>Practical tips for Developers, from a developer.</subtitle><author><name>Nick Wu</name></author><entry><title type="html">Adaptability: an overlooked virtue</title><link href="https://nickwu007.github.io/non_technical/2020/04/29/adaptability-an-overlooked-virtue/" rel="alternate" type="text/html" title="Adaptability: an overlooked virtue" /><published>2020-04-29T21:28:00+01:00</published><updated>2020-04-29T21:28:00+01:00</updated><id>https://nickwu007.github.io/non_technical/2020/04/29/adaptability-an-overlooked-virtue</id><content type="html" xml:base="https://nickwu007.github.io/non_technical/2020/04/29/adaptability-an-overlooked-virtue/">&lt;p&gt;It has been since I sat down to write an article properly, since most of my off-work time has been put into my &lt;a href=&quot;https://www.youtube.com/playlist?list=PLfkNBxEf3tVFjCJQ67ofI2Wh5yQwPGxOn&quot;&gt;podcast&lt;/a&gt;. With the lockdown situation continuing for the foreseeable future, production has been a bit more difficult, so I thought I give the good old blogging another shot. This week I want to discuss &lt;em&gt;adaptability&lt;/em&gt;, a virtue that I rarely see discussed in the industry and in my opinion absolutely essential to being a productive software engineer.&lt;/p&gt;
+
+&lt;p&gt;This article is a mix of my personal experiences and proper reasoning and arguments, which is how I like to write. That being said, I am sure not everyone is interested in my individual life, so feel free to skip past any antidotes and stories. And without further ado, let’s begin!&lt;/p&gt;
+
+&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#chapter-1&quot;&gt;How did I come across this?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#chapter-2&quot;&gt;“Sure, but why do I have to be adaptable?”&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#chapter-3&quot;&gt;Adaptability for software engineers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#chapter-5&quot;&gt;“Great! So how do I become more adaptable?”&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#chapter-6&quot;&gt;Closing words&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;how-did-i-come-across-this-&quot;&gt;How did I come across this? &lt;a name=&quot;chapter-1&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;The topic of adaptability is by no means a sudden choice, and goes back to a couple years ago for me. In 2013 I was applying to various universities around the world, and one of the most common questions on the applications is&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;What is your biggest strength?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I spent a good few weeks thinking about this. Is it hardworking that helped my grades, or honesty that led me to good friends? I came up with more virtues as a 17-year-old possibly could, but none of them seemed to be the answer for me.&lt;/p&gt;
+
+&lt;p&gt;The answer came to me, as many others do, in the form of an episode of &lt;a href=&quot;https://www.quotes.net/mquote/884693&quot;&gt;The Big Bang Theory&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“I am nothing if not adaptable.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Comic as it may be when Sheldon said it reacting to being pranked with unexpected dinner choice, I found this to be very true for myself. Moving to a city by myself a year earlier, I needed to adapt a lot to a new environment and lifestyle. And with the prospect of moving again for uni, I felt like my ability to get comfortable and productive were the best edge I had.&lt;/p&gt;
+
+&lt;p&gt;Consciously or otherwise, the following few years did prove exactly that. I have moved a few more times for various reasons, and I can confidently say that I have adapted to each to the best of my abilities. Recently I came across a post about &lt;a href=&quot;https://dev.to/demianbrecht/dude-i-m-slagging-your-code-not-you-4nja&quot;&gt;taking feedback in code reviews&lt;/a&gt;, and added a &lt;a href=&quot;https://dev.to/nickwu007/comment/o7i5&quot;&gt;comment&lt;/a&gt; about how I adapted to it since I started working full time as a software engineer. With this tiny reminder, I felt like it was time to offer my own two cents with a proper post.&lt;/p&gt;
+
+&lt;h2 id=&quot;sure-but-why-do-i-have-to-be-adaptable-&quot;&gt;“Sure, but why do I have to be adaptable?” &lt;a name=&quot;chapter-2&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;its-only-natural&quot;&gt;It’s only natural&lt;/h3&gt;
+
+&lt;p&gt;Before getting into detail about how adaptability is crucial in the tech industry, there is a fundamental point to made here. Humans, or any other organisms for that matter, have been adapting for as long as history can tell: “Survival of the fittest”. We are always adapting to the situation, and changing our ways to make the best of things. Adaptability isn’t a special skill that you have to learn; everyone has it already. It’s only natural.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-tech-world-changes-too-often&quot;&gt;The tech world changes too often&lt;/h3&gt;
+
+&lt;p&gt;As a software engineer, we have all heard and experienced how fast and drastically the tech world changes (remember when you have to &lt;em&gt;dial the phone to get on the Internet&lt;/em&gt;?). Languages, frameworks, technologies come and go all the time. Sooner or later, you come to a point where what you know isn’t useful anymore. As Albert Einstein &lt;a href=&quot;https://www.goodreads.com/quotes/85475-the-measure-of-intelligence-is-the-ability-to-change&quot;&gt;said&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The measure of intelligence is the ability to change.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For example, for the longest time I thought a backend server is where you put your business logic, and there is no other way. When I approach a new project, I always put up a server in some VM, and it just felt right. Then a couple years ago, SaaS (Software as a Service) came out of nowhere for me. Suddenly you can just write individual functions and expose them to your client, without the form of a server at all. I couldn’t not see the benefits of this approach, and gradually shifted my thinking to that. Painful as it was in the beginning, this went on to boost my productivity to a whole new level. Adapt yourself my friend, there’s always fruit for your labour.&lt;/p&gt;
+
+&lt;h2 id=&quot;adaptability-as-software-engineers-&quot;&gt;Adaptability as software engineers &lt;a name=&quot;chapter-3&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;I hope now you are more convinced about the usefulness of being adaptable. But what does it mean to be an “adaptable software engineer”? This is by no means a complete list, but what I consider the strongest indicators from other engineers that I look up to:&lt;/p&gt;
+
+&lt;h3 id=&quot;mindful-of-constraints&quot;&gt;Mindful of constraints&lt;/h3&gt;
+
+&lt;p&gt;Software is written to solve problems, and there are many ways to solve the same problem. An adaptable engineer is aware of the particular constraints of the problem: latency, computing resources, or even availability of the team. With this in mind they move to find the best option that suits these constraints. Most of the time these constraints pop up unexpectedly, and they must quickly understand them, and readjust to make sure nothing blows up.&lt;/p&gt;
+
+&lt;h3 id=&quot;shifting-technical-thinking&quot;&gt;Shifting technical thinking&lt;/h3&gt;
+
+&lt;p&gt;Software development is a bigger field than most of us realize, and you will encounter problems in areas that you probably did not know existed before. An adaptable engineer is able to shift their technical mindset into a particular field, and analyze the problem in the appropriate domain language. If it is a user interface problem, then they think in a matter of time and events. If the problem is about complex logic, they think in a matter of data and flow.&lt;/p&gt;
+
+&lt;h3 id=&quot;wear-many-hats&quot;&gt;Wear many hats&lt;/h3&gt;
+
+&lt;p&gt;Code is only one thing that we interact with day-to-day; there are also other engineers, designers, users, and many more. An adaptable engineer is able to communicate to each front in an effective way, acting as a interpreter of sort. They understand what users want, and translate it into hard logic to machine.&lt;/p&gt;
+
+&lt;h3 id=&quot;not-always-passive&quot;&gt;Not always passive&lt;/h3&gt;
+
+&lt;p&gt;Adapting seems like a reactionary action, but the truth is far from it. An adaptable engineer keeps a keen eye for improvements, whether it is code or the product. They know that adapting does not only happen in the dark days, and in fact continuous improvements is a better route to success than a pinch overhaul.&lt;/p&gt;
+
+&lt;h2 id=&quot;great-so-how-do-i-become-more-adaptable-&quot;&gt;“Great! So how do I become more adaptable?” &lt;a name=&quot;chapter-5&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;I believe one does not become adaptable in a day, and many of these indicators seem too hard to achieve. Honestly, I am also in the very early stage of my career, and I have no clue how one stays adaptable 10 years down the line, having moved from position to position. But below are a few advice that I have, many of which were given to me by the best engineers that I know.&lt;/p&gt;
+
+&lt;h3 id=&quot;dont-be-afraid-to-change&quot;&gt;Don’t be afraid to change&lt;/h3&gt;
+
+&lt;p&gt;The first and the most important principle of being adaptable is willing to do so. Way too often we hung on to our intellectual products, because we thought and worked hard for it. As Adam Hunt wrote in &lt;a href=&quot;https://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer&quot;&gt;The Pragmatic Programmer: From Journeyman to Master&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The greatest of all weaknesses is the fear of appearing weak.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Just like the post that inspired this one, the code that we wrote does not always represent us as engineers. The decisions we made earlier might not be the best now, most of the time through no fault of our own. Rather than disregarding the risks and persistently sticking to our guts, we might have a better chance if we listened and adjusted.&lt;/p&gt;
+
+&lt;h3 id=&quot;keep-your-eye-at-the-goal&quot;&gt;Keep your eye at the goal&lt;/h3&gt;
+
+&lt;p&gt;A cliche phase I know, but I have found this be a incredibly useful principle for calibrating yourself. When you are presented with a problem, understand the core of the problem itself. And when you are trying to solve it, and having to adapt to various constraints, always remember whatever you shift to do should help you get closer to solving the core problem. In the past I have had episodes where I tried to change direction when hitting a roadblock, forgot what I needed to solve in the first place, and ended up with something totally unusable. Don’t make my mistake.&lt;/p&gt;
+
+&lt;h3 id=&quot;do-it-often&quot;&gt;Do it often&lt;/h3&gt;
+
+&lt;p&gt;Inertia is an ironically powerful force. You should be looking out for opportunities for adjustments, rather than being forced to one when your car has metaphorically ground to a halt. A useful tip that I have adopted is having sync with manager/colleague periodically (weekly or bi-weekly for me), in which I talk about my recent productivity, what’s lacking, what’s coming my way, and how I should adapt. If I ask for advice, more or less we can come up with a few things to change, and over time I have grown to a better engineer because of them.&lt;/p&gt;
+
+&lt;h2 id=&quot;closing-words-&quot;&gt;Closing words &lt;a name=&quot;chapter-6&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;I hope this post has given you a think about adaptability as a software engineer. In my opinion this is one of the most productive qualities one can cultivate. If you have any thoughts and experience, I would love to hear about them!&lt;/p&gt;
+
+&lt;p&gt;Before you click out, I want to leave you with a quote from Bruce Lee, one of my personal idols:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;You must be shapeless, formless, like water. When you pour water in a cup, it becomes the cup. When you pour water in a bottle, it becomes the bottle. When you pour water in a teapot, it becomes the teapot. Water can drip and it can crash. Become like water my friend.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Nick Wu</name></author><summary type="html">It has been since I sat down to write an article properly, since most of my off-work time has been put into my podcast. With the lockdown situation continuing for the foreseeable future, production has been a bit more difficult, so I thought I give the good old blogging another shot. This week I want to discuss adaptability, a virtue that I rarely see discussed in the industry and in my opinion absolutely essential to being a productive software engineer.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/adaptability-cover.jpg" /></entry><entry><title type="html">Compile Podcast Ep 14: First year of code</title><link href="https://nickwu007.github.io/podcast/2020/04/24/compile-14/" rel="alternate" type="text/html" title="Compile Podcast Ep 14: First year of code" /><published>2020-04-24T21:28:00+01:00</published><updated>2020-04-24T21:28:00+01:00</updated><id>https://nickwu007.github.io/podcast/2020/04/24/compile-14</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2020/04/24/compile-14/">&lt;p&gt;This week Brennan joins me again to talk about our first year of coding professionally, our experiences and thoughts!&lt;/p&gt;
 
 &lt;h3 id=&quot;reach-out-to-us&quot;&gt;Reach out to us!&lt;/h3&gt;
 
@@ -289,34 +388,4 @@
 
 &lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/dp/0141983760/ref=cm_sw_r_tw_dp_U_x_DBBuEbY4M3E7A&quot;&gt;“Why we sleep” book&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.amazon.com/Sherlock-Holmes-Treason-Audible-Original/dp/B084BT2LK4&quot;&gt;My recommended audio book&lt;/a&gt;&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">In this episode, we talk about Developer Health. We discuss the mindset towards health as developers and give coding and non-coding related tips.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep_6.png" /></entry><entry><title type="html">mid-year-reflection-2019</title><link href="https://nickwu007.github.io/non_technical/life/2019/07/14/mid-year-reflection-2019/" rel="alternate" type="text/html" title="mid-year-reflection-2019" /><published>2019-07-14T19:03:00+01:00</published><updated>2019-07-14T19:03:00+01:00</updated><id>https://nickwu007.github.io/non_technical/life/2019/07/14/mid-year-reflection-2019</id><content type="html" xml:base="https://nickwu007.github.io/non_technical/life/2019/07/14/mid-year-reflection-2019/">&lt;p&gt;I realized that I did not write a post this year for new year resolutions, which I usually do. Although it has slipped in my mind, I did have a personal list of things that I wanted to do this year. And since we are just about over half on this year, I thought I could update myself on my progress, and possible shift on focus. I do recommend setting some goals for yourself, even just for a quarter, or the rest of year. Maybe my resolutions would interest you in setting one for yourself too!&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;img src=&quot;/assets/images/2019-desk-diary.jpg&quot; alt=&quot;Picture of a calendar&quot; /&gt;
-*Set a goal for yourself, from &lt;a href=&quot;https://www.pexels.com/photo/black-hello-2019-notebook-on-brown-wooden-surface-1937337/&quot;&gt;Pexels&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&quot;what-went-well&quot;&gt;What went well?&lt;/h3&gt;
-&lt;h4 id=&quot;work&quot;&gt;Work&lt;/h4&gt;
-&lt;p&gt;At the start of year, I had only just completed my first big project, and wanted to learn more about our technical stack. Up to today I have completed another few projects, which covers a range of areas as I had planned. My design and coding skills have grown since then, by quite a significant portion in my opinion, but still far from mastery naturally. All in all, I am in a relatively happy place with work, in other words I am able to enjoy working most of the time and produce at a steady pace.&lt;/p&gt;
-
-&lt;p&gt;Another point that I wanted to adjust at the start of year is putting in less time at work, ironically. I was putting a lot of time art work, and basically threw away my personal life and my friends. In the past 6 months, I have consciously limited my time at the office, and try to not work after hours. At first this put a lot of anxiety on me, worrying if I can still deliver projects on time. But as time goes on I have felt more comfortable in budgeting time appropriately for work, and my production has not gone down as badly as I thought.&lt;/p&gt;
-&lt;h4 id=&quot;side-projects&quot;&gt;Side projects&lt;/h4&gt;
-&lt;p&gt;If you have been on this blog for a while, you will probably know about &lt;a href=&quot;http://examples.links-lang.org&quot;&gt;TryLinks&lt;/a&gt;, my dissertation project at uni at first but has since turned into a mini-side project. This year I launched the a completely new UI for TryLinks, which carries the same functionality but with a much more maintainable codebase. I have to say working on this project in addition to my day job was challenging, but still I am glad to have completed the project on time and it is being actively worked on as well!&lt;/p&gt;
-&lt;h4 id=&quot;traveling&quot;&gt;Traveling&lt;/h4&gt;
-&lt;p&gt;For quite a long time, I have an ineffable dislike of traveling, and therefore kept my traveling to only strictly necessary. This year I wanted to try and see if this is true for me, and the easiest way to verify that is to travel and experience.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;img src=&quot;/assets/images/travels_2019.png&quot; alt=&quot;Where I have been this year&quot; /&gt;
-*Where I have been this year&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Up to today I have made 6 international travels, and I must say this idea is both right and wrong. It is true that I don’t particularly enjoy planning the logistics, and going on long flights. However, I think I have realized a few benefits of traveling. When I am going somewhere with others, I always come back from the trip with a stronger bond with them. Getting away from where I live makes it easier to put things into perspective, and fortunately I have had great company on all of these trips. Also, I noticed that when I am traveling, I can really think about myself as a person: what I like and dislike, my strengths and weakness, and where my mind is at the time. All of this has helped me re-center myself in life. Luckily I still have a few travels for the rest of this year, and I am more excited to go than I was 6 months ago.&lt;/p&gt;
-&lt;h3 id=&quot;what-should-i-focus-more-on&quot;&gt;What should I focus more on?&lt;/h3&gt;
-&lt;h4 id=&quot;physical-health&quot;&gt;Physical health&lt;/h4&gt;
-&lt;p&gt;Since I started working full time, with a lot of sitting around and not moving, plus a reduction in physical exercise, I have gained quite a substantial amount of weight. With this my energy level has dipped noticeably too, and I find myself less fit in general, compared to when I was in uni. The reason for this is that I have struggled with the 2 most important things in physical health: sticking to a regular schedule, and maintaining a healthy diet. This will be my main focus for the next 6 months, and hopefully by the end of year I can get back to where I was when I graduated uni.&lt;/p&gt;
-&lt;h4 id=&quot;podcast&quot;&gt;Podcast&lt;/h4&gt;
-&lt;p&gt;As many of you know, I host a &lt;a href=&quot;https://www.youtube.com/playlist?list=PLfkNBxEf3tVFjCJQ67ofI2Wh5yQwPGxOn&quot;&gt;podcast&lt;/a&gt;, where I talk about various topics with friends. It is a great shame that I have not been able to produce a single new episode in the past 6 months, and was only able to get started quite recently. Fortunately, I will be able to prioritize the podcast more from now on, and also with the help from a few enthusiastic friends.&lt;/p&gt;
-&lt;h4 id=&quot;getting-out-of-comfort-zone&quot;&gt;Getting out of comfort zone&lt;/h4&gt;
-&lt;p&gt;One thing that recently came to my mind is comfort zone. Since I am not the adventurous spirit, getting out of comfort zone is rare for me. But recently I was repeated suggested to venture out more often, in other words do things that would normally scare me. So far I have not planned out how exactly I should do that, but this will be a new focus for myself for rest of year. Maybe I will discuss this more in detail, either in another post or in the podcast.&lt;/p&gt;
-&lt;h3 id=&quot;tldr&quot;&gt;Tl;dr&lt;/h3&gt;
-&lt;p&gt;2019 has been going relatively well for me. As I was about to turn 24, I have gained a clearer image of my ideal life, and how to get there. I am glad about what I have been able to accomplish so far this year, and at the same time realize that I still have much to do. If you want to share your resolutions and your experience, I would be very glad to open a conversation!&lt;/p&gt;
-
-&lt;p&gt;Hope I can finish everything that I set out to do, and so do you!&lt;/p&gt;
-
-&lt;p&gt;See you very soon.&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">I realized that I did not write a post this year for new year resolutions, which I usually do. Although it has slipped in my mind, I did have a personal list of things that I wanted to do this year. And since we are just about over half on this year, I thought I could update myself on my progress, and possible shift on focus. I do recommend setting some goals for yourself, even just for a quarter, or the rest of year. Maybe my resolutions would interest you in setting one for yourself too!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/2019-desk-diary.jpg" /></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://www.amazon.com/Sherlock-Holmes-Treason-Audible-Original/dp/B084BT2LK4&quot;&gt;My recommended audio book&lt;/a&gt;&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">In this episode, we talk about Developer Health. We discuss the mindset towards health as developers and give coding and non-coding related tips.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep_6.png" /></entry></feed>
