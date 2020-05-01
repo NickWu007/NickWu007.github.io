@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://nickwu007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nickwu007.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-05-01T20:24:23+01:00</updated><id>https://nickwu007.github.io/</id><title type="html">DevPractical</title><subtitle>Practical tips for Developers, from a developer.</subtitle><author><name>Nick Wu</name></author><entry><title type="html">Adaptability: an overlooked virtue</title><link href="https://nickwu007.github.io/non_technical/2020/04/29/adaptability-an-overlooked-virtue/" rel="alternate" type="text/html" title="Adaptability: an overlooked virtue" /><published>2020-04-29T21:28:00+01:00</published><updated>2020-04-29T21:28:00+01:00</updated><id>https://nickwu007.github.io/non_technical/2020/04/29/adaptability-an-overlooked-virtue</id><content type="html" xml:base="https://nickwu007.github.io/non_technical/2020/04/29/adaptability-an-overlooked-virtue/">&lt;p&gt;It has been since I sat down to write an article properly, since most of my off-work time has been put into my &lt;a href=&quot;https://www.youtube.com/playlist?list=PLfkNBxEf3tVFjCJQ67ofI2Wh5yQwPGxOn&quot;&gt;podcast&lt;/a&gt;. With the lockdown situation continuing for the foreseeable future, production has been a bit more difficult, so I thought I give the good old blogging another shot. This week I want to discuss &lt;em&gt;adaptability&lt;/em&gt;, a virtue that I rarely see discussed in the industry and in my opinion absolutely essential to being a productive software engineer.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://nickwu007.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nickwu007.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-05-01T21:33:27+01:00</updated><id>https://nickwu007.github.io/</id><title type="html">DevPractical</title><subtitle>Practical tips for Developers, from a developer.</subtitle><author><name>Nick Wu</name></author><entry><title type="html">Adaptability: an overlooked virtue</title><link href="https://nickwu007.github.io/non_technical/2020/04/29/adaptability-an-overlooked-virtue/" rel="alternate" type="text/html" title="Adaptability: an overlooked virtue" /><published>2020-04-29T21:28:00+01:00</published><updated>2020-04-29T21:28:00+01:00</updated><id>https://nickwu007.github.io/non_technical/2020/04/29/adaptability-an-overlooked-virtue</id><content type="html" xml:base="https://nickwu007.github.io/non_technical/2020/04/29/adaptability-an-overlooked-virtue/">&lt;p&gt;It has been since I sat down to write an article properly, since most of my off-work time has been put into my &lt;a href=&quot;https://www.youtube.com/playlist?list=PLfkNBxEf3tVFjCJQ67ofI2Wh5yQwPGxOn&quot;&gt;podcast&lt;/a&gt;. With the lockdown situation continuing for the foreseeable future, production has been a bit more difficult, so I thought I give the good old blogging another shot. This week I want to discuss &lt;em&gt;adaptability&lt;/em&gt;, a virtue that I rarely see discussed in the industry and in my opinion absolutely essential to being a productive software engineer.&lt;/p&gt;
 
 &lt;p&gt;This article is a mix of my personal experiences and proper reasoning and arguments, which is how I like to write. That being said, I am sure not everyone is interested in my individual life, so feel free to skip past any anecdote and stories. And without further ado, let’s begin!&lt;/p&gt;
 
@@ -103,7 +103,40 @@
 
 &lt;blockquote&gt;
   &lt;p&gt;You must be shapeless, formless, like water. When you pour water in a cup, it becomes the cup. When you pour water in a bottle, it becomes the bottle. When you pour water in a teapot, it becomes the teapot. Water can drip and it can crash. Become like water my friend.&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>Nick Wu</name></author><summary type="html">It has been since I sat down to write an article properly, since most of my off-work time has been put into my podcast. With the lockdown situation continuing for the foreseeable future, production has been a bit more difficult, so I thought I give the good old blogging another shot. This week I want to discuss adaptability, a virtue that I rarely see discussed in the industry and in my opinion absolutely essential to being a productive software engineer.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/adaptability-cover.jpg" /></entry><entry><title type="html">Compile Podcast Ep 14: First year of code</title><link href="https://nickwu007.github.io/podcast/2020/04/24/compile-14/" rel="alternate" type="text/html" title="Compile Podcast Ep 14: First year of code" /><published>2020-04-24T21:28:00+01:00</published><updated>2020-04-24T21:28:00+01:00</updated><id>https://nickwu007.github.io/podcast/2020/04/24/compile-14</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2020/04/24/compile-14/">&lt;p&gt;This week Brennan joins me again to talk about our first year of coding professionally, our experiences and thoughts!&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>Nick Wu</name></author><summary type="html">It has been since I sat down to write an article properly, since most of my off-work time has been put into my podcast. With the lockdown situation continuing for the foreseeable future, production has been a bit more difficult, so I thought I give the good old blogging another shot. This week I want to discuss adaptability, a virtue that I rarely see discussed in the industry and in my opinion absolutely essential to being a productive software engineer.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/adaptability-cover.jpg" /></entry><entry><title type="html">Compile Podcast Ep 15: Adaptability: an overlooked virtue</title><link href="https://nickwu007.github.io/podcast/2020/04/24/compile-15/" rel="alternate" type="text/html" title="Compile Podcast Ep 15: Adaptability: an overlooked virtue" /><published>2020-04-24T21:28:00+01:00</published><updated>2020-04-24T21:28:00+01:00</updated><id>https://nickwu007.github.io/podcast/2020/04/24/compile-15</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2020/04/24/compile-15/">&lt;p&gt;This week I talk about adaptability as a software engineer, from a &lt;a href=&quot;https://nickwu007.github.io/non_technical/2020/04/29/adaptability-an-overlooked-virtue/&quot;&gt;blog post&lt;/a&gt; that I wrote earlier this week!&lt;/p&gt;
+
+&lt;h3 id=&quot;breakpoints&quot;&gt;Breakpoints&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;00:50 Topic intro: adaptability as a software engineer&lt;/li&gt;
+  &lt;li&gt;01:33 How did I come across this?&lt;/li&gt;
+  &lt;li&gt;03:27 “Sure, but why do I have to be adaptable?”&lt;/li&gt;
+  &lt;li&gt;05:18 Adaptability as software engineers&lt;/li&gt;
+  &lt;li&gt;07:37 “Great! So how do I become more adaptable?”&lt;/li&gt;
+  &lt;li&gt;10:20 Closing words&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;links-in-this-episode&quot;&gt;Links in this episode:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Quote from the Big Bang Theory: https://www.quotes.net/mquote/884693&lt;/li&gt;
+  &lt;li&gt;Interesting post about taking feedback in code reviews: https://dev.to/demianbrecht/dude-i-m-slagging-your-code-not-you-4nja&lt;/li&gt;
+  &lt;li&gt;Quote from Albert Einstein: https://www.goodreads.com/quotes/85475-the-measure-of-intelligence-is-the-ability-to-change&lt;/li&gt;
+  &lt;li&gt;Quote from Adam Hunt in The Pragmatic Programmer: From Journeyman to Master: https://www.goodreads.com/book/show/4099.The_Pragmatic_Programmer&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;reach-out-to-us&quot;&gt;Reach out to us!&lt;/h3&gt;
+
+&lt;p&gt;Subscribe and stay tuned! Also send in any comment or request for new topics and we will try our best to make them happen!&lt;/p&gt;
+
+&lt;p&gt;My Twitter: https://twitter.com/WujunaoNick&lt;/p&gt;
+
+&lt;p&gt;This Podcast is also on:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y&quot;&gt;Google Play Music&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367&quot;&gt;iTunes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://open.spotify.com/show/2UH9hK7VlS7ytjYdM8Vd78&quot;&gt;Spotify&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Nick Wu</name></author><summary type="html">This week I talk about adaptability as a software engineer, from a blog post that I wrote earlier this week!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep_15.png" /></entry><entry><title type="html">Compile Podcast Ep 14: First year of code</title><link href="https://nickwu007.github.io/podcast/2020/04/24/compile-14/" rel="alternate" type="text/html" title="Compile Podcast Ep 14: First year of code" /><published>2020-04-24T21:28:00+01:00</published><updated>2020-04-24T21:28:00+01:00</updated><id>https://nickwu007.github.io/podcast/2020/04/24/compile-14</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2020/04/24/compile-14/">&lt;p&gt;This week Brennan joins me again to talk about our first year of coding professionally, our experiences and thoughts!&lt;/p&gt;
 
 &lt;h3 id=&quot;reach-out-to-us&quot;&gt;Reach out to us!&lt;/h3&gt;
 
@@ -376,22 +409,4 @@
   &lt;li&gt;&lt;a href=&quot;https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y&quot;&gt;Google Play Music&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367&quot;&gt;iTunes&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://open.spotify.com/show/2UH9hK7VlS7ytjYdM8Vd78&quot;&gt;Spotify&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Nick Wu</name></author><summary type="html">Jasper and I talk about our hobbies when we are not coding, and what you can do to find a hobby for yourself!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep_7.png" /></entry><entry><title type="html">Compile Podcast Ep 6: Developer Health</title><link href="https://nickwu007.github.io/podcast/2020/02/22/compile-6/" rel="alternate" type="text/html" title="Compile Podcast Ep 6: Developer Health" /><published>2020-02-22T23:07:00+00:00</published><updated>2020-02-22T23:07:00+00:00</updated><id>https://nickwu007.github.io/podcast/2020/02/22/compile-6</id><content type="html" xml:base="https://nickwu007.github.io/podcast/2020/02/22/compile-6/">&lt;p&gt;Hello everyone! Welcome to the Compile Podcast, a show where 2 programmers talk about anything and everything!&lt;/p&gt;
-
-&lt;p&gt;In this episode, we talk about Developer Health. We discuss the mindset towards health as developers and give coding and non-coding related tips.&lt;/p&gt;
-
-&lt;p&gt;Next week we will have a new topic to discuss! So subscribe and stay tuned!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://twitter.com/WujunaoNick&quot;&gt;My Twitter&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;This Podcast is also on:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://play.google.com/music/listen#/ps/Ifd5mlxhgc5cmlsytadsglqfd4y&quot;&gt;Google Play Music&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://podcasts.apple.com/gb/podcast/the-compile-podcast/id1436437367&quot;&gt;iTunes&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;links-in-this-episode&quot;&gt;Links in this episode:&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/dp/0141983760/ref=cm_sw_r_tw_dp_U_x_DBBuEbY4M3E7A&quot;&gt;“Why we sleep” book&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.amazon.com/Sherlock-Holmes-Treason-Audible-Original/dp/B084BT2LK4&quot;&gt;My recommended audio book&lt;/a&gt;&lt;/p&gt;</content><author><name>Nick Wu</name></author><summary type="html">In this episode, we talk about Developer Health. We discuss the mindset towards health as developers and give coding and non-coding related tips.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep_6.png" /></entry></feed>
+&lt;/ul&gt;</content><author><name>Nick Wu</name></author><summary type="html">Jasper and I talk about our hobbies when we are not coding, and what you can do to find a hobby for yourself!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nickwu007.github.io/assets/images/compile_ep_7.png" /></entry></feed>
